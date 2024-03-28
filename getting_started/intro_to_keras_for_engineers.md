@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Introduction to Keras for engineers
-parent: UI Components
+title: 엔지니어를 위한 Keras 소개
+parent: 시작하기
 nav_order: 1
 permalink: /getting_started/intro_to_keras_for_engineers
 ---
 
-# Introduction to Keras for engineers
+# 엔지니어를 위한 Keras 소개
 {: .no_toc }
 
-## Table of contents
+## 목차
 {: .no_toc .text-delta }
 
 1. TOC
@@ -17,24 +17,24 @@ permalink: /getting_started/intro_to_keras_for_engineers
 
 ---
 
-**Author:** [fchollet](https://twitter.com/fchollet)  
-**Date created:** 2023/07/10  
-**Last modified:** 2023/07/10  
-**Description:** First contact with Keras 3.
+**저자:** [fchollet](https://twitter.com/fchollet)  
+**생성일:** 2023/07/10  
+**최종편집일:** 2023/07/10  
+**설명:** Keras 3와의 첫 접촉.
 
-![](https://colab.research.google.com/img/colab_favicon.ico) [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/intro_to_keras_for_engineers.ipynb) •![](https://github.com/favicon.ico) [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/guides/intro_to_keras_for_engineers.py)
-
-----
-
-## Introduction
-
-Keras 3 is a deep learning framework works with TensorFlow, JAX, and PyTorch interchangeably. This notebook will walk you through key Keras 3 workflows.
+![](https://colab.research.google.com/img/colab_favicon.ico) [**Colab에서 보기**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/intro_to_keras_for_engineers.ipynb) •![](https://github.com/favicon.ico) [**GitHub 소스**](https://github.com/keras-team/keras-io/blob/master/guides/intro_to_keras_for_engineers.py)
 
 ----
 
-## Setup
+## 소개
 
-We're going to be using the JAX backend here – but you can edit the string below to `"tensorflow"` or `"torch"` and hit "Restart runtime", and the whole notebook will run just the same! This entire guide is backend-agnostic.
+Keras 3는 TensorFlow, JAX 및 PyTorch와 상호 호환되는 딥러닝 프레임워크입니다. 이 노트북에서는 주요 Keras 3 워크플로우를 안내합니다.
+
+----
+
+## 셋업
+
+여기서는 JAX 백엔드를 사용하지만, 아래 문자열을 ``"tensorflow"`` 또는 ``"torch"``로 수정하고, "Restart runtime"을 누르면, 노트북 전체가 똑같이 실행됩니다! 이 전체 가이드는 백엔드에 구애받지 않습니다.
 
 ```python
 import numpy as np
@@ -42,28 +42,28 @@ import os
 
 os.environ["KERAS_BACKEND"] = "jax"
 
-# Note that Keras should only be imported after the backend
-# has been configured. The backend cannot be changed once the
-# package is imported.
+# Keras는 백엔드가 구성된 후에 import 되어야 한다는 점에 유의하세요. 
+# 패키지를 import 한 후에는, 백엔드를 변경할 수 없습니다.
+
 import keras
 ```
 
 ----
 
-## A first example: A MNIST convnet
+## 첫 번째 예시: MNIST 컨브넷
 
-Let's start with the Hello World of ML: training a convnet to classify MNIST digits.
+MNIST 숫자를 분류하기 위해 convnet을 트레이닝하는 ML의 Hello World부터 시작하겠습니다.
 
-Here's the data:
+다음은 데이터입니다:
 
 ```python
-# Load the data and split it between train and test sets
+# 데이터를 로드하고 트레이닝 세트와 테스트 세트로 분할하기
 (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
 
-# Scale images to the [0, 1] range
+# 이미지를 [0, 1] 범위로 조정하기
 x_train = x_train.astype("float32") / 255
 x_test = x_test.astype("float32") / 255
-# Make sure images have shape (28, 28, 1)
+# 이미지가 (28, 28, 1) 모양인지 확인하기
 x_train = np.expand_dims(x_train, -1)
 x_test = np.expand_dims(x_test, -1)
 print("x_train shape:", x_train.shape)
@@ -79,16 +79,16 @@ y_train shape: (60000,)
 10000 test samples
 ```
 
-Here's our model.
+이것이 우리의 모델입니다.
 
-Different model-building options that Keras offers include:
+Keras에서 제공하는 다양한 모델 빌드 옵션은 다음과 같습니다:
 
-*   [The Sequential API](https://keras.io/guides/sequential_model/) (what we use below)
-*   [The Functional API](https://keras.io/guides/functional_api/) (most typical)
-*   [Writing your own models yourself via subclassing](https://keras.io/guides/making_new_layers_and_models_via_subclassing/) (for advanced use cases)
+*   [Sequential API](https://keras.io/guides/sequential_model/) (아래에 우리가 사용한 것)
+*   [Functional API](https://keras.io/guides/functional_api/) (가장 일반적임)
+*   [서브클래싱을 통해 당신만의 모델 작성하기](https://keras.io/guides/making_new_layers_and_models_via_subclassing/) (for advanced use cases)
 
 ```python
-# Model parameters
+# 모델 파라미터
 num_classes = 10
 input_shape = (28, 28, 1)
 
@@ -107,12 +107,13 @@ model = keras.Sequential(
 )
 ```
 
-Here's our model summary:
+이것이 우리 모델의 Summary 입니다.:
 
 ```python
 model.summary()
 ```
 
+```
 Model: "sequential"
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
@@ -141,8 +142,9 @@ Model: "sequential"
  Trainable params: 260,298 (1016.79 KB)
 
  Non-trainable params: 0 (0.00 B)
+```
 
-We use the `compile()` method to specify the optimizer, loss function, and the metrics to monitor. Note that with the JAX and TensorFlow backends, XLA compilation is turned on by default.
+`compile()` 메서드를 사용하여 옵티마이저, 손실 함수, 모니터링할 메트릭을 지정합니다. JAX 및 TensorFlow 백엔드에서는 기본적으로 XLA 컴파일이 켜져 있다는 점에 유의하세요.
 
 ```python
 model.compile(
@@ -154,7 +156,7 @@ model.compile(
 )
 ```
 
-Let's train and evaluate the model. We'll set aside a validation split of 15% of the data during training to monitor generalization on unseen data.
+모델을 트레이닝하고 평가해 보겠습니다. 보지 않은 데이터에 대한 일반화를 모니터링하기 위해 트레이닝 중에 데이터의 15%에 해당하는 검증 분할을 따로 설정하겠습니다.
 
 ```python
 batch_size = 128
@@ -205,20 +207,19 @@ Epoch 13/20
  399/399 ━━━━━━━━━━━━━━━━━━━━ 70s 176ms/step - acc: 0.9843 - loss: 0.0504 - val_acc: 0.9918 - val_loss: 0.0316
 ```
 
-
-During training, we were saving a model at the end of each epoch. You can also save the model in its latest state like this:
+트레이닝 중에, 각 에포크가 끝날 때마다 모델을 저장했습니다. 아래처럼 모델을 최신 상태로 저장할 수도 있습니다:
 
 ```python
 model.save("final_model.keras")
 ```
 
-And reload it like this:
+그리고 이렇게 다시 로드합니다:
 
 ```python
 model = keras.saving.load_model("final_model.keras")
 ```
 
-Next, you can query predictions of class probabilities with `predict()`:
+다음으로, `predict()`를 사용하여 클래스 확률 예측을 쿼리할 수 있습니다:
 
 ```python
 predictions = model.predict(x_test)
@@ -228,11 +229,11 @@ predictions = model.predict(x_test)
  313/313 ━━━━━━━━━━━━━━━━━━━━ 3s 9ms/step
 ```
 
-That's it for the basics!
+기본 사항은 여기까지입니다!
 
 ----
 
-## Writing cross-framework custom components
+## 크로스 프레임워크 사용자 정의 컴포넌트 작성
 
 Keras enables you to write custom Layers, Models, Metrics, Losses, and Optimizers that work across TensorFlow, JAX, and PyTorch with the same codebase. Let's take a look at custom layers first.
 
