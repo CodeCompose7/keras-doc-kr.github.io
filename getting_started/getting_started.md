@@ -6,6 +6,9 @@ has_children: true
 permalink: /getting_started
 ---
 
+* 원본 링크 : https://keras.io/getting_started/
+* 최종 수정일 : 2024-03-28
+
 # Keras로 시작하기
 {: .no_toc }
 

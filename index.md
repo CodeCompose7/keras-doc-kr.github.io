@@ -5,6 +5,9 @@ nav_order: 1
 permalink: /
 ---
 
+* 원본 링크 : https://keras.io/about/
+* 최종 수정일 : 2024-03-28
+
 # Keras 3에 대하여
 
 Keras는 Python으로 작성된 딥러닝 API로, [JAX](https://jax.readthedocs.io/), [TensorFlow](https://github.com/tensorflow/tensorflow) 또는 [PyTorch](https://pytorch.org/) 위에서 실행할 수 있습니다.

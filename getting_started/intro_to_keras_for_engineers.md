@@ -6,6 +6,9 @@ nav_order: 1
 permalink: /getting_started/intro_to_keras_for_engineers
 ---
 
+* 원본 링크 : https://keras.io/getting_started/intro_to_keras_for_engineers/
+* 최종 수정일 : 2024-03-28
+
 # 엔지니어를 위한 Keras 소개
 {: .no_toc }
 
@@ -20,9 +23,10 @@ permalink: /getting_started/intro_to_keras_for_engineers
 **저자:** [fchollet](https://twitter.com/fchollet)  
 **생성일:** 2023/07/10  
 **최종편집일:** 2023/07/10  
-**설명:** Keras 3와의 첫 접촉.
+**설명:** Keras 3와의 첫 접촉
 
-![](https://colab.research.google.com/img/colab_favicon.ico) [**Colab에서 보기**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/intro_to_keras_for_engineers.ipynb) •![](https://github.com/favicon.ico) [**GitHub 소스**](https://github.com/keras-team/keras-io/blob/master/guides/intro_to_keras_for_engineers.py)
+[Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/intro_to_keras_for_engineers.ipynb){: .btn .btn-blue }
+[GitHub 소스](https://github.com/keras-team/keras-io/blob/master/guides/intro_to_keras_for_engineers.py){: .btn .btn-blue }
 
 ----
 
