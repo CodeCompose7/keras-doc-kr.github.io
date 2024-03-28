@@ -1,12 +1,12 @@
 ---
 layout: default
 title: 엔지니어를 위한 Keras 소개
-parent: 시작하기
 nav_order: 1
 permalink: /getting_started/intro_to_keras_for_engineers
+parent: 시작하기
 ---
 
-* 원본 링크 : https://keras.io/getting_started/intro_to_keras_for_engineers/
+* 원본 링크 : [https://keras.io/getting_started/intro_to_keras_for_engineers/](https://keras.io/getting_started/intro_to_keras_for_engineers/)
 * 최종 수정일 : 2024-03-28
 
 # 엔지니어를 위한 Keras 소개
@@ -119,32 +119,28 @@ model.summary()
 
 ```
 Model: "sequential"
-
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
 ┃ Layer (type)                    ┃ Output Shape              ┃    Param # ┃
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
 │ conv2d (Conv2D)                 │ (None, 26, 26, 64)        │        640 │
 ├─────────────────────────────────┼───────────────────────────┼────────────┤
-│ conv2d\_1 (Conv2D)               │ (None, 24, 24, 64)        │     36,928 │
+│ conv2d_1 (Conv2D)               │ (None, 24, 24, 64)        │     36,928 │
 ├─────────────────────────────────┼───────────────────────────┼────────────┤
-│ max\_pooling2d (MaxPooling2D)    │ (None, 12, 12, 64)        │          0 │
+│ max_pooling2d (MaxPooling2D)    │ (None, 12, 12, 64)        │          0 │
 ├─────────────────────────────────┼───────────────────────────┼────────────┤
-│ conv2d\_2 (Conv2D)               │ (None, 10, 10, 128)       │     73,856 │
+│ conv2d_2 (Conv2D)               │ (None, 10, 10, 128)       │     73,856 │
 ├─────────────────────────────────┼───────────────────────────┼────────────┤
-│ conv2d\_3 (Conv2D)               │ (None, 8, 8, 128)         │    147,584 │
+│ conv2d_3 (Conv2D)               │ (None, 8, 8, 128)         │    147,584 │
 ├─────────────────────────────────┼───────────────────────────┼────────────┤
-│ global\_average\_pooling2d        │ (None, 128)               │          0 │
+│ global_average_pooling2d        │ (None, 128)               │          0 │
 │ (GlobalAveragePooling2D)        │                           │            │
 ├─────────────────────────────────┼───────────────────────────┼────────────┤
 │ dropout (Dropout)               │ (None, 128)               │          0 │
 ├─────────────────────────────────┼───────────────────────────┼────────────┤
 │ dense (Dense)                   │ (None, 10)                │      1,290 │
 └─────────────────────────────────┴───────────────────────────┴────────────┘
-
  Total params: 260,298 (1016.79 KB)
-
  Trainable params: 260,298 (1016.79 KB)
-
  Non-trainable params: 0 (0.00 B)
 ```
 
