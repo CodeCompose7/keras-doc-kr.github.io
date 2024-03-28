@@ -5,7 +5,7 @@ nav_order: 1
 permalink: /
 ---
 
-* 원본 링크 : https://keras.io/about/
+* 원본 링크 : [https://keras.io/about/](https://keras.io/about/)
 * 최종 수정일 : 2024-03-28
 
 # Keras 3에 대하여
@@ -14,8 +14,8 @@ Keras는 Python으로 작성된 딥러닝 API로, [JAX](https://jax.readthedocs.
 
 Keras는:
 
-- **단순성** - 단순하지만, 단순하지 않습니다. Keras는 개발자의 _인지적 부하(cognitive load)_ 를 줄여, 개발자가 정말 중요한 문제에 집중할 수 있도록 합니다.
-- **유연성** - Keras는 _복잡성의 점진적 공개_ 라는 원칙을 채택합니다. 간단한 워크플로는 빠르고 쉬워야 하며, 이미 학습한 내용을 바탕으로 명확한 경로를 통해 임의로 고급 워크플로를 _만들 수 있어야_ 합니다.
+- **단순성** - 단순하지만, 단순하지 않습니다. Keras는 개발자의 _인지적 부하(cognitive load)_를 줄여, 개발자가 정말 중요한 문제에 집중할 수 있도록 합니다.
+- **유연성** - Keras는 _복잡성의 점진적 공개_라는 원칙을 채택합니다. 간단한 워크플로는 빠르고 쉬워야 하며, 이미 학습한 내용을 바탕으로 명확한 경로를 통해 임의로 고급 워크플로를 _만들 수 있어야_ 합니다.
 - **강력함** - Keras는 업계 최고 수준의 성능과 확장성을 제공하며, NASA, YouTube, Waymo 등의 조직에서 사용하고 있습니다.
 
 ----
@@ -131,8 +131,8 @@ class TokenAndPositionEmbedding(keras.Layer):
 
 Keras에 대한 자세한 튜토리얼은 여기에서 확인할 수 있습니다:
 
-- [Introduction to Keras for engineers](/getting_started/intro_to_keras_for_engineers/)
-- [Developer guides](/guides/)
+- [엔지니어를 위한 Keras 소개](/getting_started/intro_to_keras_for_engineers/)
+- [개발자 가이드](/guides/)
 
 ----
 
