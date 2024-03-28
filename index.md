@@ -1,162 +1,243 @@
 ---
 layout: default
-title: Keras에 대하여
+title: Keras 3
 nav_order: 1
 permalink: /
 ---
 
-* 원본 링크 : [https://keras.io/about/](https://keras.io/about/)
+* 원본 링크 : [https://keras.io/keras_3/](https://keras.io/keras_3/){:target="_blank"}
 * 최종 수정일 : 2024-03-28
 
-# Keras 3에 대하여
+# Keras 3.0 소개
 
-Keras는 Python으로 작성된 딥러닝 API로, [JAX](https://jax.readthedocs.io/), [TensorFlow](https://github.com/tensorflow/tensorflow) 또는 [PyTorch](https://pytorch.org/) 위에서 실행할 수 있습니다.
+[시작하기](/getting_started/getting_started){: .btn .btn-blue }
+[API 문서](/api/api){: .btn .btn-blue }
+[가이드](/guides/guides){: .btn .btn-blue }
+[GitHub](https://github.com/keras-team/keras/){: .btn .btn-blue }
 
-Keras는:
-
-- **단순성** - 단순하지만, 단순하지 않습니다. Keras는 개발자의 _인지적 부하(cognitive load)_를 줄여, 개발자가 정말 중요한 문제에 집중할 수 있도록 합니다.
-- **유연성** - Keras는 _복잡성의 점진적 공개_라는 원칙을 채택합니다. 간단한 워크플로는 빠르고 쉬워야 하며, 이미 학습한 내용을 바탕으로 명확한 경로를 통해 임의로 고급 워크플로를 _만들 수 있어야_ 합니다.
-- **강력함** - Keras는 업계 최고 수준의 성능과 확장성을 제공하며, NASA, YouTube, Waymo 등의 조직에서 사용하고 있습니다.
-
-----
-
-## Keras 3는 멀티 프레임워크 딥러닝 API입니다.
-
-멀티 프레임워크 API인 Keras는 JAX, TensorFlow, PyTorch 등의 프레임워크와 호환되는 모듈식 컴포넌트를 개발하는데 사용할 수 있습니다.
-
-이 접근 방식에는 몇 가지 주요 이점이 있습니다:
-
-- **모델에 대해 항상 최상의 성능을 얻을 수 있습니다.** 우리의 벤치마크 결과, JAX는 일반적으로 GPU, TPU, CPU에서 최고의 트레이닝 및 추론 성능을 제공하지만, 비-XLA TensorFlow가 GPU에서 더 빠른 경우도 있기 때문에, 결과는 모델마다 다릅니다. _당신의 코드를 변경하지 않고도_ 모델에 가장 적합한 성능을 제공하는 백엔드를 동적으로 선택할 수 있으므로, 항상 최고의 효율로 트레이닝하고 서비스를 제공할 수 있습니다.
-- **모델을 위해 사용 가능한 에코시스템 표면을 극대화하세요.** 모든 Keras 모델은 PyTorch `Module`로 인스턴스화할 수 있고, TensorFlow `SavedModel`로 내보낼 수 있으며, 상태없는 JAX 함수로 인스턴스화할 수 있습니다. 즉, PyTorch 에코시스템 패키지, 모든 범위의 TensorFlow 배포 및 프로덕션 도구, JAX 대규모 TPU 트레이닝 인프라와 함께, Keras 모델을 사용할 수 있습니다. Keras API를 사용해 하나의 `model.py`를 작성하고, ML 세계에서 제공하는 모든 것을 이용할 수 있습니다.
-- **오픈 소스 모델 릴리스의 배포를 극대화하세요.** 사전 트레이닝된 모델을 릴리스하고 싶으신가요? 가능한 한 많은 사람이 사용할 수 있기를 원하시나요? 순수 TensorFlow 또는 PyTorch로 구현하면, 시장의 약 절반이 사용할 수 있습니다. Keras로 구현하면, 선택한 프레임워크에 관계없이(Keras 사용자가 아니더라도) 누구나 즉시 사용할 수 있습니다. 추가 개발 비용 없이 두 배의 효과를 얻을 수 있습니다.
-- **모든 소스의 데이터 파이프라인을 사용하세요.** Keras `fit()`/`evaluate()`/`predict()` 루틴은 당신이 사용 중인 백엔드에 관계없이 [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset) 객체, PyTorch `DataLoader` 객체, NumPy 배열, Pandas 데이터프레임과 호환이 가능합니다. PyTorch `DataLoader`에서 Keras + TensorFlow 모델을 트레이닝하거나, [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset)에 대해 Keras + PyTorch 모델을 트레이닝할 수 있습니다.
+After five months of extensive public beta testing, we're excited to announce the official release of Keras 3.0. Keras 3 is a full rewrite of Keras that enables you to run your Keras workflows on top of either JAX, TensorFlow, or PyTorch, and that unlocks brand new large-scale model training and deployment capabilities. You can pick the framework that suits you best, and switch from one to another based on your current goals. You can also use Keras as a low-level cross-framework language to develop custom components such as layers, models, or metrics that can be used in native workflows in JAX, TensorFlow, or PyTorch — with one codebase.
 
 ----
 
-## Keras와의 첫 만남
+## Welcome to multi-framework machine learning.
 
-Keras의 핵심 데이터 구조는 **레이어(layers)**와 **모델(models)**입니다. 가장 간단한 모델 유형은 선형 레이어 스택인 [`Sequential` 모델](/guides/sequential_model/)입니다. 더 복잡한 아키텍처의 경우, 임의의 레이어 그래프를 만들 수 있는 [Keras 함수형 API](/guides/functional_api/)를 사용하거나, [서브클래싱을 통해 완전히 처음부터 모델 작성](/guides/making_new_layers_and_models_via_subclassing/) 방법을 사용해야 합니다.
+You're already familiar with the benefits of using Keras — it enables high-velocity development via an obsessive focus on great UX, API design, and debuggability. It's also a battle-tested framework that has been chosen by over 2.5M developers and that powers some of the most sophisticated, largest-scale ML systems in the world, such as the Waymo self-driving fleet and the YouTube recommendation engine. But what are the additional benefits of using the new multi-backend Keras 3?
 
-다음은 `Sequential` 모델입니다:
+*   **Always get the best performance for your models.** In our benchmarks, we found that JAX typically delivers the best training and inference performance on GPU, TPU, and CPU — but results vary from model to model, as non-XLA TensorFlow is occasionally faster on GPU. The ability to dynamically select the backend that will deliver the best performance for your model _without having to change anything to your code_ means you're guaranteed to train and serve with the highest achievable efficiency.
+*   **Unlock ecosystem optionality for your models.** Any Keras 3 model can be instantiated as a PyTorch `Module`, can be exported as a TensorFlow `SavedModel`, or can be instantiated as a stateless JAX function. That means that you can use your Keras 3 models with PyTorch ecosystem packages, with the full range of TensorFlow deployment & production tools (like TF-Serving, TF.js and TFLite), and with JAX large-scale TPU training infrastructure. Write one `model.py` using Keras 3 APIs, and get access to everything the ML world has to offer.
+*   **Leverage large-scale model parallelism & data parallelism with JAX.** Keras 3 includes a brand new distribution API, the `keras.distribution` namespace, currently implemented for the JAX backend (coming soon to the TensorFlow and PyTorch backends). It makes it easy to do model parallelism, data parallelism, and combinations of both — at arbitrary model scales and cluster scales. Because it keeps the model definition, training logic, and sharding configuration all separate from each other, it makes your distribution workflow easy to develop and easy to maintain. See our [starter guide](/guides/distribution/).
+*   **Maximize reach for your open-source model releases.** Want to release a pretrained model? Want as many people as possible to be able to use it? If you implement it in pure TensorFlow or PyTorch, it will be usable by roughly half of the community. If you implement it in Keras 3, it is instantly usable by anyone regardless of their framework of choice (even if they're not Keras users themselves). Twice the impact at no added development cost.
+*   **Use data pipelines from any source.** The Keras 3 `fit()`/`evaluate()`/`predict()` routines are compatible with `tf.data.Dataset` objects, with PyTorch `DataLoader` objects, with NumPy arrays, Pandas dataframes — regardless of the backend you're using. You can train a Keras 3 + TensorFlow model on a PyTorch `DataLoader` or train a Keras 3 + PyTorch model on a `tf.data.Dataset`.
+
+---
+
+## The full Keras API, available for JAX, TensorFlow, and PyTorch.
+
+Keras 3 implements the full Keras API and makes it available with TensorFlow, JAX, and PyTorch — over a hundred layers, dozens of metrics, loss functions, optimizers, and callbacks, the Keras training and evaluation loops, and the Keras saving & serialization infrastructure. All the APIs you know and love are here.
+
+Any Keras model that only uses built-in layers will immediately work with all supported backends. In fact, your existing `tf.keras` models that only use built-in layers can start running in JAX and PyTorch _right away_! That's right, your codebase just gained a whole new set of capabilities.
+
+![](https://s3.amazonaws.com/keras.io/img/keras_3/cross_framework_keras_3.jpg)
+
+---
+
+## Author multi-framework layers, models, metrics...
+
+Keras 3 enables you to create components (like arbitrary custom layers or pretrained models) that will work the same in any framework. In particular, Keras 3 gives you access to the `keras.ops` namespace that works across all backends. It contains:
+
+*   **A full implementation of the NumPy API.** Not something "NumPy-like" — just literally the NumPy API, with the same functions and the same arguments. You get `ops.matmul`, `ops.sum`, `ops.stack`, `ops.einsum`, etc.
+*   **A set of neural network-specific functions** that are absent from NumPy, such as `ops.softmax`, `ops.binary_crossentropy`, `ops.conv`, etc.
+
+As long as you only use ops from `keras.ops`, your custom layers, custom losses, custom metrics, and custom optimizers **will work with JAX, PyTorch, and TensorFlow — with the same code**. That means that you can maintain only one component implementation (e.g. a single `model.py` together with a single checkpoint file), and you can use it in all frameworks, with the exact same numerics.
+
+![](https://s3.amazonaws.com/keras.io/img/keras_3/custom_component_authoring_keras_3.jpg)
+
+---
+
+## ...that works seamlessly with any JAX, TensorFlow, and PyTorch workflow.
+
+Keras 3 is not just intended for Keras-centric workflows where you define a Keras model, a Keras optimizer, a Keras loss and metrics, and you call `fit()`, `evaluate()`, and `predict()`. It's also meant to work seamlessly with low-level backend-native workflows: you can take a Keras model (or any other component, such as a loss or metric) and start using it in a JAX training loop, a TensorFlow training loop, or a PyTorch training loop, or as part of a JAX or PyTorch model, with zero friction. Keras 3 provides exactly the same degree of low-level implementation flexibility in JAX and PyTorch as `tf.keras` previously did in TensorFlow.
+
+You can:
+
+*   Write a low-level JAX training loop to train a Keras model using an `optax` optimizer, `jax.grad`, `jax.jit`, `jax.pmap`.
+*   Write a low-level TensorFlow training loop to train a Keras model using `tf.GradientTape` and `tf.distribute`.
+*   Write a low-level PyTorch training loop to train a Keras model using a `torch.optim` optimizer, a `torch` loss function, and the `torch.nn.parallel.DistributedDataParallel` wrapper.
+*   Use Keras layers in a PyTorch `Module` (because they are `Module` instances too!)
+*   Use any PyTorch `Module` in a Keras model as if it were a Keras layer.
+*   etc.
+
+![](https://s3.amazonaws.com/keras.io/img/keras-core/custom_training_loops.jpg)
+
+---
+
+## A new distribution API for large-scale data parallelism and model parallelism.
+
+The models we've been working with have been getting larger and larger, so we wanted to provide a Kerasic solution to the multi-device model sharding problem. The API we designed keeps the model definition, the training logic, and the sharding configuration entirely separate from each other, meaning that your models can be written as if they were going to run on a single device. You can then add arbitrary sharding configurations to arbitrary models when it's time to train them.
+
+Data parallelism (replicating a small model identically on multiple devices) can be handled in just two lines:
+
+![](https://s3.amazonaws.com/keras.io/img/keras_3/keras_3_data_parallel.jpg)
+
+Model parallelism lets you specify sharding layouts for model variables and intermediate output tensors, along multiple named dimensions. In the typical case, you would organize available devices as a 2D grid (called a _device mesh_), where the first dimension is used for data parallelism and the second dimension is used for model parallelism. You would then configure your model to be sharded along the model dimension and replicated along the data dimension.
+
+The API lets you configure the layout of every variable and every output tensor via regular expressions. This makes it easy to quickly specify the same layout for entire categories of variables.
+
+![](https://s3.amazonaws.com/keras.io/img/keras_3/keras_3_model_parallel.jpg)
+
+The new distribution API is intended to be multi-backend, but is only available for the JAX backend for the time being. TensorFlow and PyTorch support is coming soon. Get started with [this guide](/guides/distribution/)!
+
+---
+
+## Pretrained models.
+
+There's a wide range of pretrained models that you can start using today with Keras 3.
+
+All 40 Keras Applications models (the `keras.applications` namespace) are available in all backends. The vast array of pretrained models in [KerasCV](https://keras.io/api/keras_cv/) and [KerasNLP](https://keras.io/api/keras_nlp/) also work with all backends. This includes:
+
+*   BERT
+*   OPT
+*   Whisper
+*   T5
+*   StableDiffusion
+*   YOLOv8
+*   SegmentAnything
+*   etc.
+
+--- 
+
+## Support for cross-framework data pipelines with all backends.
+
+Multi-framework ML also means multi-framework data loading and preprocessing. Keras 3 models can be trained using a wide range of data pipelines — regardless of whether you're using the JAX, PyTorch, or TensorFlow backends. It just works.
+
+*   `tf.data.Dataset` pipelines: the reference for scalable production ML.
+*   `torch.utils.data.DataLoader` objects.
+*   NumPy arrays and Pandas dataframes.
+*   Keras's own `keras.utils.PyDataset` objects.
+
+---
+
+## Progressive disclosure of complexity.
+
+_Progressive disclosure of complexity_ is the design principle at the heart of the Keras API. Keras doesn't force you to follow a single "true" way of building and training models. Instead, it enables a wide range of different workflows, from the very high-level to the very low-level, corresponding to different user profiles.
+
+That means that you can start out with simple workflows — such as using `Sequential` and `Functional` models and training them with `fit()` — and when you need more flexibility, you can easily customize different components while reusing most of your prior code. As your needs become more specific, you don't suddenly fall off a complexity cliff and you don't need to switch to a different set of tools.
+
+We've brought this principle to all of our backends. For instance, you can customize what happens in your training loop while still leveraging the power of `fit()`, without having to write your own training loop from scratch — just by overriding the `train_step` method.
+
+Here's how it works in PyTorch and TensorFlow:
+
+![](https://s3.amazonaws.com/keras.io/img/keras-core/customizing_fit.jpg)
+
+And [here's the link](http://keras.io/guides/custom_train_step_in_jax/) to the JAX version.
+
+---
+
+## A new stateless API for layers, models, metrics, and optimizers.
+
+Do you enjoy [functional programming](https://en.wikipedia.org/wiki/Functional_programming)? You're in for a treat.
+
+All stateful objects in Keras (i.e. objects that own numerical variables that get updated during training or evaluation) now have a stateless API, making it possible to use them in JAX functions (which are required to be fully stateless):
+
+*   All layers and models have a `stateless_call()` method which mirrors `__call__()`.
+*   All optimizers have a `stateless_apply()` method which mirrors `apply()`.
+*   All metrics have a `stateless_update_state()` method which mirrors `update_state()` and a `stateless_result()` method which mirrors `result()`.
+
+These methods have no side-effects whatsoever: they take as input the current value of the state variables of the target object, and return the update values as part of their outputs, e.g.:
+
+`outputs, updated_non_trainable_variables = layer.stateless_call(     trainable_variables,     non_trainable_variables,     inputs, )`
+
+You never have to implement these methods yourself — they're automatically available as long as you've implemented the stateful version (e.g. `call()` or `update_state()`).
+
+* * *
+
+Moving from Keras 2 to Keras 3
+------------------------------
+
+Keras 3 is highly backwards compatible with Keras 2: it implements the full public API surface of Keras 2, with a limited number of exceptions, listed [here](https://github.com/keras-team/keras/issues/18467). Most users will not have to make any code change to start running their Keras scripts on Keras 3.
+
+Larger codebases are likely to require some code changes, since they are more likely to run into one of the exceptions listed above, and are more likely to have been using private APIs or deprecated APIs (`tf.compat.v1.keras` namespace, `experimental` namespace, `keras.src` private namespace). To help you move to Keras 3, we are releasing a complete [migration guide](/guides/migrating_to_keras_3/) with quick fixes for all issues you might encounter.
+
+You also have the option to ignore the changes in Keras 3 and just keep using Keras 2 with TensorFlow — this can be a good option for projects that are not actively developed but need to keep running with updated dependencies. You have two possibilities:
+
+1.  If you were accessing `keras` as a standalone package, just switch to using the Python package `tf_keras` instead, which you can install via `pip install tf_keras`. The code and API are wholly unchanged — it's Keras 2.15 with a different package name. We will keep fixing bugs in `tf_keras` and we will keep regularly releasing new versions. However, no new features or performance improvements will be added, since the package is now in maintenance mode.
+2.  If you were accessing `keras` via `tf.keras`, there are no immediate changes until TensorFlow 2.16. TensorFlow 2.16+ will use Keras 3 by default. In TensorFlow 2.16+, to keep using Keras 2, you can first install `tf_keras`, and then export the environment variable `TF_USE_LEGACY_KERAS=1`. This will direct TensorFlow 2.16+ to resolve tf.keras to the locally-installed `tf_keras` package. Note that this may affect more than your own code, however: it will affect any package importing `tf.keras` in your Python process. To make sure your changes only affect your own code, you should use the `tf_keras` package.
+
+* * *
+
+Enjoy the library!
+------------------
+
+We're excited for you to try out the new Keras and improve your workflows by leveraging multi-framework ML. Let us know how it goes: issues, points of friction, feature requests, or success stories — we're eager to hear from you!
+
+* * *
+
+FAQ
+---
+
+#### Q: Is Keras 3 compatible with legacy Keras 2?
+
+Code developed with `tf.keras` can generally be run as-is with Keras 3 (with the TensorFlow backend). There's a limited number of incompatibilities you should be mindful of, all addressed in [this migration guide](/guides/migrating_to_keras_3/).
+
+When it comes to using APIs from `tf.keras` and Keras 3 side by side, that is **not** possible — they're different packages, running on entirely separate engines.
+
+### Q: Do pretrained models developed in legacy Keras 2 work with Keras 3?
+
+Generally, yes. Any `tf.keras` model should work out of the box with Keras 3 with the TensorFlow backend (make sure to save it in the `.keras` v3 format). In addition, if the model only uses built-in Keras layers, then it will also work out of the box with Keras 3 with the JAX and PyTorch backends.
+
+If the model contains custom layers written using TensorFlow APIs, it is usually easy to convert the code to be backend-agnostic. For instance, it only took us a few hours to convert all 40 legacy `tf.keras` models from Keras Applications to be backend-agnostic.
+
+### Q: Can I save a Keras 3 model in one backend and reload it in another backend?
+
+Yes, you can. There is no backend specialization in saved `.keras` files whatsoever. Your saved Keras models are framework-agnostic and can be reloaded with any backend.
+
+However, note that reloading a model that contains custom components with a different backend requires your custom components to be implemented using backend-agnostic APIs, e.g. `keras.ops`.
+
+### Q: Can I use Keras 3 components inside `tf.data` pipelines?
+
+With the TensorFlow backend, Keras 3 is fully compatible with `tf.data` (e.g. you can `.map()` a `Sequential` model into a `tf.data` pipeline).
+
+With a different backend, Keras 3 has limited support for `tf.data`. You won't be able to `.map()` arbitrary layers or models into a `tf.data` pipeline. However, you will be able to use specific Keras 3 preprocessing layers with `tf.data`, such as `IntegerLookup` or `CategoryEncoding`.
+
+When it comes to using a `tf.data` pipeline (that does not use Keras) to feed your call to `.fit()`, `.evaluate()` or `.predict()` — that works out of the box with all backends.
+
+### Q: Do Keras 3 models behave the same when run with different backends?
+
+Yes, numerics are identical across backends. However, keep in mind the following caveats:
+
+*   RNG behavior is different across different backends (even after seeding — your results will be deterministic in each backend but will differ across backends). So random weight initializations values and dropout values will differ across backends.
+*   Due to the nature of floating-point implementations, results are only identical up to `1e-7` precision in float32, per function execution. So when training a model for a long time, small numerical differences will accumulate and may end up resulting in noticeable numerical differences.
+*   Due to lack of support for average pooling with asymmetric padding in PyTorch, average pooling layers with `padding="same"` may result in different numerics on border rows/columns. This doesn't happen very often in practice — out of 40 Keras Applications vision models, only one was affected.
+
+### Q: Does Keras 3 support distributed training?
+
+Data-parallel distribution is supported out of the box in JAX, TensorFlow, and PyTorch. Model parallel distribution is supported out of the box for JAX with the `keras.distribution` API.
+
+**With TensorFlow:**
+
+Keras 3 is compatible with `tf.distribute` — just open a Distribution Strategy scope and create / train your model within it. [Here's an example](http://keras.io/guides/distributed_training_with_tensorflow/).
+
+**With PyTorch:**
+
+Keras 3 is compatible with PyTorch's `DistributedDataParallel` utility. [Here's an example](http://keras.io/guides/distributed_training_with_torch/).
+
+**With JAX:**
+
+You can do both data parallel and model parallel distribution in JAX using the `keras.distribution` API. For instance, to do data parallel distribution, you only need the following code snippet:
 
 ```python
-import keras
-
-model = keras.Sequential()
+distribution = keras.distribution.DataParallel(devices=keras.distribution.list_devices())
+keras.distribution.set_distribution(distribution)
 ```
 
-레이어를 쌓는 것은 `.add()`를 사용하면 간단합니다:
+For model parallel distribution, see [the following guide](/guides/distribution/).
 
-```python
-from keras import layers
+You can also distribute training yourself via JAX APIs such as `jax.sharding`. [Here's an example](http://keras.io/guides/distributed_training_with_jax/).
 
-model.add(layers.Dense(units=64, activation='relu'))
-model.add(layers.Dense(units=10, activation='softmax'))
-```
+### Q: Can my custom Keras layers be used in native PyTorch `Modules` or with Flax `Modules`?
 
-모델이 좋아 보이면, `.compile()`을 사용하여 학습 프로세스를 구성합니다:
+If they are only written using Keras APIs (e.g. the `keras.ops` namespace), then yes, your Keras layers will work out of the box with native PyTorch and JAX code. In PyTorch, just use your Keras layer like any other PyTorch `Module`. In JAX, make sure to use the stateless layer API, i.e. `layer.stateless_call()`.
 
-```python
-model.compile(loss='categorical_crossentropy',
-              optimizer='sgd',
-              metrics=['accuracy'])
-```
+### Q: Will you add more backends in the future? What about framework XYZ?
 
-필요한 경우, 옵티마이저를 추가로 구성할 수 있습니다. Keras의 철학은 단순한 것을 단순하게 유지하면서, 사용자가 필요할 때 완전히 제어할 수 있도록 하는 것입니다. (궁극적인 제어는 서브클래싱을 통해 소스 코드를 쉽게 확장할 수 있는 것입니다)
-
-```python
-model.compile(loss=keras.losses.categorical_crossentropy,
-              optimizer=keras.optimizers.SGD(learning_rate=0.01, momentum=0.9, nesterov=True))
-```
-
-이제 트레이닝 데이터를 배치에서 반복할 수 있습니다:
-
-```python
-# x_train 및 y_train은 Numpy 배열
-model.fit(x_train, y_train, epochs=5, batch_size=32)
-```
-
-테스트 손실과 지표를 한 줄로 평가하세요:
-
-```python
-loss_and_metrics = model.evaluate(x_test, y_test, batch_size=128)
-```
-
-또는 새로운 데이터에 대한 예측을 생성할 수도 있습니다:
-
-```python
-classes = model.predict(x_test, batch_size=128)
-```
-
-방금 보신 것은 Keras를 사용하는 가장 기본적인 방법입니다.
-
-하지만, Keras는 최첨단 연구 아이디어를 반복하는 데 적합한 매우 유연한 프레임워크이기도 합니다. Keras는 **복잡성의 점진적 공개**라는 원칙을 따르기 때문에, 쉽게 시작할 수 있지만, 각 단계마다 점진적인 학습만 거치면, 임의의 고급 사용 사례도 처리할 수 있습니다.
-
-위에서 몇 줄로 간단한 신경망을 트레이닝하고 평가할 수 있었던 것과 마찬가지로, Keras를 사용하여 새로운 트레이닝 절차나 최첨단 모델 아키텍처를 빠르게 개발할 수 있습니다.
-
-다음은 사용자 정의 Keras 레이어의 예시이며, JAX, TensorFlow 또는 PyTorch의 저수준(low-level) 워크플로우에서 서로 바꿔서(interchangeably) 사용할 수 있습니다:
-
-```python
-import keras
-from keras import ops
-
-class TokenAndPositionEmbedding(keras.Layer):
-    def __init__(self, max_length, vocab_size, embed_dim):
-        super().__init__()
-        self.token_embed = self.add_weight(
-            shape=(vocab_size, embed_dim),
-            initializer="random_uniform",
-            trainable=True,
-        )
-        self.position_embed = self.add_weight(
-            shape=(max_length, embed_dim),
-            initializer="random_uniform",
-            trainable=True,
-        )
-
-    def call(self, token_ids):
-        # 위치 임베딩
-        length = token_ids.shape[-1]
-        positions = ops.arange(0, length, dtype="int32")
-        positions_vectors = ops.take(self.position_embed, positions, axis=0)
-        # 토큰 임베딩
-        token_ids = ops.cast(token_ids, dtype="int32")
-        token_vectors = ops.take(self.token_embed, token_ids, axis=0)
-        # 둘을 합하기
-        embed = token_vectors + positions_vectors
-        # 임베딩을 Normalize
-        power_sum = ops.sum(ops.square(embed), axis=-1, keepdims=True)
-        return embed / ops.sqrt(ops.maximum(power_sum, 1e-7))
-```
-
-Keras에 대한 자세한 튜토리얼은 여기에서 확인할 수 있습니다:
-
-- [엔지니어를 위한 Keras 소개](/getting_started/intro_to_keras_for_engineers/)
-- [개발자 가이드](/guides/)
-
-----
-
-## 지원
-
-[Keras Google 그룹](https://groups.google.com/forum/#!forum/keras-users)에서 질문하고 개발 토론에 참여할 수 있습니다.
-
-[GitHub 이슈](https://github.com/keras-team/keras/issues)에 **버그 리포트 및 기능 요청**(이것만 가능)을 게시할 수도 있습니다. [가이드라인](https://github.com/keras-team/keras-io/blob/master/templates/contributing.md)을 먼저 읽어주세요.
-
-----
-
-## 왜 Keras라는 이름인가요?
-
-Keras(κέρας)는 고대 그리스어로 _horn_을 의미합니다. 고대 그리스와 라틴 문학에 등장하는 문학적 이미지로, _오디세이_에서 처음 등장하며, 꿈의 정령(_Oneiroi_, 단수형 _Oneiros_)을 거짓 환상으로 몽상가를 속이는(deceive) 자, ivory의 문을 통해 지구에 도착하는 자, 다가올 미래를 알리는 자, horn의 문을 통해 도착하는 자로 나누고 있습니다. κέρας(뿔)/κραίνω(성취하다), ἐλέφας(상아)/ἐλεφαίρομαι(속이다)라는 단어에서 유래한 말입니다.
-
-Keras는 처음에 프로젝트 ONEIROS(Open-ended Neuro-Electronic Intelligent Robot Operating System, 개방형 신경 전자 지능형 로봇 운영체제)의 연구 노력의 일환으로 개발되었습니다.
-
-> _"Oneiroi는 우리가 풀지 못한 수수께끼의 존재로, 어떤 이야기를 들려줄지 누가 확신할 수 있을까요? 인간이 찾는 모든 것이 이루어지지는 않습니다. 덧없는 Oneiroi에게 통로를 제공하는 두 개의 문이 있는데, 하나는 뿔로, 다른 하나는 상아로 만들어져 있습니다. 톱질한 상아를 통과하는 Oneiroi는, 성취되지 않을 메시지를 담고 있는 속임수이고, **광택이 나는 뿔을 통해 나오는 Oneiroi는 그것을 보는 사람들에게 성취될 진실을 담고 있다."**_ 호머, 오디세이 19. 562쪽(셰링 번역).
-
-----
-
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+We're open to adding new backends as long as the target framework has a large user base or otherwise has some unique technical benefits to bring to the table. However, adding and maintaining a new backend is a large burden, so we're going to carefully consider each new backend candidate on a case by case basis, and we're not likely to add many new backends. We will not add any new frameworks that aren't yet well-established. We are now potentially considering adding a backend written in [Mojo](https://www.modular.com/mojo). If that's something you might find useful, please let the Mojo team know.

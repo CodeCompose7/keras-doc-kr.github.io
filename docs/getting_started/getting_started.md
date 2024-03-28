@@ -1,12 +1,12 @@
 ---
 layout: default
 title: 시작하기
-nav_order: 2
+nav_order: 3
 permalink: /getting_started
 has_children: true
 ---
 
-* 원본 링크 : [https://keras.io/getting_started/](https://keras.io/getting_started/)
+* 원본 링크 : [https://keras.io/getting_started/](https://keras.io/getting_started/){:target="_blank"}
 * 최종 수정일 : 2024-03-28
 
 # Keras로 시작하기
