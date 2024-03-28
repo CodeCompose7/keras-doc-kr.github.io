@@ -3,7 +3,7 @@ layout: default
 title: 시작하기
 nav_order: 2
 has_children: true
-permalink: /getting-started
+permalink: /getting_started
 ---
 
 # Keras로 시작하기
