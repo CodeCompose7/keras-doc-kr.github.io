@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Zero-DCE for low-light image enhancement
-nav_order: 38+00
+nav_order: 39+00
 permalink: /examples/vision/zero_dce/
 parent: 컴퓨터 비전
 grand_parent: 코드 예제
