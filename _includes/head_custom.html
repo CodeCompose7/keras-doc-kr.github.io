@@ -43,16 +43,22 @@
 
 <style>
    @media (min-width: 50rem) {
-      .nav-list .nav-list-item .nav-list-link {
+
+      .nav-list .nav-list-item .nav-list-link,
+      html.dark-mode .nav-list .nav-list-item .nav-list-link {
          padding-left: 0;
       }
    }
 
    @media (min-width: 66.5rem) {
+
       .site-nav,
+      html.dark-mode .site-nav,
       .site-header,
-      .site-footer {
-         width: 25rem;
+      html.dark-mode .site-header,
+      .site-footer,
+      html.dark-mode .site-footer {
+         width: 20.5rem;
       }
    }
 </style>
