@@ -10,9 +10,9 @@ permalink: /
 
 # Keras 3.0 소개
 
-[시작하기](/getting_started){: .btn .btn-blue }
-[API 문서](/api){: .btn .btn-blue }
-[가이드](/guides){: .btn .btn-blue }
+[시작하기](getting_started){: .btn .btn-blue }
+[API 문서](api){: .btn .btn-blue }
+[가이드](guides){: .btn .btn-blue }
 [GitHub](https://github.com/keras-team/keras/){: .btn .btn-blue }
 
 After five months of extensive public beta testing, we're excited to announce the official release of Keras 3.0. Keras 3 is a full rewrite of Keras that enables you to run your Keras workflows on top of either JAX, TensorFlow, or PyTorch, and that unlocks brand new large-scale model training and deployment capabilities. You can pick the framework that suits you best, and switch from one to another based on your current goals. You can also use Keras as a low-level cross-framework language to develop custom components such as layers, models, or metrics that can be used in native workflows in JAX, TensorFlow, or PyTorch — with one codebase.
