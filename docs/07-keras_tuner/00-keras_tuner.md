@@ -1,6 +1,6 @@
 ---
 layout: default
-title: KerasTuner
+title: KerasTuner - 하이퍼파라미터 튜닝
 nav_order: 7
 permalink: /keras_tuner
 has_children: false

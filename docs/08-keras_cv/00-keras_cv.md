@@ -1,6 +1,6 @@
 ---
 layout: default
-title: KerasCV
+title: KerasCV - 컴퓨터 비전 워크플로우
 nav_order: 8
 permalink: /keras_cv
 has_children: false
