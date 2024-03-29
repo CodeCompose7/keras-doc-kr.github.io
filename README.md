@@ -2,12 +2,13 @@
 
 ## Keras
 
-[GitHub Page](https://codecompose7.github.io/keras-doc-kr.github.io/about)
+* [GitHub Page](https://codecompose7.github.io/keras-doc-kr.github.io/about)
 
 ### 참조 사이트
 
 * [Keras에 대해](https://keras.io/about/)
 * [DeepL](https://www.deepl.com/)
+* [HTML to Markdown](https://codebeautify.org/html-to-markdown)
 
 ## Jekyll 생성
 
