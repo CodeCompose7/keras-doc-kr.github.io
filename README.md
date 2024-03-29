@@ -2,7 +2,9 @@
 
 ## Keras
 
-* [GitHub Page](https://codecompose7.github.io/keras-doc-kr.github.io/about)
+Keras 한글 문서 페이지는 GitHub Page에서 볼 수 있습니다.
+
+* [GitHub Page에서 보기](https://codecompose7.github.io/keras-doc-kr.github.io/)
 
 ### 참조 사이트
 
@@ -13,6 +15,8 @@
 ## Jekyll 생성
 
 ### 로컬 미리보기
+
+로컬 호스팅을 위한 jekyll 실행 방법입니다.
 
 ```shell
 bundle exec jekyll serve
