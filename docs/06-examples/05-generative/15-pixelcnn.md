@@ -2,7 +2,7 @@
 layout: default
 title: PixelCNN
 nav_order: 15+00
-permalink: /examples/generative/gaugan/
+permalink: /examples/generative/pixelcnn/
 parent: 생성형 딥러닝
 grand_parent: 코드 예제
 ---
