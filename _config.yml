@@ -44,7 +44,7 @@ search:
 back_to_top: true
 back_to_top_text: "맨 위로 가기"
 
-color_scheme: "dark"
+# color_scheme: "dark"
 
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
