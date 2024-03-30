@@ -20,54 +20,9 @@ parent: 시작하기
 
 ---
 
-Keras FAQ
-=========
+## 일반적인 질문
 
-A list of frequently Asked Keras Questions.
-
-General questions
------------------
-
-<!-- no toc -->
-*   [How can I train a Keras model on multiple GPUs (on a single machine)?](#how-can-i-train-a-keras-model-on-multiple-gpus-on-a-single-machine)
-*   [How can I train a Keras model on TPU?](#how-can-i-train-a-keras-model-on-tpu)
-*   [Where is the Keras configuration file stored?](#where-is-the-keras-configuration-file-stored)
-*   [How to do hyperparameter tuning with Keras?](#how-to-do-hyperparameter-tuning-with-keras)
-*   [How can I obtain reproducible results using Keras during development?](#how-can-i-obtain-reproducible-results-using-keras-during-development)
-*   [What are my options for saving models?](#what-are-my-options-for-saving-models)
-*   [How can I install HDF5 or h5py to save my models?](#how-can-i-install-hdf5-or-h5py-to-save-my-models)
-*   [How should I cite Keras?](#how-should-i-cite-keras)
-
-Training-related questions
---------------------------
-
-<!-- no toc -->
-*   [What do "sample", "batch", and "epoch" mean?](#what-do-sample-batch-and-epoch-mean)
-*   [Why is my training loss much higher than my testing loss?](#why-is-my-training-loss-much-higher-than-my-testing-loss)
-*   [How can I ensure my training run can recover from program interruptions?](#how-can-i-ensure-my-training-run-can-recover-from-program-interruptions)
-*   [How can I interrupt training when the validation loss isn't decreasing anymore?](#how-can-i-interrupt-training-when-the-validation-loss-isnt-decreasing-anymore)
-*   [How can I freeze layers and do fine-tuning?](#how-can-i-freeze-layers-and-do-fine-tuning)
-*   [What's the difference between the `training` argument in `call()` and the `trainable` attribute?](#whats-the-difference-between-the-training-argument-in-call-and-the-trainable-attribute)
-*   [In `fit()`, how is the validation split computed?](#in-fit-how-is-the-validation-split-computed)
-*   [In `fit()`, is the data shuffled during training?](#in-fit-is-the-data-shuffled-during-training)
-*   [What's the recommended way to monitor my metrics when training with `fit()`?](#whats-the-recommended-way-to-monitor-my-metrics-when-training-with-fit)
-*   [What if I need to customize what `fit()` does?](#what-if-i-need-to-customize-what-fit-does)
-*   [What's the difference between `Model` methods `predict()` and `__call__()`?](#whats-the-difference-between-model-methods-predict-and-__call__)
-
-Modeling-related questions
---------------------------
-
-<!-- no toc -->
-*   [How can I obtain the output of an intermediate layer (feature extraction)?](#how-can-i-obtain-the-output-of-an-intermediate-layer-feature-extraction)
-*   [How can I use pre-trained models in Keras?](#how-can-i-use-pre-trained-models-in-keras)
-*   [How can I use stateful RNNs?](#how-can-i-use-stateful-rnns)
-
-* * *
-
-General questions
------------------
-
-### How can I train a Keras model on multiple GPUs (on a single machine)?
+### 여러 GPU(단일 머신)에서 Keras 모델을 어떻게 트레이닝 할 수 있나요?
 
 There are two ways to run a single model on multiple GPUs: **data parallelism** and **device parallelism**. Keras covers both.
 
@@ -81,7 +36,7 @@ For model parallelism, Keras has its own distribution API, which is currently on
 
 * * *
 
-### How can I train a Keras model on TPU?
+### TPU에서 Keras 모델을 어떻게 트레이닝 시킬 수 있나요?
 
 TPUs are a fast & efficient hardware accelerator for deep learning that is publicly available on Google Cloud. You can use TPUs via Colab, Kaggle notebooks, and GCP Deep Learning VMs (provided the `TPU_NAME` environment variable is set on the VM).
 
@@ -122,7 +77,7 @@ Importantly, you should:
 
 * * *
 
-### Where is the Keras configuration file stored?
+### Keras 구성 파일은 어디에 저장되나요?
 
 The default directory where all Keras data is stored is:
 
@@ -156,13 +111,13 @@ Likewise, cached dataset files, such as those downloaded with [`get_file()`]({{ 
 
 * * *
 
-### How to do hyperparameter tuning with Keras?
+### Keras로 하이퍼파라미터 튜닝을 수행하는 방법은 무엇인가요?
 
 We recommend using [KerasTuner]({{ site.baseurl }}/keras_tuner/).
 
 * * *
 
-### How can I obtain reproducible results using Keras during development?
+### 개발 중에 Keras를 사용하여, 재현 가능한 결과를 얻으려면 어떻게 해야 하나요?
 
 There are four sources of randomness to consider:
 
@@ -183,7 +138,7 @@ To make the CUDA runtime deterministic: if using the TensorFlow backend, call [`
 
 * * *
 
-### What are my options for saving models?
+### 모델을 저장하기 위한 옵션은 무엇입니까?
 
 _Note: it is not recommended to use pickle or cPickle to save a Keras model._
 
@@ -304,7 +259,7 @@ model = model_from_json(json_string, custom_objects={'AttentionLayer': Attention
 
 * * *
 
-### How can I install HDF5 or h5py to save my models?
+### 모델을 저장하기 위해 HDF5 또는 h5py를 어떻게 설치합니까?
 
 In order to save your Keras models as HDF5 files, Keras uses the h5py Python package. It is a dependency of Keras and should be installed by default. On Debian-based distributions, you will have to additionally install `libhdf5`:
 
@@ -322,7 +277,7 @@ If it imports without error it is installed, otherwise you can find [detailed in
 
 * * *
 
-### How should I cite Keras?
+### Keras를 어떻게 인용해야 하나요?
 
 Please cite Keras in your publications if it helps your research. Here is an example BibTeX entry:
 
@@ -337,10 +292,10 @@ Please cite Keras in your publications if it helps your research. Here is an exa
 
 * * *
 
-Training-related questions
+트레이닝 관련 질문
 --------------------------
 
-### What do "sample", "batch", and "epoch" mean?
+### "샘플", "배치", "에포크"는 무엇을 의미하나요?
 
 Below are some common definitions that are necessary to know and understand to correctly utilize Keras `fit()`:
 
@@ -352,7 +307,7 @@ Below are some common definitions that are necessary to know and understand to c
 
 * * *
 
-### Why is my training loss much higher than my testing loss?
+### 트레이닝 손실이 테스트 손실보다 훨씬 높은 이유는 무엇입니까?
 
 A Keras model has two modes: training and testing. Regularization mechanisms, such as Dropout and L1/L2 weight regularization, are turned off at testing time. They are reflected in the training time loss but not in the test time loss.
 
@@ -360,7 +315,7 @@ Besides, the training loss that Keras displays is the average of the losses for 
 
 * * *
 
-### How can I ensure my training run can recover from program interruptions?
+### 트레이닝 실행이 프로그램 중단으로부터 복구될 수 있는지 어떻게 확인할 수 있습니까?
 
 To ensure the ability to recover from an interrupted training run at any time (fault tolerance), you should use a [`keras.callbacks.BackupAndRestore`]({{ site.baseurl }}/api/callbacks/backup_and_restore#backupandrestore-class) callback that regularly saves your training progress, including the epoch number and weights, to disk, and loads it the next time you call `Model.fit()`.
 
@@ -397,7 +352,7 @@ Find out more in the [callbacks documentation]({{ site.baseurl }}/api/callbacks/
 
 * * *
 
-### How can I interrupt training when the validation loss isn't decreasing anymore?
+### 검증 손실이 더 이상 감소하지 않을 때, 트레이닝을 중단하려면 어떻게 해야 합니까?
 
 You can use an `EarlyStopping` callback:
 
@@ -412,7 +367,7 @@ Find out more in the [callbacks documentation]({{ site.baseurl }}/api/callbacks/
 
 * * *
 
-### How can I freeze layers and do fine-tuning?
+### 레이어를 동결하고, 미세 조정하려면 어떻게 해야 합니까?
 
 **Setting the `trainable` attribute**
 
@@ -513,7 +468,7 @@ gan.compile(...)  # `discriminator` is a submodel of `gan`, which should not be 
 
 * * *
 
-### What's the difference between the `training` argument in `call()` and the `trainable` attribute?
+### `call()`의 `training` 인수와 `trainable` 속성의 차이점은 무엇인가요?
 
 `training` is a boolean argument in `call` that determines whether the call should be run in inference mode or training mode. For example, in training mode, a `Dropout` layer applies random dropout and rescales the output. In inference mode, the same layer does nothing. Example:
 
@@ -569,7 +524,7 @@ This behavior only applies for `BatchNormalization`. For every other layer, weig
 
 * * *
 
-### In `fit()`, how is the validation split computed?
+### `fit()`에서, 검증 분할은 어떻게 계산됩니까?
 
 If you set the `validation_split` argument in `model.fit` to e.g. 0.1, then the validation data used will be the _last 10%_ of the data. If you set it to 0.25, it will be the last 25% of the data, etc. Note that the data isn't shuffled before extracting the validation split, so the validation is literally just the _last_ x% of samples in the input you passed.
 
@@ -579,7 +534,7 @@ Note that the `validation_split` option is only available if your data is passed
 
 * * *
 
-### In `fit()`, is the data shuffled during training?
+### `fit()`에서, 트레이닝 중에 데이터가 섞이나요?
 
 If you pass your data as NumPy arrays and if the `shuffle` argument in `model.fit()` is set to `True` (which is the default), the training data will be globally randomly shuffled at each epoch.
 
@@ -591,7 +546,7 @@ Validation data is never shuffled.
 
 * * *
 
-### What's the recommended way to monitor my metrics when training with `fit()`?
+### `fit()`으로 트레이닝할 때 메트릭을 모니터링하는 데 권장되는 방법은 무엇입니까?
 
 Loss values and metric values are reported via the default progress bar displayed by calls to `fit()`. However, staring at changing ascii numbers in a console is not an optimal metric-monitoring experience. We recommend the use of [TensorBoard](https://www.tensorflow.org/tensorboard), which will display nice-looking graphs of your training and validation metrics, regularly updated during training, which you can access from your browser.
 
@@ -599,7 +554,7 @@ You can use TensorBoard with `fit()` via the [`TensorBoard` callback]({{ site.ba
 
 * * *
 
-### What if I need to customize what `fit()` does?
+### `fit()`의 기능을 맞춤설정해야 하는 경우 어떻게 해야 하나요?
 
 You have two options:
 
@@ -627,7 +582,7 @@ See the following guides:
 
 * * *
 
-### What's the difference between `Model` methods `predict()` and `__call__()`?
+### `Model` 메소드 `predict()`와 `__call__()`의 차이점은 무엇입니까?
 
 Let's answer with an extract from [Deep Learning with Python, Second Edition](https://www.manning.com/books/deep-learning-with-python-second-edition?a_aid=keras):
 
@@ -650,10 +605,10 @@ def predict(x):
 
 * * *
 
-Modeling-related questions
+모델링 관련 질문
 --------------------------
 
-### How can I obtain the output of an intermediate layer (feature extraction)?
+### 중간 레이어의 출력(특성 추출)은 어떻게 얻을 수 있나요?
 
 In the Functional API and Sequential API, if a layer has been called exactly once, you can retrieve its output via `layer.output` and its input via `layer.input`. This enables you do quickly instantiate feature-extraction models, like this one:
 
@@ -690,13 +645,13 @@ intermediate_output = intermediate_layer_model(data)
 
 * * *
 
-### How can I use pre-trained models in Keras?
+### Keras에서 사전 트레이닝된 모델을 어떻게 사용할 수 있나요?
 
 You could leverage the [models available in `keras.applications`]({{ site.baseurl }}/api/applications/), or the models available in [KerasCV]({{ site.baseurl }}/keras_cv/) and [KerasNLP]({{ site.baseurl }}/keras_nlp/).
 
 * * *
 
-### How can I use stateful RNNs?
+### 상태있는 RNN을 어떻게 사용할 수 있나요?
 
 Making a RNN stateful means that the states for the samples of each batch will be reused as initial states for the samples in the next batch.
 

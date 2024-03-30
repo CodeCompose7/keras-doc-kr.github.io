@@ -20,12 +20,11 @@ parent: 시작하기
 
 ---
 
-Keras 3 benchmarks
-==================
+## Keras 3 벤치마크
 
 We benchmark the three backends of Keras 3 ([TensorFlow](https://tensorflow.org/), [JAX](https://jax.readthedocs.io/en/latest/), [PyTorch](https://pytorch.org/)) alongside native PyTorch implementations ([HuggingFace](https://huggingface.co/) and [Meta Research](https://github.com/facebookresearch/)) and alongside Keras 2 with TensorFlow. Find code and setup details for reproducing our results [here](https://github.com/haifeng-jin/keras-benchmarks/tree/v0.0.3).
 
-Models
+모델
 ------
 
 We chose a set of popular computer vision and natural language processing models for both generative and non-generative AI tasks. See the table below for our selections.
@@ -49,12 +48,12 @@ We employed synthetic data for all benchmarks. We used `bfloat16` precision for 
 
 To measure out-of-the-box performance, we use high-level APIs (e.g. `Trainer()` from HuggingFace, plain PyTorch training loops and Keras `model.fit()`) with as little configuration as possible. Note that this is quite different from measuring an optimized implementation for a particular hardware/framework/model combination.
 
-Hardware
+하드웨어
 --------
 
 All benchmarks are done with a single NVIDIA A100 GPU with 40GB of GPU memory on a Google Cloud Compute Engine of machine type `a2-highgpu-1g` with 12 vCPUs and 85GB host memory.
 
-Results
+결과
 -------
 
 Table 2 displays benchmarking results in milliseconds per step. Each step involves training or predicting on a single data batch. Results are averaged over 100 steps, excluding the first, which includes model creation and compilation overhead.
@@ -83,16 +82,16 @@ For large language models (Gemma and Mistral), we also used the same batch size 
 
 \* _LLM inference with the PyTorch backend is abnormally slow at this time because KerasNLP uses static sequence padding, unlike HuggingFace. This will be addressed soon._
 
-Discussion
+토론
 ----------
 
-### Key Finding 1: There is no "best" backend
+### 주요 발견 1: "최고의" 백엔드는 없습니다.
 
 Each of the three backends of Keras offers unique strengths. Crucially, from a performance standpoint, there's no single backend that consistently outpaces the others. The fastest backend often depends on your specific model architecture.
 
 This underscores the value of framework optionality when chasing optimal performance. Keras 3 empowers you to seamlessly switch backends, ensuring you find the ideal match for your model.
 
-### Key Finding 2: Keras 3 is consistently faster than the reference PyTorch implementations
+### 주요 발견 2: Keras 3은 참조 PyTorch 구현보다 지속적으로 빠릅니다.
 
 The following figure compares the best-performing Keras 3 backend for each model with the corresponding reference native PyTorch implementation. We calculated the throughput (steps/ms) increase of Keras 3 over native PyTorch from Table 2. A 100% increase indicates Keras 3 is twice as fast, while 0% means both frameworks perform equally.
 
@@ -102,7 +101,7 @@ The following figure compares the best-performing Keras 3 backend for each model
 
 Keras 3 with the best-performing backend outperformed the reference native PyTorch implementations for all the models. Notably, 5 out of 10 tasks demonstrated speedups exceeding 50%, with a maximum speedup of 290%.
 
-### Key Finding 3: Keras 3 delivers best-in-class "out-of-the-box" performance
+### 주요 발견 3: Keras 3는 동급 최고의 "기본(out-of-the-box)" 성능을 제공합니다.
 
 All Keras model implementations benchmarked here are plain implementations without any custom performance optimizations: they represent "out-of-the-box performance", the kind of performance that any Keras user should expect for their own models. While, for native PyTorch implementations, more performance optimizations are expected on the user's side.
 
@@ -112,7 +111,7 @@ Conversely, consider a less manually-optimized model like SegmentAnything, where
 
 The takeaway here is that Keras offers exceptional out-of-the-box performance. You don't have to know all the tricks to make your model run faster.
 
-### Key Finding 4: Keras 3 is faster than Keras 2
+### 주요 발견 4: Keras 3은 Keras 2보다 빠릅니다.
 
 We also calculated the throughput (steps/ms) increase of Keras 3 (using its best-performing backend) over Keras 2 with TensorFlow from Table 1. Results are shown in the following figure.
 
@@ -124,12 +123,12 @@ Keras 3 consistently outperformed Keras 2 across all benchmarked models, with su
 
 Importantly, you would still see a performance boost even if you simply upgrade to Keras 3 and continue using the TensorFlow backend. This is mainly because Keras 2 uses more TensorFlow fused ops directly, which may be sub-optimal for XLA compilation in certain use cases.
 
-Conclusions
+결론
 -----------
 
 Framework performance depends heavily on the specific model. Keras 3 empowers you to select the fastest framework for your task – an option almost always to outperform both Keras 2 and reference PyTorch implementations. Importantly, Keras 3 models deliver excellent out-of-the-box performance without requiring complex, low-level optimizations.
 
-References
+참조
 ----------
 
 [^1]: Kirillov, Alexander, et al. "Segment anything." ICCV (2023).

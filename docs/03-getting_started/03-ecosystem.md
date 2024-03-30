@@ -20,8 +20,7 @@ parent: 시작하기
 
 ---
 
-The Keras ecosystem
-===================
+## Keras 에코시스템
 
 The Keras project isn't limited to the core Keras API for building and training neural networks. It spans a wide range of related initiatives that cover every step of the machine learning workflow.
 
