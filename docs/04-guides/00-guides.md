@@ -2,7 +2,7 @@
 layout: default
 title: 개발자 가이드
 nav_order: 4
-permalink: /guides
+permalink: /guides/
 has_children: true
 ---
 
