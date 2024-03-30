@@ -35,7 +35,7 @@ Keras는:
 
 ## Keras와의 첫 만남
 
-Keras의 핵심 데이터 구조는 **레이어(layers)**와 **모델(models)**입니다. 가장 간단한 모델 유형은 선형 레이어 스택인 [`Sequential` 모델](/guides/sequential_model/)입니다. 더 복잡한 아키텍처의 경우, 임의의 레이어 그래프를 만들 수 있는 [Keras 함수형 API](/guides/functional_api/)를 사용하거나, [서브클래싱을 통해 완전히 처음부터 모델 작성](/guides/making_new_layers_and_models_via_subclassing/) 방법을 사용해야 합니다.
+Keras의 핵심 데이터 구조는 **레이어(layers)**와 **모델(models)**입니다. 가장 간단한 모델 유형은 선형 레이어 스택인 [`Sequential` 모델](guides/sequential_model/)입니다. 더 복잡한 아키텍처의 경우, 임의의 레이어 그래프를 만들 수 있는 [Keras 함수형 API](guides/functional_api/)를 사용하거나, [서브클래싱을 통해 완전히 처음부터 모델 작성](guides/making_new_layers_and_models_via_subclassing/) 방법을 사용해야 합니다.
 
 다음은 `Sequential` 모델입니다:
 
@@ -131,8 +131,8 @@ class TokenAndPositionEmbedding(keras.Layer):
 
 Keras에 대한 자세한 튜토리얼은 여기에서 확인할 수 있습니다:
 
-- [엔지니어를 위한 Keras 소개](/getting_started/intro_to_keras_for_engineers/)
-- [개발자 가이드](/guides/)
+- [엔지니어를 위한 Keras 소개](getting_started/intro_to_keras_for_engineers/)
+- [개발자 가이드](guides/)
 
 ----
 

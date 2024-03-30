@@ -20,41 +20,41 @@ has_children: true
 
 ---
 
-## Learning resources
+## 학습 리소스
 ------------------
 
-Are you a machine learning engineer looking for a Keras introduction one-pager? Read our guide [Introduction to Keras for engineers](/getting_started/intro_to_keras_for_engineers/).
+Keras 소개 한 페이지짜리 가이드를 찾고 계신 머신러닝 엔지니어이신가요? [엔지니어를 위한 Keras 소개](getting_started/intro_to_keras_for_engineers/) 가이드를 읽어보세요.
 
-Want to learn more about Keras 3 and its capabilities? See the [Keras 3 launch announcement](/keras_3/).
+Keras 3와 그 기능에 대해 더 자세히 알고 싶으신가요? [Keras 3 출시 발표](/)를 참조하세요.
 
-Are you looking for detailed guides covering in-depth usage of different parts of the Keras API? Read our [Keras developer guides](/guides/).
+Keras API의 다양한 부분에 대한 심층적인 사용법을 다루는 자세한 가이드를 찾고 계신가요? [Keras 개발자 가이드](guides/)를 읽어보세요.
 
-Are you looking for tutorials showing Keras in action across a wide range of use cases? See the [Keras code examples](/examples/): over 150 well-explained notebooks demonstrating Keras best practices in computer vision, natural language processing, and generative AI.
+다양한 사용 사례에서 Keras가 실제로 작동하는 모습을 보여주는 튜토리얼을 찾고 계신가요? 컴퓨터 비전, 자연어 처리, 생성 AI 분야에서 Keras 모범 사례를 보여주는 150개 이상의 잘 설명된 노트북인 [Keras 코드 예제](examples/)를 참조하세요.
 
 ----
 
-## Installing Keras 3
+## 케라스 3 설치하기
 
-You can install Keras from PyPI via:
+PyPI에서 다음을 통해 Keras를 설치할 수 있습니다:
 
 ```shell
 pip install --upgrade keras
 ```
 
-You can check your local Keras version number via:
+다음을 통해 로컬 Keras 버전 번호를 확인할 수 있습니다:
 
 ```python
 import keras
 print(keras.__version__)
 ```
 
-To use Keras 3, you will also need to install a backend framework – either JAX, TensorFlow, or PyTorch:
+Keras 3를 사용하려면 백엔드 프레임워크(JAX, TensorFlow 또는 PyTorch)도 설치해야 합니다:
 
-*   [Installing JAX](https://jax.readthedocs.io/en/latest/installation.html)
-*   [Installing TensorFlow](https://www.tensorflow.org/install)
-*   [Installing PyTorch](https://pytorch.org/get-started/locally/)
+* [JAX 설치하기](https://jax.readthedocs.io/en/latest/installation.html)
+* [TensorFlow 설치](https://www.tensorflow.org/install)
+* [PyTorch 설치](https://pytorch.org/get-started/locally/)
 
-If you install TensorFlow 2.15, you should reinstall Keras 3 afterwards. The cause is that `tensorflow==2.15` will overwrite your Keras installation with `keras==2.15`. This step is not necessary for TensorFlow versions 2.16 onwards as starting in TensorFlow 2.16, it will install Keras 3 by default.
+텐서플로우 2.15를 설치한 경우, 이후 케라스 3를 재설치해야 합니다. 그 이유는 `tensorflow==2.15`가 Keras 설치를 `keras==2.15`로 덮어쓰기 때문입니다. 텐서플로우 2.16 버전부터는 기본적으로 케라스 3이 설치되므로 이 단계는 필요하지 않습니다.
 
 ### Installing KerasCV and KerasNLP
 
