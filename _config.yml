@@ -11,6 +11,12 @@ enable_copy_code_button: true
 
 aux_links_new_tab: true
 
+defaults:
+  - scope:
+      path: "img"
+    values:
+      image: true
+
 baseurl: "/keras-doc-kr.github.io"
 
 # Enable or disable the site search
