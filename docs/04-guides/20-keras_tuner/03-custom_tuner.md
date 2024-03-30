@@ -3,7 +3,7 @@ layout: default
 title: Tune hyperparameters in your custom training loop
 nav_order: 3
 permalink: /guides/keras_tuner/custom_tuner/
-parent: 하이퍼파라미터 튜닝
+parent: KerasTuner
 grand_parent: 개발자 가이드
 ---
 

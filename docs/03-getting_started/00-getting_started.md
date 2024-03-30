@@ -2,7 +2,7 @@
 layout: default
 title: 시작하기
 nav_order: 3
-permalink: /getting_started
+permalink: /getting_started/
 has_children: true
 ---
 

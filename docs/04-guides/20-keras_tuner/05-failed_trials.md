@@ -3,7 +3,7 @@ layout: default
 title: Handling failed trials in KerasTuner
 nav_order: 5
 permalink: /guides/keras_tuner/failed_trials/
-parent: 하이퍼파라미터 튜닝
+parent: KerasTuner
 grand_parent: 개발자 가이드
 ---
 

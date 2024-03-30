@@ -3,7 +3,7 @@ layout: default
 title: Tailor the search space
 nav_order: 6
 permalink: /guides/keras_tuner/tailor_the_search_space/
-parent: 하이퍼파라미터 튜닝
+parent: KerasTuner
 grand_parent: 개발자 가이드
 ---
 

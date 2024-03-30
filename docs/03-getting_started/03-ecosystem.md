@@ -2,7 +2,7 @@
 layout: default
 title: Keras 에코시스템
 nav_order: 3
-permalink: /getting_started/ecosystem
+permalink: /getting_started/ecosystem/
 parent: 시작하기
 ---
 

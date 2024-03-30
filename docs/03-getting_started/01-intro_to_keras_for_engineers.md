@@ -2,7 +2,7 @@
 layout: default
 title: 엔지니어를 위한 Keras 소개
 nav_order: 1
-permalink: /getting_started/intro_to_keras_for_engineers
+permalink: /getting_started/intro_to_keras_for_engineers/
 parent: 시작하기
 ---
 
