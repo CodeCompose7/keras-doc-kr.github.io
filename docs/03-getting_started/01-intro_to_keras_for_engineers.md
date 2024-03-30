@@ -87,9 +87,9 @@ y_train shape: (60000,)
 
 Keras에서 제공하는 다양한 모델 빌드 옵션은 다음과 같습니다:
 
-*   [Sequential API](https://keras.io/guides/sequential_model/) (아래에 우리가 사용한 것)
-*   [Functional API](https://keras.io/guides/functional_api/) (가장 일반적임)
-*   [서브클래싱을 통해 당신만의 모델 작성하기](https://keras.io/guides/making_new_layers_and_models_via_subclassing/) (for advanced use cases)
+*   [Sequential API]({{ site.baseurl }}/guides/sequential_model/) (아래에 우리가 사용한 것)
+*   [Functional API]({{ site.baseurl }}/guides/functional_api/) (가장 일반적임)
+*   [서브클래싱을 통해 당신만의 모델 작성하기]({{ site.baseurl }}/guides/making_new_layers_and_models_via_subclassing/) (for advanced use cases)
 
 ```python
 # 모델 파라미터
@@ -235,14 +235,14 @@ predictions = model.predict(x_test)
 
 ## 크로스 프레임워크 사용자 정의 컴포넌트 작성
 
-Keras enables you to write custom Layers, Models, Metrics, Losses, and Optimizers that work across TensorFlow, JAX, and PyTorch with the same codebase. Let's take a look at custom layers first.
+Keras를 사용하면 동일한 코드베이스로 TensorFlow, JAX, PyTorch에서 작동하는 사용자 정의 레이어, 모델, 메트릭, 손실 및 옵티마이저를 작성할 수 있습니다. 먼저 사용자 정의 레이어를 살펴보겠습니다.
 
-The `keras.ops` namespace contains:
+`keras.ops` 네임스페이스에는 다음이 포함됩니다:
 
-*   An implementation of the NumPy API, e.g. [`keras.ops.stack`](/api/ops/numpy#stack-function) or [`keras.ops.matmul`](/api/ops/numpy#matmul-function).
-*   A set of neural network specific ops that are absent from NumPy, such as [`keras.ops.conv`](/api/ops/nn#conv-function) or [`keras.ops.binary_crossentropy`](/api/ops/nn#binarycrossentropy-function).
+* NumPy API의 구현(예: [`keras.ops.stack`](/api/ops/numpy#stack-function) 또는 [`keras.ops.matmul`](/api/ops/numpy#matmul-function))
+* NumPy에 없는 신경망 전용 ops 세트(예: [`keras.ops.conv`](/api/ops/nn#conv-function) 또는 [`keras.ops.binary_crossentropy`](/api/ops/nn#binarycrossentropy-function))
 
-Let's make a custom `Dense` layer that works with all backends:
+모든 백엔드에서 작동하는 사용자 정의 `Dense` 레이어를 만들어 보겠습니다:
 
 ```python
 class MyDense(keras.layers.Layer):
@@ -268,29 +268,29 @@ class MyDense(keras.layers.Layer):
         )
 
     def call(self, inputs):
-        # Use Keras ops to create backend-agnostic layers/metrics/etc.
+        # Keras ops를 사용하여, 백엔드에 구애받지 않는 레이어/메트릭/등을 생성하세요.
         x = keras.ops.matmul(inputs, self.w) + self.b
         return self.activation(x)
 ```
 
-Next, let's make a custom `Dropout` layer that relies on the `keras.random` namespace:
+다음으로, `keras.random` 네임스페이스에 의존하는 사용자 정의 `Dropout` 레이어를 만들어 보겠습니다:
 
 ```python
 class MyDropout(keras.layers.Layer):
     def __init__(self, rate, name=None):
         super().__init__(name=name)
         self.rate = rate
-        # Use seed_generator for managing RNG state.
-        # It is a state element and its seed variable is
-        # tracked as part of `layer.variables`.
+        # seed_generator를 사용하여 RNG 상태를 관리합니다. 
+        # 이는 상태 요소(state element)이며, 
+        # 시드 변수는 `layer.variables`의 일부로 추적됩니다.
         self.seed_generator = keras.random.SeedGenerator(1337)
 
     def call(self, inputs):
-        # Use `keras.random` for random ops.
+        # 무작위 ops에 대해 `keras.random`을 사용합니다.
         return keras.random.dropout(inputs, self.rate, seed=self.seed_generator)
 ```
 
-Next, let's write a custom subclassed model that uses our two custom layers:
+다음으로, 두 개의 커스텀 레이어를 사용하는 커스텀 서브클래스 모델을 작성해 보겠습니다:
 
 ```python
 class MyModel(keras.Model):
@@ -315,7 +315,7 @@ class MyModel(keras.Model):
         return self.dense(x)
 ```
 
-Let's compile it and fit it:
+컴파일하고, fit 해보겠습니다:
 
 ```python
 model = MyModel(num_classes=10)
@@ -331,7 +331,7 @@ model.fit(
     x_train,
     y_train,
     batch_size=batch_size,
-    epochs=1,  # For speed
+    epochs=1,  # 여기에서는 더 빠르게 하기 위해, 에포크를 1로 지정합니다.
     validation_split=0.15,
 )
 ```
@@ -344,24 +344,24 @@ model.fit(
 
 ----
 
-## Training models on arbitrary data sources
+## 임의의 데이터 소스에 대해 모델 트레이닝
 
-All Keras models can be trained and evaluated on a wide variety of data sources, independently of the backend you're using. This includes:
+모든 Keras 모델은 사용 중인 백엔드와 관계없이 다양한 데이터 소스에서 트레이닝 및 평가할 수 있습니다. 여기에는 다음이 포함됩니다:
 
-*   NumPy arrays
-*   Pandas dataframes
-*   TensorFlow [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset) objects
-*   PyTorch `DataLoader` objects
-*   Keras `PyDataset` objects
+* NumPy 배열
+* Pandas 데이터 프레임
+* TensorFlow [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset) 객체
+* PyTorch `DataLoader` 객체
+* Keras `PyDataset` 객체
 
-They all work whether you're using TensorFlow, JAX, or PyTorch as your Keras backend.
+이 예제는 TensorFlow, JAX 또는 PyTorch 중 어떤 것을 Keras 백엔드로 사용하든지 모두 작동합니다.
 
-Let's try it out with PyTorch `DataLoaders`:
+PyTorch `DataLoaders`를 사용해 보겠습니다:
 
 ```python
 import torch
 
-# Create a TensorDataset
+# TensorDataset 생성
 train_torch_dataset = torch.utils.data.TensorDataset(
     torch.from_numpy(x_train), torch.from_numpy(y_train)
 )
@@ -369,7 +369,7 @@ val_torch_dataset = torch.utils.data.TensorDataset(
     torch.from_numpy(x_test), torch.from_numpy(y_test)
 )
 
-# Create a DataLoader
+# DataLoader 생성
 train_dataloader = torch.utils.data.DataLoader(
     train_torch_dataset, batch_size=batch_size, shuffle=True
 )
@@ -394,7 +394,7 @@ model.fit(train_dataloader, epochs=1, validation_data=val_dataloader)
 <keras.src.callbacks.history.History at 0x2b3385480>
 ```
 
-Now let's try this out with [`tf.data`](https://www.tensorflow.org/api_docs/python/tf/data):
+이제 이것을 [`tf.data`](https://www.tensorflow.org/api_docs/python/tf/data)를 사용하여 시도해 보겠습니다:
 
 ```python
 import tensorflow as tf
@@ -429,34 +429,34 @@ model.fit(train_dataset, epochs=1, validation_data=test_dataset)
 
 ----
 
-## Further reading
+## 더 읽어보기
 
-This concludes our short overview of the new multi-backend capabilities of Keras 3. Next, you can learn about:
+이것으로 Keras 3의 새로운 멀티 백엔드 기능에 대한 간략한 개요를 마쳤습니다. 이제, 다음 것들에 대해 알아볼 수 있습니다:
 
-### How to customize what happens in `fit()`
+### `fit()`에서 일어나는 일을 사용자 정의하는 방법
 
-Want to implement a non-standard training algorithm yourself but still want to benefit from the power and usability of `fit()`? It's easy to customize `fit()` to support arbitrary use cases:
+비표준 트레이닝 알고리즘을 직접 구현하고 싶지만, `fit()`의 강력한 성능과 유용성을 활용하고 싶으신가요? 임의의 사용 사례를 지원하도록 `fit()`을 쉽게 사용자 정의할 수 있습니다:
 
-*   [Customizing what happens in `fit()` with TensorFlow](http://keras.io/guides/custom_train_step_in_tensorflow/)
-*   [Customizing what happens in `fit()` with JAX](http://keras.io/guides/custom_train_step_in_jax/)
-*   [Customizing what happens in `fit()` with PyTorch](http://keras.io/guides/custom_train_step_in_torch/)
+* [TensorFlow로 `fit()`에서 일어나는 일 사용자 지정하기]({{ site.baseurl }}/guides/custom_train_step_in_tensorflow/)
+* [JAX로 `fit()`에서 일어나는 일 사용자 정의하기]({{ site.baseurl }}/guides/custom_train_step_in_jax/)
+* [PyTorch로 `fit()`에서 일어나는 일 사용자 정의하기]({{ site.baseurl }}/guides/custom_train_step_in_torch/)
 
 * * *
 
-How to write custom training loops
+사용자 지정 트레이닝 루프를 작성하는 방법
 ----------------------------------
 
-*   [Writing a training loop from scratch in TensorFlow](http://keras.io/guides/writing_a_custom_training_loop_in_tensorflow/)
-*   [Writing a training loop from scratch in JAX](http://keras.io/guides/writing_a_custom_training_loop_in_jax/)
-*   [Writing a training loop from scratch in PyTorch](http://keras.io/guides/writing_a_custom_training_loop_in_torch/)
+* [TensorFlow에서 처음부터 트레이닝 루프 작성하기]({{ site.baseurl }}/guides/writing_a_custom_training_loop_in_tensorflow/)
+* [JAX에서 처음부터 트레이닝 루프 작성하기]({{ site.baseurl }}/guides/writing_a_custom_training_loop_in_jax/)
+* [PyTorch에서 처음부터 트레이닝 루프 작성하기]({{ site.baseurl }}/guides/writing_a_custom_training_loop_in_torch/)
 
 * * *
 
-How to distribute training
+트레이닝 배포 방법
 --------------------------
 
-*   [Guide to distributed training with TensorFlow](http://keras.io/guides/distributed_training_with_tensorflow/)
-*   [JAX distributed training example](https://github.com/keras-team/keras/blob/master/examples/demo_jax_distributed.py)
-*   [PyTorch distributed training example](https://github.com/keras-team/keras/blob/master/examples/demo_torch_multi_gpu.py)
+* [TensorFlow 분산 트레이닝 가이드]({{ site.baseurl }}/guides/distributed_training_with_tensorflow/)
+* [JAX 분산 트레이닝 예제](https://github.com/keras-team/keras/blob/master/examples/demo_jax_distributed.py)
+* [PyTorch 분산 트레이닝 예제](https://github.com/keras-team/keras/blob/master/examples/demo_torch_multi_gpu.py)
 
-Enjoy the library! 🚀
+라이브러리를 즐겨보세요! 🚀

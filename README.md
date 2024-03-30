@@ -17,7 +17,7 @@ Keras 한글 문서 페이지는 GitHub Page에서 볼 수 있습니다.
 가장 간단한 모델 유형은 선형 레이어 스택인 [`Sequential` 모델]({{ site.baseurl }}/guides/sequential_model/)입니다.
 ```
 
-`{{ site.baseurl }}` 이 부분을 앞에 붙여주세요.
+`{{ site.baseurl }}/` 이 부분을 앞에 붙여주세요.
 
 ### permalink 링크
 
