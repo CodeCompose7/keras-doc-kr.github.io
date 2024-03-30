@@ -2,7 +2,7 @@
 layout: default
 title: KerasNLP - 자연어 워크플로우
 nav_order: 9
-permalink: /keras_nlp
+permalink: /keras_nlp/
 has_children: false
 ---
 
