@@ -19,7 +19,7 @@ Keras 한글 문서 페이지는 GitHub Page에서 볼 수 있습니다.
 로컬 호스팅을 위한 jekyll 실행 방법입니다.
 
 ```shell
-bundle exec jekyll serve
+bundle exec jekyll serve --baseurl ''
 ```
 
 ### 페이지 참조
