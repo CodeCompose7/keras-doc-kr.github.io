@@ -2,7 +2,7 @@
 layout: default
 title: 코드 예제
 nav_order: 6
-permalink: /examples
+permalink: /examples/
 has_children: true
 ---
 

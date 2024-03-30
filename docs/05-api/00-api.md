@@ -2,7 +2,7 @@
 layout: default
 title: Keras 3 API 문서
 nav_order: 5
-permalink: /api
+permalink: /api/
 has_children: true
 ---
 
