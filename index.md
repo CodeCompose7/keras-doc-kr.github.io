@@ -10,9 +10,9 @@ permalink: /
 
 # Keras 3.0 소개
 
-[시작하기](getting_started){: .btn .btn-blue }
-[API 문서](api){: .btn .btn-blue }
-[가이드](guides){: .btn .btn-blue }
+[시작하기]({{ site.baseurl }}/getting_started){: .btn .btn-blue }
+[API 문서]({{ site.baseurl }}/api){: .btn .btn-blue }
+[가이드]({{ site.baseurl }}/guides){: .btn .btn-blue }
 [GitHub](https://github.com/keras-team/keras/){: .btn .btn-blue }
 
 5개월간의 광범위한 공개 베타 테스트 끝에, Keras 3.0의 공식 출시를 발표하게 되어 기쁘게 생각합니다. Keras 3는 완전히 새롭게 재작성된 Keras로, JAX, TensorFlow 또는 PyTorch 위에서 Keras 워크플로를 실행할 수 있으며, 완전히 새로운 대규모 모델 트레이닝 및 배포 기능을 제공합니다. 현재 목표에 따라 가장 적합한 프레임워크를 선택하고, 다른 프레임워크로 전환할 수 있습니다. 또한 Keras를 로우레벨 크로스 프레임워크 언어로 사용하여, 하나의 코드베이스로 JAX, TensorFlow 또는 PyTorch의 기본 워크플로에서 사용할 수 있는 레이어, 모델 또는 메트릭과 같은 사용자 지정 구성 요소를 개발할 수도 있습니다.
@@ -25,7 +25,7 @@ permalink: /
 
 *  **당신의 모델에 항상 최상의 성능 제공** 벤치마크 결과, JAX는 일반적으로 GPU, TPU, CPU에서 최고의 트레이닝 및 추론 성능을 제공하지만, 비-XLA TensorFlow가 GPU에서 더 빠른 경우도 있기 때문에 결과는 모델마다 다릅니다. _당신의 코드를 변경하지 않고도_ 당신의 모델에 가장 적합한 성능을 제공하는 백엔드를 동적으로 선택할 수 있으므로, 달성 가능한 최고의 효율로 트레이닝하고 서비스를 제공할 수 있습니다.
 *  **모델에 대한 에코시스템 옵션 잠금 해제** 모든 Keras 3 모델은 PyTorch `Module`로 인스턴스화할 수 있으며, TensorFlow `SavedModel`로 내보낼 수 있고, 상태없는 JAX 함수로 인스턴스화할 수 있습니다. 즉, PyTorch 에코시스템 패키지, 모든 범위의 TensorFlow 배포 및 프로덕션 도구(예: TF-Serving, TF.js 및 TFLite), JAX 대규모 TPU 트레이닝 인프라와 함께 Keras 3 모델을 사용할 수 있습니다. Keras 3 API를 사용해 하나의 `model.py`를 작성하고, ML 세계의 모든 것을 이용할 수 있습니다.
-*  **JAX로 대규모 모델 병렬 처리 및 데이터 병렬 처리 활용** Keras 3에는 현재 JAX 백엔드용으로 구현된 새로운 배포 API인 `keras.distribution` 네임스페이스가 포함되어 있습니다. (곧 TensorFlow 및 PyTorch 백엔드에 제공될 예정) 이를 통해 임의의 모델 규모와 클러스터 규모에서, 모델 병렬 처리, 데이터 병렬 처리, 그리고 이 두 가지의 조합을 쉽게 수행할 수 있습니다. 모델 정의, 학습 로직, 샤딩 구성이 모두 서로 분리되어 있기 때문에, 배포 워크플로우를 개발하기 쉽고 유지 관리가 쉽습니다. [스타터 가이드](guides/distribution/)를 참조하세요.
+*  **JAX로 대규모 모델 병렬 처리 및 데이터 병렬 처리 활용** Keras 3에는 현재 JAX 백엔드용으로 구현된 새로운 배포 API인 `keras.distribution` 네임스페이스가 포함되어 있습니다. (곧 TensorFlow 및 PyTorch 백엔드에 제공될 예정) 이를 통해 임의의 모델 규모와 클러스터 규모에서, 모델 병렬 처리, 데이터 병렬 처리, 그리고 이 두 가지의 조합을 쉽게 수행할 수 있습니다. 모델 정의, 학습 로직, 샤딩 구성이 모두 서로 분리되어 있기 때문에, 배포 워크플로우를 개발하기 쉽고 유지 관리가 쉽습니다. [스타터 가이드]({{ site.baseurl }}/guides/distribution/)를 참조하세요.
 *  **오픈소스 모델 릴리스의 도달 범위를 극대화하세요.** 사전 트레이닝된 모델을 릴리스하고 싶으신가요? 최대한 많은 사람이 사용할 수 있기를 원하시나요? 순수 TensorFlow 또는 PyTorch로 구현하면 커뮤니티의 약 절반이 사용할 수 있습니다. Keras 3로 구현하면 선택한 프레임워크에 관계없이 누구나 즉시 사용할 수 있습니다.(Keras 사용자가 아니더라도) 추가 개발 비용 없이 두 배의 효과를 얻을 수 있습니다.
 *  **모든 소스의 데이터 파이프라인을 사용하세요.** Keras 3 `fit()`/`evaluate()`/`predict()` 루틴은 사용 중인 백엔드에 관계없이 `tf.data.Dataset` 객체, PyTorch `DataLoader` 객체, NumPy 배열, Pandas 데이터 프레임과 호환이 가능합니다. PyTorch `DataLoader`에서 Keras 3 + TensorFlow 모델을 트레이닝하거나, `tf.data.Dataset`에서 Keras 3 + PyTorch 모델을 트레이닝할 수 있습니다.
 
@@ -85,7 +85,7 @@ API를 사용하면 정규 표현식을 통해 모든 변수와 모든 출력 �
 
 ![](https://s3.amazonaws.com/keras.io/img/keras_3/keras_3_model_parallel.jpg)
 
-새로운 배포 API는 다중 백엔드를 위한 것이지만, 당분간은 JAX 백엔드에서만 사용할 수 있습니다. 텐서플로우와 파이토치 지원은 곧 제공될 예정입니다. [이 가이드](guides/distribution/)로 시작하세요!
+새로운 배포 API는 다중 백엔드를 위한 것이지만, 당분간은 JAX 백엔드에서만 사용할 수 있습니다. 텐서플로우와 파이토치 지원은 곧 제공될 예정입니다. [이 가이드]({{ site.baseurl }}/guides/distribution/)로 시작하세요!
 
 ---
 
@@ -93,7 +93,7 @@ API를 사용하면 정규 표현식을 통해 모든 변수와 모든 출력 �
 
 Keras 3에서 지금 바로 사용할 수 있는 다양한 사전 트레이닝된 모델이 있습니다.
 
-모든 백엔드에서 40개의 Keras 애플리케이션 모델(`keras.applications` 네임스페이스)을 사용할 수 있습니다. [KerasCV](api/keras_cv/) 및 [KerasNLP](api/keras_nlp/)의 방대한 사전 트레이닝된 모델도 모든 백엔드에서 작동합니다. 여기에는 다음이 포함됩니다:
+모든 백엔드에서 40개의 Keras 애플리케이션 모델(`keras.applications` 네임스페이스)을 사용할 수 있습니다. [KerasCV]({{ site.baseurl }}/api/keras_cv/) 및 [KerasNLP]({{ site.baseurl }}/api/keras_nlp/)의 방대한 사전 트레이닝된 모델도 모든 백엔드에서 작동합니다. 여기에는 다음이 포함됩니다:
 
 * BERT
 * OPT
@@ -129,7 +129,7 @@ PyTorch 및 TensorFlow에서 작동하는 방식은 다음과 같습니다:
 
 ![](https://s3.amazonaws.com/keras.io/img/keras-core/customizing_fit.jpg)
 
-그리고 [여기 링크](guides/custom_train_step_in_jax/)는 JAX 버전에 대한 링크입니다.
+그리고 [여기 링크]({{ site.baseurl }}/guides/custom_train_step_in_jax/)는 JAX 버전에 대한 링크입니다.
 
 ---
 
@@ -161,7 +161,7 @@ Keras 2에서 Keras 3으로 이동하기
 ------------------------------
 Keras 3는 Keras 2와의 역호환성이 뛰어나며, [여기](https://github.com/keras-team/keras/issues/18467)에 나열된 몇 가지 예외를 제외하고, Keras 2의 전체 공개 API 표면을 구현합니다. 대부분의 사용자는 Keras 3에서 Keras 스크립트를 실행하기 위해 코드를 변경할 필요가 없습니다.
 
-대규모 코드베이스는 위에 나열된 예외 중 하나가 발생할 가능성이 높고, private API 또는 deprecated API(`tf.compat.v1.keras` 네임스페이스, `experimental` 네임스페이스, `keras.src` private 네임스페이스)를 사용했을 가능성이 높으므로 일부 코드 변경이 필요할 수 있습니다. Keras 3로 마이그레이션하는 데 도움을 드리기 위해, 발생할 수 있는 모든 문제에 대한 빠른 수정 사항이 포함된 전체 [마이그레이션 가이드](guides/migrating_to_keras_3/)를 공개하고 있습니다.
+대규모 코드베이스는 위에 나열된 예외 중 하나가 발생할 가능성이 높고, private API 또는 deprecated API(`tf.compat.v1.keras` 네임스페이스, `experimental` 네임스페이스, `keras.src` private 네임스페이스)를 사용했을 가능성이 높으므로 일부 코드 변경이 필요할 수 있습니다. Keras 3로 마이그레이션하는 데 도움을 드리기 위해, 발생할 수 있는 모든 문제에 대한 빠른 수정 사항이 포함된 전체 [마이그레이션 가이드]({{ site.baseurl }}/guides/migrating_to_keras_3/)를 공개하고 있습니다.
 
 또한 Keras 3의 변경 사항을 무시하고, TensorFlow와 Keras 2를 계속 사용할 수 있는 옵션도 있습니다. 이는 활발하게 개발되지는 않았지만, 업데이트된 종속성으로 계속 실행해야 하는 프로젝트에 좋은 옵션이 될 수 있습니다. 두 가지 가능성이 있습니다:
 
@@ -183,7 +183,7 @@ FAQ
 
 #### Q: Keras 3는 기존 Keras 2와 호환되나요?
 
-예. `tf.keras`로 개발된 코드는 일반적으로 (TensorFlow 백엔드로) Keras 3에서 그대로 실행할 수 있습니다. 주의해야 할 몇 가지 비호환성이 있으며, 모두 이 [마이그레이션 가이드](/guides/migrating_to_keras_3/)에서 다루고 있습니다.
+예. `tf.keras`로 개발된 코드는 일반적으로 (TensorFlow 백엔드로) Keras 3에서 그대로 실행할 수 있습니다. 주의해야 할 몇 가지 비호환성이 있으며, 모두 이 [마이그레이션 가이드]({{ site.baseurl }}/guides/migrating_to_keras_3/)에서 다루고 있습니다.
 
 `tf.keras`와 Keras 3의 API를 나란히 사용하는 것은, 완전히 다른 엔진에서 실행되는 서로 다른 패키지이기 때문에 **가능하지** 않습니다.
 
@@ -221,11 +221,11 @@ FAQ
 
 **TensorFlow 사용 시:**
 
-Keras 3는 `tf.distribute`와 호환됩니다. Distribution Strategy scope를 열고, 그 안에서 모델을 생성/트레이닝하기만 하면 됩니다. [여기 예시가 있습니다](guides/distributed_training_with_tensorflow/).
+Keras 3는 `tf.distribute`와 호환됩니다. Distribution Strategy scope를 열고, 그 안에서 모델을 생성/트레이닝하기만 하면 됩니다. [여기 예시가 있습니다]({{ site.baseurl }}/guides/distributed_training_with_tensorflow/).
 
 **PyTorch 사용 시:**
 
-Keras 3는 PyTorch의 `DistributedDataParallel` 유틸리티와 호환됩니다. [여기 예시가 있습니다](guides/distributed_training_with_torch/).
+Keras 3는 PyTorch의 `DistributedDataParallel` 유틸리티와 호환됩니다. [여기 예시가 있습니다]({{ site.baseurl }}/guides/distributed_training_with_torch/).
 
 **JAX 사용 시:**
 
@@ -236,9 +236,9 @@ distribution = keras.distribution.DataParallel(devices=keras.distribution.list_d
 keras.distribution.set_distribution(distribution)
 ```
 
-모델 병렬 배포에 대해서는 [다음 가이드](guides/distribution/)를 참조하세요.
+모델 병렬 배포에 대해서는 [다음 가이드]({{ site.baseurl }}/guides/distribution/)를 참조하세요.
 
-또한 `jax.sharding`과 같은 JAX API를 통해 직접 트레이닝을 배포할 수도 있습니다. [여기 예시가 있습니다](guides/distributed_training_with_jax/).
+또한 `jax.sharding`과 같은 JAX API를 통해 직접 트레이닝을 배포할 수도 있습니다. [여기 예시가 있습니다]({{ site.baseurl }}/guides/distributed_training_with_jax/).
 
 ### Q: 사용자 정의 Keras 레이어를 기본 PyTorch `Modules` 또는 Flax `Modules`에서 사용할 수 있나요?
 
