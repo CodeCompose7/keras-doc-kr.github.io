@@ -2,7 +2,7 @@
 layout: default
 title: FAQ
 nav_order: 4
-permalink: /getting_started/faq
+permalink: /getting_started/faq/
 parent: 시작하기
 ---
 

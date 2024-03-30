@@ -3,7 +3,7 @@ layout: default
 title: Getting started with KerasTuner
 nav_order: 1
 permalink: /guides/keras_tuner/getting_started/
-parent: 하이퍼파라미터 튜닝
+parent: KerasTuner
 grand_parent: 개발자 가이드
 ---
 

@@ -3,7 +3,7 @@ layout: default
 title: Visualize the hyperparameter tuning process
 nav_order: 4
 permalink: /guides/keras_tuner/visualize_tuning/
-parent: 하이퍼파라미터 튜닝
+parent: KerasTuner
 grand_parent: 개발자 가이드
 ---
 

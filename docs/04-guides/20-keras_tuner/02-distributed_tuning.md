@@ -3,7 +3,7 @@ layout: default
 title: Distributed hyperparameter tuning
 nav_order: 2
 permalink: /guides/keras_tuner/distributed_tuning/
-parent: 하이퍼파라미터 튜닝
+parent: KerasTuner
 grand_parent: 개발자 가이드
 ---
 

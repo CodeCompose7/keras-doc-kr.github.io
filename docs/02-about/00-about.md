@@ -2,7 +2,7 @@
 layout: default
 title: Keras에 대하여
 nav_order: 2
-permalink: /about
+permalink: /about/
 ---
 
 * 원본 링크 : [https://keras.io/about/](https://keras.io/about/){:target="_blank"}

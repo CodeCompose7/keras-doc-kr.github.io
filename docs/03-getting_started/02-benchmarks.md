@@ -2,7 +2,7 @@
 layout: default
 title: Keras 3 벤치마크
 nav_order: 2
-permalink: /getting_started/benchmarks
+permalink: /getting_started/benchmarks/
 parent: 시작하기
 ---
 
