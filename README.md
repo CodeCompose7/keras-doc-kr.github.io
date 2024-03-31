@@ -37,6 +37,18 @@ has_children: true
 ^permalink: [^\s]+[^\/\s]$
 ```
 
+### 이탤릭체
+
+markdown에서 이탤릭체는 `_italic_` 대신 `*italic*`을 사용하세요.
+
+### 코드 블록
+
+markdown에서 코드 블록은 ` ``` ` 로 사용하세요. 다만, 사용 언어를 붙여주세요.
+
+` ```python ` 이나 ` ```latex `, ` ```shell ` 등으로 사용합니다.
+
+아무 것도 붙지 않은 ` ``` ` 은 결과 항목으로 사용됩니다.
+
 ### 참조 사이트
 
 * [Keras에 대해](https://keras.io/about/)
