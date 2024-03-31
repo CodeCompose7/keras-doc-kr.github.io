@@ -23,13 +23,13 @@ has_children: true
 ## 학습 리소스
 ------------------
 
-Keras 소개 한 페이지짜리 가이드를 찾고 계신 머신러닝 엔지니어이신가요? [엔지니어를 위한 Keras 소개]({{ site.baseurl }}/getting_started/intro_to_keras_for_engineers/) 가이드를 읽어보세요.
+Keras 소개 한 페이지짜리 가이드를 찾고 계신 머신러닝 엔지니어이신가요? [엔지니어를 위한 Keras 소개]({% link docs/03-getting_started/01-intro_to_keras_for_engineers.md %}) 가이드를 읽어보세요.
 
-Keras 3와 그 기능에 대해 더 자세히 알고 싶으신가요? [Keras 3 출시 발표]({{ site.baseurl }}/)를 참조하세요.
+Keras 3와 그 기능에 대해 더 자세히 알고 싶으신가요? [Keras 3 출시 발표]({% link index.md %})를 참조하세요.
 
-Keras API의 다양한 부분에 대한 심층적인 사용법을 다루는 자세한 가이드를 찾고 계신가요? [Keras 개발자 가이드]({{ site.baseurl }}/guides/)를 읽어보세요.
+Keras API의 다양한 부분에 대한 심층적인 사용법을 다루는 자세한 가이드를 찾고 계신가요? [Keras 개발자 가이드]({% link docs/04-guides/00-guides.md %})를 읽어보세요.
 
-다양한 사용 사례에서 Keras가 실제로 작동하는 모습을 보여주는 튜토리얼을 찾고 계신가요? 컴퓨터 비전, 자연어 처리, 생성 AI 분야에서 Keras 모범 사례를 보여주는 150개 이상의 잘 설명된 노트북인 [Keras 코드 예제]({{ site.baseurl }}/examples/)를 참조하세요.
+다양한 사용 사례에서 Keras가 실제로 작동하는 모습을 보여주는 튜토리얼을 찾고 계신가요? 컴퓨터 비전, 자연어 처리, 생성 AI 분야에서 Keras 모범 사례를 보여주는 150개 이상의 잘 설명된 노트북인 [Keras 코드 예제]({% link docs/06-examples/00-examples.md %})를 참조하세요.
 
 ----
 

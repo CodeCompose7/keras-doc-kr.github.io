@@ -87,9 +87,9 @@ y_train shape: (60000,)
 
 Keras에서 제공하는 다양한 모델 빌드 옵션은 다음과 같습니다:
 
-*   [Sequential API]({{ site.baseurl }}/guides/sequential_model/) (아래에 우리가 사용한 것)
-*   [Functional API]({{ site.baseurl }}/guides/functional_api/) (가장 일반적임)
-*   [서브클래싱을 통해 당신만의 모델 작성하기]({{ site.baseurl }}/guides/making_new_layers_and_models_via_subclassing/) (for advanced use cases)
+*   [Sequential API]({% link docs/04-guides/02-sequential_model.md %}) (아래에 우리가 사용한 것)
+*   [Functional API]({% link docs/04-guides/01-functional_api.md %}) (가장 일반적임)
+*   [서브클래싱을 통해 당신만의 모델 작성하기]({% link docs/04-guides/03-making_new_layers_and_models_via_subclassing.md %}) (for advanced use cases)
 
 ```python
 # 모델 파라미터
@@ -239,8 +239,8 @@ Keras를 사용하면 동일한 코드베이스로 TensorFlow, JAX, PyTorch에�
 
 `keras.ops` 네임스페이스에는 다음이 포함됩니다:
 
-* NumPy API의 구현(예: [`keras.ops.stack`](/api/ops/numpy#stack-function) 또는 [`keras.ops.matmul`](/api/ops/numpy#matmul-function))
-* NumPy에 없는 신경망 전용 ops 세트(예: [`keras.ops.conv`](/api/ops/nn#conv-function) 또는 [`keras.ops.binary_crossentropy`](/api/ops/nn#binarycrossentropy-function))
+* NumPy API의 구현(예: [`keras.ops.stack`]({% link docs/05-api/04-ops/01-numpy.md %}#stack-function) 또는 [`keras.ops.matmul`]({% link docs/05-api/04-ops/01-numpy.md %}#matmul-function))
+* NumPy에 없는 신경망 전용 ops 세트(예: [`keras.ops.conv`]({% link docs/05-api/04-ops/02-nn.md %}#conv-function) 또는 [`keras.ops.binary_crossentropy`]({% link docs/05-api/04-ops/02-nn.md %}#binarycrossentropy-function))
 
 모든 백엔드에서 작동하는 사용자 정의 `Dense` 레이어를 만들어 보겠습니다:
 
@@ -437,25 +437,25 @@ model.fit(train_dataset, epochs=1, validation_data=test_dataset)
 
 비표준 트레이닝 알고리즘을 직접 구현하고 싶지만, `fit()`의 강력한 성능과 유용성을 활용하고 싶으신가요? 임의의 사용 사례를 지원하도록 `fit()`을 쉽게 사용자 정의할 수 있습니다:
 
-* [TensorFlow로 `fit()`에서 일어나는 일 사용자 지정하기]({{ site.baseurl }}/guides/custom_train_step_in_tensorflow/)
-* [JAX로 `fit()`에서 일어나는 일 사용자 정의하기]({{ site.baseurl }}/guides/custom_train_step_in_jax/)
-* [PyTorch로 `fit()`에서 일어나는 일 사용자 정의하기]({{ site.baseurl }}/guides/custom_train_step_in_torch/)
+* [TensorFlow로 `fit()`에서 일어나는 일 사용자 지정하기]({% link docs/04-guides/06-custom_train_step_in_tensorflow.md %})
+* [JAX로 `fit()`에서 일어나는 일 사용자 정의하기]({% link docs/04-guides/05-custom_train_step_in_jax.md %})
+* [PyTorch로 `fit()`에서 일어나는 일 사용자 정의하기]({% link docs/04-guides/07-custom_train_step_in_torch.md %})
 
 * * *
 
 사용자 지정 트레이닝 루프를 작성하는 방법
 ----------------------------------
 
-* [TensorFlow에서 처음부터 트레이닝 루프 작성하기]({{ site.baseurl }}/guides/writing_a_custom_training_loop_in_tensorflow/)
-* [JAX에서 처음부터 트레이닝 루프 작성하기]({{ site.baseurl }}/guides/writing_a_custom_training_loop_in_jax/)
-* [PyTorch에서 처음부터 트레이닝 루프 작성하기]({{ site.baseurl }}/guides/writing_a_custom_training_loop_in_torch/)
+* [TensorFlow에서 처음부터 트레이닝 루프 작성하기]({% link docs/04-guides/09-writing_a_custom_training_loop_in_tensorflow.md %})
+* [JAX에서 처음부터 트레이닝 루프 작성하기]({% link docs/04-guides/08-writing_a_custom_training_loop_in_jax.md %})
+* [PyTorch에서 처음부터 트레이닝 루프 작성하기]({% link docs/04-guides/10-writing_a_custom_training_loop_in_torch.md %})
 
 * * *
 
 트레이닝 배포 방법
 --------------------------
 
-* [TensorFlow 분산 트레이닝 가이드]({{ site.baseurl }}/guides/distributed_training_with_tensorflow/)
+* [TensorFlow 분산 트레이닝 가이드]({% link docs/04-guides/16-distributed_training_with_tensorflow.md %})
 * [JAX 분산 트레이닝 예제](https://github.com/keras-team/keras/blob/master/examples/demo_jax_distributed.py)
 * [PyTorch 분산 트레이닝 예제](https://github.com/keras-team/keras/blob/master/examples/demo_torch_multi_gpu.py)
 
