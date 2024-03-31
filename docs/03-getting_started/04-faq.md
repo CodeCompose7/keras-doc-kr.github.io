@@ -281,7 +281,7 @@ If it imports without error it is installed, otherwise you can find [detailed in
 
 Please cite Keras in your publications if it helps your research. Here is an example BibTeX entry:
 
-```
+```latex
 @misc{chollet2015keras,
   title={Keras},
   author={Chollet, Fran\c{c}ois and others},

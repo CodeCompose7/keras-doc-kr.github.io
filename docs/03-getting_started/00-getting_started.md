@@ -72,7 +72,7 @@ pip install --upgrade keras
 
 환경 변수 `KERAS_BACKEND`를 내보내거나 `~/.keras/keras.json`에서 로컬 구성 파일을 편집하여 백엔드를 구성할 수 있습니다. 사용 가능한 백엔드 옵션은 다음과 같습니다: `"jax"`, `"tensorflow"`, `"torch"`. 예시:
 
-```
+```shell
 export KERAS_BACKEND="jax"
 ```
 
