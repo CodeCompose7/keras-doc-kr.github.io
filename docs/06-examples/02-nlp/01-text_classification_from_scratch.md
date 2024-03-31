@@ -8,7 +8,7 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/nlp/text_classification_from_scratch/](https://keras.io/examples/nlp/text_classification_from_scratch/){:target="_blank"}
-* 최종 수정일 : 2024-03-29
+* 최종 수정일 : 2024-04-01
 
 # Text classification from scratch
 {: .no_toc }
