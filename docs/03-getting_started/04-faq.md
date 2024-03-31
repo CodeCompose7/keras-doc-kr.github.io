@@ -28,11 +28,11 @@ There are two ways to run a single model on multiple GPUs: **data parallelism** 
 
 For data parallelism, Keras supports the built-in data parallel distribution APIs of JAX, TensorFlow, and PyTorch. See the following guides:
 
-*   [Multi-GPU distributed training with JAX]({{ site.baseurl }}/guides/distributed_training_with_jax/)
-*   [Multi-GPU distributed training with TensorFlow]({{ site.baseurl }}/guides/distributed_training_with_tensorflow/)
-*   [Multi-GPU distributed training with PyTorch]({{ site.baseurl }}/guides/distributed_training_with_torch/)
+*   [Multi-GPU distributed training with JAX]({% link docs/04-guides/15-distributed_training_with_jax.md %})
+*   [Multi-GPU distributed training with TensorFlow]({% link docs/04-guides/16-distributed_training_with_tensorflow.md %})
+*   [Multi-GPU distributed training with PyTorch]({% link docs/04-guides/17-distributed_training_with_torch.md %})
 
-For model parallelism, Keras has its own distribution API, which is currently only support by the JAX backend. See [the documentation for the `LayoutMap` API]({{ site.baseurl }}/api/distribution/).
+For model parallelism, Keras has its own distribution API, which is currently only support by the JAX backend. See [the documentation for the `LayoutMap` API]({% link docs/05-api/12-distribution.md %}).
 
 * * *
 
@@ -107,13 +107,13 @@ It contains the following fields:
 *   The default float data type.
 *   The default backend. It can be one of `"jax"`, `"tensorflow"`, `"torch"`, or `"numpy"`.
 
-Likewise, cached dataset files, such as those downloaded with [`get_file()`]({{ site.baseurl }}/utils/#get_file), are stored by default in `$HOME/.keras/datasets/`, and cached model weights files from Keras Applications are stored by default in `$HOME/.keras/models/`.
+Likewise, cached dataset files, such as those downloaded with [`get_file()`]({% link docs/05-api/14-utils.md %}#get_file), are stored by default in `$HOME/.keras/datasets/`, and cached model weights files from Keras Applications are stored by default in `$HOME/.keras/models/`.
 
 * * *
 
 ### Keras로 하이퍼파라미터 튜닝을 수행하는 방법은 무엇인가요?
 
-We recommend using [KerasTuner]({{ site.baseurl }}/keras_tuner/).
+We recommend using [KerasTuner]({% link docs/07-keras_tuner/00-keras_tuner.md %}).
 
 * * *
 
@@ -241,7 +241,7 @@ from keras.models import load_model
 model = load_model('my_model.h5', custom_objects={'AttentionLayer': AttentionLayer})
 ```
 
-Alternatively, you can use a [custom object scope]({{ site.baseurl }}/utils/#customobjectscope):
+Alternatively, you can use a [custom object scope]({% link docs/05-api/14-utils.md %}#customobjectscope):
 
 ```python
 from keras.utils import CustomObjectScope
@@ -303,7 +303,7 @@ Below are some common definitions that are necessary to know and understand to c
 
 *   **Batch**: a set of _N_ samples. The samples in a **batch** are processed independently, in parallel. If training, a batch results in only one update to the model. A **batch** generally approximates the distribution of the input data better than a single input. The larger the batch, the better the approximation; however, it is also true that the batch will take longer to process and will still result in only one update. For inference (evaluate/predict), it is recommended to pick a batch size that is as large as you can afford without going out of memory (since larger batches will usually result in faster evaluation/prediction).
 
-*   **Epoch**: an arbitrary cutoff, generally defined as "one pass over the entire dataset", used to separate training into distinct phases, which is useful for logging and periodic evaluation. When using `validation_data` or `validation_split` with the `fit` method of Keras models, evaluation will be run at the end of every **epoch**. Within Keras, there is the ability to add [callbacks]({{ site.baseurl }}/api/callbacks/) specifically designed to be run at the end of an **epoch**. Examples of these are learning rate changes and model checkpointing (saving).
+*   **Epoch**: an arbitrary cutoff, generally defined as "one pass over the entire dataset", used to separate training into distinct phases, which is useful for logging and periodic evaluation. When using `validation_data` or `validation_split` with the `fit` method of Keras models, evaluation will be run at the end of every **epoch**. Within Keras, there is the ability to add [callbacks]({% link docs/05-api/03-callbacks.md %}) specifically designed to be run at the end of an **epoch**. Examples of these are learning rate changes and model checkpointing (saving).
 
 * * *
 
@@ -317,7 +317,7 @@ Besides, the training loss that Keras displays is the average of the losses for 
 
 ### 트레이닝 실행이 프로그램 중단으로부터 복구될 수 있는지 어떻게 확인할 수 있습니까?
 
-To ensure the ability to recover from an interrupted training run at any time (fault tolerance), you should use a [`keras.callbacks.BackupAndRestore`]({{ site.baseurl }}/api/callbacks/backup_and_restore#backupandrestore-class) callback that regularly saves your training progress, including the epoch number and weights, to disk, and loads it the next time you call `Model.fit()`.
+To ensure the ability to recover from an interrupted training run at any time (fault tolerance), you should use a [`keras.callbacks.BackupAndRestore`]({% link docs/05-api/03-callbacks/03-backup_and_restore.md %}#backupandrestore-class) callback that regularly saves your training progress, including the epoch number and weights, to disk, and loads it the next time you call `Model.fit()`.
 
 ```python
 import numpy as np
@@ -348,7 +348,7 @@ except RuntimeError:
             callbacks=[backup_callback])
 ```
 
-Find out more in the [callbacks documentation]({{ site.baseurl }}/api/callbacks/).
+Find out more in the [callbacks documentation]({% link docs/05-api/03-callbacks.md %}).
 
 * * *
 
@@ -363,7 +363,7 @@ early_stopping = EarlyStopping(monitor='val_loss', patience=2)
 model.fit(x, y, validation_split=0.2, callbacks=[early_stopping])
 ```
 
-Find out more in the [callbacks documentation]({{ site.baseurl }}/api/callbacks/).
+Find out more in the [callbacks documentation]({% link docs/05-api/03-callbacks.md %}).
 
 * * *
 
@@ -550,7 +550,7 @@ Validation data is never shuffled.
 
 Loss values and metric values are reported via the default progress bar displayed by calls to `fit()`. However, staring at changing ascii numbers in a console is not an optimal metric-monitoring experience. We recommend the use of [TensorBoard](https://www.tensorflow.org/tensorboard), which will display nice-looking graphs of your training and validation metrics, regularly updated during training, which you can access from your browser.
 
-You can use TensorBoard with `fit()` via the [`TensorBoard` callback]({{ site.baseurl }}/api/callbacks/tensorboard/).
+You can use TensorBoard with `fit()` via the [`TensorBoard` callback]({% link docs/05-api/03-callbacks/04-tensorboard.md %}).
 
 * * *
 
@@ -562,13 +562,13 @@ You have two options:
 
 This is a better option if you want to use custom update rules but still want to leverage the functionality provided by `fit()`, such as callbacks, efficient step fusing, etc.
 
-Note that this pattern does not prevent you from building models with the Functional API, in which case you will use the class you created to instantiate the model with the `inputs` and `outputs`. Same goes for Sequential models, in which case you will subclass [`keras.Sequential`]({{ site.baseurl }}/api/models/sequential#sequential-class) and override its `train_step` instead of [`keras.Model`]({{ site.baseurl }}/api/models/model#model-class).
+Note that this pattern does not prevent you from building models with the Functional API, in which case you will use the class you created to instantiate the model with the `inputs` and `outputs`. Same goes for Sequential models, in which case you will subclass [`keras.Sequential`]({% link docs/05-api/01-models/02-sequential.md %}#sequential-class) and override its `train_step` instead of [`keras.Model`]({% link docs/05-api/01-models/01-model.md %}#model-class).
 
 See the following guides:
 
-*   [Writing a custom train step in JAX]({{ site.baseurl }}/guides/custom_train_step_in_jax/)
-*   [Writing a custom train step in TensorFlow]({{ site.baseurl }}/guides/custom_train_step_in_tensorflow/)
-*   [Writing a custom train step in PyTorch]({{ site.baseurl }}/guides/custom_train_step_in_torch/)
+*   [Writing a custom train step in JAX]({% link docs/04-guides/05-custom_train_step_in_jax.md %})
+*   [Writing a custom train step in TensorFlow]({% link docs/04-guides/06-custom_train_step_in_tensorflow.md %})
+*   [Writing a custom train step in PyTorch]({% link docs/04-guides/07-custom_train_step_in_torch.md %})
 
 **2) Write a low-level custom training loop**
 
@@ -576,9 +576,9 @@ This is a good option if you want to be in control of every last little detail �
 
 See the following guides:
 
-*   [Writing a custom training loop in JAX]({{ site.baseurl }}/guides/writing_a_custom_training_loop_in_jax/)
-*   [Writing a custom training loop in TensorFlow]({{ site.baseurl }}/guides/writing_a_custom_training_loop_in_tensorflow/)
-*   [Writing a custom training loop in PyTorch]({{ site.baseurl }}/guides/writing_a_custom_training_loop_in_torch/)
+*   [Writing a custom training loop in JAX]({% link docs/04-guides/08-writing_a_custom_training_loop_in_jax.md %})
+*   [Writing a custom training loop in TensorFlow]({% link docs/04-guides/09-writing_a_custom_training_loop_in_tensorflow.md %})
+*   [Writing a custom training loop in PyTorch]({% link docs/04-guides/10-writing_a_custom_training_loop_in_torch.md %})
 
 * * *
 
@@ -647,7 +647,7 @@ intermediate_output = intermediate_layer_model(data)
 
 ### Keras에서 사전 트레이닝된 모델을 어떻게 사용할 수 있나요?
 
-You could leverage the [models available in `keras.applications`]({{ site.baseurl }}/api/applications/), or the models available in [KerasCV]({{ site.baseurl }}/keras_cv/) and [KerasNLP]({{ site.baseurl }}/keras_nlp/).
+You could leverage the [models available in `keras.applications`]({% link docs/05-api/10-applications.md %}), or the models available in [KerasCV]({% link docs/08-keras_cv/00-keras_cv.md %}) and [KerasNLP]({% link docs/09-keras_nlp/00-keras_nlp.md %}).
 
 * * *
 
