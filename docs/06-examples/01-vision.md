@@ -269,6 +269,8 @@ V2
 .
 {: .lh-0 .my-0 .opacity-0}
 
+★
+{: .label .label-purple .mx-1}
 V3
 {: .label .label-green .mx-1}
 [3D volumetric rendering with NeRF](/examples/vision/nerf)
@@ -295,416 +297,398 @@ V3
 
 ### OCR
 
-[
+V3
+{: .label .label-green .mx-1}
+[OCR model for reading Captchas](/examples/vision/captcha_ocr)
+{: .d-inline .v-align-middle}
 
-**V3**
-
-OCR model for reading Captchas
-
-
-
-](/examples/vision/captcha_ocr)[
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Handwriting recognition](/examples/vision/handwriting_recognition)
+{: .d-inline .v-align-middle}
 
-Handwriting recognition
+.
+{: .lh-0 .my-0 .opacity-0}
 
+### 이미지 강화
 
+V3
+{: .label .label-green .mx-1}
+[Convolutional autoencoder for image denoising](/examples/vision/autoencoder)
+{: .d-inline .v-align-middle}
 
-](/examples/vision/handwriting_recognition)
+.
+{: .lh-0 .my-0 .opacity-0}
 
-### Image enhancement
+V3
+{: .label .label-green .mx-1}
+[Low-light image enhancement using MIRNet](/examples/vision/mirnet)
+{: .d-inline .v-align-middle}
 
-[
+.
+{: .lh-0 .my-0 .opacity-0}
 
-**V3**
+V3
+{: .label .label-green .mx-1}
+[Image Super-Resolution using an Efficient Sub-Pixel CNN](/examples/vision/super_resolution_sub_pixel)
+{: .d-inline .v-align-middle}
 
-Convolutional autoencoder for image denoising
-
-
-
-](/examples/vision/autoencoder)[
-
-**V3**
-
-Low-light image enhancement using MIRNet
-
-
-
-](/examples/vision/mirnet)[
-
-**V3**
-
-Image Super-Resolution using an Efficient Sub-Pixel CNN
-
-
-
-](/examples/vision/super_resolution_sub_pixel)[
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Enhanced Deep Residual Networks for single-image super-resolution](/examples/vision/edsr)
+{: .d-inline .v-align-middle}
 
-Enhanced Deep Residual Networks for single-image super-resolution
+.
+{: .lh-0 .my-0 .opacity-0}
 
+V3
+{: .label .label-green .mx-1}
+[Zero-DCE for low-light image enhancement](/examples/vision/zero_dce)
+{: .d-inline .v-align-middle}
 
+.
+{: .lh-0 .my-0 .opacity-0}
 
-](/examples/vision/edsr)[
+### 데이터 보강
 
-**V3**
+V3
+{: .label .label-green .mx-1}
+[CutMix data augmentation for image classification](/examples/vision/cutmix)
+{: .d-inline .v-align-middle}
 
-Zero-DCE for low-light image enhancement
+.
+{: .lh-0 .my-0 .opacity-0}
 
+V3
+{: .label .label-green .mx-1}
+[MixUp augmentation for image classification](/examples/vision/mixup)
+{: .d-inline .v-align-middle}
 
+.
+{: .lh-0 .my-0 .opacity-0}
 
-](/examples/vision/zero_dce)
+V3
+{: .label .label-green .mx-1}
+[RandAugment for Image Classification for Improved Robustness](/examples/vision/randaugment)
+{: .d-inline .v-align-middle}
 
-### Data augmentation
+.
+{: .lh-0 .my-0 .opacity-0}
 
-[
-
-**V3**
-
-CutMix data augmentation for image classification
-
-
-
-](/examples/vision/cutmix)[
-
-**V3**
-
-MixUp augmentation for image classification
-
-
-
-](/examples/vision/mixup)[
-
-**V3**
-
-RandAugment for Image Classification for Improved Robustness
-
-
-
-](/examples/vision/randaugment)
-
-### Image & Text
-
-[
+### 이미지 & 텍스트
 
 ★
+{: .label .label-purple .mx-1}
+V3
+{: .label .label-green .mx-1}
+[Image captioning](/examples/vision/image_captioning)
+{: .d-inline .v-align-middle}
 
-**V3**
-
-Image captioning
-
-
-
-](/examples/vision/image_captioning)[
-
-V2
-
-Natural language image search with a Dual Encoder
-
-
-
-](/examples/vision/nl_image_search)
-
-### Vision models interpretability
-
-[
-
-**V3**
-
-Visualizing what convnets learn
-
-
-
-](/examples/vision/visualizing_what_convnets_learn)[
-
-**V3**
-
-Model interpretability with Integrated Gradients
-
-
-
-](/examples/vision/integrated_gradients)[
-
-**V3**
-
-Investigating Vision Transformer representations
-
-
-
-](/examples/vision/probing_vits)[
-
-**V3**
-
-Grad-CAM class activation visualization
-
-
-
-](/examples/vision/grad_cam)
-
-### Image similarity search
-
-[
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Natural language image search with a Dual Encoder](/examples/vision/nl_image_search)
+{: .d-inline .v-align-middle}
 
-Near-duplicate image search
+.
+{: .lh-0 .my-0 .opacity-0}
 
+### 비전 모델 해석 가능성(interpretability)
 
+V3
+{: .label .label-green .mx-1}
+[Visualizing what convnets learn](/examples/vision/visualizing_what_convnets_learn)
+{: .d-inline .v-align-middle}
 
-](/examples/vision/near_dup_search)[
+.
+{: .lh-0 .my-0 .opacity-0}
 
-**V3**
+V3
+{: .label .label-green .mx-1}
+[Model interpretability with Integrated Gradients](/examples/vision/integrated_gradients)
+{: .d-inline .v-align-middle}
 
-Semantic Image Clustering
+.
+{: .lh-0 .my-0 .opacity-0}
 
+V3
+{: .label .label-green .mx-1}
+[Investigating Vision Transformer representations](/examples/vision/probing_vits)
+{: .d-inline .v-align-middle}
 
+.
+{: .lh-0 .my-0 .opacity-0}
 
-](/examples/vision/semantic_image_clustering)[
+V3
+{: .label .label-green .mx-1}
+[Grad-CAM class activation visualization](/examples/vision/grad_cam)
+{: .d-inline .v-align-middle}
 
-**V3**
+.
+{: .lh-0 .my-0 .opacity-0}
 
-Image similarity estimation using a Siamese Network with a contrastive loss
-
-
-
-](/examples/vision/siamese_contrastive)[
-
-**V3**
-
-Image similarity estimation using a Siamese Network with a triplet loss
-
-
-
-](/examples/vision/siamese_network)[
-
-**V3**
-
-Metric learning for image similarity search
-
-
-
-](/examples/vision/metric_learning)[
+### 이미지 유사도 검색
 
 V2
-
-Metric learning for image similarity search using TensorFlow Similarity
-
-
-
-](/examples/vision/metric_learning_tf_similarity)[
-
-**V3**
-
-Self-supervised contrastive learning with NNCLR
-
-
-
-](/examples/vision/nnclr)
-
-### Video
-
-[
-
-**V3**
-
-Video Classification with a CNN-RNN Architecture
-
-
-
-](/examples/vision/video_classification)[
-
-**V3**
-
-Next-Frame Video Prediction with Convolutional LSTMs
-
-
-
-](/examples/vision/conv_lstm)[
-
-**V3**
-
-Video Classification with Transformers
-
-
-
-](/examples/vision/video_transformers)[
-
-**V3**
-
-Video Vision Transformer
-
-
-
-](/examples/vision/vivit)
-
-### Performance recipes
-
-[
-
-**V3**
-
-Gradient Centralization for Better Training Performance
-
-
-
-](/examples/vision/gradient_centralization)[
-
-**V3**
-
-Learning to tokenize in Vision Transformers
-
-
-
-](/examples/vision/token_learner)[
-
-**V3**
-
-Knowledge Distillation
-
-
-
-](/examples/vision/knowledge_distillation)[
-
-**V3**
-
-FixRes: Fixing train-test resolution discrepancy
-
-
-
-](/examples/vision/fixres)[
-
-**V3**
-
-Class Attention Image Transformers with LayerScale
-
-
-
-](/examples/vision/cait)[
-
-**V3**
-
-Augmenting convnets with aggregated attention
-
-
-
-](/examples/vision/patch_convnet)[
-
-**V3**
-
-Learning to Resize
-
-
-
-](/examples/vision/learnable_resizer)
-
-### Other
-
-[
+{: .label .label-yellow .mx-1}
+[Near-duplicate image search](/examples/vision/near_dup_search)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Semantic Image Clustering](/examples/vision/semantic_image_clustering)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Image similarity estimation using a Siamese Network with a contrastive loss](/examples/vision/siamese_contrastive)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Image similarity estimation using a Siamese Network with a triplet loss](/examples/vision/siamese_network)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Metric learning for image similarity search](/examples/vision/metric_learning)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Metric learning for image similarity search using TensorFlow Similarity](/examples/vision/metric_learning_tf_similarity)
+{: .d-inline .v-align-middle}
 
-Semi-supervision and domain adaptation with AdaMatch
+.
+{: .lh-0 .my-0 .opacity-0}
 
+V3
+{: .label .label-green .mx-1}
+[Self-supervised contrastive learning with NNCLR](/examples/vision/nnclr)
+{: .d-inline .v-align-middle}
 
+.
+{: .lh-0 .my-0 .opacity-0}
 
-](/examples/vision/adamatch)[
+### 비디오
+
+V3
+{: .label .label-green .mx-1}
+[Video Classification with a CNN-RNN Architecture](/examples/vision/video_classification)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Next-Frame Video Prediction with Convolutional LSTMs](/examples/vision/conv_lstm)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Video Classification with Transformers](/examples/vision/video_transformers)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Video Vision Transformer](/examples/vision/vivit)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+### 성능 레시피
+
+V3
+{: .label .label-green .mx-1}
+[Gradient Centralization for Better Training Performance](/examples/vision/gradient_centralization)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Learning to tokenize in Vision Transformers](/examples/vision/token_learner)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Knowledge Distillation](/examples/vision/knowledge_distillation)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[FixRes: Fixing train-test resolution discrepancy](/examples/vision/fixres)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Class Attention Image Transformers with LayerScale](/examples/vision/cait)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Augmenting convnets with aggregated attention](/examples/vision/patch_convnet)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Learning to Resize](/examples/vision/learnable_resizer)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+### 기타
 
 V2
+{: .label .label-yellow .mx-1}
+[Semi-supervision and domain adaptation with AdaMatch](/examples/vision/adamatch)
+{: .d-inline .v-align-middle}
 
-Barlow Twins for Contrastive SSL
-
-
-
-](/examples/vision/barlow_twins)[
-
-V2
-
-Consistency training with supervision
-
-
-
-](/examples/vision/consistency_training)[
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Barlow Twins for Contrastive SSL](/examples/vision/barlow_twins)
+{: .d-inline .v-align-middle}
 
-Distilling Vision Transformers
-
-
-
-](/examples/vision/deit)[
-
-V2
-
-Focal Modulation: A replacement for Self-Attention
-
-
-
-](/examples/vision/focal_modulation_network)[
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Consistency training with supervision](/examples/vision/consistency_training)
+{: .d-inline .v-align-middle}
 
-Using the Forward-Forward Algorithm for Image Classification
-
-
-
-](/examples/vision/forwardforward)[
-
-V2
-
-Masked image modeling with Autoencoders
-
-
-
-](/examples/vision/masked_image_modeling)[
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Distilling Vision Transformers](/examples/vision/deit)
+{: .d-inline .v-align-middle}
 
-Segment Anything Model with 🤗Transformers
-
-
-
-](/examples/vision/sam)[
-
-V2
-
-Semantic segmentation with SegFormer and Hugging Face Transformers
-
-
-
-](/examples/vision/segformer)[
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Focal Modulation: A replacement for Self-Attention](/examples/vision/focal_modulation_network)
+{: .d-inline .v-align-middle}
 
-Self-supervised contrastive learning with SimSiam
-
-
-
-](/examples/vision/simsiam)[
-
-V2
-
-Supervised Contrastive Learning
-
-
-
-](/examples/vision/supervised-contrastive-learning)[
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Using the Forward-Forward Algorithm for Image Classification](/examples/vision/forwardforward)
+{: .d-inline .v-align-middle}
 
-When Recurrence meets Transformers
-
-
-
-](/examples/vision/temporal_latent_bottleneck)[
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Masked image modeling with Autoencoders](/examples/vision/masked_image_modeling)
+{: .d-inline .v-align-middle}
 
-Efficient Object Detection with YOLOV8 and KerasCV
+.
+{: .lh-0 .my-0 .opacity-0}
 
+V2
+{: .label .label-yellow .mx-1}
+[Segment Anything Model with 🤗Transformers](/examples/vision/sam)
+{: .d-inline .v-align-middle}
 
+.
+{: .lh-0 .my-0 .opacity-0}
 
-](/examples/vision/yolov8)
+V2
+{: .label .label-yellow .mx-1}
+[Semantic segmentation with SegFormer and Hugging Face Transformers](/examples/vision/segformer)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V2
+{: .label .label-yellow .mx-1}
+[Self-supervised contrastive learning with SimSiam](/examples/vision/simsiam)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V2
+{: .label .label-yellow .mx-1}
+[Supervised Contrastive Learning](/examples/vision/supervised-contrastive-learning)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V2
+{: .label .label-yellow .mx-1}
+[When Recurrence meets Transformers](/examples/vision/temporal_latent_bottleneck)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V2
+{: .label .label-yellow .mx-1}
+[Efficient Object Detection with YOLOV8 and KerasCV](/examples/vision/yolov8)
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
 
 * * *
