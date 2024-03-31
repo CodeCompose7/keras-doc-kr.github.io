@@ -10,9 +10,9 @@ permalink: /
 
 # Keras 3.0 소개
 
-[시작하기]({{ site.baseurl }}/getting_started){: .btn .btn-blue }
-[API 문서]({{ site.baseurl }}/api){: .btn .btn-blue }
-[가이드]({{ site.baseurl }}/guides){: .btn .btn-blue }
+[시작하기]({% link docs/03-getting_started/00-getting_started.md %}){: .btn .btn-blue }
+[API 문서]({% link docs/05-api/00-api.md %}){: .btn .btn-blue }
+[가이드]({% link docs/04-guides/00-guides.md %}){: .btn .btn-blue }
 [GitHub](https://github.com/keras-team/keras/){: .btn .btn-blue }
 
 5개월간의 광범위한 공개 베타 테스트 끝에, Keras 3.0의 공식 출시를 발표하게 되어 기쁘게 생각합니다. Keras 3는 완전히 새롭게 재작성된 Keras로, JAX, TensorFlow 또는 PyTorch 위에서 Keras 워크플로를 실행할 수 있으며, 완전히 새로운 대규모 모델 트레이닝 및 배포 기능을 제공합니다. 현재 목표에 따라 가장 적합한 프레임워크를 선택하고, 다른 프레임워크로 전환할 수 있습니다. 또한 Keras를 로우레벨 크로스 프레임워크 언어로 사용하여, 하나의 코드베이스로 JAX, TensorFlow 또는 PyTorch의 기본 워크플로에서 사용할 수 있는 레이어, 모델 또는 메트릭과 같은 사용자 지정 구성 요소를 개발할 수도 있습니다.
@@ -25,7 +25,7 @@ permalink: /
 
 *  **당신의 모델에 항상 최상의 성능 제공** 벤치마크 결과, JAX는 일반적으로 GPU, TPU, CPU에서 최고의 트레이닝 및 추론 성능을 제공하지만, 비-XLA TensorFlow가 GPU에서 더 빠른 경우도 있기 때문에 결과는 모델마다 다릅니다. _당신의 코드를 변경하지 않고도_ 당신의 모델에 가장 적합한 성능을 제공하는 백엔드를 동적으로 선택할 수 있으므로, 달성 가능한 최고의 효율로 트레이닝하고 서비스를 제공할 수 있습니다.
 *  **모델에 대한 에코시스템 옵션 잠금 해제** 모든 Keras 3 모델은 PyTorch `Module`로 인스턴스화할 수 있으며, TensorFlow `SavedModel`로 내보낼 수 있고, 상태없는 JAX 함수로 인스턴스화할 수 있습니다. 즉, PyTorch 에코시스템 패키지, 모든 범위의 TensorFlow 배포 및 프로덕션 도구(예: TF-Serving, TF.js 및 TFLite), JAX 대규모 TPU 트레이닝 인프라와 함께 Keras 3 모델을 사용할 수 있습니다. Keras 3 API를 사용해 하나의 `model.py`를 작성하고, ML 세계의 모든 것을 이용할 수 있습니다.
-*  **JAX로 대규모 모델 병렬 처리 및 데이터 병렬 처리 활용** Keras 3에는 현재 JAX 백엔드용으로 구현된 새로운 배포 API인 `keras.distribution` 네임스페이스가 포함되어 있습니다. (곧 TensorFlow 및 PyTorch 백엔드에 제공될 예정) 이를 통해 임의의 모델 규모와 클러스터 규모에서, 모델 병렬 처리, 데이터 병렬 처리, 그리고 이 두 가지의 조합을 쉽게 수행할 수 있습니다. 모델 정의, 학습 로직, 샤딩 구성이 모두 서로 분리되어 있기 때문에, 배포 워크플로우를 개발하기 쉽고 유지 관리가 쉽습니다. [스타터 가이드]({{ site.baseurl }}/guides/distribution/)를 참조하세요.
+*  **JAX로 대규모 모델 병렬 처리 및 데이터 병렬 처리 활용** Keras 3에는 현재 JAX 백엔드용으로 구현된 새로운 배포 API인 `keras.distribution` 네임스페이스가 포함되어 있습니다. (곧 TensorFlow 및 PyTorch 백엔드에 제공될 예정) 이를 통해 임의의 모델 규모와 클러스터 규모에서, 모델 병렬 처리, 데이터 병렬 처리, 그리고 이 두 가지의 조합을 쉽게 수행할 수 있습니다. 모델 정의, 학습 로직, 샤딩 구성이 모두 서로 분리되어 있기 때문에, 배포 워크플로우를 개발하기 쉽고 유지 관리가 쉽습니다. [스타터 가이드]({% link docs/04-guides/18-distribution.md %})를 참조하세요.
 *  **오픈소스 모델 릴리스의 도달 범위를 극대화하세요.** 사전 트레이닝된 모델을 릴리스하고 싶으신가요? 최대한 많은 사람이 사용할 수 있기를 원하시나요? 순수 TensorFlow 또는 PyTorch로 구현하면 커뮤니티의 약 절반이 사용할 수 있습니다. Keras 3로 구현하면 선택한 프레임워크에 관계없이 누구나 즉시 사용할 수 있습니다.(Keras 사용자가 아니더라도) 추가 개발 비용 없이 두 배의 효과를 얻을 수 있습니다.
 *  **모든 소스의 데이터 파이프라인을 사용하세요.** Keras 3 `fit()`/`evaluate()`/`predict()` 루틴은 사용 중인 백엔드에 관계없이 `tf.data.Dataset` 객체, PyTorch `DataLoader` 객체, NumPy 배열, Pandas 데이터 프레임과 호환이 가능합니다. PyTorch `DataLoader`에서 Keras 3 + TensorFlow 모델을 트레이닝하거나, `tf.data.Dataset`에서 Keras 3 + PyTorch 모델을 트레이닝할 수 있습니다.
 

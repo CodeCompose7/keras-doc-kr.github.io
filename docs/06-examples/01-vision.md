@@ -27,7 +27,7 @@ has_children: true
 {: .label .label-purple .mx-1}
 V3
 {: .label .label-green .mx-1}
-[Image classification from scratch](/examples/vision/image_classification_from_scratch)
+[Image classification from scratch]({% link docs/06-examples/01-vision/01-image_classification_from_scratch.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -37,7 +37,7 @@ V3
 {: .label .label-purple .mx-1}
 V3
 {: .label .label-green .mx-1}
-[Simple MNIST convnet](/examples/vision/mnist_convnet) 
+[Simple MNIST convnet]({% link docs/06-examples/01-vision/02-mnist_convnet.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -47,7 +47,7 @@ V3
 {: .label .label-purple .mx-1}
 V3
 {: .label .label-green .mx-1}
-[Image classification via fine-tuning with EfficientNet](/examples/vision/image_classification_efficientnet_fine_tuning)
+[Image classification via fine-tuning with EfficientNet]({% link docs/06-examples/01-vision/03-image_classification_efficientnet_fine_tuning.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -55,7 +55,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Image classification with Vision Transformer](/examples/vision/image_classification_with_vision_transformer)
+[Image classification with Vision Transformer]({% link docs/06-examples/01-vision/04-image_classification_with_vision_transformer.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -63,7 +63,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Classification using Attention-based Deep Multiple Instance Learning](/examples/vision/attention_mil_classification)
+[Classification using Attention-based Deep Multiple Instance Learning]({% link docs/06-examples/01-vision/05-attention_mil_classification.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -71,7 +71,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Image classification with modern MLP models](/examples/vision/mlp_image_classification)
+[Image classification with modern MLP models]({% link docs/06-examples/01-vision/06-mlp_image_classification.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -79,7 +79,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[A mobile-friendly Transformer-based model for image classification](/examples/vision/mobilevit)
+[A mobile-friendly Transformer-based model for image classification]({% link docs/06-examples/01-vision/07-mobilevit.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -87,7 +87,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Pneumonia Classification on TPU](/examples/vision/xray_classification_with_tpus)
+[Pneumonia Classification on TPU]({% link docs/06-examples/01-vision/08-xray_classification_with_tpus.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -95,7 +95,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Compact Convolutional Transformers](/examples/vision/cct)
+[Compact Convolutional Transformers]({% link docs/06-examples/01-vision/09-cct.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -103,7 +103,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Image classification with ConvMixer](/examples/vision/convmixer)
+[Image classification with ConvMixer]({% link docs/06-examples/01-vision/10-convmixer.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -111,7 +111,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Image classification with EANet (External Attention Transformer)](/examples/vision/eanet)
+[Image classification with EANet (External Attention Transformer)]({% link docs/06-examples/01-vision/11-eanet.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -119,7 +119,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Involutional neural networks](/examples/vision/involution)
+[Involutional neural networks]({% link docs/06-examples/01-vision/12-involution.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -127,7 +127,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Image classification with Perceiver](/examples/vision/perceiver_image_classification)
+[Image classification with Perceiver]({% link docs/06-examples/01-vision/13-perceiver_image_classification.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -135,7 +135,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Few-Shot learning with Reptile](/examples/vision/reptile)
+[Few-Shot learning with Reptile]({% link docs/06-examples/01-vision/14-reptile.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -143,7 +143,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Semi-supervised image classification using contrastive pretraining with SimCLR](/examples/vision/semisupervised_simclr)
+[Semi-supervised image classification using contrastive pretraining with SimCLR]({% link docs/06-examples/01-vision/15-semisupervised_simclr.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -151,7 +151,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Image classification with Swin Transformers](/examples/vision/swin_transformers)
+[Image classification with Swin Transformers]({% link docs/06-examples/01-vision/16-swin_transformers.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -159,7 +159,7 @@ V3
 
 V2
 {: .label .label-yellow .mx-1}
-[Train a Vision Transformer on small datasets](/examples/vision/vit_small_ds)
+[Train a Vision Transformer on small datasets]({% link docs/06-examples/01-vision/17-vit_small_ds.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -167,7 +167,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[A Vision Transformer without Attention](/examples/vision/shiftvit)
+[A Vision Transformer without Attention]({% link docs/06-examples/01-vision/18-shiftvit.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -175,7 +175,7 @@ V2
 
 V3
 {: .label .label-green .mx-1}
-[Image Classification using Global Context Vision Transformer](/examples/vision/image_classification_using_global_context_vision_transformer)
+[Image Classification using Global Context Vision Transformer]({% link docs/06-examples/01-vision/19-image_classification_using_global_context_vision_transformer.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -183,7 +183,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Image Classification using BigTransfer (BiT)](/examples/vision/bit)
+[Image Classification using BigTransfer (BiT)]({% link docs/06-examples/01-vision/20-bit.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -195,7 +195,7 @@ V3
 {: .label .label-purple .mx-1}
 V3
 {: .label .label-green .mx-1}
-[Image segmentation with a U-Net-like architecture](/examples/vision/oxford_pets_image_segmentation)
+[Image segmentation with a U-Net-like architecture]({% link docs/06-examples/01-vision/21-oxford_pets_image_segmentation.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -203,7 +203,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Multiclass semantic segmentation using DeepLabV3+](/examples/vision/deeplabv3_plus)
+[Multiclass semantic segmentation using DeepLabV3+]({% link docs/06-examples/01-vision/22-deeplabv3_plus.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -211,7 +211,7 @@ V3
 
 V2
 {: .label .label-yellow .mx-1}
-[Highly accurate boundaries segmentation using BASNet](/examples/vision/basnet_segmentation)
+[Highly accurate boundaries segmentation using BASNet]({% link docs/06-examples/01-vision/23-basnet_segmentation.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -219,7 +219,7 @@ V2
 
 V3
 {: .label .label-green .mx-1}
-[Image Segmentation using Composable Fully-Convolutional Networks](/examples/vision/fully_convolutional_network)
+[Image Segmentation using Composable Fully-Convolutional Networks]({% link docs/06-examples/01-vision/24-fully_convolutional_network.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -229,7 +229,7 @@ V3
 
 V2
 {: .label .label-yellow .mx-1}
-[Object Detection with RetinaNet](/examples/vision/retinanet)
+[Object Detection with RetinaNet]({% link docs/06-examples/01-vision/25-retinanet.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -237,7 +237,7 @@ V2
 
 V3
 {: .label .label-green .mx-1}
-[Keypoint Detection with Transfer Learning](/examples/vision/keypoint_detection)
+[Keypoint Detection with Transfer Learning]({% link docs/06-examples/01-vision/26-keypoint_detection.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -245,7 +245,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Object detection with Vision Transformers](/examples/vision/object_detection_using_vision_transformer)
+[Object detection with Vision Transformers]({% link docs/06-examples/01-vision/27-object_detection_using_vision_transformer.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -255,7 +255,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[3D image classification from CT scans](/examples/vision/3D_image_classification)
+[3D image classification from CT scans]({% link docs/06-examples/01-vision/28-3D_image_classification.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -263,7 +263,7 @@ V3
 
 V2
 {: .label .label-yellow .mx-1}
-[Monocular depth estimation](/examples/vision/depth_estimation)
+[Monocular depth estimation]({% link docs/06-examples/01-vision/29-depth_estimation.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -273,7 +273,7 @@ V2
 {: .label .label-purple .mx-1}
 V3
 {: .label .label-green .mx-1}
-[3D volumetric rendering with NeRF](/examples/vision/nerf)
+[3D volumetric rendering with NeRF]({% link docs/06-examples/01-vision/30-nerf.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -281,7 +281,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Point cloud segmentation with PointNet](/examples/vision/pointnet_segmentation)
+[Point cloud segmentation with PointNet]({% link docs/06-examples/01-vision/31-pointnet_segmentation.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -289,7 +289,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Point cloud classification](/examples/vision/pointnet)
+[Point cloud classification]({% link docs/06-examples/01-vision/32-pointnet.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -299,7 +299,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[OCR model for reading Captchas](/examples/vision/captcha_ocr)
+[OCR model for reading Captchas]({% link docs/06-examples/01-vision/33-captcha_ocr.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -307,7 +307,7 @@ V3
 
 V2
 {: .label .label-yellow .mx-1}
-[Handwriting recognition](/examples/vision/handwriting_recognition)
+[Handwriting recognition]({% link docs/06-examples/01-vision/34-handwriting_recognition.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -317,7 +317,7 @@ V2
 
 V3
 {: .label .label-green .mx-1}
-[Convolutional autoencoder for image denoising](/examples/vision/autoencoder)
+[Convolutional autoencoder for image denoising]({% link docs/06-examples/01-vision/35-autoencoder.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -325,7 +325,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Low-light image enhancement using MIRNet](/examples/vision/mirnet)
+[Low-light image enhancement using MIRNet]({% link docs/06-examples/01-vision/36-mirnet.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -333,7 +333,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Image Super-Resolution using an Efficient Sub-Pixel CNN](/examples/vision/super_resolution_sub_pixel)
+[Image Super-Resolution using an Efficient Sub-Pixel CNN]({% link docs/06-examples/01-vision/37-super_resolution_sub_pixel.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -341,7 +341,7 @@ V3
 
 V2
 {: .label .label-yellow .mx-1}
-[Enhanced Deep Residual Networks for single-image super-resolution](/examples/vision/edsr)
+[Enhanced Deep Residual Networks for single-image super-resolution]({% link docs/06-examples/01-vision/38-edsr.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -349,7 +349,7 @@ V2
 
 V3
 {: .label .label-green .mx-1}
-[Zero-DCE for low-light image enhancement](/examples/vision/zero_dce)
+[Zero-DCE for low-light image enhancement]({% link docs/06-examples/01-vision/39-zero_dce.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -359,7 +359,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[CutMix data augmentation for image classification](/examples/vision/cutmix)
+[CutMix data augmentation for image classification]({% link docs/06-examples/01-vision/40-cutmix.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -367,7 +367,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[MixUp augmentation for image classification](/examples/vision/mixup)
+[MixUp augmentation for image classification]({% link docs/06-examples/01-vision/41-mixup.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -375,7 +375,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[RandAugment for Image Classification for Improved Robustness](/examples/vision/randaugment)
+[RandAugment for Image Classification for Improved Robustness]({% link docs/06-examples/01-vision/42-randaugment.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -387,7 +387,7 @@ V3
 {: .label .label-purple .mx-1}
 V3
 {: .label .label-green .mx-1}
-[Image captioning](/examples/vision/image_captioning)
+[Image captioning]({% link docs/06-examples/01-vision/43-image_captioning.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -395,7 +395,7 @@ V3
 
 V2
 {: .label .label-yellow .mx-1}
-[Natural language image search with a Dual Encoder](/examples/vision/nl_image_search)
+[Natural language image search with a Dual Encoder]({% link docs/06-examples/01-vision/44-nl_image_search.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -405,7 +405,7 @@ V2
 
 V3
 {: .label .label-green .mx-1}
-[Visualizing what convnets learn](/examples/vision/visualizing_what_convnets_learn)
+[Visualizing what convnets learn]({% link docs/06-examples/01-vision/45-visualizing_what_convnets_learn.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -413,7 +413,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Model interpretability with Integrated Gradients](/examples/vision/integrated_gradients)
+[Model interpretability with Integrated Gradients]({% link docs/06-examples/01-vision/46-integrated_gradients.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -421,7 +421,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Investigating Vision Transformer representations](/examples/vision/probing_vits)
+[Investigating Vision Transformer representations]({% link docs/06-examples/01-vision/47-probing_vits.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -429,7 +429,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Grad-CAM class activation visualization](/examples/vision/grad_cam)
+[Grad-CAM class activation visualization]({% link docs/06-examples/01-vision/48-grad_cam.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -439,7 +439,7 @@ V3
 
 V2
 {: .label .label-yellow .mx-1}
-[Near-duplicate image search](/examples/vision/near_dup_search)
+[Near-duplicate image search]({% link docs/06-examples/01-vision/49-near_dup_search.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -447,7 +447,7 @@ V2
 
 V3
 {: .label .label-green .mx-1}
-[Semantic Image Clustering](/examples/vision/semantic_image_clustering)
+[Semantic Image Clustering]({% link docs/06-examples/01-vision/50-semantic_image_clustering.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -455,7 +455,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Image similarity estimation using a Siamese Network with a contrastive loss](/examples/vision/siamese_contrastive)
+[Image similarity estimation using a Siamese Network with a contrastive loss]({% link docs/06-examples/01-vision/51-siamese_contrastive.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -463,7 +463,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Image similarity estimation using a Siamese Network with a triplet loss](/examples/vision/siamese_network)
+[Image similarity estimation using a Siamese Network with a triplet loss]({% link docs/06-examples/01-vision/52-siamese_network.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -471,7 +471,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Metric learning for image similarity search](/examples/vision/metric_learning)
+[Metric learning for image similarity search]({% link docs/06-examples/01-vision/53-metric_learning.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -479,7 +479,7 @@ V3
 
 V2
 {: .label .label-yellow .mx-1}
-[Metric learning for image similarity search using TensorFlow Similarity](/examples/vision/metric_learning_tf_similarity)
+[Metric learning for image similarity search using TensorFlow Similarity]({% link docs/06-examples/01-vision/54-metric_learning_tf_similarity.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -487,7 +487,7 @@ V2
 
 V3
 {: .label .label-green .mx-1}
-[Self-supervised contrastive learning with NNCLR](/examples/vision/nnclr)
+[Self-supervised contrastive learning with NNCLR]({% link docs/06-examples/01-vision/55-nnclr.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -497,7 +497,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Video Classification with a CNN-RNN Architecture](/examples/vision/video_classification)
+[Video Classification with a CNN-RNN Architecture]({% link docs/06-examples/01-vision/56-video_classification.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -505,7 +505,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Next-Frame Video Prediction with Convolutional LSTMs](/examples/vision/conv_lstm)
+[Next-Frame Video Prediction with Convolutional LSTMs]({% link docs/06-examples/01-vision/57-conv_lstm.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -513,7 +513,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Video Classification with Transformers](/examples/vision/video_transformers)
+[Video Classification with Transformers]({% link docs/06-examples/01-vision/58-video_transformers.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -521,7 +521,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Video Vision Transformer](/examples/vision/vivit)
+[Video Vision Transformer]({% link docs/06-examples/01-vision/59-vivit.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -531,7 +531,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Gradient Centralization for Better Training Performance](/examples/vision/gradient_centralization)
+[Gradient Centralization for Better Training Performance]({% link docs/06-examples/01-vision/60-gradient_centralization.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -539,7 +539,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Learning to tokenize in Vision Transformers](/examples/vision/token_learner)
+[Learning to tokenize in Vision Transformers]({% link docs/06-examples/01-vision/61-token_learner.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -547,7 +547,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Knowledge Distillation](/examples/vision/knowledge_distillation)
+[Knowledge Distillation]({% link docs/06-examples/01-vision/62-knowledge_distillation.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -555,7 +555,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[FixRes: Fixing train-test resolution discrepancy](/examples/vision/fixres)
+[FixRes: Fixing train-test resolution discrepancy]({% link docs/06-examples/01-vision/63-fixres.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -563,7 +563,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Class Attention Image Transformers with LayerScale](/examples/vision/cait)
+[Class Attention Image Transformers with LayerScale]({% link docs/06-examples/01-vision/64-cait.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -571,7 +571,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Augmenting convnets with aggregated attention](/examples/vision/patch_convnet)
+[Augmenting convnets with aggregated attention]({% link docs/06-examples/01-vision/65-patch_convnet.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -579,7 +579,7 @@ V3
 
 V3
 {: .label .label-green .mx-1}
-[Learning to Resize](/examples/vision/learnable_resizer)
+[Learning to Resize]({% link docs/06-examples/01-vision/66-learnable_resizer.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -589,7 +589,7 @@ V3
 
 V2
 {: .label .label-yellow .mx-1}
-[Semi-supervision and domain adaptation with AdaMatch](/examples/vision/adamatch)
+[Semi-supervision and domain adaptation with AdaMatch]({% link docs/06-examples/01-vision/67-adamatch.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -597,7 +597,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[Barlow Twins for Contrastive SSL](/examples/vision/barlow_twins)
+[Barlow Twins for Contrastive SSL]({% link docs/06-examples/01-vision/68-barlow_twins.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -605,7 +605,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[Consistency training with supervision](/examples/vision/consistency_training)
+[Consistency training with supervision]({% link docs/06-examples/01-vision/69-consistency_training.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -613,7 +613,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[Distilling Vision Transformers](/examples/vision/deit)
+[Distilling Vision Transformers]({% link docs/06-examples/01-vision/70-deit.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -621,7 +621,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[Focal Modulation: A replacement for Self-Attention](/examples/vision/focal_modulation_network)
+[Focal Modulation: A replacement for Self-Attention]({% link docs/06-examples/01-vision/71-focal_modulation_network.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -629,7 +629,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[Using the Forward-Forward Algorithm for Image Classification](/examples/vision/forwardforward)
+[Using the Forward-Forward Algorithm for Image Classification]({% link docs/06-examples/01-vision/72-forwardforward.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -637,7 +637,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[Masked image modeling with Autoencoders](/examples/vision/masked_image_modeling)
+[Masked image modeling with Autoencoders]({% link docs/06-examples/01-vision/73-masked_image_modeling.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -645,7 +645,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[Segment Anything Model with 🤗Transformers](/examples/vision/sam)
+[Segment Anything Model with 🤗Transformers]({% link docs/06-examples/01-vision/74-sam.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -653,7 +653,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[Semantic segmentation with SegFormer and Hugging Face Transformers](/examples/vision/segformer)
+[Semantic segmentation with SegFormer and Hugging Face Transformers]({% link docs/06-examples/01-vision/75-segformer.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -661,7 +661,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[Self-supervised contrastive learning with SimSiam](/examples/vision/simsiam)
+[Self-supervised contrastive learning with SimSiam]({% link docs/06-examples/01-vision/76-simsiam.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -669,7 +669,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[Supervised Contrastive Learning](/examples/vision/supervised-contrastive-learning)
+[Supervised Contrastive Learning]({% link docs/06-examples/01-vision/77-supervised-contrastive-learning.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -677,7 +677,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[When Recurrence meets Transformers](/examples/vision/temporal_latent_bottleneck)
+[When Recurrence meets Transformers]({% link docs/06-examples/01-vision/78-temporal_latent_bottleneck.md %})
 {: .d-inline .v-align-middle}
 
 .
@@ -685,7 +685,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[Efficient Object Detection with YOLOV8 and KerasCV](/examples/vision/yolov8)
+[Efficient Object Detection with YOLOV8 and KerasCV]({% link docs/06-examples/01-vision/79-yolov8.md %})
 {: .d-inline .v-align-middle}
 
 .
