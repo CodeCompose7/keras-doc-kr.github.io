@@ -8,7 +8,7 @@ has_children: true
 ---
 
 * 원본 링크 : [https://keras.io/examples/generative/](https://keras.io/examples/generative/){:target="_blank"}
-* 최종 수정일 : 2024-04-01
+* 최종 수정일 : 2024-04-02
 
 # 생성형 딥러닝
 {: .no_toc }
@@ -41,7 +41,6 @@ V3
 .
 {: .lh-0 .my-0 .opacity-0}
 
-
 V2
 {: .label .label-yellow .mx-1}
 [DreamBooth]({% link docs/06-examples/05-generative/03-dreambooth.md %})
@@ -50,211 +49,179 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 V2
-
-Denoising Diffusion Probabilistic Models
-
-
-
-](/examples/generative/ddpm)[
-
-V2
-
-Teach StableDiffusion new concepts via Textual Inversion
-
-
-
-](/examples/generative/fine_tune_via_textual_inversion)[
+{: .label .label-yellow .mx-1}
+[Denoising Diffusion Probabilistic Models]({% link docs/06-examples/05-generative/04-ddpm.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
-
-Fine-tuning Stable Diffusion
-
-
-
-](/examples/generative/finetune_stable_diffusion)[
-
-**V3**
-
-Variational AutoEncoder
-
-
-
-](/examples/generative/vae)[
-
-**V3**
-
-GAN overriding Model.train\_step
-
-
-
-](/examples/generative/dcgan_overriding_train_step)[
-
-**V3**
-
-WGAN-GP overriding Model.train\_step
-
-
-
-](/examples/generative/wgan_gp)[
-
-**V3**
-
-Conditional GAN
-
-
-
-](/examples/generative/conditional_gan)[
+{: .label .label-yellow .mx-1}
+[Teach StableDiffusion new concepts via Textual Inversion]({% link docs/06-examples/05-generative/05-fine_tune_via_textual_inversion.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Fine-tuning Stable Diffusion]({% link docs/06-examples/05-generative/06-finetune_stable_diffusion.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-CycleGAN
+V3
+{: .label .label-green .mx-1}
+[Variational AutoEncoder]({% link docs/06-examples/05-generative/07-vae.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
+V3
+{: .label .label-green .mx-1}
+[GAN overriding Model.train\_step]({% link docs/06-examples/05-generative/08-dcgan_overriding_train_step.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
+V3
+{: .label .label-green .mx-1}
+[WGAN-GP overriding Model.train\_step]({% link docs/06-examples/05-generative/09-wgan_gp.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-](/examples/generative/cyclegan)[
-
-V2
-
-Data-efficient GANs with Adaptive Discriminator Augmentation
-
-
-
-](/examples/generative/gan_ada)[
-
-**V3**
-
-Deep Dream
-
-
-
-](/examples/generative/deep_dream)[
-
-**V3**
-
-GauGAN for conditional image generation
-
-
-
-](/examples/generative/gaugan)[
-
-**V3**
-
-PixelCNN
-
-
-
-](/examples/generative/pixelcnn)[
+V3
+{: .label .label-green .mx-1}
+[Conditional GAN]({% link docs/06-examples/05-generative/10-conditional_gan.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
-
-Face image generation with StyleGAN
-
-
-
-](/examples/generative/stylegan)[
-
-V2
-
-Vector-Quantized Variational Autoencoders
-
-
-
-](/examples/generative/vq_vae)
-
-### Style transfer
-
-[
-
-**V3**
-
-Neural style transfer
-
-
-
-](/examples/generative/neural_style_transfer)[
+{: .label .label-yellow .mx-1}
+[CycleGAN]({% link docs/06-examples/05-generative/11-cyclegan.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Data-efficient GANs with Adaptive Discriminator Augmentation]({% link docs/06-examples/05-generative/12-gan_ada.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-Neural Style Transfer with AdaIN
+V3
+{: .label .label-green .mx-1}
+[Deep Dream]({% link docs/06-examples/05-generative/13-deep_dream.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
+V3
+{: .label .label-green .mx-1}
+[GauGAN for conditional image generation]({% link docs/06-examples/05-generative/14-gaugan.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
+V3
+{: .label .label-green .mx-1}
+[PixelCNN]({% link docs/06-examples/05-generative/15-pixelcnn.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-](/examples/generative/adain)
+V2
+{: .label .label-yellow .mx-1}
+[Face image generation with StyleGAN]({% link docs/06-examples/05-generative/16-stylegan.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-### Text generation
+V2
+{: .label .label-yellow .mx-1}
+[Vector-Quantized Variational Autoencoders]({% link docs/06-examples/05-generative/17-vq_vae.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-[
+### 스타일 전이
+
+V3
+{: .label .label-green .mx-1}
+[Neural style transfer]({% link docs/06-examples/05-generative/18-neural_style_transfer.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V2
+{: .label .label-yellow .mx-1}
+[Neural Style Transfer with AdaIN]({% link docs/06-examples/05-generative/19-adain.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
+
+### 텍스트 생성
 
 ★
+{: .label .label-purple .mx-1}
+V3
+{: .label .label-green .mx-1}
+[GPT2 Text Generation with KerasNLP]({% link docs/06-examples/05-generative/20-gpt2_text_generation_with_kerasnlp.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-**V3**
+V3
+{: .label .label-green .mx-1}
+[GPT text generation from scratch with KerasNLP]({% link docs/06-examples/05-generative/21-text_generation_gpt.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-GPT2 Text Generation with KerasNLP
+V3
+{: .label .label-green .mx-1}
+[Text generation with a miniature GPT]({% link docs/06-examples/05-generative/22-text_generation_with_miniature_gpt.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-
-
-](/examples/generative/gpt2_text_generation_with_kerasnlp)[
-
-**V3**
-
-GPT text generation from scratch with KerasNLP
-
-
-
-](/examples/generative/text_generation_gpt)[
-
-**V3**
-
-Text generation with a miniature GPT
-
-
-
-](/examples/generative/text_generation_with_miniature_gpt)[
-
-**V3**
-
-Character-level text generation with LSTM
-
-
-
-](/examples/generative/lstm_character_level_text_generation)[
+V3
+{: .label .label-green .mx-1}
+[Character-level text generation with LSTM]({% link docs/06-examples/05-generative/23-lstm_character_level_text_generation.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[Text Generation using FNet]({% link docs/06-examples/05-generative/24-text_generation_fnet.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-Text Generation using FNet
-
-
-
-](/examples/generative/text_generation_fnet)
-
-### Graph generation
-
-[
+### 그래프 생성
 
 V2
-
-Drug Molecule Generation with VAE
-
-
-
-](/examples/generative/molecule_generation)[
-
-V2
-
-WGAN-GP with R-GCN for the generation of small molecular graphs
-
-
-
-](/examples/generative/wgan-graphs)
-
-### Other
-
-[
+{: .label .label-yellow .mx-1}
+[Drug Molecule Generation with VAE]({% link docs/06-examples/05-generative/25-molecule_generation.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
 V2
+{: .label .label-yellow .mx-1}
+[WGAN-GP with R-GCN for the generation of small molecular graphs]({% link docs/06-examples/05-generative/26-wgan-graphs.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-Density estimation using Real NVP
+### 기타
 
-
-
-](/examples/generative/real_nvp)
+V2
+{: .label .label-yellow .mx-1}
+[Density estimation using Real NVP]({% link docs/06-examples/05-generative/27-real_nvp.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
