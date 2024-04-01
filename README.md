@@ -14,10 +14,16 @@ Keras 한글 문서 페이지는 GitHub Page에서 볼 수 있습니다.
 링크는 다음과 같이 기록해야 합니다.
 
 ```markdown
-가장 간단한 모델 유형은 선형 레이어 스택인 [`Sequential` 모델]({{ site.baseurl }}/guides/sequential_model/)입니다.
+Keras의 핵심 데이터 구조는 **레이어(layers)**와 **모델(models)**입니다. 가장 간단한 모델 유형은 선형 레이어 스택인 [`Sequential` 모델]({% link docs/04-guides/02-sequential_model.md %})입니다.
 ```
 
-`{{ site.baseurl }}/` 이 부분을 앞에 붙여주세요.
+{% link docs/04-guides/02-sequential_model.md %} 파일 명을 사용하세요.
+
+`permalink`를 사용할 수도 있습니다. 하지만 이 경우, `{{ site.baseurl }}/` 이 부분을 앞에 붙여주세요.
+
+```markdown
+가장 간단한 모델 유형은 선형 레이어 스택인 [`Sequential` 모델]({{ site.baseurl }}/guides/sequential_model/)입니다.
+```
 
 ### permalink 링크
 
