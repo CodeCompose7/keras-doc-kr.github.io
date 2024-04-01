@@ -29,7 +29,7 @@ The Keras project isn't limited to the core Keras API for building and training 
 KerasTuner
 ----------
 
-[KerasTuner Documentation]({{ site.baseurl }}/keras_tuner/) - [KerasTuner GitHub repository](https://github.com/keras-team/keras-tuner)
+[KerasTuner Documentation]({% link docs/07-keras_tuner/00-keras_tuner.md %}) - [KerasTuner GitHub repository](https://github.com/keras-team/keras-tuner)
 
 KerasTuner is an easy-to-use, scalable hyperparameter optimization framework that solves the pain points of hyperparameter search. Easily configure your search space with a define-by-run syntax, then leverage one of the available search algorithms to find the best hyperparameter values for your models. KerasTuner comes with Bayesian Optimization, Hyperband, and Random Search algorithms built-in, and is also designed to be easy for researchers to extend in order to experiment with new search algorithms.
 
@@ -38,7 +38,7 @@ KerasTuner is an easy-to-use, scalable hyperparameter optimization framework tha
 KerasNLP
 --------
 
-[KerasNLP Documentation]({{ site.baseurl }}/keras_nlp/) - [KerasNLP GitHub repository](https://github.com/keras-team/keras-nlp)
+[KerasNLP Documentation]({% link docs/09-keras_nlp/00-keras_nlp.md %}) - [KerasNLP GitHub repository](https://github.com/keras-team/keras-nlp)
 
 KerasNLP is a natural language processing library that supports users through their entire development cycle. Our workflows are built from modular components that have state-of-the-art preset weights and architectures when used out-of-the-box and are easily customizable when more control is needed.
 
@@ -47,7 +47,7 @@ KerasNLP is a natural language processing library that supports users through th
 KerasCV
 -------
 
-[KerasCV Documentation]({{ site.baseurl }}/keras_cv/) - [KerasCV GitHub repository](https://github.com/keras-team/keras-cv)
+[KerasCV Documentation]({% link docs/08-keras_cv/00-keras_cv.md %}) - [KerasCV GitHub repository](https://github.com/keras-team/keras-cv)
 
 KerasCV is a repository of modular building blocks (layers, metrics, losses, data-augmentation) that applied computer vision engineers can leverage to quickly assemble production-grade, state-of-the-art training and inference pipelines for common use cases such as image classification, object detection, image segmentation, image data augmentation, etc.
 

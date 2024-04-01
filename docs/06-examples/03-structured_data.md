@@ -8,7 +8,7 @@ has_children: true
 ---
 
 * 원본 링크 : [https://keras.io/examples/structured_data/](https://keras.io/examples/structured_data/){:target="_blank"}
-* 최종 수정일 : 2024-03-29
+* 최종 수정일 : 2024-04-01
 
 # 구조화된 데이터
 {: .no_toc }
@@ -20,3 +20,101 @@ has_children: true
 {:toc}
 
 ---
+
+### 구조화된 데이터 분류
+
+★
+{: .label .label-purple .mx-1}
+V3
+{: .label .label-green .mx-1}
+[Structured data classification with FeatureSpace]({% link docs/06-examples/03-structured_data/01-structured_data_classification_with_feature_space.md %})
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+★
+{: .label .label-purple .mx-1}
+V3
+{: .label .label-green .mx-1}
+[Imbalanced classification: credit card fraud detection]({% link docs/06-examples/03-structured_data/02-imbalanced_classification.md %})
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Structured data classification from scratch]({% link docs/06-examples/03-structured_data/03-structured_data_classification_from_scratch.md %})
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Structured data learning with Wide, Deep, and Cross networks]({% link docs/06-examples/03-structured_data/04-wide_deep_cross_networks.md %})
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V2
+{: .label .label-yellow .mx-1}
+[Classification with Gated Residual and Variable Selection Networks]({% link docs/06-examples/03-structured_data/05-classification_with_grn_and_vsn.md %})
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V2
+{: .label .label-yellow .mx-1}
+[Classification with TensorFlow Decision Forests]({% link docs/06-examples/03-structured_data/06-classification_with_tfdf.md %})
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Classification with Neural Decision Forests]({% link docs/06-examples/03-structured_data/07-deep_neural_decision_forests.md %})
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[Structured data learning with TabTransformer]({% link docs/06-examples/03-structured_data/08-tabtransformer.md %})
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+### 추천
+
+V3
+{: .label .label-green .mx-1}
+[Collaborative Filtering for Movie Recommendations]({% link docs/06-examples/03-structured_data/09-collaborative_filtering_movielens.md %})
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+V3
+{: .label .label-green .mx-1}
+[A Transformer-based recommendation system]({% link docs/06-examples/03-structured_data/10-movielens_recommendations_transformers.md %})
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}
+
+### 기타
+
+V2
+{: .label .label-yellow .mx-1}
+[FeatureSpace advanced use cases]({% link docs/06-examples/03-structured_data/11-feature_space_advanced.md %})
+{: .d-inline .v-align-middle}
+
+.
+{: .lh-0 .my-0 .opacity-0}

@@ -8,7 +8,7 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/vision/image_classification_efficientnet_fine_tuning/](https://keras.io/examples/vision/image_classification_efficientnet_fine_tuning/){:target="_blank"}
-* 최종 수정일 : 2024-03-31
+* 최종 수정일 : 2024-04-01
 
 # EfficientNet으로 하는 미세 조정을 통한 이미지 분류
 {: .no_toc }
@@ -169,7 +169,7 @@ for i, (image, label) in enumerate(ds_train.take(9)):
     plt.axis("off")
 ```
 
-![png](/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_9_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_9_0.png)
 
 ### Data augmentation
 
@@ -203,7 +203,7 @@ for image, label in ds_train.take(1):
         plt.axis("off")
 ```
 
-![png](/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_13_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_13_0.png)
 
 ### Prepare inputs
 
@@ -1094,7 +1094,7 @@ def plot_hist(hist):
 plot_hist(hist)
 ```
 
-![png](/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_19_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_19_0.png)
 
 * * *
 
@@ -1193,7 +1193,7 @@ Epoch 25/25
  187/187 ━━━━━━━━━━━━━━━━━━━━ 138s 416ms/step - accuracy: 0.6065 - loss: 1.4131 - val_accuracy: 0.7456 - val_loss: 0.9307
 ```
 
-![png](/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_23_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_23_1.png)
 
 The second step is to unfreeze a number of layers and fit the model using smaller learning rate. In this example we show unfreezing all layers, but depending on specific dataset it may be desireble to only unfreeze a fraction of all layers.
 
@@ -1234,7 +1234,7 @@ Epoch 4/4
  187/187 ━━━━━━━━━━━━━━━━━━━━ 79s 419ms/step - accuracy: 0.6625 - loss: 1.1775 - val_accuracy: 0.7701 - val_loss: 0.8284
 ```
 
-![png](/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_25_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_25_1.png)
 
 ### Tips for fine tuning EfficientNet
 

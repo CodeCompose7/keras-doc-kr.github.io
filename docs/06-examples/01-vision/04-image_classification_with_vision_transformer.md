@@ -8,7 +8,7 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/vision/image_classification_with_vision_transformer/](https://keras.io/examples/vision/image_classification_with_vision_transformer/){:target="_blank"}
-* 최종 수정일 : 2024-03-29
+* 최종 수정일 : 2024-04-01
 
 # Vision Transformer로 이미지 분류
 {: .no_toc }
@@ -203,9 +203,9 @@ Patches per image: 144
 Elements per patch: 108
 ```
 
-![png](/img/examples/vision/image_classification_with_vision_transformer/image_classification_with_vision_transformer_15_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_classification_with_vision_transformer/image_classification_with_vision_transformer_15_1.png)
 
-![png](/img/examples/vision/image_classification_with_vision_transformer/image_classification_with_vision_transformer_15_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_classification_with_vision_transformer/image_classification_with_vision_transformer_15_2.png)
 
 * * *
 
@@ -362,9 +362,9 @@ Test accuracy: 10.61%
 Test top 5 accuracy: 31.51%
 ```
 
-![png](/img/examples/vision/image_classification_with_vision_transformer/image_classification_with_vision_transformer_21_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_classification_with_vision_transformer/image_classification_with_vision_transformer_21_9.png)
 
-![png](/img/examples/vision/image_classification_with_vision_transformer/image_classification_with_vision_transformer_21_10.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_classification_with_vision_transformer/image_classification_with_vision_transformer_21_10.png)
 
 After 100 epochs, the ViT model achieves around 55% accuracy and 82% top-5 accuracy on the test data. These are not competitive results on the CIFAR-100 dataset, as a ResNet50V2 trained from scratch on the same data can achieve 67% accuracy.
 

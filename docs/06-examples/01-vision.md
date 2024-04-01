@@ -8,7 +8,7 @@ has_children: true
 ---
 
 * 원본 링크 : [https://keras.io/examples/vision/](https://keras.io/examples/vision/){:target="_blank"}
-* 최종 수정일 : 2024-03-31
+* 최종 수정일 : 2024-04-01
 
 # 컴퓨터 비전
 {: .no_toc }
@@ -690,5 +690,3 @@ V2
 
 .
 {: .lh-0 .my-0 .opacity-0}
-
-* * *
