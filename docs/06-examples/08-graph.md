@@ -8,7 +8,7 @@ has_children: true
 ---
 
 * 원본 링크 : [https://keras.io/examples/graph/](https://keras.io/examples/graph/){:target="_blank"}
-* 최종 수정일 : 2024-04-01
+* 최종 수정일 : 2024-04-02
 
 # 그래프 데이터
 {: .no_toc }
@@ -21,28 +21,22 @@ has_children: true
 
 ---
 
-[
+[Graph attention network (GAT) for node classification]({% link docs/06-examples/08-graph/01-gat_node_classification.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-Graph attention network (GAT) for node classification
+[Node Classification with Graph Neural Networks]({% link docs/06-examples/08-graph/02-gnn_citations.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
+[Message-passing neural network (MPNN) for molecular property prediction]({% link docs/06-examples/08-graph/03-mpnn-molecular-graphs.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
 
-
-](/examples/graph/gat_node_classification)[
-
-Node Classification with Graph Neural Networks
-
-
-
-](/examples/graph/gnn_citations)[
-
-Message-passing neural network (MPNN) for molecular property prediction
-
-
-
-](/examples/graph/mpnn-molecular-graphs)[
-
-Graph representation learning with node2vec
-
-
-
-](/examples/graph/node2vec_movielens)
+[Graph representation learning with node2vec]({% link docs/06-examples/08-graph/04-node2vec_movielens.md %})
+{: .d-inline .v-align-middle}
+.
+{: .lh-0 .my-0 .opacity-0}
