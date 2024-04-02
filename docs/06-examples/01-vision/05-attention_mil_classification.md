@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Classification using Attention-based Deep Multiple Instance Learning (MIL).
+title: 어텐션 기반 심층 다중 인스턴스 학습(MIL)을 사용한 분류
 nav_order: 05+00
 permalink: /examples/vision/attention_mil_classification/
 parent: 컴퓨터 비전

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Image classification with modern MLP models
+title: 최신 MLP 모델을 사용한 이미지 분류
 nav_order: 06+00
 permalink: /examples/vision/mlp_image_classification/
 parent: 컴퓨터 비전

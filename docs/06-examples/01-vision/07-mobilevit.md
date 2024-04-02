@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MobileViT - A mobile-friendly Transformer-based model for image classification
+title: MobileViT - 이미지 분류를 위한 모바일 친화적인 트랜스포머 기반 모델
 nav_order: 07+00
 permalink: /examples/vision/mobilevit/
 parent: 컴퓨터 비전
