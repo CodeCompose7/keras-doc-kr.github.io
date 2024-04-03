@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Train a Vision Transformer on small datasets
+title: 소규모 데이터 세트에 대해 비전 트랜스포머 트레이닝
 nav_order: 17+00
 permalink: /examples/vision/vit_small_ds/
 parent: 컴퓨터 비전
@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/vit_small_ds/](https://keras.io/examples/vision/vit_small_ds/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# Train a Vision Transformer on small datasets
+# 소규모 데이터 세트에 대해 비전 트랜스포머 트레이닝
 {: .no_toc }
 
 ## 목차

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Vision Transformer로 이미지 분류
+title: 비전 트랜스포머로 이미지 분류
 nav_order: 04+00
 permalink: /examples/vision/image_classification_with_vision_transformer/
 parent: 컴퓨터 비전
@@ -8,9 +8,9 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/vision/image_classification_with_vision_transformer/](https://keras.io/examples/vision/image_classification_with_vision_transformer/){:target="_blank"}
-* 최종 수정일 : 2024-04-01
+* 최종 수정일 : 2024-04-03
 
-# Vision Transformer로 이미지 분류
+# 비전 트랜스포머로 이미지 분류
 {: .no_toc }
 
 ## 목차
