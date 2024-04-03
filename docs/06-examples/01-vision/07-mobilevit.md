@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MobileViT - A mobile-friendly Transformer-based model for image classification
+title: MobileViT - 이미지 분류를 위한 모바일 친화적인 트랜스포머 기반 모델
 nav_order: 07+00
 permalink: /examples/vision/mobilevit/
 parent: 컴퓨터 비전
@@ -8,7 +8,7 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/vision/mobilevit/](https://keras.io/examples/vision/mobilevit/){:target="_blank"}
-* 최종 수정일 : 2024-04-02
+* 최종 수정일 : 2024-04-03
 
 # MobileViT: A mobile-friendly Transformer-based model for image classification
 {: .no_toc }
@@ -29,7 +29,10 @@ grand_parent: 코드 예제
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/mobilevit.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/mobilevit.py){: .btn .btn-blue }
 
-ⓘ 이 예제는 Keras 3을 사용합니다.
+{: .new-title }
+> 버전
+>
+> ⓘ 이 예제는 Keras 3을 사용합니다.
 
 ----
 

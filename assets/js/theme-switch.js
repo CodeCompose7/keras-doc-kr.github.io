@@ -56,4 +56,22 @@ window.addEventListener("DOMContentLoaded", function () {
             document.documentElement.classList.remove('dark-mode');
         }
     }
+
+    function loadTheme() {
+        const theme = localStorage.getItem('theme'); // localStorage에서 'theme' 값을 가져옵니다.
+    
+        let themeLink = document.createElement('link'); // 새로운 <link> 요소를 생성합니다.
+        themeLink.rel = 'stylesheet';
+    
+        // 'theme' 값에 따라 적용할 CSS 파일을 결정합니다.
+        if (theme === 'dark') {
+          themeLink.href = '/assets/css/just-the-docs-dark-2.css';
+        } else {
+          themeLink.href = '/assets/css/just-the-docs-default-2.css';
+        }
+    
+        document.head.appendChild(themeLink); // 생성된 <link> 요소를 <head>에 추가합니다.
+    }
+
+    loadTheme();
 });

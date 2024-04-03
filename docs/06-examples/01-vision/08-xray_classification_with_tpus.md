@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pneumonia Classification on TPU
+title: TPU에서 폐렴 분류
 nav_order: 08+00
 permalink: /examples/vision/xray_classification_with_tpus/
 parent: 컴퓨터 비전
@@ -8,9 +8,9 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/vision/xray_classification_with_tpus/](https://keras.io/examples/vision/xray_classification_with_tpus/){:target="_blank"}
-* 최종 수정일 : 2024-04-02
+* 최종 수정일 : 2024-04-03
 
-# Pneumonia Classification on TPU
+# TPU에서 폐렴 분류
 {: .no_toc }
 
 ## 목차
@@ -29,7 +29,10 @@ grand_parent: 코드 예제
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/xray_classification_with_tpus.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/xray_classification_with_tpus.py){: .btn .btn-blue }
 
-ⓘ 이 예제는 Keras 3을 사용합니다.
+{: .new-title }
+> 버전
+>
+> ⓘ 이 예제는 Keras 3을 사용합니다.
 
 ----
 

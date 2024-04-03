@@ -8,7 +8,7 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/vision/mnist_convnet/](https://keras.io/examples/vision/mnist_convnet/){:target="_blank"}
-* 최종 수정일 : 2024-03-31
+* 최종 수정일 : 2024-04-03
 
 # 간단한 MNIST convnet
 {: .no_toc }
@@ -29,7 +29,10 @@ grand_parent: 코드 예제
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/mnist_convnet.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet.py){: .btn .btn-blue }
 
-ⓘ 이 예제는 Keras 3을 사용합니다.
+{: .new-title }
+> 버전
+>
+> ⓘ 이 예제는 Keras 3을 사용합니다.
 
 ----
 

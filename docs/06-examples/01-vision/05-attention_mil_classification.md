@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Classification using Attention-based Deep Multiple Instance Learning (MIL).
+title: 어텐션 기반 심층 다중 인스턴스 학습(MIL)을 사용한 분류
 nav_order: 05+00
 permalink: /examples/vision/attention_mil_classification/
 parent: 컴퓨터 비전
@@ -8,7 +8,7 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/vision/attention_mil_classification/](https://keras.io/examples/vision/attention_mil_classification/){:target="_blank"}
-* 최종 수정일 : 2024-04-02
+* 최종 수정일 : 2024-04-03
 
 # Classification using Attention-based Deep Multiple Instance Learning (MIL).
 {: .no_toc }
@@ -29,7 +29,10 @@ grand_parent: 코드 예제
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/attention_mil_classification.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/attention_mil_classification.py){: .btn .btn-blue }
 
-ⓘ 이 예제는 Keras 3을 사용합니다.
+{: .new-title }
+> 버전
+>
+> ⓘ 이 예제는 Keras 3을 사용합니다.
 
 ----
 
