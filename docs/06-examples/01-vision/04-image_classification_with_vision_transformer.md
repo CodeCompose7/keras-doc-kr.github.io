@@ -29,10 +29,8 @@ grand_parent: 코드 예제
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/image_classification_with_vision_transformer.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/image_classification_with_vision_transformer.py){: .btn .btn-blue }
 
-{: .new-title }
-> 버전
->
-> ⓘ 이 예제는 Keras 3을 사용합니다.
+ⓘ 이 예제는 Keras 3을 사용합니다.
+{: .label .label-green .px-10}
 
 ----
 
