@@ -21,7 +21,7 @@ grand_parent: 코드 예제
 
 ---
 
-**저자:** Mehdi
+**저자:** Mehdi  
 **생성일:** 2021/05/06  
 **최종편집일:** 2022/09/10  
 **설명:** Similarity learning using a siamese network trained with a contrastive loss.
