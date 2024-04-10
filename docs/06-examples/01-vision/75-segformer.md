@@ -27,7 +27,7 @@ grand_parent: 코드 예제
 **설명:** Fine-tuning a SegFormer model variant for semantic segmentation.
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/segformer.ipynb){: .btn .btn-blue }
-[GitHub 소스](https://github.com/favicon.ico) [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/examples/vision/segformer.py){: .btn .btn-blue }
+[GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/segformer.py){: .btn .btn-blue }
 
 ⓘ 이 예제는 Keras 2를 사용합니다.
 {: .label .label-yellow .px-10}
