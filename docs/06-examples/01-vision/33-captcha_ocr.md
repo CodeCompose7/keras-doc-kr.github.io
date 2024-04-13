@@ -213,7 +213,7 @@ for batch in train_dataset.take(1):
 plt.show()
 ```
 
-![png](/img/examples/vision/captcha_ocr/captcha_ocr_13_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/captcha_ocr/captcha_ocr_13_0.png)
 
 * * *
 
@@ -751,4 +751,4 @@ Model: "functional_1"
  1/1 ━━━━━━━━━━━━━━━━━━━━ 1s 579ms/step
 ```
 
-![png](/img/examples/vision/captcha_ocr/captcha_ocr_19_6.png)
+![png]({{ site.baseurl }}/img/examples/vision/captcha_ocr/captcha_ocr_19_6.png)

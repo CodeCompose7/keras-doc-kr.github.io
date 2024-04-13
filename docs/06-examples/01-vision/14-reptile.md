@@ -215,7 +215,7 @@ for a in range(5):
 plt.show()
 ```
 
-![png](/img/examples/vision/reptile/reptile_8_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/reptile/reptile_8_0.png)
 
 * * *
 
@@ -380,6 +380,6 @@ for i, ax in zip(range(5), axarr):
 plt.show()
 ```
 
-![png](/img/examples/vision/reptile/reptile_14_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/reptile/reptile_14_1.png)
 
-![png](/img/examples/vision/reptile/reptile_14_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/reptile/reptile_14_2.png)

@@ -468,9 +468,9 @@ Epoch 20/20
 258/258 [==============================] - 153s 594ms/step - loss: 2.0258e-04 - binary_accuracy: 1.0000 - val_loss: 0.0585 - val_binary_accuracy: 0.9933
 ```
 
-![png](/img/examples/nlp/multi_label_classification/multi_label_classification_38_1.png)
+![png]({{ site.baseurl }}/img/examples/nlp/multi_label_classification/multi_label_classification_38_1.png)
 
-![png](/img/examples/nlp/multi_label_classification/multi_label_classification_38_2.png)
+![png]({{ site.baseurl }}/img/examples/nlp/multi_label_classification/multi_label_classification_38_2.png)
 
 While training, we notice an initial sharp fall in the loss followed by a gradual decay.
 

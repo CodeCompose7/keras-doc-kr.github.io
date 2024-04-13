@@ -146,7 +146,7 @@ plt.imshow(images[np.random.randint(low=0, high=num_images)])
 plt.show()
 ```
 
-![png](/img/examples/vision/nerf/nerf_5_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_5_0.png)
 
 * * *
 
@@ -572,7 +572,7 @@ I0000 00:00:1699908753.457905   65271 device_compiler.h:187] Compiled cluster us
  1/1 ━━━━━━━━━━━━━━━━━━━━ 1s 924ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_3.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 29s 889ms/step - loss: 0.1091 - psnr: 9.8283 - val_loss: 0.0753 - val_psnr: 11.5686
@@ -580,7 +580,7 @@ Epoch 2/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 477ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_5.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 16s 926ms/step - loss: 0.0633 - psnr: 12.4819 - val_loss: 0.0657 - val_psnr: 12.1781
@@ -588,7 +588,7 @@ Epoch 3/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 474ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_7.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 16s 921ms/step - loss: 0.0589 - psnr: 12.6268 - val_loss: 0.0637 - val_psnr: 12.3413
@@ -596,7 +596,7 @@ Epoch 4/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 470ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_9.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 15s 915ms/step - loss: 0.0573 - psnr: 12.8150 - val_loss: 0.0617 - val_psnr: 12.4789
@@ -604,7 +604,7 @@ Epoch 5/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 477ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_11.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_11.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 15s 918ms/step - loss: 0.0552 - psnr: 12.9703 - val_loss: 0.0594 - val_psnr: 12.6457
@@ -612,7 +612,7 @@ Epoch 6/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 476ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_13.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_13.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 15s 894ms/step - loss: 0.0538 - psnr: 13.0895 - val_loss: 0.0533 - val_psnr: 13.0049
@@ -620,7 +620,7 @@ Epoch 7/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 473ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_15.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_15.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 16s 940ms/step - loss: 0.0436 - psnr: 13.9857 - val_loss: 0.0381 - val_psnr: 14.4764
@@ -628,7 +628,7 @@ Epoch 8/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 475ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_17.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_17.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 15s 919ms/step - loss: 0.0325 - psnr: 15.1856 - val_loss: 0.0294 - val_psnr: 15.5187
@@ -636,7 +636,7 @@ Epoch 9/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 478ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_19.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_19.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 16s 927ms/step - loss: 0.0276 - psnr: 15.8105 - val_loss: 0.0259 - val_psnr: 16.0297
@@ -644,7 +644,7 @@ Epoch 10/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 474ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_21.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_21.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 16s 952ms/step - loss: 0.0251 - psnr: 16.1994 - val_loss: 0.0252 - val_psnr: 16.0842
@@ -652,7 +652,7 @@ Epoch 11/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 474ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_23.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_23.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 15s 909ms/step - loss: 0.0239 - psnr: 16.3749 - val_loss: 0.0228 - val_psnr: 16.5269
@@ -660,7 +660,7 @@ Epoch 12/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 474ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_25.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_25.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 19s 1s/step - loss: 0.0215 - psnr: 16.8117 - val_loss: 0.0186 - val_psnr: 17.3930
@@ -668,7 +668,7 @@ Epoch 13/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 474ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_27.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_27.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 16s 923ms/step - loss: 0.0188 - psnr: 17.3916 - val_loss: 0.0174 - val_psnr: 17.6570
@@ -676,7 +676,7 @@ Epoch 14/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 476ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_29.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_29.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 16s 973ms/step - loss: 0.0175 - psnr: 17.6871 - val_loss: 0.0172 - val_psnr: 17.6644
@@ -684,7 +684,7 @@ Epoch 15/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 468ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_31.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_31.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 15s 919ms/step - loss: 0.0172 - psnr: 17.7639 - val_loss: 0.0161 - val_psnr: 18.0313
@@ -692,7 +692,7 @@ Epoch 16/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 477ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_33.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_33.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 16s 915ms/step - loss: 0.0150 - psnr: 18.3860 - val_loss: 0.0151 - val_psnr: 18.2832
@@ -700,7 +700,7 @@ Epoch 17/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 473ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_35.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_35.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 16s 926ms/step - loss: 0.0154 - psnr: 18.2210 - val_loss: 0.0146 - val_psnr: 18.4284
@@ -708,7 +708,7 @@ Epoch 18/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 468ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_37.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_37.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 16s 959ms/step - loss: 0.0145 - psnr: 18.4869 - val_loss: 0.0134 - val_psnr: 18.8039
@@ -716,7 +716,7 @@ Epoch 19/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 473ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_39.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_39.png)
 
 ```
 16/16 ━━━━━━━━━━━━━━━━━━━━ 16s 933ms/step - loss: 0.0136 - psnr: 18.8040 - val_loss: 0.0138 - val_psnr: 18.6680
@@ -724,7 +724,7 @@ Epoch 20/20
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 472ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_11_41.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_11_41.png)
 
 ```
  16/16 ━━━━━━━━━━━━━━━━━━━━ 15s 916ms/step - loss: 0.0131 - psnr: 18.9661 - val_loss: 0.0132 - val_psnr: 18.8687
@@ -781,7 +781,7 @@ for ax, ori_img, recons_img, depth_map in zip(
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 475ms/step
 ```
 
-![png](/img/examples/vision/nerf/nerf_14_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/nerf/nerf_14_1.png)
 
 * * *
 

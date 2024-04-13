@@ -86,7 +86,7 @@ img_path = keras.utils.get_file("elephant.jpg", "https://i.imgur.com/Bvro0YD.png
 display(Image(img_path))
 ```
 
-![jpeg](/img/examples/vision/integrated_gradients/integrated_gradients_3_0.jpg)
+![jpeg]({{ site.baseurl }}/img/examples/vision/integrated_gradients/integrated_gradients_3_0.jpg)
 
 * * *
 
@@ -526,6 +526,6 @@ I0000 00:00:1699486705.534012   86541 device_compiler.h:187] Compiled cluster us
 Predicted: tf.Tensor(386, shape=(), dtype=int64) [('n02504458', 'African_elephant', 0.8871446)]
 ```
 
-![png](/img/examples/vision/integrated_gradients/integrated_gradients_9_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/integrated_gradients/integrated_gradients_9_3.png)
 
-![png](/img/examples/vision/integrated_gradients/integrated_gradients_9_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/integrated_gradients/integrated_gradients_9_4.png)

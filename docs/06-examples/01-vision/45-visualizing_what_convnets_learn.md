@@ -174,7 +174,7 @@ This is what an input that maximizes the response of filter 0 in the target laye
 display(Image("0.png"))
 ```
 
-![png](/img/examples/vision/visualizing_what_convnets_learn/visualizing_what_convnets_learn_15_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/visualizing_what_convnets_learn/visualizing_what_convnets_learn_15_0.png)
 
 * * *
 
@@ -286,7 +286,7 @@ Processing filter 62
 Processing filter 63
 ```
 
-![png](/img/examples/vision/visualizing_what_convnets_learn/visualizing_what_convnets_learn_17_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/visualizing_what_convnets_learn/visualizing_what_convnets_learn_17_1.png)
 
 Image classification models see the world by decomposing their inputs over a "vector basis" of texture filters such as these.
 

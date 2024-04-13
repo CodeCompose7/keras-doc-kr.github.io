@@ -292,7 +292,7 @@ for i in range(25):
     plt.xlabel(class_names[train_labels[i][0]])
 plt.show()
 ```
-![png](/img/examples/vision/involution/involution_13_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/involution/involution_13_0.png)
 
 * * *
 
@@ -589,9 +589,9 @@ plt.legend()
 plt.show()
 ```
 
-![png](/img/examples/vision/involution/involution_22_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/involution/involution_22_0.png)
 
-![png](/img/examples/vision/involution/involution_22_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/involution/involution_22_1.png)
 
 * * *
 
@@ -632,7 +632,7 @@ for ax, test_image in zip(axes, test_images[:10]):
     ax[3].set_title("Involution Kernel 3")
 ```
 
-![png](/img/examples/vision/involution/involution_24_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/involution/involution_24_1.png)
 
 * * *
 

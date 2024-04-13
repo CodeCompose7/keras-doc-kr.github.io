@@ -216,7 +216,7 @@ def visualize(anchor, positive, negative):
 visualize(*list(train_dataset.take(1).as_numpy_iterator())[0])
 ```
 
-![png](/img/examples/vision/siamese_network/siamese_network_12_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/siamese_network/siamese_network_12_0.png)
 
 * * *
 
@@ -431,7 +431,7 @@ anchor_embedding, positive_embedding, negative_embedding = (
 )
 ```
 
-![png](/img/examples/vision/siamese_network/siamese_network_22_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/siamese_network/siamese_network_22_0.png)
 
 Finally, we can compute the cosine similarity between the anchor and positive images and compare it with the similarity between the anchor and the negative images.
 

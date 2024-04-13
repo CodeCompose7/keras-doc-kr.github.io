@@ -666,7 +666,7 @@ Epoch 5/50
 313/313 [==============================] - ETA: 0s - loss: 1.0235 - accuracy: 0.6345 - top-5-accuracy: 0.9660
 ```
 
-![png](/img/examples/vision/patch_convnet/patch_conv_net_23_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/patch_convnet/patch_conv_net_23_3.png)
 
 ```
 313/313 [==============================] - 8s 25ms/step - loss: 1.0235 - accuracy: 0.6345 - top-5-accuracy: 0.9660 - val_loss: 1.0085 - val_accuracy: 0.6424 - val_top-5-accuracy: 0.9640
@@ -682,7 +682,7 @@ Epoch 10/50
 313/313 [==============================] - ETA: 0s - loss: 0.6260 - accuracy: 0.7849 - top-5-accuracy: 0.9877
 ```
 
-![png](/img/examples/vision/patch_convnet/patch_conv_net_23_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/patch_convnet/patch_conv_net_23_5.png)
 
 ```
 313/313 [==============================] - 8s 25ms/step - loss: 0.6260 - accuracy: 0.7849 - top-5-accuracy: 0.9877 - val_loss: 0.6985 - val_accuracy: 0.7624 - val_top-5-accuracy: 0.9847
@@ -698,7 +698,7 @@ Epoch 15/50
 313/313 [==============================] - ETA: 0s - loss: 0.4735 - accuracy: 0.8348 - top-5-accuracy: 0.9939
 ```
 
-![png](/img/examples/vision/patch_convnet/patch_conv_net_23_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/patch_convnet/patch_conv_net_23_7.png)
 
 ```
 313/313 [==============================] - 8s 25ms/step - loss: 0.4735 - accuracy: 0.8348 - top-5-accuracy: 0.9939 - val_loss: 0.5945 - val_accuracy: 0.8040 - val_top-5-accuracy: 0.9883
@@ -714,7 +714,7 @@ Epoch 20/50
 311/313 [============================>.] - ETA: 0s - loss: 0.3800 - accuracy: 0.8676 - top-5-accuracy: 0.9956
 ```
 
-![png](/img/examples/vision/patch_convnet/patch_conv_net_23_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/patch_convnet/patch_conv_net_23_9.png)
 
 ```
 313/313 [==============================] - 8s 25ms/step - loss: 0.3801 - accuracy: 0.8676 - top-5-accuracy: 0.9956 - val_loss: 0.5274 - val_accuracy: 0.8222 - val_top-5-accuracy: 0.9915
@@ -730,7 +730,7 @@ Epoch 25/50
 312/313 [============================>.] - ETA: 0s - loss: 0.2985 - accuracy: 0.8976 - top-5-accuracy: 0.9976
 ```
 
-![png](/img/examples/vision/patch_convnet/patch_conv_net_23_11.png)
+![png]({{ site.baseurl }}/img/examples/vision/patch_convnet/patch_conv_net_23_11.png)
 
 ```
 313/313 [==============================] - 8s 25ms/step - loss: 0.2986 - accuracy: 0.8976 - top-5-accuracy: 0.9976 - val_loss: 0.5302 - val_accuracy: 0.8276 - val_top-5-accuracy: 0.9922
@@ -746,7 +746,7 @@ Epoch 30/50
 313/313 [==============================] - ETA: 0s - loss: 0.2180 - accuracy: 0.9235 - top-5-accuracy: 0.9988
 ```
 
-![png](/img/examples/vision/patch_convnet/patch_conv_net_23_13.png)
+![png]({{ site.baseurl }}/img/examples/vision/patch_convnet/patch_conv_net_23_13.png)
 
 ```
 313/313 [==============================] - 8s 26ms/step - loss: 0.2180 - accuracy: 0.9235 - top-5-accuracy: 0.9988 - val_loss: 0.5175 - val_accuracy: 0.8407 - val_top-5-accuracy: 0.9925
@@ -762,7 +762,7 @@ Epoch 35/50
 313/313 [==============================] - ETA: 0s - loss: 0.1544 - accuracy: 0.9464 - top-5-accuracy: 0.9995
 ```
 
-![png](/img/examples/vision/patch_convnet/patch_conv_net_23_15.png)
+![png]({{ site.baseurl }}/img/examples/vision/patch_convnet/patch_conv_net_23_15.png)
 
 ```
 313/313 [==============================] - 7s 24ms/step - loss: 0.1544 - accuracy: 0.9464 - top-5-accuracy: 0.9995 - val_loss: 0.5137 - val_accuracy: 0.8513 - val_top-5-accuracy: 0.9928
@@ -778,7 +778,7 @@ Epoch 40/50
 312/313 [============================>.] - ETA: 0s - loss: 0.1017 - accuracy: 0.9653 - top-5-accuracy: 0.9997
 ```
 
-![png](/img/examples/vision/patch_convnet/patch_conv_net_23_17.png)
+![png]({{ site.baseurl }}/img/examples/vision/patch_convnet/patch_conv_net_23_17.png)
 
 ```
 313/313 [==============================] - 8s 25ms/step - loss: 0.1016 - accuracy: 0.9653 - top-5-accuracy: 0.9997 - val_loss: 0.5357 - val_accuracy: 0.8614 - val_top-5-accuracy: 0.9923
@@ -794,7 +794,7 @@ Epoch 45/50
 312/313 [============================>.] - ETA: 0s - loss: 0.0752 - accuracy: 0.9763 - top-5-accuracy: 0.9999
 ```
 
-![png](/img/examples/vision/patch_convnet/patch_conv_net_23_19.png)
+![png]({{ site.baseurl }}/img/examples/vision/patch_convnet/patch_conv_net_23_19.png)
 
 ```
 313/313 [==============================] - 8s 26ms/step - loss: 0.0752 - accuracy: 0.9764 - top-5-accuracy: 0.9999 - val_loss: 0.4844 - val_accuracy: 0.8679 - val_top-5-accuracy: 0.9938
@@ -810,7 +810,7 @@ Epoch 50/50
 313/313 [==============================] - ETA: 0s - loss: 0.1828 - accuracy: 0.9447 - top-5-accuracy: 0.9995
 ```
 
-![png](/img/examples/vision/patch_convnet/patch_conv_net_23_21.png)
+![png]({{ site.baseurl }}/img/examples/vision/patch_convnet/patch_conv_net_23_21.png)
 
 ```
 313/313 [==============================] - 8s 25ms/step - loss: 0.1828 - accuracy: 0.9447 - top-5-accuracy: 0.9995 - val_loss: 0.4614 - val_accuracy: 0.8480 - val_top-5-accuracy: 0.9920
@@ -872,7 +872,7 @@ image = keras.utils.img_to_array(image)
 plot_attention(image)
 ```
 
-![png](/img/examples/vision/patch_convnet/patch_conv_net_25_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/patch_convnet/patch_conv_net_25_1.png)
 
 * * *
 

@@ -293,11 +293,11 @@ plt.show()
 Index selected: 102.
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_13_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_13_1.png)
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_13_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_13_2.png)
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_13_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_13_3.png)
 
 * * *
 
@@ -460,7 +460,7 @@ plt.title("Original")
 plt.show()
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_17_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_17_0.png)
 
 * * *
 
@@ -809,7 +809,7 @@ plt.show()
 train_callbacks = [TrainMonitor(epoch_interval=5)]
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_32_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_32_0.png)
 
 * * *
 
@@ -844,7 +844,7 @@ Epoch 1/100
 Idx chosen: 92
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_1.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 47s 95ms/step - mae: 0.2033 - loss: 0.4828 - val_loss: 0.5225 - val_mae: 0.1600
@@ -861,7 +861,7 @@ Epoch 6/100
 Idx chosen: 14
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_3.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 14s 88ms/step - mae: 0.1414 - loss: 0.5265 - val_loss: 0.5328 - val_mae: 0.1402
@@ -878,7 +878,7 @@ Epoch 11/100
 Idx chosen: 106
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_5.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 14s 87ms/step - mae: 0.1339 - loss: 0.5317 - val_loss: 0.5392 - val_mae: 0.1330
@@ -895,7 +895,7 @@ Epoch 16/100
 Idx chosen: 71
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_7.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 14s 91ms/step - mae: 0.1276 - loss: 0.5362 - val_loss: 0.5456 - val_mae: 0.1243
@@ -912,7 +912,7 @@ Epoch 21/100
 Idx chosen: 188
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_9.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 85ms/step - mae: 0.1186 - loss: 0.5430 - val_loss: 0.5546 - val_mae: 0.1168
@@ -929,7 +929,7 @@ Epoch 26/100
 Idx chosen: 20
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_11.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_11.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 86ms/step - mae: 0.1123 - loss: 0.5470 - val_loss: 0.5572 - val_mae: 0.1127
@@ -946,7 +946,7 @@ Epoch 31/100
 Idx chosen: 102
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_13.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_13.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 86ms/step - mae: 0.1095 - loss: 0.5501 - val_loss: 0.5578 - val_mae: 0.1108
@@ -963,7 +963,7 @@ Epoch 36/100
 Idx chosen: 121
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_15.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_15.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 86ms/step - mae: 0.1057 - loss: 0.5526 - val_loss: 0.5627 - val_mae: 0.1050
@@ -980,7 +980,7 @@ Epoch 41/100
 Idx chosen: 210
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_17.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_17.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 85ms/step - mae: 0.1049 - loss: 0.5533 - val_loss: 0.5620 - val_mae: 0.1030
@@ -997,7 +997,7 @@ Epoch 46/100
 Idx chosen: 214
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_19.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_19.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 85ms/step - mae: 0.1032 - loss: 0.5537 - val_loss: 0.5549 - val_mae: 0.1037
@@ -1014,7 +1014,7 @@ Epoch 51/100
 Idx chosen: 74
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_21.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_21.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 85ms/step - mae: 0.1025 - loss: 0.5543 - val_loss: 0.5645 - val_mae: 0.1007
@@ -1031,7 +1031,7 @@ Epoch 56/100
 Idx chosen: 202
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_23.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_23.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 86ms/step - mae: 0.1015 - loss: 0.5558 - val_loss: 0.5619 - val_mae: 0.0996
@@ -1048,7 +1048,7 @@ Epoch 61/100
 Idx chosen: 87
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_25.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_25.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 86ms/step - mae: 0.1001 - loss: 0.5564 - val_loss: 0.5606 - val_mae: 0.0998
@@ -1065,7 +1065,7 @@ Epoch 66/100
 Idx chosen: 116
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_27.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_27.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 86ms/step - mae: 0.0993 - loss: 0.5567 - val_loss: 0.5572 - val_mae: 0.1000
@@ -1082,7 +1082,7 @@ Epoch 71/100
 Idx chosen: 99
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_29.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_29.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 84ms/step - mae: 0.0982 - loss: 0.5577 - val_loss: 0.5628 - val_mae: 0.0970
@@ -1099,7 +1099,7 @@ Epoch 76/100
 Idx chosen: 103
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_31.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_31.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 83ms/step - mae: 0.0973 - loss: 0.5579 - val_loss: 0.5628 - val_mae: 0.0967
@@ -1116,7 +1116,7 @@ Epoch 81/100
 Idx chosen: 151
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_33.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_33.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 83ms/step - mae: 0.0965 - loss: 0.5578 - val_loss: 0.5651 - val_mae: 0.0957
@@ -1133,7 +1133,7 @@ Epoch 86/100
 Idx chosen: 130
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_35.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_35.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 83ms/step - mae: 0.0961 - loss: 0.5584 - val_loss: 0.5641 - val_mae: 0.0954
@@ -1150,7 +1150,7 @@ Epoch 91/100
 Idx chosen: 149
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_37.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_37.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 13s 84ms/step - mae: 0.0957 - loss: 0.5585 - val_loss: 0.5636 - val_mae: 0.0952
@@ -1167,7 +1167,7 @@ Epoch 96/100
 Idx chosen: 52
 ```
 
-![png](/img/examples/vision/masked_image_modeling/masked_image_modeling_34_39.png)
+![png]({{ site.baseurl }}/img/examples/vision/masked_image_modeling/masked_image_modeling_34_39.png)
 
 ```
  157/157 ━━━━━━━━━━━━━━━━━━━━ 14s 87ms/step - mae: 0.0956 - loss: 0.5585 - val_loss: 0.5643 - val_mae: 0.0950

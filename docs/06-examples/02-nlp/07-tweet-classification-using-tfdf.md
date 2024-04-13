@@ -586,9 +586,9 @@ plot_curve(logs_1)
 plot_curve(logs_2)
 ```
 
-![png](/img/examples/nlp/tweet-classification-using-tfdf/tweet-classification-using-tfdf_41_0.png)
+![png]({{ site.baseurl }}/img/examples/nlp/tweet-classification-using-tfdf/tweet-classification-using-tfdf_41_0.png)
 
-![png](/img/examples/nlp/tweet-classification-using-tfdf/tweet-classification-using-tfdf_41_1.png)
+![png]({{ site.baseurl }}/img/examples/nlp/tweet-classification-using-tfdf/tweet-classification-using-tfdf_41_1.png)
 
 * * *
 

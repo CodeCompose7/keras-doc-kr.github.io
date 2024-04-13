@@ -977,7 +977,7 @@ Epoch 1/25
 40/40 [==============================] - ETA: 0s - loss: 2.3925 - accuracy: 0.1401
 ```
 
-![png](/img/examples/vision/focal_modulation_network/focal_modulation_network_37_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/focal_modulation_network/focal_modulation_network_37_1.png)
 
 ```
 40/40 [==============================] - 57s 724ms/step - loss: 2.3925 - accuracy: 0.1401 - val_loss: 2.2182 - val_accuracy: 0.1768
@@ -1003,7 +1003,7 @@ Epoch 11/25
 39/40 [============================>.] - ETA: 0s - loss: 1.0040 - accuracy: 0.6453
 ```
 
-![png](/img/examples/vision/focal_modulation_network/focal_modulation_network_37_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/focal_modulation_network/focal_modulation_network_37_3.png)
 
 ```
 40/40 [==============================] - 20s 489ms/step - loss: 1.0041 - accuracy: 0.6452 - val_loss: 1.1765 - val_accuracy: 0.5939
@@ -1029,7 +1029,7 @@ Epoch 21/25
 40/40 [==============================] - ETA: 0s - loss: 0.6005 - accuracy: 0.7938
 ```
 
-![png](/img/examples/vision/focal_modulation_network/focal_modulation_network_37_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/focal_modulation_network/focal_modulation_network_37_5.png)
 
 ```
 40/40 [==============================] - 20s 488ms/step - loss: 0.6005 - accuracy: 0.7938 - val_loss: 0.9326 - val_accuracy: 0.6880
@@ -1060,9 +1060,9 @@ plt.legend()
 plt.show()
 ```
 
-![png](/img/examples/vision/focal_modulation_network/focal_modulation_network_39_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/focal_modulation_network/focal_modulation_network_39_0.png)
 
-![png](/img/examples/vision/focal_modulation_network/focal_modulation_network_39_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/focal_modulation_network/focal_modulation_network_39_1.png)
 
 * * *
 
@@ -1090,15 +1090,15 @@ for row in range(5):
     )
 ```
 
-![png](/img/examples/vision/focal_modulation_network/focal_modulation_network_41_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/focal_modulation_network/focal_modulation_network_41_0.png)
 
-![png](/img/examples/vision/focal_modulation_network/focal_modulation_network_41_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/focal_modulation_network/focal_modulation_network_41_1.png)
 
-![png](/img/examples/vision/focal_modulation_network/focal_modulation_network_41_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/focal_modulation_network/focal_modulation_network_41_2.png)
 
-![png](/img/examples/vision/focal_modulation_network/focal_modulation_network_41_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/focal_modulation_network/focal_modulation_network_41_3.png)
 
-![png](/img/examples/vision/focal_modulation_network/focal_modulation_network_41_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/focal_modulation_network/focal_modulation_network_41_4.png)
 
 * * *
 

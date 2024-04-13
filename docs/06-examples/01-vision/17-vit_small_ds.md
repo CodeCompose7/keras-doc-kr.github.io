@@ -320,37 +320,37 @@ for index, name in enumerate(shifted_images):
 2022-01-12 04:50:54.960908: I tensorflow/stream_executor/cuda/cuda_blas.cc:1774] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
 ```
 
-![png](/img/examples/vision/vit_small_ds/vit_small_ds_13_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/vit_small_ds/vit_small_ds_13_1.png)
 
 ```
 ORIGINAL
 ```
 
-![png](/img/examples/vision/vit_small_ds/vit_small_ds_13_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/vit_small_ds/vit_small_ds_13_3.png)
 
 ```
 LEFT-UP
 ```
 
-![png](/img/examples/vision/vit_small_ds/vit_small_ds_13_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/vit_small_ds/vit_small_ds_13_5.png)
 
 ```
 LEFT-DOWN
 ```
 
-![png](/img/examples/vision/vit_small_ds/vit_small_ds_13_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/vit_small_ds/vit_small_ds_13_7.png)
 
 ```
 RIGHT-UP
 ```
 
-![png](/img/examples/vision/vit_small_ds/vit_small_ds_13_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/vit_small_ds/vit_small_ds_13_9.png)
 
 ```
 RIGHT-DOWN
 ```
 
-![png](/img/examples/vision/vit_small_ds/vit_small_ds_13_11.png)
+![png]({{ site.baseurl }}/img/examples/vision/vit_small_ds/vit_small_ds_13_11.png)
 
 * * *
 

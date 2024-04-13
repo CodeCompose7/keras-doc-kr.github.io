@@ -410,9 +410,9 @@ Epoch 00011: val_loss did not improve from 0.32843
 Epoch 00011: early stopping
 ```
 
-![png](/img/examples/nlp/active_learning_review_classification/active_learning_review_classification_15_1.png)
+![png]({{ site.baseurl }}/img/examples/nlp/active_learning_review_classification/active_learning_review_classification_15_1.png)
 
-![png](/img/examples/nlp/active_learning_review_classification/active_learning_review_classification_15_2.png)
+![png]({{ site.baseurl }}/img/examples/nlp/active_learning_review_classification/active_learning_review_classification_15_2.png)
 
 ```
 ----------------------------------------------------------------------------------------------------
@@ -745,9 +745,9 @@ Epoch 00006: val_loss did not improve from 0.33779
 Epoch 00006: early stopping
 ```
 
-![png](/img/examples/nlp/active_learning_review_classification/active_learning_review_classification_17_1.png)
+![png]({{ site.baseurl }}/img/examples/nlp/active_learning_review_classification/active_learning_review_classification_17_1.png)
 
-![png](/img/examples/nlp/active_learning_review_classification/active_learning_review_classification_17_2.png)
+![png]({{ site.baseurl }}/img/examples/nlp/active_learning_review_classification/active_learning_review_classification_17_2.png)
 
 ```
 ----------------------------------------------------------------------------------------------------

@@ -176,7 +176,7 @@ ax[1].imshow(
 plt.show()
 ```
 
-![png](/img/examples/vision/fully_convolutional_network/fully_convolutional_network_11_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/fully_convolutional_network/fully_convolutional_network_11_0.png)
 
 * * *
 
@@ -901,7 +901,7 @@ for i, ((key_32s, value_32s), (key_16s, value_16s), (key_8s, value_8s)) in enume
 plt.show()
 ```
 
-![png](/img/examples/vision/fully_convolutional_network/fully_convolutional_network_34_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/fully_convolutional_network/fully_convolutional_network_34_0.png)
 
 ### Visualizing predicted segmentation masks
 
@@ -972,7 +972,7 @@ WARNING:matplotlib.image:Clipping input data to the valid range for imshow with 
 WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
 ```
 
-![png](/img/examples/vision/fully_convolutional_network/fully_convolutional_network_36_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/fully_convolutional_network/fully_convolutional_network_36_1.png)
 
 * * *
 

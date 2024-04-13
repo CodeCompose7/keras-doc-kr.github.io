@@ -99,7 +99,7 @@ ax.set_axis_off()
 plt.show()
 ```
 
-![png](/img/examples/vision/pointnet/pointnet_10_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/pointnet/pointnet_10_0.png)
 
 To generate a `tf.data.Dataset()` we need to first parse through the ModelNet data folders. Each mesh is loaded and sampled into a point cloud before being added to a standard python list and converted to a `numpy` array. We also store the current enumerate index value as the object label and use a dictionary to recall this later.
 
@@ -591,4 +591,4 @@ plt.show()
 1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 405ms/step
 ```
 
-![png](/img/examples/vision/pointnet/pointnet_28_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/pointnet/pointnet_28_2.png)

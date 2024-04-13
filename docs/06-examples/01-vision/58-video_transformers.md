@@ -479,8 +479,8 @@ Test video path: v_ShavingBeard_g03_c02.avi
   PlayingCello:  0.00%
 ```
 
-![png](/img/examples/vision/video_transformers/video_transformers_23_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/video_transformers/video_transformers_23_1.png)
 
-![png](/img/examples/vision/video_transformers/shaving.gif)
+![png]({{ site.baseurl }}/img/examples/vision/video_transformers/shaving.gif)
 
 The performance of our model is far from optimal, because it was trained on a small dataset.

@@ -321,7 +321,7 @@ Dimension of the CT scan is: (128, 128, 64, 1)
 <matplotlib.image.AxesImage at 0x7fc5b9900d50>
 ```
 
-![png](/img/examples/vision/3D_image_classification/3D_image_classification_17_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/3D_image_classification/3D_image_classification_17_2.png)
 
 Since a CT scan has many slices, let's visualize a montage of the slices.
 
@@ -355,7 +355,7 @@ def plot_slices(num_rows, num_columns, width, height, data):
 plot_slices(4, 10, 128, 128, image[:, :, :40])
 ```
 
-![png](/img/examples/vision/3D_image_classification/3D_image_classification_19_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/3D_image_classification/3D_image_classification_19_0.png)
 
 * * *
 
@@ -625,7 +625,7 @@ for i, metric in enumerate(["acc", "loss"]):
     ax[i].legend(["train", "val"])
 ```
 
-![png](/img/examples/vision/3D_image_classification/3D_image_classification_26_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/3D_image_classification/3D_image_classification_26_0.png)
 
 * * *
 

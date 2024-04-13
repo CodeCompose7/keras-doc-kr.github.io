@@ -316,7 +316,7 @@ patch_embeddings = conv_mixer_model.layers[2].get_weights()[0]
 visualization_plot(patch_embeddings)
 ```
 
-![png](/img/examples/vision/convmixer/convmixer_19_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/convmixer/convmixer_19_0.png)
 
 Even though we did not train the network to convergence, we can notice that different patches show different patterns. Some share similarity with others while some are very different. These visualizations are more salient with larger image sizes.
 
@@ -348,7 +348,7 @@ visualization_plot(kernel)
 54 <DepthwiseConv2D name=depthwise_conv2d_7, built=True>
 ```
 
-![png](/img/examples/vision/convmixer/convmixer_21_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/convmixer/convmixer_21_1.png)
 
 We see that different filters in the kernel have different locality spans, and this pattern is likely to evolve with more training.
 

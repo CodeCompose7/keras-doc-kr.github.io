@@ -123,9 +123,9 @@ img = ImageOps.autocontrast(load_img(target_img_paths[9]))
 display(img)
 ```
 
-![jpeg](/img/examples/vision/oxford_pets_image_segmentation/oxford_pets_image_segmentation_6_0.jpg)
+![jpeg]({{ site.baseurl }}/img/examples/vision/oxford_pets_image_segmentation/oxford_pets_image_segmentation_6_0.jpg)
 
-![png](/img/examples/vision/oxford_pets_image_segmentation/oxford_pets_image_segmentation_6_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/oxford_pets_image_segmentation/oxford_pets_image_segmentation_6_1.png)
 
 * * *
 
@@ -828,8 +828,8 @@ display_mask(i)  # Note that the model only sees inputs at 150x150.
  32/32 ━━━━━━━━━━━━━━━━━━━━ 5s 100ms/step
 ```
 
-![jpeg](/img/examples/vision/oxford_pets_image_segmentation/oxford_pets_image_segmentation_16_1.jpg)
+![jpeg]({{ site.baseurl }}/img/examples/vision/oxford_pets_image_segmentation/oxford_pets_image_segmentation_16_1.jpg)
 
-![png](/img/examples/vision/oxford_pets_image_segmentation/oxford_pets_image_segmentation_16_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/oxford_pets_image_segmentation/oxford_pets_image_segmentation_16_2.png)
 
-![png](/img/examples/vision/oxford_pets_image_segmentation/oxford_pets_image_segmentation_16_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/oxford_pets_image_segmentation/oxford_pets_image_segmentation_16_3.png)

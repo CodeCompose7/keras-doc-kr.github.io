@@ -1033,9 +1033,9 @@ for sample in val_dataset.take(2):
     )
 ```
 
-![png](/img/examples/vision/retinanet/retinanet_44_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/retinanet/retinanet_44_0.png)
 
-![png](/img/examples/vision/retinanet/retinanet_44_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/retinanet/retinanet_44_1.png)
 
 Example available on HuggingFace.
 

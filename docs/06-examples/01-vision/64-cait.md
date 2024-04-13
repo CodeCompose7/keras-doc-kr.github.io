@@ -822,7 +822,7 @@ plt.axis("off")
 plt.show()
 ```
 
-![png](/img/examples/vision/cait/cait_33_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/cait/cait_33_0.png)
 
 * * *
 
@@ -947,7 +947,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![png](/img/examples/vision/cait/cait_42_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/cait/cait_42_0.png)
 
 Whereas in the second CA layer, the model is trying to focus more on the context that contains discriminative signals.
 
@@ -969,7 +969,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![png](/img/examples/vision/cait/cait_44_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/cait/cait_44_0.png)
 
 Finally, we obtain the saliency map for the given image.
 
@@ -991,7 +991,7 @@ plt.axis("off")
 plt.show()
 ```
 
-![png](/img/examples/vision/cait/cait_46_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/cait/cait_46_0.png)
 
 * * *
 

@@ -609,7 +609,7 @@ plt.show()
 WARNING:matplotlib.legend:No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
 ```
 
-![png](/img/examples/nlp/parameter_efficient_finetuning_of_gpt2_with_lora/parameter_efficient_finetuning_of_gpt2_with_lora_43_1.png)
+![png]({{ site.baseurl }}/img/examples/nlp/parameter_efficient_finetuning_of_gpt2_with_lora/parameter_efficient_finetuning_of_gpt2_with_lora_43_1.png)
 
 ### Merge weights and generate text!
 

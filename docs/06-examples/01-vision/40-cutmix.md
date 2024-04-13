@@ -301,7 +301,7 @@ for i in range(9):
     plt.axis("off")
 ```
 
-![png](/img/examples/vision/cutmix/cutmix_16_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/cutmix/cutmix_16_0.png)
 
 * * *
 

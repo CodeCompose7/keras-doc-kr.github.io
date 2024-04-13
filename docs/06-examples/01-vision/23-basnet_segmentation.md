@@ -189,7 +189,7 @@ for image, mask in val_dataset.take(1):
     display([image[0], mask[0]])
 ```
 
-![png](/img/examples/vision/basnet_segmentation/basnet_segmentation_10_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/basnet_segmentation/basnet_segmentation_10_0.png)
 
 * * *
 
@@ -1069,4 +1069,4 @@ for image, mask in val_dataset.take(1):
 1/1 [==============================] - 2s 2s/step
 ```
 
-![png](/img/examples/vision/basnet_segmentation/basnet_segmentation_29_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/basnet_segmentation/basnet_segmentation_29_1.png)

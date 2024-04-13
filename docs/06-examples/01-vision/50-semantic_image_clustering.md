@@ -159,7 +159,7 @@ plt.title(image_class)
 _ = plt.axis("off")
 ```
 
-![png](/img/examples/vision/semantic_image_clustering/semantic_image_clustering_13_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/semantic_image_clustering/semantic_image_clustering_13_0.png)
 
 Display a sample of augmented versions of the image
 
@@ -172,7 +172,7 @@ for i in range(9):
     plt.axis("off")
 ```
 
-![png](/img/examples/vision/semantic_image_clustering/semantic_image_clustering_15_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/semantic_image_clustering/semantic_image_clustering_15_0.png)
 
 * * *
 
@@ -426,7 +426,7 @@ plt.xlabel("epoch")
 plt.show()
 ```
 
-![png](/img/examples/vision/semantic_image_clustering/semantic_image_clustering_24_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/semantic_image_clustering/semantic_image_clustering_24_0.png)
 
 * * *
 
@@ -495,7 +495,7 @@ for _ in range(nrows):
         position += 1
 ```
 
-![png](/img/examples/vision/semantic_image_clustering/semantic_image_clustering_31_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/semantic_image_clustering/semantic_image_clustering_31_0.png)
 
 You notice that images on each row are visually similar, and belong to similar classes.
 
@@ -752,7 +752,7 @@ plt.xlabel("epoch")
 plt.show()
 ```
 
-![png](/img/examples/vision/semantic_image_clustering/semantic_image_clustering_45_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/semantic_image_clustering/semantic_image_clustering_45_0.png)
 
 * * *
 
@@ -837,7 +837,7 @@ for c in non_empty_clusters.keys():
         position += 1
 ```
 
-![png](/img/examples/vision/semantic_image_clustering/semantic_image_clustering_52_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/semantic_image_clustering/semantic_image_clustering_52_0.png)
 
 ### Compute clustering accuracy
 

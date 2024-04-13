@@ -173,7 +173,7 @@ plt.axis("off")
 plt.show()
 ```
 
-![png](/img/examples/vision/probing_vits/probing_vits_9_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/probing_vits/probing_vits_9_0.png)
 
 * * *
 
@@ -353,7 +353,7 @@ plt.show()
 Num Heads: 12.
 ```
 
-![png](/img/examples/vision/probing_vits/probing_vits_19_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/probing_vits/probing_vits_19_1.png)
 
 ### Inspecting the plots
 
@@ -367,13 +367,13 @@ Inspired by [Raghu et al.](https://arxiv.org/abs/2108.08810) we computed mean at
 
 | Pretrained on ImageNet-21k <br /> Fine-tuned on ImageNet-1k | Pretrained on ImageNet-1k |
 |:-:|:-:|
-| ![png](/img/examples/vision/probing_vits/1.png) | ![png](/img/examples/vision/probing_vits/2.png) |
+| ![png]({{ site.baseurl }}/img/examples/vision/probing_vits/1.png) | ![png]({{ site.baseurl }}/img/examples/vision/probing_vits/2.png) |
 
 *   When distilled from a CNN ViTs tend to have less global attention spans:
 *   
 | No distillation (ViT B-16 from DeiT) | Distilled ViT B-16 from DeiT |
 |:-:|:-:|
-| ![png](/img/examples/vision/probing_vits/3.png) | ![png](/img/examples/vision/probing_vits/4.png) |
+| ![png]({{ site.baseurl }}/img/examples/vision/probing_vits/3.png) | ![png]({{ site.baseurl }}/img/examples/vision/probing_vits/4.png) |
 
 To reproduce these plots, please refer to [this notebook](https://github.com/sayakpaul/probing-vits/blob/main/notebooks/mean-attention-distance-1k.ipynb).
 
@@ -449,7 +449,7 @@ fig.subplots_adjust(top=1.35)
 fig.show()
 ```
 
-![png](/img/examples/vision/probing_vits/probing_vits_24_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/probing_vits/probing_vits_24_0.png)
 
 ### Inspecting the plots
 
@@ -546,7 +546,7 @@ for i in range(3):
             img_count += 1
 ```
 
-![png](/img/examples/vision/probing_vits/probing_vits_31_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/probing_vits/probing_vits_31_0.png)
 
 ### Inspecting the plots
 
@@ -609,7 +609,7 @@ WARNING:matplotlib.image:Clipping input data to the valid range for imshow with 
 WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
 ```
 
-![png](/img/examples/vision/probing_vits/probing_vits_34_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/probing_vits/probing_vits_34_1.png)
 
 ### Inspecting the plots
 
@@ -640,7 +640,7 @@ plt.imshow(similarity, cmap="inferno")
 plt.show()
 ```
 
-![png](/img/examples/vision/probing_vits/probing_vits_37_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/probing_vits/probing_vits_37_0.png)
 
 ### Inspecting the plots
 

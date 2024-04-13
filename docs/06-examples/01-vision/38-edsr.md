@@ -219,9 +219,9 @@ def PSNR(super_resolution, high_resolution):
     return psnr_value
 ```
 
-![png](/img/examples/vision/edsr/edsr_11_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_11_1.png)
 
-![png](/img/examples/vision/edsr/edsr_11_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_11_2.png)
 
 * * *
 
@@ -561,25 +561,25 @@ for lowres, highres in val.take(10):
     plot_results(lowres, preds)
 ```
 
-![png](/img/examples/vision/edsr/edsr_17_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_17_0.png)
 
-![png](/img/examples/vision/edsr/edsr_17_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_17_1.png)
 
-![png](/img/examples/vision/edsr/edsr_17_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_17_2.png)
 
-![png](/img/examples/vision/edsr/edsr_17_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_17_3.png)
 
-![png](/img/examples/vision/edsr/edsr_17_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_17_4.png)
 
-![png](/img/examples/vision/edsr/edsr_17_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_17_5.png)
 
-![png](/img/examples/vision/edsr/edsr_17_6.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_17_6.png)
 
-![png](/img/examples/vision/edsr/edsr_17_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_17_7.png)
 
-![png](/img/examples/vision/edsr/edsr_17_8.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_17_8.png)
 
-![png](/img/examples/vision/edsr/edsr_17_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/edsr/edsr_17_9.png)
 
 * * *
 

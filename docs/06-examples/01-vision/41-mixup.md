@@ -199,7 +199,7 @@ for i, (image, label) in enumerate(zip(sample_images[:9], sample_labels[:9])):
 [0.0, 0.0, 0.0, 0.0003173351287841797, 0.0, 0.9996826648712158, 0.0, 0.0, 0.0, 0.0]
 ```
 
-![png](/img/examples/vision/mixup/mixup_15_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/mixup/mixup_15_1.png)
 
 * * *
 

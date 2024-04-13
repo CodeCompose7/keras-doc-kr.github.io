@@ -780,9 +780,9 @@ plt.legend()
 plt.show()
 ```
 
-![png](/img/examples/vision/temporal_latent_bottleneck/temporal_latent_bottleneck_32_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/temporal_latent_bottleneck/temporal_latent_bottleneck_32_0.png)
 
-![png](/img/examples/vision/temporal_latent_bottleneck/temporal_latent_bottleneck_32_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/temporal_latent_bottleneck/temporal_latent_bottleneck_32_1.png)
 
 * * *
 
@@ -857,7 +857,7 @@ ax[1].set_title("TLB Attention:")
 plt.show()
 ```
 
-![png](/img/examples/vision/temporal_latent_bottleneck/temporal_latent_bottleneck_36_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/temporal_latent_bottleneck/temporal_latent_bottleneck_36_0.png)
 
 * * *
 
