@@ -60,6 +60,8 @@ markdown에서 코드 블록은 ` ``` ` 로 사용하세요. 다만, 사용 언�
 * [Keras에 대해](https://keras.io/about/)
 * [DeepL](https://www.deepl.com/)
 * [HTML to Markdown](https://codebeautify.org/html-to-markdown)
+* [Online latex editor](https://latexeditor.lagrida.com/)
+* [Bulk Image Downloader From Url List](https://chromewebstore.google.com/detail/kekkjfalendfifgchoceceoahjnejmgf?hl=en-GB)
 
 ## Jekyll 생성
 
