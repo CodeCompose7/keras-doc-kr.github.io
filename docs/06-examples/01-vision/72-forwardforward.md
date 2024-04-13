@@ -114,7 +114,7 @@ Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-dataset
 4 Random Training samples and labels
 ```
 
-![png](/img/examples/vision/forwardforward/forwardforward_5_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/forwardforward/forwardforward_5_1.png)
 
 * * *
 
@@ -920,7 +920,7 @@ plt.show()
 Test Accuracy score : 97.64%
 ```
 
-![png](/img/examples/vision/forwardforward/forwardforward_15_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/forwardforward/forwardforward_15_1.png)
 
 * * *
 

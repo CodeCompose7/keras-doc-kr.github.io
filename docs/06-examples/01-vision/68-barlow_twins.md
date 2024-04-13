@@ -540,9 +540,9 @@ def plot_values(batch: tuple):
 plot_values(next(sample_augment_versions))
 ```
 
-![png](/img/examples/vision/barlow_twins/barlow_twins_21_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/barlow_twins/barlow_twins_21_0.png)
 
-![png](/img/examples/vision/barlow_twins/barlow_twins_21_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/barlow_twins/barlow_twins_21_1.png)
 
 * * *
 
@@ -1265,7 +1265,7 @@ Epoch 160/160
 97/97 [==============================] - 29s 294ms/step - loss: 781.7180
 ```
 
-![png](/img/examples/vision/barlow_twins/barlow_twins_35_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/barlow_twins/barlow_twins_35_1.png)
 
 * * *
 

@@ -433,7 +433,7 @@ plt.grid()
 plt.show()
 ```
 
-![png](/img/examples/vision/eanet/eanet_24_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/eanet/eanet_24_0.png)
 
 ### Let's display the final results of the test on CIFAR-100.
 

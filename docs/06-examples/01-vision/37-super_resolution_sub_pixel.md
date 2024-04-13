@@ -134,21 +134,21 @@ for batch in train_ds.take(1):
         display(array_to_img(img))
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_0.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_1.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_2.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_3.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_4.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_5.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_6.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_6.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_11_7.png)
 
 We prepare a dataset of test image paths that we will use for visual evaluation at the end of this example.
 
@@ -213,37 +213,37 @@ for batch in train_ds.take(1):
         display(array_to_img(img))
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_0.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_1.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_2.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_3.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_4.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_5.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_6.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_6.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_7.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_8.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_8.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_9.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_10.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_10.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_11.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_11.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_12.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_12.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_13.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_13.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_14.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_14.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_15.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_17_15.png)
 
 * * *
 
@@ -472,7 +472,7 @@ Mean PSNR for epoch: 22.51
  1/1 ━━━━━━━━━━━━━━━━━━━━ 1s 684ms/step
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_27_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_27_3.png)
 
 ```
 50/50 - 8s - 158ms/step - loss: 0.0284 - val_loss: 0.0057
@@ -538,7 +538,7 @@ Mean PSNR for epoch: 26.52
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_27_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_27_5.png)
 
 ```
 50/50 - 1s - 24ms/step - loss: 0.0026 - val_loss: 0.0023
@@ -604,7 +604,7 @@ Mean PSNR for epoch: 26.37
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_27_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_27_7.png)
 
 ```
 50/50 - 1s - 23ms/step - loss: 0.0026 - val_loss: 0.0023
@@ -670,7 +670,7 @@ Mean PSNR for epoch: 26.52
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 18ms/step
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_27_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_27_9.png)
 
 ```
 50/50 - 1s - 23ms/step - loss: 0.0027 - val_loss: 0.0023
@@ -736,7 +736,7 @@ Mean PSNR for epoch: 26.49
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_27_11.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_27_11.png)
 
 ```
 50/50 - 1s - 23ms/step - loss: 0.0025 - val_loss: 0.0022
@@ -845,11 +845,11 @@ PSNR of low resolution image and high resolution image is 30.0157
 PSNR of predict and high resolution is 30.5336
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_1.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_2.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_3.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step
@@ -857,11 +857,11 @@ PSNR of low resolution image and high resolution image is 25.1103
 PSNR of predict and high resolution is 26.0954
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_5.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_6.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_6.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_7.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 1s 693ms/step
@@ -869,11 +869,11 @@ PSNR of low resolution image and high resolution image is 27.7789
 PSNR of predict and high resolution is 28.3920
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_9.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_10.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_10.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_11.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_11.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 18ms/step
@@ -881,11 +881,11 @@ PSNR of low resolution image and high resolution image is 28.0321
 PSNR of predict and high resolution is 28.2747
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_13.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_13.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_14.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_14.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_15.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_15.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 18ms/step
@@ -893,11 +893,11 @@ PSNR of low resolution image and high resolution image is 25.7853
 PSNR of predict and high resolution is 26.3532
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_17.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_17.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_18.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_18.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_19.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_19.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step
@@ -905,11 +905,11 @@ PSNR of low resolution image and high resolution image is 25.9181
 PSNR of predict and high resolution is 26.7292
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_21.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_21.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_22.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_22.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_23.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_23.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step
@@ -917,11 +917,11 @@ PSNR of low resolution image and high resolution image is 26.2389
 PSNR of predict and high resolution is 27.1362
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_25.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_25.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_26.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_26.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_27.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_27.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step
@@ -929,11 +929,11 @@ PSNR of low resolution image and high resolution image is 23.3281
 PSNR of predict and high resolution is 24.6649
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_29.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_29.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_30.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_30.png)
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_31.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_31.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step
@@ -941,4 +941,4 @@ PSNR of low resolution image and high resolution image is 29.9008
 PSNR of predict and high resolution is 30.0894
 ```
 
-![png](/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_33.png)
+![png]({{ site.baseurl }}/img/examples/vision/super_resolution_sub_pixel/super_resolution_sub_pixel_29_33.png)

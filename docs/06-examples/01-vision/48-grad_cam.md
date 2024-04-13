@@ -78,7 +78,7 @@ img_path = keras.utils.get_file(
 display(Image(img_path))
 ```
 
-![jpeg](/img/examples/vision/grad_cam/grad_cam_4_0.jpg)
+![jpeg]({{ site.baseurl }}/img/examples/vision/grad_cam/grad_cam_4_0.jpg)
 
 * * *
 
@@ -165,7 +165,7 @@ plt.show()
 Predicted: [('n02504458', 'African_elephant', 9.860664)]
 ```
 
-![png](/img/examples/vision/grad_cam/grad_cam_8_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/grad_cam/grad_cam_8_3.png)
 
 * * *
 
@@ -207,7 +207,7 @@ def save_and_display_gradcam(img_path, heatmap, cam_path="cam.jpg", alpha=0.4):
 save_and_display_gradcam(img_path, heatmap)
 ```
 
-![jpeg](/img/examples/vision/grad_cam/grad_cam_10_0.jpg)
+![jpeg]({{ site.baseurl }}/img/examples/vision/grad_cam/grad_cam_10_0.jpg)
 
 * * *
 
@@ -232,7 +232,7 @@ preds = model.predict(img_array)
 print("Predicted:", decode_predictions(preds, top=2)[0])
 ```
 
-![jpeg](/img/examples/vision/grad_cam/grad_cam_12_0.jpg)
+![jpeg]({{ site.baseurl }}/img/examples/vision/grad_cam/grad_cam_12_0.jpg)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step
@@ -247,7 +247,7 @@ heatmap = make_gradcam_heatmap(img_array, model, last_conv_layer_name, pred_inde
 save_and_display_gradcam(img_path, heatmap)
 ```
 
-![jpeg](/img/examples/vision/grad_cam/grad_cam_14_0.jpg)
+![jpeg]({{ site.baseurl }}/img/examples/vision/grad_cam/grad_cam_14_0.jpg)
 
 We generate class activation heatmap for "egyptian cat," the class index is 285
 
@@ -257,4 +257,4 @@ heatmap = make_gradcam_heatmap(img_array, model, last_conv_layer_name, pred_inde
 save_and_display_gradcam(img_path, heatmap)
 ```
 
-![jpeg](/img/examples/vision/grad_cam/grad_cam_16_0.jpg)
+![jpeg]({{ site.baseurl }}/img/examples/vision/grad_cam/grad_cam_16_0.jpg)

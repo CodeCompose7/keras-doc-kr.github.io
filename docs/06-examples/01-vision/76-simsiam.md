@@ -206,9 +206,9 @@ for n in range(25):
 plt.show()
 ```
 
-![png](/img/examples/vision/simsiam/simsiam_12_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/simsiam/simsiam_12_0.png)
 
-![png](/img/examples/vision/simsiam/simsiam_12_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/simsiam/simsiam_12_1.png)
 
 Notice that the images in `samples_images_one` and `sample_images_two` are essentially the same but are augmented differently.
 
@@ -379,7 +379,7 @@ Epoch 5/5
 391/391 [==============================] - 16s 40ms/step - loss: -0.9182
 ```
 
-![png](/img/examples/vision/simsiam/simsiam_22_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/simsiam/simsiam_22_1.png)
 
 If your solution gets very close to -1 (minimum value of our loss) very quickly with a different dataset and a different backbone architecture that is likely because of _representation collapse_. It is a phenomenon where the encoder yields similar output for all the images. In that case additional hyperparameter tuning is required especially in the following areas:
 

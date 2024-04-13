@@ -726,19 +726,19 @@ generate_caption()
 generate_caption()
 ```
 
-![png](/img/examples/vision/image_captioning/image_captioning_17_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_captioning/image_captioning_17_0.png)
 
 ```
 Predicted Caption:  a black and white dog is swimming in a pool
 ```
 
-![png](/img/examples/vision/image_captioning/image_captioning_17_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_captioning/image_captioning_17_2.png)
 
 ```
 Predicted Caption:  a black dog is running through the water
 ```
 
-![png](/img/examples/vision/image_captioning/image_captioning_17_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_captioning/image_captioning_17_4.png)
 
 ```
 Predicted Caption:  a man in a green shirt and green pants is riding a bicycle

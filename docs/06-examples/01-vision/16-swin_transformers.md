@@ -122,7 +122,7 @@ x_train shape: (45000, 32, 32, 3) - y_train shape: (45000, 100)
 x_test shape: (10000, 32, 32, 3) - y_test shape: (10000, 100)
 ```
 
-![png](/img/examples/vision/swin_transformers/swin_transformers_7_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/swin_transformers/swin_transformers_7_1.png)
 
 * * *
 
@@ -660,7 +660,7 @@ plt.grid()
 plt.show()
 ```
 
-![png](/img/examples/vision/swin_transformers/swin_transformers_23_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/swin_transformers/swin_transformers_23_0.png)
 
 Let's display the final results of the training on CIFAR-100.
 

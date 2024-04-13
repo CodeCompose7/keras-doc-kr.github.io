@@ -390,7 +390,7 @@ for data in train_ds.take(1):
 plt.show()
 ```
 
-![png](/img/examples/vision/handwriting_recognition/handwriting_recognition_28_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/handwriting_recognition/handwriting_recognition_28_0.png)
 
 You will notice that the content of original image is kept as faithful as possible and has been padded accordingly.
 
@@ -690,7 +690,7 @@ for batch in test_ds.take(1):
 plt.show()
 ```
 
-![png](/img/examples/vision/handwriting_recognition/handwriting_recognition_40_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/handwriting_recognition/handwriting_recognition_40_0.png)
 
 To get better results the model should be trained for at least 50 epochs.
 

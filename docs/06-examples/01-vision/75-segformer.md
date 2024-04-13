@@ -181,9 +181,9 @@ for samples in train_ds.take(2):
     display([sample_image, sample_mask])
 ```
 
-![png](/img/examples/vision/segformer/segformer_12_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/segformer/segformer_12_0.png)
 
-![png](/img/examples/vision/segformer/segformer_12_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/segformer/segformer_12_1.png)
 
 * * *
 
@@ -313,7 +313,7 @@ history = model.fit(
 1/1 [==============================] - 0s 54ms/step
 ```
 
-![png](/img/examples/vision/segformer/segformer_22_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/segformer/segformer_22_1.png)
 
 ```
 Sample Prediction after epoch 5
@@ -338,31 +338,31 @@ show_predictions(test_ds, 5)
 1/1 [==============================] - 0s 54ms/step
 ```
 
-![png](/img/examples/vision/segformer/segformer_24_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/segformer/segformer_24_1.png)
 
 ```
 1/1 [==============================] - 0s 54ms/step
 ```
 
-![png](/img/examples/vision/segformer/segformer_24_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/segformer/segformer_24_3.png)
 
 ```
 1/1 [==============================] - 0s 53ms/step
 ```
 
-![png](/img/examples/vision/segformer/segformer_24_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/segformer/segformer_24_5.png)
 
 ```
 1/1 [==============================] - 0s 53ms/step
 ```
 
-![png](/img/examples/vision/segformer/segformer_24_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/segformer/segformer_24_7.png)
 
 ```
 1/1 [==============================] - 0s 53ms/step
 ```
 
-![png](/img/examples/vision/segformer/segformer_24_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/segformer/segformer_24_9.png)
 
 * * *
 

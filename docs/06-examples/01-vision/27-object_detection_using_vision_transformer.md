@@ -232,9 +232,9 @@ Patch size: 32 X 32
 3072 elements per patch
 ```
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_11_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_11_1.png)
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_11_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_11_2.png)
 
 * * *
 
@@ -480,7 +480,7 @@ Epoch 27/100
  18/18 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.0157 - val_loss: 0.0014
 ```
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_17_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_17_1.png)
 
 * * *
 
@@ -622,24 +622,24 @@ plt.show()
 mean_iou: 0.9092338486331416
 ```
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_1.png)
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_2.png)
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_3.png)
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_4.png)
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_5.png)
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_6.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_6.png)
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_7.png)
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_8.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_8.png)
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_9.png)
 
-![png](/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_10.png)
+![png]({{ site.baseurl }}/img/examples/vision/object_detection_using_vision_transformer/object_detection_using_vision_transformer_19_10.png)
 
 This example demonstrates that a pure Transformer can be trained to predict the bounding boxes of an object in a given image, thus extending the use of Transformers to object detection tasks. The model can be improved further by tuning hyper-parameters and pre-training.

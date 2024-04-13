@@ -120,7 +120,7 @@ Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-dataset
  11490434/11490434 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step
 ```
 
-![png](/img/examples/vision/autoencoder/autoencoder_5_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/autoencoder/autoencoder_5_1.png)
 
 * * *
 
@@ -308,7 +308,7 @@ display(test_data, predictions)
  313/313 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step
 ```
 
-![png](/img/examples/vision/autoencoder/autoencoder_11_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/autoencoder/autoencoder_11_1.png)
 
 Now that we know that our autoencoder works, let's retrain it using the noisy data as our input and the clean data as our target. We want our autoencoder to learn how to denoise the images.
 
@@ -541,4 +541,4 @@ display(noisy_test_data, predictions)
  313/313 ━━━━━━━━━━━━━━━━━━━━ 0s 523us/step
 ```
 
-![png](/img/examples/vision/autoencoder/autoencoder_15_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/autoencoder/autoencoder_15_1.png)

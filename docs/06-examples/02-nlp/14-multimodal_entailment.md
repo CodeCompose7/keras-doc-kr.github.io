@@ -197,7 +197,7 @@ random_idx = np.random.choice(len(df))
 visualize(random_idx)
 ```
 
-![png](/img/examples/nlp/multimodal_entailment/multimodal_entailment_14_0.png)
+![png]({{ site.baseurl }}/img/examples/nlp/multimodal_entailment/multimodal_entailment_14_0.png)
 
 ```
 Text one: Friends, interested all go to have a look!
@@ -207,7 +207,7 @@ Text two: Friends, interested all go to have a look!
 Label: Contradictory
 ```
 
-![png](/img/examples/nlp/multimodal_entailment/multimodal_entailment_14_2.png)
+![png]({{ site.baseurl }}/img/examples/nlp/multimodal_entailment/multimodal_entailment_14_2.png)
 
 ```
 Text one: 👟 KICK OFF @ MARDEN SPORTS COMPLEX
@@ -327,7 +327,7 @@ bert_preprocess_model = make_bert_preprocessing_model(["text_1", "text_2"])
 keras.utils.plot_model(bert_preprocess_model, show_shapes=True, show_dtype=True)
 ```
 
-![png](/img/examples/nlp/multimodal_entailment/multimodal_entailment_22_0.png)
+![png]({{ site.baseurl }}/img/examples/nlp/multimodal_entailment/multimodal_entailment_22_0.png)
 
 ### Run the preprocessor on a sample input
 
@@ -582,7 +582,7 @@ multimodal_model = create_multimodal_model()
 keras.utils.plot_model(multimodal_model, show_shapes=True)
 ```
 
-![png](/img/examples/nlp/multimodal_entailment/multimodal_entailment_39_0.png)
+![png]({{ site.baseurl }}/img/examples/nlp/multimodal_entailment/multimodal_entailment_39_0.png)
 
 You can inspect the structure of the individual encoders as well by setting the `expand_nested` argument of `plot_model()` to `True`. You are encouraged to play with the different hyperparameters involved in building this model and observe how the final performance is affected.
 

@@ -254,7 +254,7 @@ for sample in selected_samples:
 visualize_keypoints(images, keypoints)
 ```
 
-![png](/img/examples/vision/keypoint_detection/keypoint_detection_18_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/keypoint_detection/keypoint_detection_18_0.png)
 
 The plots show that we have images of non-uniform sizes, which is expected in most real-world scenarios. However, if we resize these images to have a uniform shape (for instance (224 x 224)) their ground-truth annotations will also be affected. The same applies if we apply any geometric transformation (horizontal flip, for e.g.) to an image. Fortunately, `imgaug` provides utilities that can handle this issue. In the next section, we will write a data generator inheriting the [`keras.utils.Sequence`](https://keras.io/api/utils/python_utils/#sequence-class) class that applies data augmentation on batches of data using `imgaug`.
 
@@ -390,7 +390,7 @@ Total batches in training set: 166
 Total batches in validation set: 29
 ```
 
-![png](/img/examples/vision/keypoint_detection/keypoint_detection_28_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/keypoint_detection/keypoint_detection_28_1.png)
 
 * * *
 
@@ -513,9 +513,9 @@ visualize_keypoints(sample_val_images, predictions)
  1/1 ━━━━━━━━━━━━━━━━━━━━ 7s 7s/step
 ```
 
-![png](/img/examples/vision/keypoint_detection/keypoint_detection_37_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/keypoint_detection/keypoint_detection_37_1.png)
 
-![png](/img/examples/vision/keypoint_detection/keypoint_detection_37_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/keypoint_detection/keypoint_detection_37_2.png)
 
 Predictions will likely improve with more training.
 

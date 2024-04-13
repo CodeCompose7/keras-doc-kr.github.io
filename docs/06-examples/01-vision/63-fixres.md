@@ -234,19 +234,19 @@ vanilla_sample_images, _ = next(iter(vanilla_train_dataset))
 visualize_dataset(vanilla_sample_images)
 ```
 
-![png](/img/examples/vision/fixres/fixres_13_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/fixres/fixres_13_0.png)
 
 ```
 Batch shape: (32, 128, 128, 3).
 ```
 
-![png](/img/examples/vision/fixres/fixres_13_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/fixres/fixres_13_2.png)
 
 ```
 Batch shape: (32, 224, 224, 3).
 ```
 
-![png](/img/examples/vision/fixres/fixres_13_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/fixres/fixres_13_4.png)
 
 ```
 Batch shape: (32, 224, 224, 3).

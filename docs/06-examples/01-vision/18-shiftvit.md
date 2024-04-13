@@ -1134,7 +1134,7 @@ for images in predict_ds:
         plt.axis("off")
 ```
 
-![png](/img/examples/vision/shiftvit/shiftvit_46_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/shiftvit/shiftvit_46_0.png)
 
 * * *
 

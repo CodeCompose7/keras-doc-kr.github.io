@@ -200,7 +200,7 @@ for ax, im, label in zip(grid, x_slice, y_slice):
     ax.axis("off")
 ```
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_7_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_7_0.png)
 
 * * *
 
@@ -433,25 +433,25 @@ Performing NN search
 Building NN list:   0%|          | 0/10 [00:00<?, ?it/s]
 ```
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_2.png)
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_3.png)
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_4.png)
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_5.png)
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_6.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_6.png)
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_7.png)
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_8.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_8.png)
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_9.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_9.png)
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_10.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_10.png)
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_11.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_17_11.png)
 
 * * *
 
@@ -482,7 +482,7 @@ ax2.set_ylim((-0.05, 1.05))
 plt.show()
 ```
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_19_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_19_0.png)
 
 We can also take 100 examples for each class and plot the confusion matrix for each example and their nearest match. We also add an "extra" 10th class to represent the matches above the calibrated distance threshold.
 
@@ -505,7 +505,7 @@ cm = tfsim.visualization.confusion_matrix(
 )
 ```
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_21_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_21_0.png)
 
 * * *
 
@@ -525,7 +525,7 @@ else:
     print("All queries have a match below the distance threshold.")
 ```
 
-![png](/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_23_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning_tf_similarity/metric_learning_tf_similarity_23_0.png)
 
 * * *
 

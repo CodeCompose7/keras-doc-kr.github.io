@@ -493,7 +493,7 @@ plt.legend(["train", "valid"], loc="upper right")
 plt.show()
 ```
 
-![png](/img/examples/vision/nl_image_search/nl_image_search_23_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/nl_image_search/nl_image_search_23_0.png)
 
 * * *
 
@@ -574,7 +574,7 @@ for i in range(9):
     plt.axis("off")
 ```
 
-![png](/img/examples/vision/nl_image_search/nl_image_search_30_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/nl_image_search/nl_image_search_30_0.png)
 
 * * *
 

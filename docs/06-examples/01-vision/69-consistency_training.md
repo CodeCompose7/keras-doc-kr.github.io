@@ -185,9 +185,9 @@ for i, image in enumerate(sample_images[:9]):
     plt.axis("off")
 ```
 
-![png](/img/examples/vision/consistency_training/consistency_training_16_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/consistency_training/consistency_training_16_0.png)
 
-![png](/img/examples/vision/consistency_training/consistency_training_16_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/consistency_training/consistency_training_16_1.png)
 
 * * *
 

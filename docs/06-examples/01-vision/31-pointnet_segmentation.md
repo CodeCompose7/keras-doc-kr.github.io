@@ -268,9 +268,9 @@ visualize_data(point_clouds[0], all_labels[0])
 visualize_data(point_clouds[300], all_labels[300])
 ```
 
-![png](/img/examples/vision/pointnet_segmentation/pointnet_segmentation_15_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/pointnet_segmentation/pointnet_segmentation_15_0.png)
 
-![png](/img/examples/vision/pointnet_segmentation/pointnet_segmentation_15_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/pointnet_segmentation/pointnet_segmentation_15_1.png)
 
 ### Preprocessing
 
@@ -309,9 +309,9 @@ visualize_data(point_clouds[0], all_labels[0])
 visualize_data(point_clouds[300], all_labels[300])
 ```
 
-![png](/img/examples/vision/pointnet_segmentation/pointnet_segmentation_19_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/pointnet_segmentation/pointnet_segmentation_19_0.png)
 
-![png](/img/examples/vision/pointnet_segmentation/pointnet_segmentation_19_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/pointnet_segmentation/pointnet_segmentation_19_1.png)
 
 ### Creating TensorFlow datasets
 
@@ -763,7 +763,7 @@ Steps per epoch: 92.
 Total training steps: 5520.
 ```
 
-![png](/img/examples/vision/pointnet_segmentation/pointnet_segmentation_34_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/pointnet_segmentation/pointnet_segmentation_34_1.png)
 
 Finally, we implement a utility for running our experiments and launch model training.
 
@@ -947,9 +947,9 @@ plot_result("loss")
 plot_result("accuracy")
 ```
 
-![png](/img/examples/vision/pointnet_segmentation/pointnet_segmentation_38_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/pointnet_segmentation/pointnet_segmentation_38_0.png)
 
-![png](/img/examples/vision/pointnet_segmentation/pointnet_segmentation_38_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/pointnet_segmentation/pointnet_segmentation_38_1.png)
 
 * * *
 
@@ -986,9 +986,9 @@ Validation prediction shape: (32, 1024, 5)
 Index selected: 26
 ```
 
-![png](/img/examples/vision/pointnet_segmentation/pointnet_segmentation_40_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/pointnet_segmentation/pointnet_segmentation_40_1.png)
 
-![png](/img/examples/vision/pointnet_segmentation/pointnet_segmentation_40_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/pointnet_segmentation/pointnet_segmentation_40_2.png)
 
 * * *
 

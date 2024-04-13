@@ -246,7 +246,7 @@ visualize_samples = next(
 visualize_depth_map(visualize_samples)
 ```
 
-![png](/img/examples/vision/depth_estimation/depth_estimation_13_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/depth_estimation/depth_estimation_13_0.png)
 
 * * *
 
@@ -273,7 +273,7 @@ for x in range(0, img_vis.shape[0], STEP):
     ax.view_init(45, 135)
 ```
 
-![png](/img/examples/vision/depth_estimation/depth_estimation_15_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/depth_estimation/depth_estimation_15_0.png)
 
 * * *
 
@@ -587,9 +587,9 @@ test_loader = next(
 visualize_depth_map(test_loader, test=True, model=model)
 ```
 
-![png](/img/examples/vision/depth_estimation/depth_estimation_23_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/depth_estimation/depth_estimation_23_0.png)
 
-![png](/img/examples/vision/depth_estimation/depth_estimation_23_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/depth_estimation/depth_estimation_23_1.png)
 
 * * *
 

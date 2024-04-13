@@ -531,17 +531,17 @@ Matches: 407
 Matches: 306
 ```
 
-![png](/img/examples/vision/near_dup_search/near_dup_search_41_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/near_dup_search/near_dup_search_41_1.png)
 
-![png](/img/examples/vision/near_dup_search/near_dup_search_41_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/near_dup_search/near_dup_search_41_2.png)
 
-![png](/img/examples/vision/near_dup_search/near_dup_search_41_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/near_dup_search/near_dup_search_41_3.png)
 
-![png](/img/examples/vision/near_dup_search/near_dup_search_41_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/near_dup_search/near_dup_search_41_4.png)
 
-![png](/img/examples/vision/near_dup_search/near_dup_search_41_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/near_dup_search/near_dup_search_41_5.png)
 
-![png](/img/examples/vision/near_dup_search/near_dup_search_41_6.png)
+![png]({{ site.baseurl }}/img/examples/vision/near_dup_search/near_dup_search_41_6.png)
 
 ### TRT model
 
@@ -558,15 +558,15 @@ Matches: 280
 Matches: 503
 ```
 
-![png](/img/examples/vision/near_dup_search/near_dup_search_43_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/near_dup_search/near_dup_search_43_1.png)
 
-![png](/img/examples/vision/near_dup_search/near_dup_search_43_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/near_dup_search/near_dup_search_43_2.png)
 
-![png](/img/examples/vision/near_dup_search/near_dup_search_43_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/near_dup_search/near_dup_search_43_3.png)
 
-![png](/img/examples/vision/near_dup_search/near_dup_search_43_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/near_dup_search/near_dup_search_43_4.png)
 
-![png](/img/examples/vision/near_dup_search/near_dup_search_43_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/near_dup_search/near_dup_search_43_5.png)
 
 As you may have noticed, there are a couple of incorrect results. This can be mitigated in a few ways:
 

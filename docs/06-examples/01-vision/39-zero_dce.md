@@ -706,15 +706,15 @@ Epoch 100/100
  25/25 ━━━━━━━━━━━━━━━━━━━━ 2s 64ms/step - color_constancy_loss: 0.0831 - exposure_loss: 0.7873 - illumination_smoothness_loss: 0.0180 - spatial_constancy_loss: 0.2765 - total_loss: 1.1649 - val_color_constancy_loss: 0.0984 - val_exposure_loss: 0.6115 - val_illumination_smoothness_loss: 0.0341 - val_spatial_constancy_loss: 0.3011 - val_total_loss: 1.0451
 ```
 
-![png](/img/examples/vision/zero_dce/zero_dce_21_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/zero_dce/zero_dce_21_3.png)
 
-![png](/img/examples/vision/zero_dce/zero_dce_21_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/zero_dce/zero_dce_21_4.png)
 
-![png](/img/examples/vision/zero_dce/zero_dce_21_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/zero_dce/zero_dce_21_5.png)
 
-![png](/img/examples/vision/zero_dce/zero_dce_21_6.png)
+![png]({{ site.baseurl }}/img/examples/vision/zero_dce/zero_dce_21_6.png)
 
-![png](/img/examples/vision/zero_dce/zero_dce_21_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/zero_dce/zero_dce_21_7.png)
 
 * * *
 
@@ -758,12 +758,12 @@ for val_image_file in test_low_light_images:
     )
 ```
 
-![png](/img/examples/vision/zero_dce/zero_dce_25_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/zero_dce/zero_dce_25_0.png)
 
-![png](/img/examples/vision/zero_dce/zero_dce_25_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/zero_dce/zero_dce_25_1.png)
 
-![png](/img/examples/vision/zero_dce/zero_dce_25_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/zero_dce/zero_dce_25_2.png)
 
-![png](/img/examples/vision/zero_dce/zero_dce_25_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/zero_dce/zero_dce_25_3.png)
 
-![png](/img/examples/vision/zero_dce/zero_dce_25_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/zero_dce/zero_dce_25_4.png)

@@ -146,7 +146,7 @@ plt.show()
 Displaying frames for example 95.
 ```
 
-![png](/img/examples/vision/conv_lstm/conv_lstm_7_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/conv_lstm/conv_lstm_7_1.png)
 
 * * *
 
@@ -328,7 +328,7 @@ plt.show()
  1/1 ━━━━━━━━━━━━━━━━━━━━ 1s 814ms/step
 ```
 
-![png](/img/examples/vision/conv_lstm/conv_lstm_13_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/conv_lstm/conv_lstm_13_1.png)
 
 * * *
 

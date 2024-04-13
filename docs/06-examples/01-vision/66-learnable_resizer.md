@@ -226,7 +226,7 @@ WARNING:matplotlib.image:Clipping input data to the valid range for imshow with 
 WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
 ```
 
-![png](/img/examples/vision/learnable_resizer/learnable_resizer_13_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/learnable_resizer/learnable_resizer_13_1.png)
 
 * * *
 
@@ -323,7 +323,7 @@ WARNING:matplotlib.image:Clipping input data to the valid range for imshow with 
 WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
 ```
 
-![png](/img/examples/vision/learnable_resizer/learnable_resizer_20_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/learnable_resizer/learnable_resizer_20_1.png)
 
 The plot shows that the visuals of the images have improved with training. The following table shows the benefits of using the resizing module in comparison to using the bilinear interpolation:
 

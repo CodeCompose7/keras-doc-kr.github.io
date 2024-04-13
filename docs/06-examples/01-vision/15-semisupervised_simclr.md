@@ -264,7 +264,7 @@ def visualize_augmentations(num_images):
 visualize_augmentations(num_images=8)
 ```
 
-![png](/img/examples/vision/semisupervised_simclr/semisupervised_simclr_9_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/semisupervised_simclr/semisupervised_simclr_9_0.png)
 
 * * *
 
@@ -751,9 +751,9 @@ def plot_training_curves(pretraining_history, finetuning_history, baseline_histo
 plot_training_curves(pretraining_history, finetuning_history, baseline_history)
 ```
 
-![png](/img/examples/vision/semisupervised_simclr/semisupervised_simclr_19_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/semisupervised_simclr/semisupervised_simclr_19_0.png)
 
-![png](/img/examples/vision/semisupervised_simclr/semisupervised_simclr_19_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/semisupervised_simclr/semisupervised_simclr_19_1.png)
 
 By comparing the training curves, we can see that when using contrastive pretraining, a higher validation accuracy can be reached, paired with a lower validation loss, which means that the pretrained network was able to generalize better when seeing only a small amount of labeled examples.
 

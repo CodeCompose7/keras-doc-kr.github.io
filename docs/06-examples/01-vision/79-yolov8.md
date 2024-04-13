@@ -378,9 +378,9 @@ visualize_dataset(
 )
 ```
 
-![png](/img/examples/vision/yolov8/yolov8_30_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/yolov8/yolov8_30_0.png)
 
-![png](/img/examples/vision/yolov8/yolov8_30_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/yolov8/yolov8_30_1.png)
 
 We need to extract the inputs from the preprocessing dictionary and get them ready to be fed into the model.
 
@@ -578,4 +578,4 @@ visualize_detections(yolo, dataset=val_ds, bounding_box_format="xyxy")
 1/1 [==============================] - 0s 115ms/step
 ```
 
-![png](/img/examples/vision/yolov8/yolov8_49_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/yolov8/yolov8_49_1.png)

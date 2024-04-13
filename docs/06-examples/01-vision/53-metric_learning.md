@@ -118,7 +118,7 @@ examples = x_train[sample_idxs]
 show_collage(examples)
 ```
 
-![png](/img/examples/vision/metric_learning/metric_learning_7_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning/metric_learning_7_0.png)
 
 Metric learning provides training data not as explicit `(X, y)` pairs but instead uses multiple instances that are related in the way we want to express similarity. In our example we will use instances of the same class to represent similarity; a single training instance will not be one image, but a pair of images of the same class. When referring to the images in this pair we'll use the common metric learning names of the `anchor` (a randomly chosen image) and the `positive` (another randomly chosen image of the same class).
 
@@ -169,7 +169,7 @@ examples = next(iter(AnchorPositivePairs(num_batches=1)))
 show_collage(examples)
 ```
 
-![png](/img/examples/vision/metric_learning/metric_learning_13_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning/metric_learning_13_0.png)
 
 * * *
 
@@ -301,7 +301,7 @@ Epoch 20/20
  1000/1000 ━━━━━━━━━━━━━━━━━━━━ 2s 2ms/step - loss: 1.6356
 ```
 
-![png](/img/examples/vision/metric_learning/metric_learning_19_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning/metric_learning_19_3.png)
 
 * * *
 
@@ -348,7 +348,7 @@ for row_idx in range(num_collage_examples):
 show_collage(examples)
 ```
 
-![png](/img/examples/vision/metric_learning/metric_learning_23_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning/metric_learning_23_0.png)
 
 We can also get a quantified view of the performance by considering the correctness of near neighbours in terms of a confusion matrix.
 
@@ -387,4 +387,4 @@ disp.plot(include_values=True, cmap="viridis", ax=None, xticks_rotation="vertica
 plt.show()
 ```
 
-![png](/img/examples/vision/metric_learning/metric_learning_25_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/metric_learning/metric_learning_25_0.png)

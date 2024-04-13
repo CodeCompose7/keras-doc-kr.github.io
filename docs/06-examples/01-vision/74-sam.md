@@ -259,7 +259,7 @@ plt.imshow(raw_image)
 plt.show()
 ```
 
-![png](/img/examples/vision/sam/sam_14_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/sam/sam_14_0.png)
 
 Let's now define a set of points we will use as the prompt.
 
@@ -270,7 +270,7 @@ input_points = [[[450, 600]]]
 show_points_on_image(raw_image, input_points[0])
 ```
 
-![png](/img/examples/vision/sam/sam_16_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/sam/sam_16_0.png)
 
 And segment:
 
@@ -300,7 +300,7 @@ masks = processor.image_processor.post_process_masks(
 show_masks_on_image(raw_image, masks, outputs.iou_scores)
 ```
 
-![png](/img/examples/vision/sam/sam_21_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/sam/sam_21_0.png)
 
 And there we go!
 
@@ -364,7 +364,7 @@ plt.show()
 tf.shape(ground_truth_seg)
 ```
 
-![png](/img/examples/vision/sam/sam_26_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/sam/sam_26_0.png)
 
 ```
 <tf.Tensor: shape=(2,), dtype=int32, numpy=array([256, 256], dtype=int32)>
@@ -623,4 +623,4 @@ WARNING:matplotlib.image:Clipping input data to the valid range for imshow with 
 WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
 ```
 
-![png](/img/examples/vision/sam/sam_48_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/sam/sam_48_1.png)

@@ -559,9 +559,9 @@ Epoch 50/50
  75/75 ━━━━━━━━━━━━━━━━━━━━ 28s 378ms/step - loss: 0.1077 - peak_signal_noise_ratio: 67.6709 - val_loss: 0.1084 - val_peak_signal_noise_ratio: 67.6183 - learning_rate: 3.1250e-06
 ```
 
-![png](/img/examples/vision/mirnet/mirnet_17_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/mirnet/mirnet_17_3.png)
 
-![png](/img/examples/vision/mirnet/mirnet_17_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/mirnet/mirnet_17_4.png)
 
 * * *
 
@@ -610,14 +610,14 @@ for low_light_image in random.sample(test_low_light_images, 6):
     )
 ```
 
-![png](/img/examples/vision/mirnet/mirnet_21_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/mirnet/mirnet_21_0.png)
 
-![png](/img/examples/vision/mirnet/mirnet_21_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/mirnet/mirnet_21_1.png)
 
-![png](/img/examples/vision/mirnet/mirnet_21_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/mirnet/mirnet_21_2.png)
 
-![png](/img/examples/vision/mirnet/mirnet_21_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/mirnet/mirnet_21_3.png)
 
-![png](/img/examples/vision/mirnet/mirnet_21_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/mirnet/mirnet_21_4.png)
 
-![png](/img/examples/vision/mirnet/mirnet_21_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/mirnet/mirnet_21_5.png)

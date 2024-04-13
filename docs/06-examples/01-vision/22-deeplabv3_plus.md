@@ -847,13 +847,13 @@ Epoch 25/25
 250/250 [==============================] - 93s 372ms/step - loss: 0.2059 - accuracy: 0.9377 - val_loss: 0.9640 - val_accuracy: 0.7651
 ```
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_12_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_12_1.png)
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_12_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_12_2.png)
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_12_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_12_3.png)
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_12_4.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_12_4.png)
 
 * * *
 
@@ -929,25 +929,25 @@ plot_predictions(train_images[:4], colormap, model=model)
  1/1 ━━━━━━━━━━━━━━━━━━━━ 7s 7s/step
 ```
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_16_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_16_1.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 24ms/step
 ```
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_16_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_16_3.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 24ms/step
 ```
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_16_5.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_16_5.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 24ms/step
 ```
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_16_7.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_16_7.png)
 
 ### Inference on Validation Images
 
@@ -961,22 +961,22 @@ plot_predictions(val_images[:4], colormap, model=model)
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 24ms/step
 ```
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_18_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_18_0.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 24ms/step
 ```
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_18_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_18_1.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 25ms/step
 ```
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_18_2.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_18_2.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 25ms/step
 ```
 
-![png](/img/examples/vision/deeplabv3_plus/deeplabv3_plus_18_3.png)
+![png]({{ site.baseurl }}/img/examples/vision/deeplabv3_plus/deeplabv3_plus_18_3.png)

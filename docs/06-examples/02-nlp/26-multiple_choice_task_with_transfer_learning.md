@@ -372,7 +372,7 @@ def get_lr_callback(batch_size=8, mode="cos", epochs=10, plot=False):
 _ = get_lr_callback(CFG.batch_size, plot=True)
 ```
 
-![png](/img/examples/nlp/multiple_choice_task_with_transfer_learning/multiple_choice_task_with_transfer_learning_32_0.png)
+![png]({{ site.baseurl }}/img/examples/nlp/multiple_choice_task_with_transfer_learning/multiple_choice_task_with_transfer_learning_32_0.png)
 
 * * *
 
@@ -560,7 +560,7 @@ Finally, let's check the model structure visually if everything is in place.
 keras.utils.plot_model(model, show_shapes=True)
 ```
 
-![png](/img/examples/nlp/multiple_choice_task_with_transfer_learning/multiple_choice_task_with_transfer_learning_42_0.png)
+![png]({{ site.baseurl }}/img/examples/nlp/multiple_choice_task_with_transfer_learning/multiple_choice_task_with_transfer_learning_42_0.png)
 
 * * *
 

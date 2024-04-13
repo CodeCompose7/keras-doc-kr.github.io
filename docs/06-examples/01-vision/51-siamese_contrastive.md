@@ -254,7 +254,7 @@ Inspect training pairs
 visualize(pairs_train[:-1], labels_train[:-1], to_show=4, num_col=4)
 ```
 
-![png](/img/examples/vision/siamese_contrastive/siamese_contrastive_22_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/siamese_contrastive/siamese_contrastive_22_0.png)
 
 Inspect validation pairs
 
@@ -262,7 +262,7 @@ Inspect validation pairs
 visualize(pairs_val[:-1], labels_val[:-1], to_show=4, num_col=4)
 ```
 
-![png](/img/examples/vision/siamese_contrastive/siamese_contrastive_24_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/siamese_contrastive/siamese_contrastive_24_0.png)
 
 Inspect test pairs
 
@@ -270,7 +270,7 @@ Inspect test pairs
 visualize(pairs_test[:-1], labels_test[:-1], to_show=4, num_col=4)
 ```
 
-![png](/img/examples/vision/siamese_contrastive/siamese_contrastive_26_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/siamese_contrastive/siamese_contrastive_26_0.png)
 
 * * *
 
@@ -476,9 +476,9 @@ plt_metric(history=history.history, metric="accuracy", title="Model accuracy")
 plt_metric(history=history.history, metric="loss", title="Contrastive Loss")
 ```
 
-![png](/img/examples/vision/siamese_contrastive/siamese_contrastive_36_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/siamese_contrastive/siamese_contrastive_36_0.png)
 
-![png](/img/examples/vision/siamese_contrastive/siamese_contrastive_36_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/siamese_contrastive/siamese_contrastive_36_1.png)
 
 * * *
 
@@ -509,4 +509,4 @@ visualize(pairs_test, labels_test, to_show=3, predictions=predictions, test=True
  625/625 ━━━━━━━━━━━━━━━━━━━━ 1s 619us/step
 ```
 
-![png](/img/examples/vision/siamese_contrastive/siamese_contrastive_40_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/siamese_contrastive/siamese_contrastive_40_1.png)

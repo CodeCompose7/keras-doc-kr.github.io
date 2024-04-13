@@ -981,7 +981,7 @@ Downloading data from https://storage.googleapis.com/download.tensorflow.org/dat
 # Image:
 ```
 
-![png](/img/examples/vision/image_classification_using_global_context_vision_transformer/image_classification_using_global_context_vision_transformer_24_1.png)
+![png]({{ site.baseurl }}/img/examples/vision/image_classification_using_global_context_vision_transformer/image_classification_using_global_context_vision_transformer_24_1.png)
 
 ```
 # Prediction (Top 5):

@@ -177,7 +177,7 @@ for i, image in enumerate(sample_images[:9]):
     plt.axis("off")
 ```
 
-![png](/img/examples/vision/randaugment/randaugment_15_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/randaugment/randaugment_15_0.png)
 
 You are encouraged to run the above code block a couple of times to see different variations.
 
@@ -195,7 +195,7 @@ for i, image in enumerate(sample_images[:9]):
     plt.axis("off")
 ```
 
-![png](/img/examples/vision/randaugment/randaugment_18_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/randaugment/randaugment_18_0.png)
 
 * * *
 

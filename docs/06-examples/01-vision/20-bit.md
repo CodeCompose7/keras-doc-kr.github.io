@@ -101,7 +101,7 @@ for i, (image, label) in enumerate(train_ds.take(9)):
     plt.axis("off")
 ```
 
-![png](/img/examples/vision/bit/bit_7_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/bit/bit_7_0.png)
 
 * * *
 
@@ -204,7 +204,7 @@ for n in range(25):
     plt.axis("off")
 ```
 
-![png](/img/examples/vision/bit/bit_16_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/bit/bit_16_0.png)
 
 * * *
 
@@ -337,7 +337,7 @@ def plot_hist(hist):
 plot_hist(history)
 ```
 
-![png](/img/examples/vision/bit/bit_30_0.png)
+![png]({{ site.baseurl }}/img/examples/vision/bit/bit_30_0.png)
 
 * * *
 
