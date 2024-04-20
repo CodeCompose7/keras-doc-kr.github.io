@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 불균형 분류: 신용 카드 사기 탐지
+title: 불균형 분류 - 신용 카드 사기 탐지
 nav_order: 02+00
 permalink: /examples/structured_data/imbalanced_classification/
 parent: 구조화된 데이터
