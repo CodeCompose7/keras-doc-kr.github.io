@@ -605,7 +605,7 @@ Downloading data from https://storage.googleapis.com/tensorflow/keras-applicatio
  511/511 ━━━━━━━━━━━━━━━━━━━━ 0s 48ms/step - i_loss: 0.6896 - n_loss: 0.2961
 ```
 
-![png](/img/examples/generative/ddim/ddim_16_3.png)
+![png]({{ site.baseurl }}/img/examples/generative/ddim/ddim_16_3.png)
 
 ```
  511/511 ━━━━━━━━━━━━━━━━━━━━ 110s 138ms/step - i_loss: 0.6891 - n_loss: 0.2959 - kid: 0.0000e+00 - val_i_loss: 2.5650 - val_kid: 2.0372 - val_n_loss: 0.7914
@@ -624,7 +624,7 @@ model.load_weights(checkpoint_path)
 model.plot_images()
 ```
 
-![png](/img/examples/generative/ddim/ddim_18_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/ddim/ddim_18_0.png)
 
 * * *
 

@@ -119,7 +119,7 @@ df_small_noise.plot(legend=False, ax=ax)
 plt.show()
 ```
 
-![png](/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_9_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_9_0.png)
 
 ### Timeseries data with anomalies
 
@@ -131,7 +131,7 @@ df_daily_jumpsup.plot(legend=False, ax=ax)
 plt.show()
 ```
 
-![png](/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_11_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_11_0.png)
 
 * * *
 
@@ -330,7 +330,7 @@ plt.legend()
 plt.show()
 ```
 
-![png](/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_21_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_21_0.png)
 
 * * *
 
@@ -362,7 +362,7 @@ print("Reconstruction error threshold: ", threshold)
  118/118 ━━━━━━━━━━━━━━━━━━━━ 1s 6ms/step
 ```
 
-![png](/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_23_1.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_23_1.png)
 
 ```
 Reconstruction error threshold:  0.1232659916089631
@@ -379,7 +379,7 @@ plt.plot(x_train_pred[0])
 plt.show()
 ```
 
-![png](/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_25_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_25_0.png)
 
 ### Prepare test data
 
@@ -409,14 +409,14 @@ print("Number of anomaly samples: ", np.sum(anomalies))
 print("Indices of anomaly samples: ", np.where(anomalies))
 ```
 
-![png](/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_27_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_27_0.png)
 
 ```
 Test input shape:  (3745, 288, 1)
  118/118 ━━━━━━━━━━━━━━━━━━━━ 0s 1ms/step
 ```
 
-![png](/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_27_2.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_27_2.png)
 
 ```
 Number of anomaly samples:  394
@@ -496,4 +496,4 @@ df_subset.plot(legend=False, ax=ax, color="r")
 plt.show()
 ```
 
-![png](/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_31_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_anomaly_detection/timeseries_anomaly_detection_31_0.png)

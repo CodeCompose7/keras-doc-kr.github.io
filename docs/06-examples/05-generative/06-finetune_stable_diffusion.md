@@ -266,7 +266,7 @@ for i in range(3):
     plt.axis("off")
 ```
 
-![png](/img/examples/generative/finetune_stable_diffusion/finetune_stable_diffusion_15_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/finetune_stable_diffusion/finetune_stable_diffusion_15_0.png)
 
 * * *
 
@@ -508,11 +508,11 @@ for prompt in outputs:
     plot_images(outputs[prompt], prompt)
 ```
 
-![png](/img/examples/generative/finetune_stable_diffusion/finetune_stable_diffusion_28_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/finetune_stable_diffusion/finetune_stable_diffusion_28_0.png)
 
-![png](/img/examples/generative/finetune_stable_diffusion/finetune_stable_diffusion_28_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/finetune_stable_diffusion/finetune_stable_diffusion_28_1.png)
 
-![png](/img/examples/generative/finetune_stable_diffusion/finetune_stable_diffusion_28_2.png)
+![png]({{ site.baseurl }}/img/examples/generative/finetune_stable_diffusion/finetune_stable_diffusion_28_2.png)
 
 We can notice that the model has started adapting to the style of our dataset. You can check the [accompanying repository](https://github.com/sayakpaul/stable-diffusion-keras-ft#results) for more comparisons and commentary. If you're feeling adventurous to try out a demo, you can check out [this resource](https://huggingface.co/spaces/sayakpaul/pokemon-sd-kerascv).
 

@@ -335,7 +335,7 @@ Let's visualize our connectivity graph:
 keras.utils.plot_model(model, show_shapes=True, rankdir="LR")
 ```
 
-![png](/img/examples/structured_data/structured_data_classification_from_scratch/structured_data_classification_from_scratch_23_0.png)
+![png]({{ site.baseurl }}/img/examples/structured_data/structured_data_classification_from_scratch/structured_data_classification_from_scratch_23_0.png)
 
 * * *
 

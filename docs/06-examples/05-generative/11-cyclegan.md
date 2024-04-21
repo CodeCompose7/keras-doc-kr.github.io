@@ -162,7 +162,7 @@ for i, samples in enumerate(zip(train_horses.take(4), train_zebras.take(4))):
 plt.show()
 ```
 
-![png](/img/examples/generative/cyclegan/cyclegan_9_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/cyclegan/cyclegan_9_0.png)
 
 * * *
 
@@ -646,7 +646,7 @@ cycle_gan_model.fit(
 1067/1067 [==============================] - ETA: 0s - G_loss: 4.4794 - F_loss: 4.1048 - D_X_loss: 0.1584 - D_Y_loss: 0.1233
 ```
 
-![png](/img/examples/generative/cyclegan/cyclegan_21_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/cyclegan/cyclegan_21_1.png)
 
 ```
 1067/1067 [==============================] - 390s 366ms/step - G_loss: 4.4783 - F_loss: 4.1035 - D_X_loss: 0.1584 - D_Y_loss: 0.1232
@@ -704,4 +704,4 @@ plt.show()
 Weights loaded successfully
 ```
 
-![png](/img/examples/generative/cyclegan/cyclegan_25_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/cyclegan/cyclegan_25_1.png)

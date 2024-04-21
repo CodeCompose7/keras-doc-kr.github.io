@@ -182,7 +182,7 @@ It is possible to plot the entire dataset, but the resulting plot will be diffic
 transactions_evset.add_index("CUSTOMER_ID").plot(indexes="3774")
 ```
 
-![png](/img/examples/timeseries/event_classification_for_payment_card_fraud_detection/event_classification_for_payment_card_fraud_detection_12_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/event_classification_for_payment_card_fraud_detection/event_classification_for_payment_card_fraud_detection_12_0.png)
 
 Note the few fraudulent transactions for this client.
 
@@ -277,7 +277,7 @@ Let's look at the features of terminal "3774".
 feature_set_1.plot(indexes="3774")
 ```
 
-![png](/img/examples/timeseries/event_classification_for_payment_card_fraud_detection/event_classification_for_payment_card_fraud_detection_16_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/event_classification_for_payment_card_fraud_detection/event_classification_for_payment_card_fraud_detection_16_0.png)
 
 A transaction's fraudulent status is not known at the time of the transaction (otherwise, there would be no problem). However, the banks knows if a transacation is fraudulent one week after it is made. We create a set of features that indicate the number and ratio of fraudulent transactions in the last N days.
 
@@ -480,7 +480,7 @@ tp.plot(
 )
 ```
 
-![png](/img/examples/timeseries/event_classification_for_payment_card_fraud_detection/event_classification_for_payment_card_fraud_detection_34_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/event_classification_for_payment_card_fraud_detection/event_classification_for_payment_card_fraud_detection_34_0.png)
 
 We filter the input features and label in each fold.
 
@@ -704,7 +704,7 @@ Finaly, we plot the ROC curve.
 _ = RocCurveDisplay.from_predictions(labels, predictions)
 ```
 
-![png](/img/examples/timeseries/event_classification_for_payment_card_fraud_detection/event_classification_for_payment_card_fraud_detection_54_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/event_classification_for_payment_card_fraud_detection/event_classification_for_payment_card_fraud_detection_54_0.png)
 
 The Keras model is ready to be used on transactions with an unknown fraud status, a.k.a. serving. We save the model on disk for future use.
 

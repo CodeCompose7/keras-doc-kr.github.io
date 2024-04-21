@@ -742,7 +742,7 @@ model.fit(
 31/31 [==============================] - ETA: 0s - loss: 0.7746
 ```
 
-![png](/img/examples/generative/ddpm/ddpm_13_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/ddpm/ddpm_13_1.png)
 
 ```
 31/31 [==============================] - 194s 4s/step - loss: 0.7668
@@ -777,7 +777,7 @@ model.plot_images(num_rows=4, num_cols=8)
 100  222M  100  222M    0     0  16.0M      0  0:00:13  0:00:13 --:--:-- 14.7M
 ```
 
-![png](/img/examples/generative/ddpm/ddpm_16_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/ddpm/ddpm_16_0.png)
 
 * * *
 

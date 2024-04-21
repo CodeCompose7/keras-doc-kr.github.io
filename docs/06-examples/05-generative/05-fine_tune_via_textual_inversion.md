@@ -578,7 +578,7 @@ plot_images(generated)
 25/25 [==============================] - 19s 314ms/step
 ```
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_33_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_33_1.png)
 
 As you can see, the model still thinks of our token as a cat, as this was the seed token we used to initialize our custom token.
 
@@ -778,35 +778,35 @@ Epoch 50/50
 <keras.callbacks.History at 0x7f183aea3eb8>
 ```
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_2.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_2.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_3.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_3.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_4.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_4.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_5.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_5.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_6.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_6.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_7.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_7.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_8.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_8.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_9.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_9.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_10.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_10.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_11.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_11.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_12.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_12.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_13.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_13.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_14.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_14.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_15.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_15.png)
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_16.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_39_16.png)
 
 It's pretty fun to see how the model learns our new token over time. Play around with it and see how you can tune training parameters and your training dataset to produce the best images!
 
@@ -833,7 +833,7 @@ plot_images(generated)
 25/25 [==============================] - 8s 316ms/step
 ```
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_42_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_42_1.png)
 
 ```python
 generated = stable_diffusion.text_to_image(
@@ -849,7 +849,7 @@ plot_images(generated)
 25/25 [==============================] - 8s 314ms/step
 ```
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_43_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_43_1.png)
 
 ```python
 generated = stable_diffusion.text_to_image(
@@ -862,7 +862,7 @@ plot_images(generated)
 25/25 [==============================] - 8s 322ms/step
 ```
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_44_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_44_1.png)
 
 ```python
 generated = stable_diffusion.text_to_image(
@@ -876,7 +876,7 @@ plot_images(generated)
 25/25 [==============================] - 8s 315ms/step
 ```
 
-![png](/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_45_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/fine_tune_via_textual_inversion/fine_tune_via_textual_inversion_45_1.png)
 
 * * *
 

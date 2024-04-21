@@ -436,7 +436,7 @@ An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not i
 Total model weights: 110693
 ```
 
-![png](/img/examples/structured_data/tabtransformer/tabtransformer_24_2.png)
+![png]({{ site.baseurl }}/img/examples/structured_data/tabtransformer/tabtransformer_24_2.png)
 
 Let's train and evaluate the baseline model:
 
@@ -612,7 +612,7 @@ keras.utils.plot_model(tabtransformer_model, show_shapes=True, rankdir="LR")
 Total model weights: 88543
 ```
 
-![png](/img/examples/structured_data/tabtransformer/tabtransformer_29_1.png)
+![png]({{ site.baseurl }}/img/examples/structured_data/tabtransformer/tabtransformer_29_1.png)
 
 Let's train and evaluate the TabTransformer model:
 

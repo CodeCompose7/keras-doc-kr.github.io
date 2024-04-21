@@ -165,7 +165,7 @@ plt.legend(["route_0", "route_25"])
 <matplotlib.legend.Legend at 0x7f5a870b2050>
 ```
 
-![png](/img/examples/timeseries/timeseries_traffic_forecasting/timeseries_traffic_forecasting_11_1.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_traffic_forecasting/timeseries_traffic_forecasting_11_1.png)
 
 We can also visualize the correlation between the timeseries in different routes.
 
@@ -180,7 +180,7 @@ plt.ylabel("road number")
 Text(0, 0.5, 'road number')
 ```
 
-![png](/img/examples/timeseries/timeseries_traffic_forecasting/timeseries_traffic_forecasting_13_1.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_traffic_forecasting/timeseries_traffic_forecasting_13_1.png)
 
 Using this correlation heatmap, we can see that for example the speed in routes 4, 5, 6 are highly correlated.
 
@@ -694,6 +694,6 @@ print(f"naive MAE: {naive_mse}, model MAE: {model_mse}")
 naive MAE: 0.13472308593195767, model MAE: 0.13524348477186485
 ```
 
-![png](/img/examples/timeseries/timeseries_traffic_forecasting/timeseries_traffic_forecasting_32_1.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_traffic_forecasting/timeseries_traffic_forecasting_32_1.png)
 
 Of course, the goal here is to demonstrate the method, not to achieve the best performance. To improve the model's accuracy, all model hyperparameters should be tuned carefully. In addition, several of the `LSTMGC` blocks can be stacked to increase the representation power of the model.

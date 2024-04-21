@@ -183,7 +183,7 @@ def view_eeg_plot(idx):
 view_eeg_plot(7)
 ```
 
-![png](/img/examples/timeseries/eeg_signal_classification/eeg_signal_classification_15_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/eeg_signal_classification/eeg_signal_classification_15_0.png)
 
 * * *
 
@@ -326,7 +326,7 @@ plt.title("Number of samples per class")
 plt.show()
 ```
 
-![png](/img/examples/timeseries/eeg_signal_classification/eeg_signal_classification_22_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/eeg_signal_classification/eeg_signal_classification_22_0.png)
 
 * * *
 
@@ -723,7 +723,7 @@ We use the function defined above to see model metrics during training.
 plot_history_metrics(conv_model_history)
 ```
 
-![png](/img/examples/timeseries/eeg_signal_classification/eeg_signal_classification_48_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/eeg_signal_classification/eeg_signal_classification_48_0.png)
 
 * * *
 
@@ -786,4 +786,4 @@ Recall : 0.311914324760437
 W0000 00:00:1699421785.101645    4408 graph_launch.cc:671] Fallback to op-by-op mode because memset node breaks graph update
 ```
 
-![png](/img/examples/timeseries/eeg_signal_classification/eeg_signal_classification_50_2.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/eeg_signal_classification/eeg_signal_classification_50_2.png)

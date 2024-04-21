@@ -49,7 +49,7 @@ Stable Diffusion isn't just an image model, though, it's also a natural language
 
 _Latent space walking_, or _latent space exploration_, is the process of sampling a point in latent space and incrementally changing the latent representation. Its most common application is generating animations where each sampled point is fed to the decoder and is stored as a frame in the final animation. For high-quality latent representations, this produces coherent-looking animations. These animations can provide insight into the feature map of the latent space, and can ultimately lead to improvements in the training process. One such GIF is displayed below:
 
-![Panda to Plane](/img/examples/generative/random_walks_with_stable_diffusion/panda2plane.gif)
+![Panda to Plane]({{ site.baseurl }}/img/examples/generative/random_walks_with_stable_diffusion/panda2plane.gif)
 
 In this guide, we will show how to take advantage of the Stable Diffusion API in KerasCV to perform prompt interpolation and circular walks through Stable Diffusion's visual latent manifold, as well as through the text encoder's latent manifold.
 
@@ -248,7 +248,7 @@ export_as_gif("doggo-and-fruit-150.gif", images, rubber_band=True)
  25/25 ━━━━━━━━━━━━━━━━━━━━ 5s 204ms/step
 ```
 
-![Dog to Fruit 150](/img/examples/generative/random_walks_with_stable_diffusion/dog2fruit150.gif)
+![Dog to Fruit 150]({{ site.baseurl }}/img/examples/generative/random_walks_with_stable_diffusion/dog2fruit150.gif)
 
 The resulting gif shows a much clearer and more coherent shift between the two prompts. Try out some prompts of your own and experiment!
 
@@ -338,7 +338,7 @@ plot_grid(images, "4-way-interpolation.jpg", interpolation_steps)
  50/50 ━━━━━━━━━━━━━━━━━━━━ 11s 210ms/step
 ```
 
-![png](/img/examples/generative/random_walks_with_stable_diffusion/random_walks_with_stable_diffusion_13_2.png)
+![png]({{ site.baseurl }}/img/examples/generative/random_walks_with_stable_diffusion/random_walks_with_stable_diffusion_13_2.png)
 
 We can also interpolate while allowing diffusion noise to vary by dropping the `diffusion_noise` parameter:
 
@@ -366,7 +366,7 @@ plot_grid(images, "4-way-interpolation-varying-noise.jpg", interpolation_steps)
  50/50 ━━━━━━━━━━━━━━━━━━━━ 11s 213ms/step
 ```
 
-![png](/img/examples/generative/random_walks_with_stable_diffusion/random_walks_with_stable_diffusion_15_2.png)
+![png]({{ site.baseurl }}/img/examples/generative/random_walks_with_stable_diffusion/random_walks_with_stable_diffusion_15_2.png)
 
 Next up – let's go for some walks!
 
@@ -562,7 +562,7 @@ export_as_gif("cows.gif", images)
  25/25 ━━━━━━━━━━━━━━━━━━━━ 5s 214ms/step
 ```
 
-![Happy Cows](/img/examples/generative/random_walks_with_stable_diffusion/happycows.gif)
+![Happy Cows]({{ site.baseurl }}/img/examples/generative/random_walks_with_stable_diffusion/happycows.gif)
 
 Experiment with your own prompts and with different values of `unconditional_guidance_scale`!
 

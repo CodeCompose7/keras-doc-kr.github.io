@@ -95,7 +95,7 @@ plt.show()
 plt.close()
 ```
 
-![png](/img/examples/timeseries/timeseries_classification_from_scratch/timeseries_classification_from_scratch_7_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_classification_from_scratch/timeseries_classification_from_scratch_7_0.png)
 
 * * *
 
@@ -166,7 +166,7 @@ model = make_model(input_shape=x_train.shape[1:])
 keras.utils.plot_model(model, show_shapes=True)
 ```
 
-![png](/img/examples/timeseries/timeseries_classification_from_scratch/timeseries_classification_from_scratch_17_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_classification_from_scratch/timeseries_classification_from_scratch_17_0.png)
 
 * * *
 
@@ -826,6 +826,6 @@ plt.show()
 plt.close()
 ```
 
-![png](/img/examples/timeseries/timeseries_classification_from_scratch/timeseries_classification_from_scratch_23_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_classification_from_scratch/timeseries_classification_from_scratch_23_0.png)
 
 We can see how the training accuracy reaches almost 0.95 after 100 epochs. However, by observing the validation accuracy we can see how the network still needs training until it reaches almost 0.97 for both the validation and the training accuracy after 200 epochs. Beyond the 200th epoch, if we continue on training, the validation accuracy will start decreasing while the training accuracy will continue on increasing: the model starts overfitting.

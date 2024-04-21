@@ -342,7 +342,7 @@ def plot_latent_space(vae, n=30, figsize=15):
 plot_latent_space(vae)
 ```
 
-![png](/img/examples/generative/vae/vae_14_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/vae/vae_14_0.png)
 
 * * *
 
@@ -371,4 +371,4 @@ plot_label_clusters(vae, x_train, y_train)
 W0000 00:00:1700704481.358429 3339856 graph_launch.cc:671] Fallback to op-by-op mode because memset node breaks graph update
 ```
 
-![png](/img/examples/generative/vae/vae_16_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/vae/vae_16_1.png)

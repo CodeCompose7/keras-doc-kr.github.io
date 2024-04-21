@@ -167,7 +167,7 @@ def show_raw_visualization(data):
 show_raw_visualization(df)
 ```
 
-![png](/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_6_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_6_0.png)
 
 * * *
 
@@ -411,7 +411,7 @@ def visualize_loss(history, title):
 visualize_loss(history, "Training and Validation Loss")
 ```
 
-![png](/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_22_0.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_22_0.png)
 
 * * *
 
@@ -455,28 +455,28 @@ for x, y in dataset_val.take(5):
  8/8 ━━━━━━━━━━━━━━━━━━━━ 0s 4ms/step  
 ```
 
-![png](/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_24_1.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_24_1.png)
 
 ```
  8/8 ━━━━━━━━━━━━━━━━━━━━ 0s 4ms/step
 ```
 
-![png](/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_24_3.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_24_3.png)
 
 ```
  8/8 ━━━━━━━━━━━━━━━━━━━━ 0s 5ms/step
 ```
 
-![png](/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_24_5.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_24_5.png)
 
 ```
  8/8 ━━━━━━━━━━━━━━━━━━━━ 0s 5ms/step
 ```
 
-![png](/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_24_7.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_24_7.png)
 
 ```
  8/8 ━━━━━━━━━━━━━━━━━━━━ 0s 4ms/step
 ```
 
-![png](/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_24_9.png)
+![png]({{ site.baseurl }}/img/examples/timeseries/timeseries_weather_forecasting/timeseries_weather_forecasting_24_9.png)

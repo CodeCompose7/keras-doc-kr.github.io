@@ -245,7 +245,7 @@ plt.legend(["train", "test"], loc="upper left")
 plt.show()
 ```
 
-![png](/img/examples/structured_data/collaborative_filtering_movielens/collaborative_filtering_movielens_14_0.png)
+![png]({{ site.baseurl }}/img/examples/structured_data/collaborative_filtering_movielens/collaborative_filtering_movielens_14_0.png)
 
 * * *
 

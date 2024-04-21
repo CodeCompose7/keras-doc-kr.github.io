@@ -187,7 +187,7 @@ def plot_images(images, title=None):
 plot_images(load_images(instance_image_paths[:5]))
 ```
 
-![png](/img/examples/generative/dreambooth/dreambooth_16_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/dreambooth/dreambooth_16_0.png)
 
 **Class images**:
 
@@ -195,7 +195,7 @@ plot_images(load_images(instance_image_paths[:5]))
 plot_images(load_images(class_image_paths[:5]))
 ```
 
-![png](/img/examples/generative/dreambooth/dreambooth_18_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/dreambooth/dreambooth_18_0.png)
 
 * * *
 
@@ -650,7 +650,7 @@ By using this model checkpoint, you acknowledge that its usage is subject to the
 50/50 [==============================] - 42s 160ms/step
 ```
 
-![png](/img/examples/generative/dreambooth/dreambooth_40_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/dreambooth/dreambooth_40_1.png)
 
 Now, let's load checkpoints from a different experiment we conducted where we also fine-tuned the text encoder along with the UNet:
 
@@ -677,7 +677,7 @@ Downloading data from https://huggingface.co/chansung/dreambooth-dog/resolve/mai
 50/50 [==============================] - 8s 159ms/step
 ```
 
-![png](/img/examples/generative/dreambooth/dreambooth_42_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/dreambooth/dreambooth_42_1.png)
 
 The default number of steps for generating an image in `text_to_image()` [is 50](https://github.com/keras-team/keras-cv/blob/3575bc3b944564fe15b46b917e6555aa6a9d7be0/keras_cv/models/stable_diffusion/stable_diffusion.py#L73). Let's increase it to 100.
 
@@ -692,7 +692,7 @@ plot_images(images_dreamboothed, prompt)
 100/100 [==============================] - 16s 159ms/step
 ```
 
-![png](/img/examples/generative/dreambooth/dreambooth_44_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/dreambooth/dreambooth_44_1.png)
 
 Feel free to experiment with different prompts (don't forget to add the unique identifier and the class label!) to see how the results change. We welcome you to check out our codebase and more experimental results [here](https://github.com/sayakpaul/dreambooth-keras#results). You can also read [this blog post](https://huggingface.co/blog/dreambooth) to get more ideas.
 

@@ -394,7 +394,7 @@ keras.utils.plot_model(baseline_model, show_shapes=True, rankdir="LR")
   return bool(asarray(a1 == a2).all())
 ```
 
-![png](/img/examples/structured_data/wide_deep_cross_networks/wide_deep_cross_networks_24_1.png)
+![png]({{ site.baseurl }}/img/examples/structured_data/wide_deep_cross_networks/wide_deep_cross_networks_24_1.png)
 
 Let's run it:
 
@@ -554,7 +554,7 @@ keras.utils.plot_model(wide_and_deep_model, show_shapes=True, rankdir="LR")
   return bool(asarray(a1 == a2).all())
 ```
 
-![png](/img/examples/structured_data/wide_deep_cross_networks/wide_deep_cross_networks_29_1.png)
+![png]({{ site.baseurl }}/img/examples/structured_data/wide_deep_cross_networks/wide_deep_cross_networks_29_1.png)
 
 Let's run it:
 
@@ -716,7 +716,7 @@ keras.utils.plot_model(deep_and_cross_model, show_shapes=True, rankdir="LR")
   return bool(asarray(a1 == a2).all())
 ```
 
-![png](/img/examples/structured_data/wide_deep_cross_networks/wide_deep_cross_networks_34_1.png)
+![png]({{ site.baseurl }}/img/examples/structured_data/wide_deep_cross_networks/wide_deep_cross_networks_34_1.png)
 
 Let's run it:
 

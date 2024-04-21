@@ -606,8 +606,8 @@ display(Image("generated_img_1_19.png"))
 display(Image("generated_img_2_19.png"))
 ```
 
-![png](/img/examples/generative/wgan_gp/wgan_gp_17_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/wgan_gp/wgan_gp_17_0.png)
 
-![png](/img/examples/generative/wgan_gp/wgan_gp_17_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/wgan_gp/wgan_gp_17_1.png)
 
-![png](/img/examples/generative/wgan_gp/wgan_gp_17_2.png)
+![png]({{ site.baseurl }}/img/examples/generative/wgan_gp/wgan_gp_17_2.png)

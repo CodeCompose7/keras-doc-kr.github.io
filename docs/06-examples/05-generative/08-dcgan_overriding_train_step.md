@@ -88,7 +88,7 @@ for x in dataset:
     break
 ```
 
-![png](/img/examples/generative/dcgan_overriding_train_step/dcgan_overriding_train_step_8_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/dcgan_overriding_train_step/dcgan_overriding_train_step_8_0.png)
 
 * * *
 

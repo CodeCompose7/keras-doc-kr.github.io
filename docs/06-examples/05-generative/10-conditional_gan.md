@@ -412,7 +412,7 @@ imageio.mimsave("animation.gif", converted_images[:, :, :, 0], fps=1)
 embed.embed_file("animation.gif")
 ```
 
-![gif](/img/examples/generative/conditional_gan/animation.gif)
+![gif]({{ site.baseurl }}/img/examples/generative/conditional_gan/animation.gif)
 
 We can further improve the performance of this model with recipes like [WGAN-GP](https://keras.io/examples/generative/wgan_gp). Conditional generation is also widely used in many modern image generation architectures like [VQ-GANs](https://arxiv.org/abs/2012.09841), [DALL-E](https://openai.com/blog/dall-e/), etc.
 
