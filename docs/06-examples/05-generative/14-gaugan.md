@@ -231,11 +231,11 @@ Image batch shape: (4, 256, 256, 3).
 One-hot encoded label map shape: (4, 256, 256, 12).
 ```
 
-![png](/img/examples/generative/gaugan/gaugan_11_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_11_1.png)
 
-![png](/img/examples/generative/gaugan/gaugan_11_2.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_11_2.png)
 
-![png](/img/examples/generative/gaugan/gaugan_11_3.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_11_3.png)
 
 Note that in the rest of this example, we use a couple of figures from the [original GauGAN paper](https://arxiv.org/abs/1903.07291) for convenience.
 
@@ -804,13 +804,13 @@ W0000 00:00:1705013326.657730   30384 graph_launch.cc:671] Fallback to op-by-op 
  1/1 ━━━━━━━━━━━━━━━━━━━━ 3s 3s/step
 ```
 
-![png](/img/examples/generative/gaugan/gaugan_31_5.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_5.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_6.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_6.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_7.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_7.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_8.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_8.png)
 
 ```
  75/75 ━━━━━━━━━━━━━━━━━━━━ 114s 426ms/step - disc_loss: 1.3051 - feat_loss: 11.2902 - gen_loss: 113.0590 - kl_loss: 83.1493 - vgg_loss: 18.4890 - val_disc_loss: 1.0374 - val_feat_loss: 9.2344 - val_gen_loss: 110.1001 - val_kl_loss: 83.8935 - val_vgg_loss: 16.6412
@@ -826,13 +826,13 @@ Epoch 6/15
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 35ms/step
 ```
 
-![png](/img/examples/generative/gaugan/gaugan_31_10.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_10.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_11.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_11.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_12.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_12.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_13.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_13.png)
 
 ```
  75/75 ━━━━━━━━━━━━━━━━━━━━ 19s 258ms/step - disc_loss: 0.8982 - feat_loss: 9.2486 - gen_loss: 109.9399 - kl_loss: 83.8095 - vgg_loss: 16.5587 - val_disc_loss: 0.8061 - val_feat_loss: 8.5935 - val_gen_loss: 109.5937 - val_kl_loss: 84.5844 - val_vgg_loss: 15.8794
@@ -848,13 +848,13 @@ Epoch 11/15
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 30ms/step
 ```
 
-![png](/img/examples/generative/gaugan/gaugan_31_15.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_15.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_16.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_16.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_17.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_17.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_18.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_18.png)
 
 ```
  75/75 ━━━━━━━━━━━━━━━━━━━━ 20s 263ms/step - disc_loss: 0.9047 - feat_loss: 7.5019 - gen_loss: 107.6317 - kl_loss: 83.6812 - vgg_loss: 16.1292 - val_disc_loss: 0.8788 - val_feat_loss: 7.7651 - val_gen_loss: 109.1731 - val_kl_loss: 84.3094 - val_vgg_loss: 16.0356
@@ -868,15 +868,15 @@ Epoch 15/15
  75/75 ━━━━━━━━━━━━━━━━━━━━ 15s 194ms/step - disc_loss: 0.8939 - feat_loss: 7.5489 - gen_loss: 108.8330 - kl_loss: 85.0358 - vgg_loss: 15.9147 - val_disc_loss: 0.9616 - val_feat_loss: 8.0080 - val_gen_loss: 108.1650 - val_kl_loss: 84.7754 - val_vgg_loss: 15.9561
 ```
 
-![png](/img/examples/generative/gaugan/gaugan_31_20.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_20.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_21.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_21.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_22.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_22.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_23.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_23.png)
 
-![png](/img/examples/generative/gaugan/gaugan_31_24.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_24.png)
 
 * * *
 
@@ -917,19 +917,19 @@ for _ in range(5):
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 29ms/step
 ```
 
-![png](/img/examples/generative/gaugan/gaugan_33_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_33_1.png)
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 25ms/step
 ```
 
-![png](/img/examples/generative/gaugan/gaugan_33_3.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_33_3.png)
 
  ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 25ms/step
 ```
 
-![png](/img/examples/generative/gaugan/gaugan_33_5.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_33_5.png)
 
 * * *
 

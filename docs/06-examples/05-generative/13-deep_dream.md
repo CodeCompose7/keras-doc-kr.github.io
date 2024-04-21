@@ -94,7 +94,7 @@ from IPython.display import Image, display
 display(Image(base_image_path))
 ```
 
-![jpeg](/img/examples/generative/deep_dream/deep_dream_5_0.jpg)
+![jpeg]({{ site.baseurl }}/img/examples/generative/deep_dream/deep_dream_5_0.jpg)
 
 Let's set up some image preprocessing/deprocessing utilities:
 
@@ -296,4 +296,4 @@ You can use the trained model hosted on [Hugging Face Hub](https://huggingface.c
 display(Image(result_prefix + ".png"))
 ```
 
-![png](/img/examples/generative/deep_dream/deep_dream_17_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/deep_dream/deep_dream_17_0.png)

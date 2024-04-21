@@ -868,6 +868,6 @@ axes[1, 1].set_ylim([-2, 2])
 (-2.0, 2.0)
 ```
 
-![png](/img/examples/generative/real_nvp/real_nvp_13_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/real_nvp/real_nvp_13_1.png)
 
-![png](/img/examples/generative/real_nvp/real_nvp_13_2.png)
+![png]({{ site.baseurl }}/img/examples/generative/real_nvp/real_nvp_13_2.png)

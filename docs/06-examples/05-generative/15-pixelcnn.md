@@ -358,10 +358,10 @@ display(Image("generated_image_3.png"))
 100%|███████████████████████████████████████████████████████████████████████████| 28/28 [00:06<00:00,  4.51it/s]
 ```
 
-![png](/img/examples/generative/pixelcnn/pixelcnn_10_57.png)
+![png]({{ site.baseurl }}/img/examples/generative/pixelcnn/pixelcnn_10_57.png)
 
-![png](/img/examples/generative/pixelcnn/pixelcnn_10_58.png)
+![png]({{ site.baseurl }}/img/examples/generative/pixelcnn/pixelcnn_10_58.png)
 
-![png](/img/examples/generative/pixelcnn/pixelcnn_10_59.png)
+![png]({{ site.baseurl }}/img/examples/generative/pixelcnn/pixelcnn_10_59.png)
 
-![png](/img/examples/generative/pixelcnn/pixelcnn_10_60.png)
+![png]({{ site.baseurl }}/img/examples/generative/pixelcnn/pixelcnn_10_60.png)

@@ -794,7 +794,7 @@ Downloading data from https://github.com/soon-yau/stylegan_keras/releases/downlo
 540540928/540534982 [==============================] - 30s 0us/step
 ```
 
-![png](/img/examples/generative/stylegan/stylegan_21_4.png)
+![png]({{ site.baseurl }}/img/examples/generative/stylegan/stylegan_21_4.png)
 
 * * *
 
@@ -818,4 +818,4 @@ plt.axis("off")
 (-0.5, 383.5, 127.5, -0.5)
 ```
 
-![png](/img/examples/generative/stylegan/stylegan_23_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/stylegan/stylegan_23_1.png)

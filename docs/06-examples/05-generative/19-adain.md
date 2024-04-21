@@ -260,7 +260,7 @@ for (axis, style_image, content_image) in zip(axes, style[0:10], content[0:10]):
     ax_content.set_title("Content Image")
 ```
 
-![png](/img/examples/generative/adain/adain_8_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/adain/adain_8_0.png)
 
 * * *
 
@@ -608,7 +608,7 @@ Downloading data from https://storage.googleapis.com/tensorflow/keras-applicatio
 50/50 [==============================] - ETA: 0s - style_loss: 213.1439 - content_loss: 141.1564 - total_loss: 354.3002
 ```
 
-![png](/img/examples/generative/adain/adain_23_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/adain/adain_23_1.png)
 
 ```
 50/50 [==============================] - 124s 2s/step - style_loss: 213.1439 - content_loss: 141.1564 - total_loss: 354.3002 - val_style_loss: 167.0819 - val_content_loss: 129.0497 - val_total_loss: 296.1316
@@ -644,7 +644,7 @@ for style, content in test_ds.take(1):
         ax_reconstructed.set_title("NST Image")
 ```
 
-![png](/img/examples/generative/adain/adain_25_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/adain/adain_25_0.png)
 
 * * *
 

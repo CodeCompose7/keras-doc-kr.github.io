@@ -114,7 +114,7 @@ SMILES: Cn1cncc1O
 Num heavy atoms: 7
 ```
 
-![png](/img/examples/generative/wgan-graphs/wgan-graphs_6_1.png)
+![png]({{ site.baseurl }}/img/examples/generative/wgan-graphs/wgan-graphs_6_1.png)
 
 ### Define helper functions
 
@@ -224,7 +224,7 @@ def graph_to_molecule(graph):
 graph_to_molecule(smiles_to_graph(smiles))
 ```
 
-![png](/img/examples/generative/wgan-graphs/wgan-graphs_8_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/wgan-graphs/wgan-graphs_8_0.png)
 
 ### Generate training set
 
@@ -674,7 +674,7 @@ MolsToGridImage(
 )
 ```
 
-![png](/img/examples/generative/wgan-graphs/wgan-graphs_20_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/wgan-graphs/wgan-graphs_20_0.png)
 
 * * *
 

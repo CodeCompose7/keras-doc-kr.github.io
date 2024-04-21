@@ -95,9 +95,9 @@ display(Image(base_image_path))
 display(Image(style_reference_image_path))
 ```
 
-![jpeg](/img/examples/generative/neural_style_transfer/neural_style_transfer_5_0.jpg)
+![jpeg]({{ site.baseurl }}/img/examples/generative/neural_style_transfer/neural_style_transfer_5_0.jpg)
 
-![jpeg](/img/examples/generative/neural_style_transfer/neural_style_transfer_5_1.jpg)
+![jpeg]({{ site.baseurl }}/img/examples/generative/neural_style_transfer/neural_style_transfer_5_1.jpg)
 
 * * *
 
@@ -349,4 +349,4 @@ After 4000 iterations, you get the following result:
 display(Image(result_prefix + "_at_iteration_4000.png"))
 ```
 
-![png](/img/examples/generative/neural_style_transfer/neural_style_transfer_19_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/neural_style_transfer/neural_style_transfer_19_0.png)

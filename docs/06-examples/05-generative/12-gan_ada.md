@@ -660,7 +660,7 @@ Epoch 5/10
 46/46 [==============================] - 10s 225ms/step - g_loss: 4.6022 - d_loss: 0.0847 - real_acc: 0.9655 - gen_acc: 0.9852 - aug_p: 0.0234 - val_kid: 3.9004
 ```
 
-![png](/img/examples/generative/gan_ada/gan_ada_18_3.png)
+![png]({{ site.baseurl }}/img/examples/generative/gan_ada/gan_ada_18_3.png)
 
 ```
 Epoch 6/10
@@ -675,7 +675,7 @@ Epoch 10/10
 46/46 [==============================] - 10s 219ms/step - g_loss: 3.4063 - d_loss: 0.1757 - real_acc: 0.9314 - gen_acc: 0.9475 - aug_p: 0.0473 - val_kid: 2.9112
 ```
 
-![png](/img/examples/generative/gan_ada/gan_ada_18_5.png)
+![png]({{ site.baseurl }}/img/examples/generative/gan_ada/gan_ada_18_5.png)
 
 ```
 <keras.callbacks.History at 0x7fefcc2cb9d0>
@@ -692,7 +692,7 @@ model.load_weights(checkpoint_path)
 model.plot_images()
 ```
 
-![png](/img/examples/generative/gan_ada/gan_ada_20_0.png)
+![png]({{ site.baseurl }}/img/examples/generative/gan_ada/gan_ada_20_0.png)
 
 * * *
 
