@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/patch_convnet/](https://keras.io/examples/vision/patch_convnet/){:target="_blank"}
 * 최종 수정일 : 2024-04-10
 
-# 통합 어텐션으로 컨볼루션 네트워크 강화
+# 통합 어텐션으로 컨볼루션 네트워크 강화 (Augmenting convnets with aggregated attention)
 {: .no_toc }
 
 ## 목차

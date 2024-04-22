@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/oxford_pets_image_segmentation/](https://keras.io/examples/vision/oxford_pets_image_segmentation/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# U-Net과 유사한 아키텍처를 사용한 이미지 세그멘테이션
+# U-Net과 유사한 아키텍처를 사용한 이미지 세그멘테이션 (Image segmentation with a U-Net-like architecture)
 {: .no_toc }
 
 ## 목차

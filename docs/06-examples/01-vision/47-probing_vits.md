@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/probing_vits/](https://keras.io/examples/vision/probing_vits/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# 비전 트랜스포머 표현 조사
+# 비전 트랜스포머 표현 조사 (Investigating Vision Transformer representations)
 {: .no_toc }
 
 ## 목차

@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/object_detection_using_vision_transformer/](https://keras.io/examples/vision/object_detection_using_vision_transformer/){:target="_blank"}
 * 최종 수정일 : 2024-04-05
 
-# 비전 트랜스포머를 사용한 객체 감지
+# 비전 트랜스포머를 사용한 객체 감지 (Object detection with Vision Transformers)
 {: .no_toc }
 
 ## 목차

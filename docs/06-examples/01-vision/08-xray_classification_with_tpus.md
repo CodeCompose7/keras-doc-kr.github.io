@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/xray_classification_with_tpus/](https://keras.io/examples/vision/xray_classification_with_tpus/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# TPU에서 폐렴 분류
+# TPU에서 폐렴 분류 (Pneumonia Classification on TPU)
 {: .no_toc }
 
 ## 목차

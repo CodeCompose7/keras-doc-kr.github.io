@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/randaugment/](https://keras.io/examples/vision/randaugment/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# 견고성 향상을 위한 이미지 분류를 위한 RandAugment
+# 견고성 향상을 위한 이미지 분류를 위한 RandAugment (RandAugment for Image Classification for Improved Robustness)
 {: .no_toc }
 
 ## 목차

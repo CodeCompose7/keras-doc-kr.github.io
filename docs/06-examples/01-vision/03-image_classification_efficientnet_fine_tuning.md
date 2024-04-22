@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/image_classification_efficientnet_fine_tuning/](https://keras.io/examples/vision/image_classification_efficientnet_fine_tuning/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# EfficientNet으로 하는 미세 조정을 통한 이미지 분류
+# EfficientNet으로 하는 미세 조정을 통한 이미지 분류 (Image classification via fine-tuning with EfficientNet)
 {: .no_toc }
 
 ## 목차

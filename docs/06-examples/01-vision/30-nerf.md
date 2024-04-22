@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/nerf/](https://keras.io/examples/vision/nerf/){:target="_blank"}
 * 최종 수정일 : 2024-04-05
 
-# NeRF를 사용한 3D 체적 렌더링
+# NeRF를 사용한 3D 체적 렌더링 (3D volumetric rendering with NeRF)
 {: .no_toc }
 
 ## 목차

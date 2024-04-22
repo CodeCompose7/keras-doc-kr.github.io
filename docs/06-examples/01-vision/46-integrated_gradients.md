@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/integrated_gradients/](https://keras.io/examples/vision/integrated_gradients/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# 통합 그래디언트를 통한 모델 해석 가능성
+# 통합 그래디언트를 통한 모델 해석 가능성 (Model interpretability with Integrated Gradients)
 {: .no_toc }
 
 ## 목차

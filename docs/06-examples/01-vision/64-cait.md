@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/cait/](https://keras.io/examples/vision/cait/){:target="_blank"}
 * 최종 수정일 : 2024-04-10
 
-# LayerScale을 사용한 클래스 어텐션 이미지 트랜스포머
+# LayerScale을 사용한 클래스 어텐션 이미지 트랜스포머 (Class Attention Image Transformers with LayerScale)
 {: .no_toc }
 
 ## 목차

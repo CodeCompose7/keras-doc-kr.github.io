@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/vit_small_ds/](https://keras.io/examples/vision/vit_small_ds/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# 소규모 데이터 세트에 대해 비전 트랜스포머 트레이닝
+# 소규모 데이터 세트에 대해 비전 트랜스포머 트레이닝 (Train a Vision Transformer on small datasets)
 {: .no_toc }
 
 ## 목차

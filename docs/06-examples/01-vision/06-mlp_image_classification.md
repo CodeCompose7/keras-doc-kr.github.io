@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/mlp_image_classification/](https://keras.io/examples/vision/mlp_image_classification/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# Image classification with modern MLP models
+# 최신 MLP 모델을 사용한 이미지 분류 (Image classification with modern MLP models)
 {: .no_toc }
 
 ## 목차

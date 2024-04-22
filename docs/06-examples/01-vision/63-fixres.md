@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/fixres/](https://keras.io/examples/vision/fixres/){:target="_blank"}
 * 최종 수정일 : 2024-04-07
 
-# FixRes: 트레이닝-테스트 해상도 불일치 수정
+# FixRes: 트레이닝-테스트 해상도 불일치 수정 (FixRes: Fixing train-test resolution discrepancy)
 {: .no_toc }
 
 ## 목차

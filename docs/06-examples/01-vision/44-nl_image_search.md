@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/nl_image_search/](https://keras.io/examples/vision/nl_image_search/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# 듀얼 인코더를 이용한 자연어 이미지 검색
+# 듀얼 인코더를 이용한 자연어 이미지 검색 (Natural language image search with a Dual Encoder)
 {: .no_toc }
 
 ## 목차

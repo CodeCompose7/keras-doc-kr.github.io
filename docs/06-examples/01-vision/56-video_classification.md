@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/video_classification/](https://keras.io/examples/vision/video_classification/){:target="_blank"}
 * 최종 수정일 : 2024-04-07
 
-# CNN-RNN 아키텍처를 사용한 비디오 분류
+# CNN-RNN 아키텍처를 사용한 비디오 분류 (Video Classification with a CNN-RNN Architecture)
 {: .no_toc }
 
 ## 목차

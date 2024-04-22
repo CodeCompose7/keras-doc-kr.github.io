@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/eanet/](https://keras.io/examples/vision/eanet/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# Image classification with EANet (External Attention Transformer)
+# EANet(External Attention Transformer)을 사용한 이미지 분류 (Image classification with EANet (External Attention Transformer))
 {: .no_toc }
 
 ## 목차

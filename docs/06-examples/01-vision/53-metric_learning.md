@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/metric_learning/](https://keras.io/examples/vision/metric_learning/){:target="_blank"}
 * 최종 수정일 : 2024-03-29
 
-# 이미지 유사도 검색을 위한 메트릭 학습
+# 이미지 유사도 검색을 위한 메트릭 학습 (Metric learning for image similarity search)
 {: .no_toc }
 
 ## 목차

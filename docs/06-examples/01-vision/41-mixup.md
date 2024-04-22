@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/mixup/](https://keras.io/examples/vision/mixup/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# 이미지 분류를 위한 MixUp 보강
+# 이미지 분류를 위한 MixUp 보강 (MixUp augmentation for image classification)
 {: .no_toc }
 
 ## 목차

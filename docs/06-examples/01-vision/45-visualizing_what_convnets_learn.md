@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/visualizing_what_convnets_learn/](https://keras.io/examples/vision/visualizing_what_convnets_learn/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# Convnets이 학습한 내용 시각화
+# Convnets이 학습한 내용 시각화 (Visualizing what convnets learn)
 {: .no_toc }
 
 ## 목차

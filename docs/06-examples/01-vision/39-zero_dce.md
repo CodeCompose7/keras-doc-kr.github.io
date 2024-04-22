@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/zero_dce/](https://keras.io/examples/vision/zero_dce/){:target="_blank"}
 * 최종 수정일 : 2024-04-05
 
-# 저조도 이미지 향상을 위한 Zero-DCE
+# 저조도 이미지 향상을 위한 Zero-DCE (Zero-DCE for low-light image enhancement)
 {: .no_toc }
 
 ## 목차

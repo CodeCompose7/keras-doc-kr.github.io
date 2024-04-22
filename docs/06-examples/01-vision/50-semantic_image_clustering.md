@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/semantic_image_clustering/](https://keras.io/examples/vision/semantic_image_clustering/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# 시맨틱 이미지 클러스터링
+# 시맨틱 이미지 클러스터링 (Semantic Image Clustering)
 {: .no_toc }
 
 ## 목차

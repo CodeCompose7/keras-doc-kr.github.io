@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/mirnet/](https://keras.io/examples/vision/mirnet/){:target="_blank"}
 * 최종 수정일 : 2024-04-05
 
-# MIRNet을 사용한 저조도 이미지 향상
+# MIRNet을 사용한 저조도 이미지 향상 (Low-light image enhancement using MIRNet)
 {: .no_toc }
 
 ## 목차

@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/mobilevit/](https://keras.io/examples/vision/mobilevit/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# MobileViT: A mobile-friendly Transformer-based model for image classification
+# MobileViT: 이미지 분류를 위한 모바일 친화적인 트랜스포머 기반 모델 (MobileViT: A mobile-friendly Transformer-based model for image classification)
 {: .no_toc }
 
 ## 목차

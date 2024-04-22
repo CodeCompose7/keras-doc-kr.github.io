@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/autoencoder/](https://keras.io/examples/vision/autoencoder/){:target="_blank"}
 * 최종 수정일 : 2024-03-29
 
-# 이미지 노이즈 제거를 위한 컨볼루셔널 오토인코더
+# 이미지 노이즈 제거를 위한 컨볼루셔널 오토인코더 (Convolutional autoencoder for image denoising)
 {: .no_toc }
 
 ## 목차

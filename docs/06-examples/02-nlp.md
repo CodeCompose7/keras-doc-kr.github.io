@@ -10,7 +10,7 @@ has_children: true
 * 원본 링크 : [https://keras.io/examples/nlp/](https://keras.io/examples/nlp/){:target="_blank"}
 * 최종 수정일 : 2024-04-01
 
-# 자연어 처리
+# 자연어 처리 (Natural Language Processing)
 {: .no_toc }
 
 ## 목차

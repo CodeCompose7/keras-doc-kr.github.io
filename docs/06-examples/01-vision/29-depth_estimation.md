@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/depth_estimation/](https://keras.io/examples/vision/depth_estimation/){:target="_blank"}
 * 최종 수정일 : 2024-04-05
 
-# 단안 깊이 추정
+# 단안 깊이 추정 (Monocular depth estimation)
 {: .no_toc }
 
 ## 목차

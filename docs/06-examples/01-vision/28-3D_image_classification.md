@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/3D_image_classification/](https://keras.io/examples/vision/3D_image_classification/){:target="_blank"}
 * 최종 수정일 : 2024-04-05
 
-# CT 스캔의 3D 이미지 분류
+# CT 스캔의 3D 이미지 분류 (3D image classification from CT scans)
 {: .no_toc }
 
 ## 목차

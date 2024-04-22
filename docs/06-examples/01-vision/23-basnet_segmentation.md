@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/basnet_segmentation/](https://keras.io/examples/vision/basnet_segmentation/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# BASNet을 사용한 매우 정확한 경계 세그멘테이션
+# BASNet을 사용한 매우 정확한 경계 세그멘테이션 (Highly accurate boundaries segmentation using BASNet)
 {: .no_toc }
 
 ## 목차

@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/retinanet/](https://keras.io/examples/vision/retinanet/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# RetinaNet을 이용한 객체 감지
+# RetinaNet을 이용한 객체 감지 (Object Detection with RetinaNet)
 {: .no_toc }
 
 ## 목차

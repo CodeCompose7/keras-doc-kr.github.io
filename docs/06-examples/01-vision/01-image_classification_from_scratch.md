@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/image_classification_from_scratch/](https://keras.io/examples/vision/image_classification_from_scratch/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# 처음부터 이미지 분류
+# 처음부터 이미지 분류 (Image classification from scratch)
 {: .no_toc }
 
 ## 목차

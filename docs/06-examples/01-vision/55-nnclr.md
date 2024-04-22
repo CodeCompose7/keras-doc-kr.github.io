@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/nnclr/](https://keras.io/examples/vision/nnclr/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# NNCLR을 사용한 자기 지도(Self-supervised) 대조 학습
+# NNCLR을 사용한 자기 지도 대조 학습 (Self-supervised contrastive learning with NNCLR)
 {: .no_toc }
 
 ## 목차

@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/attention_mil_classification/](https://keras.io/examples/vision/attention_mil_classification/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# Classification using Attention-based Deep Multiple Instance Learning (MIL).
+# 어텐션 기반 심층 다중 인스턴스 학습(MIL)을 사용한 분류 (Classification using Attention-based Deep Multiple Instance Learning (MIL))
 {: .no_toc }
 
 ## 목차

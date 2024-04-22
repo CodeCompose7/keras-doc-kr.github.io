@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/barlow_twins/](https://keras.io/examples/vision/barlow_twins/){:target="_blank"}
 * 최종 수정일 : 2024-04-10
 
-# Contrastive SSL을 위한 Barlow Twins
+# Contrastive SSL을 위한 Barlow Twins (Barlow Twins for Contrastive SSL)
 {: .no_toc }
 
 ## 목차

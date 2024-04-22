@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/handwriting_recognition/](https://keras.io/examples/vision/handwriting_recognition/){:target="_blank"}
 * 최종 수정일 : 2024-03-29
 
-# 손글씨 인식
+# 손글씨 인식 (Handwriting recognition)
 {: .no_toc }
 
 ## 목차

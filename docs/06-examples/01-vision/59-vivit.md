@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/vivit/](https://keras.io/examples/vision/vivit/){:target="_blank"}
 * 최종 수정일 : 2024-04-07
 
-# 비디오 비전 트랜스포머
+# 비디오 비전 트랜스포머 (Video Vision Transformer)
 {: .no_toc }
 
 ## 목차

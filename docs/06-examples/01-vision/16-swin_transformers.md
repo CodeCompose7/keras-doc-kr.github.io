@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/swin_transformers/](https://keras.io/examples/vision/swin_transformers/){:target="_blank"}
 * 최종 수정일 : 2024-03-29
 
-# Swin 트랜스포머를 사용한 이미지 분류
+# Swin 트랜스포머를 사용한 이미지 분류 (Image classification with Swin Transformers)
 {: .no_toc }
 
 ## 목차

@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/mnist_convnet/](https://keras.io/examples/vision/mnist_convnet/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# 간단한 MNIST convnet
+# 간단한 MNIST convnet (Simple MNIST convnet)
 {: .no_toc }
 
 ## 목차

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 트레이닝 성능 향상을 위한 그라디언트 중앙화
+title: 트레이닝 성능 향상을 위한 그래디언트 중앙화
 nav_order: 60+00
 permalink: /examples/vision/gradient_centralization/
 parent: 컴퓨터 비전
@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/gradient_centralization/](https://keras.io/examples/vision/gradient_centralization/){:target="_blank"}
 * 최종 수정일 : 2024-04-07
 
-# 트레이닝 성능 향상을 위한 그라디언트 중앙화 (Gradient Centralization)
+# 트레이닝 성능 향상을 위한 그래디언트 중앙화 (Gradient Centralization for Better Training Performance)
 {: .no_toc }
 
 ## 목차

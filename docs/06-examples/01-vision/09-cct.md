@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/cct/](https://keras.io/examples/vision/cct/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# Compact Convolutional Transformers
+# 컴팩트 컨볼루션 트랜스포머 (Compact Convolutional Transformers)
 {: .no_toc }
 
 ## 목차

@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/conv_lstm/](https://keras.io/examples/vision/conv_lstm/){:target="_blank"}
 * 최종 수정일 : 2024-04-07
 
-# 컨볼루션 LSTM을 사용한 다음 프레임 비디오 예측
+# 컨볼루션 LSTM을 사용한 다음 프레임 비디오 예측 (Next-Frame Video Prediction with Convolutional LSTMs)
 {: .no_toc }
 
 ## 목차
