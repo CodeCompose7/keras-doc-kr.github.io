@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 이전 학습 및 미세 조정
+title: 전이 학습 및 미세 조정
 nav_order: 14
 permalink: /guides/transfer_learning/
 parent: 개발자 가이드
@@ -9,7 +9,7 @@ parent: 개발자 가이드
 * 원본 링크 : [https://keras.io/guides/transfer_learning/](https://keras.io/guides/transfer_learning/){:target="_blank"}
 * 최종 수정일 : 2024-04-22
 
-# 이전 학습 및 미세 조정 (Transfer learning & fine-tuning)
+# 전이 학습 및 미세 조정 (Transfer learning & fine-tuning)
 {: .no_toc }
 
 ## 목차
