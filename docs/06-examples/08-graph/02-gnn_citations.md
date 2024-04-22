@@ -205,7 +205,7 @@ subjects = list(papers[papers["paper_id"].isin(list(cora_graph.nodes))]["subject
 nx.draw_spring(cora_graph, node_size=15, node_color=subjects)
 ```
 
-![png](/img/examples/graph/gnn_citations/gnn_citations_19_0.png)
+![png]({{ site.baseurl }}/img/examples/graph/gnn_citations/gnn_citations_19_0.png)
 
 ### Split the dataset into stratified train and test sets
 
@@ -644,7 +644,7 @@ Let's plot the learning curves.
 display_learning_curves(history)
 ```
 
-![png](/img/examples/graph/gnn_citations/gnn_citations_37_0.png)
+![png]({{ site.baseurl }}/img/examples/graph/gnn_citations/gnn_citations_37_0.png)
 
 Now we evaluate the baseline model on the test data split.
 
@@ -1575,7 +1575,7 @@ Let's plot the learning curves
 display_learning_curves(history)
 ```
 
-![png](/img/examples/graph/gnn_citations/gnn_citations_55_0.png)
+![png]({{ site.baseurl }}/img/examples/graph/gnn_citations/gnn_citations_55_0.png)
 
 Now we evaluate the GNN model on the test data split. The results may vary depending on the training sample, however the GNN model always outperforms the baseline model in terms of the test accuracy.
 

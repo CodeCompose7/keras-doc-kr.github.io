@@ -604,7 +604,7 @@ Episode * 98 * Avg Reward is ==> -173.42104867150212
 Episode * 99 * Avg Reward is ==> -173.2394285933109
 ```
 
-![png](/img/examples/rl/ddpg_pendulum/ddpg_pendulum_16_100.png)
+![png]({{ site.baseurl }}/img/examples/rl/ddpg_pendulum/ddpg_pendulum_16_100.png)
 
 If training proceeds correctly, the average episodic reward will increase with time.
 

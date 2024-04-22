@@ -790,7 +790,7 @@ axs[1].grid(True)
 plt.show()
 ```
 
-![png](/img/examples/audio/uk_ireland_accent_recognition/uk_ireland_accent_recognition_29_0.png)
+![png]({{ site.baseurl }}/img/examples/audio/uk_ireland_accent_recognition/uk_ireland_accent_recognition_29_0.png)
 
 * * *
 
@@ -879,7 +879,7 @@ plt.title("Validation Confusion Matrix")
 plt.show()
 ```
 
-![png](/img/examples/audio/uk_ireland_accent_recognition/uk_ireland_accent_recognition_36_0.png)
+![png]({{ site.baseurl }}/img/examples/audio/uk_ireland_accent_recognition/uk_ireland_accent_recognition_36_0.png)
 
 * * *
 
@@ -1062,7 +1062,7 @@ plt.yticks(yticks, [class_names[top_class_indices[x]] for x in yticks])
 _ = plt.ylim(-0.5 + np.array([len(class_names), 0]))
 ```
 
-![png](/img/examples/audio/uk_ireland_accent_recognition/uk_ireland_accent_recognition_48_0.png)
+![png]({{ site.baseurl }}/img/examples/audio/uk_ireland_accent_recognition/uk_ireland_accent_recognition_48_0.png)
 
 
 {% include wav-embed.html %}

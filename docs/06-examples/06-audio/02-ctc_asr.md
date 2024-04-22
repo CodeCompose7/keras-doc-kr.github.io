@@ -260,7 +260,7 @@ plt.show()
 
 {{ site.baseurl }}/img/examples/audio/ctc_asr/audio1.wav
 
-![png](/img/examples/audio/ctc_asr/ctc_asr_15_1.png)
+![png]({{ site.baseurl }}/img/examples/audio/ctc_asr/ctc_asr_15_1.png)
 
 * * *
 

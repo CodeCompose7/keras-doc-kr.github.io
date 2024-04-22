@@ -542,7 +542,7 @@ keras.utils.plot_model(
 )
 ```
 
-![png](/img/examples/graph/node2vec_movielens/node2vec_movielens_44_0.png)
+![png]({{ site.baseurl }}/img/examples/graph/node2vec_movielens/node2vec_movielens_44_0.png)
 
 Now we train the model on the `dataset`.
 
@@ -582,7 +582,7 @@ plt.xlabel("epoch")
 plt.show()
 ```
 
-![png](/img/examples/graph/node2vec_movielens/node2vec_movielens_48_0.png)
+![png]({{ site.baseurl }}/img/examples/graph/node2vec_movielens/node2vec_movielens_48_0.png)
 
 * * *
 

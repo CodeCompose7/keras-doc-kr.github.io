@@ -323,7 +323,7 @@ BBBP:   0
 Molecule:
 ```
 
-![png](/img/examples/graph/mpnn-molecular-graphs/mpnn-molecular-graphs_12_1.png)
+![png]({{ site.baseurl }}/img/examples/graph/mpnn-molecular-graphs/mpnn-molecular-graphs_12_1.png)
 
 ```python
 graph = graph_from_molecule(molecule)
@@ -588,7 +588,7 @@ mpnn.compile(
 keras.utils.plot_model(mpnn, show_dtype=True, show_shapes=True)
 ```
 
-![png](/img/examples/graph/mpnn-molecular-graphs/mpnn-molecular-graphs_21_0.png)
+![png]({{ site.baseurl }}/img/examples/graph/mpnn-molecular-graphs/mpnn-molecular-graphs_21_0.png)
 
 ### Training
 
@@ -698,7 +698,7 @@ Epoch 40/40
 <matplotlib.legend.Legend at 0x1603c63d0>
 ```
 
-![png](/img/examples/graph/mpnn-molecular-graphs/mpnn-molecular-graphs_23_2.png)
+![png]({{ site.baseurl }}/img/examples/graph/mpnn-molecular-graphs/mpnn-molecular-graphs_23_2.png)
 
 ### Predicting
 
@@ -711,7 +711,7 @@ legends = [f"y_true/y_pred = {y_true[i]}/{y_pred[i]:.2f}" for i in range(len(y_t
 MolsToGridImage(molecules, molsPerRow=4, legends=legends)
 ```
 
-![png](/img/examples/graph/mpnn-molecular-graphs/mpnn-molecular-graphs_25_0.png)
+![png]({{ site.baseurl }}/img/examples/graph/mpnn-molecular-graphs/mpnn-molecular-graphs_25_0.png)
 
 * * *
 
