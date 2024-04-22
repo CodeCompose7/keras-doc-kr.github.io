@@ -106,7 +106,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[적응형 판별자 증강을 통한 데이터 효율적 GAN (Data-efficient GANs with Adaptive Discriminator Augmentation)]({% link docs/06-examples/05-generative/12-gan_ada.md %})
+[적응형 판별자 보강을 통한 데이터 효율적 GAN (Data-efficient GANs with Adaptive Discriminator Augmentation)]({% link docs/06-examples/05-generative/12-gan_ada.md %})
 {: .d-inline .v-align-middle}
 .
 {: .lh-0 .my-0 .opacity-0}

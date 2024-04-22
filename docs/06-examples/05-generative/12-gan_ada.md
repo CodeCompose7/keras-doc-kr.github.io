@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 적응형 판별자 증강을 통한 데이터 효율적 GAN
+title: 적응형 판별자 보강을 통한 데이터 효율적 GAN
 nav_order: 12+00
 permalink: /examples/generative/gan_ada/
 parent: 생성형 딥러닝
@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/generative/gan_ada/](https://keras.io/examples/generative/gan_ada/){:target="_blank"}
 * 최종 수정일 : 2024-04-21
 
-# 적응형 판별자 증강을 통한 데이터 효율적 GAN (Data-efficient GANs with Adaptive Discriminator Augmentation)
+# 적응형 판별자 보강을 통한 데이터 효율적 GAN (Data-efficient GANs with Adaptive Discriminator Augmentation)
 {: .no_toc }
 
 ## 목차
