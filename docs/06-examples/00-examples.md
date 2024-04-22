@@ -1598,16 +1598,16 @@ V2
 
 * * *
 
-Adding a new code example
+새 코드 예제 추가하기
 -------------------------
 
-We welcome new code examples! Here are our rules:
+우리는 새로운 코드 예제를 환영합니다! 규칙은 다음과 같습니다:
 
-*   They should be shorter than 300 lines of code (comments may be as long as you want).
-*   They should demonstrate modern Keras best practices.
-*   They should be substantially different in topic from all examples listed above.
-*   They should be extensively documented & commented.
+* 코드 길이가 300줄 미만이어야 합니다. (주석은 원하는 만큼 길어도 됩니다)
+* 최신 Keras 모범 사례를 보여줄 수 있어야 합니다.
+* 위에 나열된 모든 예제와는 주제가 상당히 달라야 합니다.
+* 광범위하게 문서화되고 주석을 달아야 합니다.
 
-New examples are added via Pull Requests to the [keras.io repository](https://github.com/keras-team/keras-io). They must be submitted as a `.py` file that follows a specific format. They are usually generated from Jupyter notebooks. See the [`tutobooks` documentation](https://github.com/keras-team/keras-io/blob/master/README.md) for more details.
+새로운 예제는 Pull 리퀘스트를 통해 [keras.io 리포지토리](https://github.com/keras-team/keras-io)에 추가됩니다. 예제는 특정 형식을 따르는 `.py` 파일로 제출해야 합니다. 예제는 보통 Jupyter 노트북에서 생성됩니다. 자세한 내용은 [`tutobooks` 문서](https://github.com/keras-team/keras-io/blob/master/README.md)를 참조하세요.
 
-If you would like to convert a Keras 2 example to Keras 3, please open a Pull Request to the [keras.io repository](https://github.com/keras-team/keras-io).
+Keras 2 예제를 Keras 3으로 변환하려면, [keras.io 리포지토리](https://github.com/keras-team/keras-io)에 Pull 리퀘스트를 열어주세요.
