@@ -1394,28 +1394,28 @@ V2
 
 * * *
 
-[Reinforcement Learning]({% link docs/06-examples/07-rl.md %})
+[강화 학습]({% link docs/06-examples/07-rl.md %})
 ---------------------------------------
 
 ### RL 알고리즘
 
 V3
 {: .label .label-green .mx-1}
-[Actor Critic Method]({% link docs/06-examples/07-rl/01-actor_critic_cartpole.md %})
+[Actor Critic 방법 (Actor Critic Method)]({% link docs/06-examples/07-rl/01-actor_critic_cartpole.md %})
 {: .d-inline .v-align-middle}
 .
 {: .lh-0 .my-0 .opacity-0}
 
 V3
 {: .label .label-green .mx-1}
-[Proximal Policy Optimization]({% link docs/06-examples/07-rl/02-ppo_cartpole.md %})
+[Proximal 정책 최적화 (Proximal Policy Optimization)]({% link docs/06-examples/07-rl/02-ppo_cartpole.md %})
 {: .d-inline .v-align-middle}
 .
 {: .lh-0 .my-0 .opacity-0}
 
 V3
 {: .label .label-green .mx-1}
-[Deep Q-Learning for Atari Breakout]({% link docs/06-examples/07-rl/03-deep_q_network_breakout.md %})
+[아타리 브레이크아웃을 위한 심층 Q-러닝 (Deep Q-Learning for Atari Breakout)]({% link docs/06-examples/07-rl/03-deep_q_network_breakout.md %})
 {: .d-inline .v-align-middle}
 .
 {: .lh-0 .my-0 .opacity-0}
@@ -1424,7 +1424,7 @@ V3
 
 V2
 {: .label .label-yellow .mx-1}
-[Deep Deterministic Policy Gradient (DDPG)]({% link docs/06-examples/07-rl/04-ddpg_pendulum.md %})
+[심층 결정론적 정책 그래디언트(DDPG) (Deep Deterministic Policy Gradient (DDPG))]({% link docs/06-examples/07-rl/04-ddpg_pendulum.md %})
 {: .d-inline .v-align-middle}
 .
 {: .lh-0 .my-0 .opacity-0}
