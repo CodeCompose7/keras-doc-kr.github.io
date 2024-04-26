@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/fully_convolutional_network/](https://keras.io/examples/vision/fully_convolutional_network/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# Composable 완전 컨볼루션 네트워크를 사용한 이미지 세그멘테이션
+# Composable 완전 컨볼루션 네트워크를 사용한 이미지 세그멘테이션 (Image Segmentation using Composable Fully-Convolutional Networks)
 {: .no_toc }
 
 ## 목차

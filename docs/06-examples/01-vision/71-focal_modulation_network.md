@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/focal_modulation_network/](https://keras.io/examples/vision/focal_modulation_network/){:target="_blank"}
 * 최종 수정일 : 2024-04-10
 
-# 초점 변조(Focal Modulation): 셀프 어텐션을 대체하는
+# 초점 변조(Focal Modulation): 셀프 어텐션을 대체하는 (Focal Modulation: A replacement for Self-Attention)
 {: .no_toc }
 
 ## 목차

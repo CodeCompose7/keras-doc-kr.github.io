@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/learnable_resizer/](https://keras.io/examples/vision/learnable_resizer/){:target="_blank"}
 * 최종 수정일 : 2024-04-10
 
-# 컴퓨터 비전에서 리사이즈 학습
+# 컴퓨터 비전에서 리사이즈 학습 (Learning to Resize)
 {: .no_toc }
 
 ## 목차

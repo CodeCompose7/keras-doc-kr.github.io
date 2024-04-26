@@ -8,9 +8,9 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/vision/mnist_convnet/](https://keras.io/examples/vision/mnist_convnet/){:target="_blank"}
-* 최종 수정일 : 2024-04-03
+* 최종 수정일 : 2024-04-22
 
-# 간단한 MNIST convnet
+# 간단한 MNIST convnet (Simple MNIST convnet)
 {: .no_toc }
 
 ## 목차
@@ -24,7 +24,7 @@ grand_parent: 코드 예제
 **저자:** [fchollet](https://twitter.com/fchollet)  
 **생성일:** 2015/06/19  
 **최종편집일:** 2020/04/21  
-**설명:** A simple convnet that achieves ~99% test accuracy on MNIST.
+**설명:** MNIST에 대해 최대 99%의 테스트 정확도를 달성하는 간단한 convnet입니다.
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/mnist_convnet.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet.py){: .btn .btn-blue }
@@ -34,7 +34,7 @@ grand_parent: 코드 예제
 
 ----
 
-## Setup
+## 셋업
 
 ```python
 import numpy as np
@@ -44,29 +44,28 @@ from keras import layers
 
 * * *
 
-Prepare the data
+데이터 준비
 ----------------
 
 ```python
-# Model / data parameters
+# 모델 / 데이터 파라미터
 num_classes = 10
 input_shape = (28, 28, 1)
 
-# Load the data and split it between train and test sets
+# 데이터를 로드하고 트레이닝 세트와 테스트 세트로 분할합니다.
 (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
 
-# Scale images to the [0, 1] range
+# 이미지 배율을 [0, 1] 범위로 조정하기
 x_train = x_train.astype("float32") / 255
 x_test = x_test.astype("float32") / 255
-# Make sure images have shape (28, 28, 1)
+# 이미지가 (28, 28, 1) 모양인지 확인하기
 x_train = np.expand_dims(x_train, -1)
 x_test = np.expand_dims(x_test, -1)
 print("x_train shape:", x_train.shape)
 print(x_train.shape[0], "train samples")
 print(x_test.shape[0], "test samples")
 
-
-# convert class vectors to binary class matrices
+# 클래스 벡터를 이진 클래스 행렬로 변환하기
 y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 ```
@@ -79,7 +78,7 @@ x_train shape: (60000, 28, 28, 1)
 
 * * *
 
-Build the model
+모델 빌드
 ---------------
 
 ```python
@@ -125,7 +124,7 @@ Model: "sequential"
 
 * * *
 
-Train the model
+모델 트레이닝
 ---------------
 
 ```python
@@ -174,7 +173,7 @@ Epoch 15/15
 
 * * *
 
-Evaluate the trained model
+트레이닝된 모델 평가하기
 --------------------------
 
 ```python

@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/token_learner/](https://keras.io/examples/vision/token_learner/){:target="_blank"}
 * 최종 수정일 : 2024-04-07
 
-# 비전 트랜스포머에서 토큰화 학습하기
+# 비전 트랜스포머에서 토큰화 학습하기 (Learning to tokenize in Vision Transformers)
 {: .no_toc }
 
 ## 목차

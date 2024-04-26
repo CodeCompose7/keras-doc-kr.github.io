@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/siamese_contrastive/](https://keras.io/examples/vision/siamese_contrastive/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# 대비 손실이 있는 Siamese 네트워크를 사용한 이미지 유사도 추정
+# 대비 손실이 있는 Siamese 네트워크를 사용한 이미지 유사도 추정 (Image similarity estimation using a Siamese Network with a contrastive loss)
 {: .no_toc }
 
 ## 목차

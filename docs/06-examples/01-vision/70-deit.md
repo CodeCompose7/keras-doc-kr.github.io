@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/deit/](https://keras.io/examples/vision/deit/){:target="_blank"}
 * 최종 수정일 : 2024-04-10
 
-# 증류식 비전 트랜스포머
+# 증류식 비전 트랜스포머 (Distilling Vision Transformers)
 {: .no_toc }
 
 ## 목차

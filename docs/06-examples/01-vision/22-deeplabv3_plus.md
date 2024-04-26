@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/deeplabv3_plus/](https://keras.io/examples/vision/deeplabv3_plus/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# DeepLabV3+를 사용한 다중 클래스 시맨틱 세그멘테이션
+# DeepLabV3+를 사용한 다중 클래스 시맨틱 세그멘테이션 (Multiclass semantic segmentation using DeepLabV3+)
 {: .no_toc }
 
 ## 목차

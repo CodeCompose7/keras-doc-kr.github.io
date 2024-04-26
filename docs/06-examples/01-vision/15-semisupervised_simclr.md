@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/semisupervised_simclr/](https://keras.io/examples/vision/semisupervised_simclr/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# SimCLR을 사용한 대조 사전 트레이닝을 사용한 반지도 이미지 분류
+# SimCLR을 사용한 대조 사전 트레이닝을 사용한 반지도 이미지 분류 (Semi-supervised image classification using contrastive pretraining with SimCLR)
 {: .no_toc }
 
 ## 목차

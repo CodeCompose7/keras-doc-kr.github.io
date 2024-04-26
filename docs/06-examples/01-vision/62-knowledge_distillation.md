@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/knowledge_distillation/](https://keras.io/examples/vision/knowledge_distillation/){:target="_blank"}
 * 최종 수정일 : 2024-04-07
 
-# 지식 증류
+# 지식 증류 (Knowledge Distillation)
 {: .no_toc }
 
 ## 목차

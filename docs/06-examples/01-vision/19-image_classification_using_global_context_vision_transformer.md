@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/image_classification_using_global_context_vision_transformer/](https://keras.io/examples/vision/image_classification_using_global_context_vision_transformer/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# 글로벌 컨텍스트 비전 트랜스포머를 이용한 이미지 분류
+# 글로벌 컨텍스트 비전 트랜스포머를 이용한 이미지 분류 (Image Classification using Global Context Vision Transformer)
 {: .no_toc }
 
 ## 목차

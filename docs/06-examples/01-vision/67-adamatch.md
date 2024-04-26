@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/adamatch/](https://keras.io/examples/vision/adamatch/){:target="_blank"}
 * 최종 수정일 : 2024-04-10
 
-# AdaMatch를 통한 반지도(Semi-supervision) 및 도메인 적응
+# AdaMatch를 통한 반지도 및 도메인 적응 (Semi-supervision and domain adaptation with AdaMatch)
 {: .no_toc }
 
 ## 목차

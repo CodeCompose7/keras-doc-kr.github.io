@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/masked_image_modeling/](https://keras.io/examples/vision/masked_image_modeling/){:target="_blank"}
 * 최종 수정일 : 2024-04-10
 
-# 자동 인코더를 사용한 마스크 이미지 모델링
+# 자동 인코더를 사용한 마스크 이미지 모델링 (Masked image modeling with Autoencoders)
 {: .no_toc }
 
 ## 목차

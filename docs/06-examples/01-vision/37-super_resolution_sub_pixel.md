@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/super_resolution_sub_pixel/](https://keras.io/examples/vision/super_resolution_sub_pixel/){:target="_blank"}
 * 최종 수정일 : 2024-04-05
 
-# Efficient Sub-Pixel CNN을 사용한 이미지 초해상도
+# Efficient Sub-Pixel CNN을 사용한 이미지 초해상도 (Image Super-Resolution using an Efficient Sub-Pixel CNN)
 {: .no_toc }
 
 ## 목차

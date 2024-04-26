@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/grad_cam/](https://keras.io/examples/vision/grad_cam/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# Grad-CAM 클래스 활성화 시각화
+# Grad-CAM 클래스 활성화 시각화 (Grad-CAM class activation visualization)
 {: .no_toc }
 
 ## 목차

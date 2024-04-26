@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/shiftvit/](https://keras.io/examples/vision/shiftvit/){:target="_blank"}
 * 최종 수정일 : 2024-04-03
 
-# 어텐션이 없는 비전 트랜스포머
+# 어텐션이 없는 비전 트랜스포머 (A Vision Transformer without Attention)
 {: .no_toc }
 
 ## 목차

@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/captcha_ocr/](https://keras.io/examples/vision/captcha_ocr/){:target="_blank"}
 * 최종 수정일 : 2024-04-05
 
-# 캡챠 읽기를 위한 OCR 모델
+# 캡챠 읽기를 위한 OCR 모델 (OCR model for reading Captchas)
 {: .no_toc }
 
 ## 목차

@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/generative/dcgan_overriding_train_step/](https://keras.io/examples/generative/dcgan_overriding_train_step/){:target="_blank"}
 * 최종 수정일 : 2024-04-21
 
-# DCGAN to generate face images (얼굴 이미지 생성을 위한 DCGAN)
+# 얼굴 이미지 생성을 위한 DCGAN (DCGAN to generate face images)
 {: .no_toc }
 
 ## 목차

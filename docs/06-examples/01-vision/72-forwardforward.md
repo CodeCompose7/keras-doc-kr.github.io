@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/forwardforward/](https://keras.io/examples/vision/forwardforward/){:target="_blank"}
 * 최종 수정일 : 2024-04-10
 
-# 이미지 분류를 위한 Forward-Forward 알고리즘 사용
+# 이미지 분류를 위한 Forward-Forward 알고리즘 사용 (Using the Forward-Forward Algorithm for Image Classification)
 {: .no_toc }
 
 ## 목차

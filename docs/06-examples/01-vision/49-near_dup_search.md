@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/near_dup_search/](https://keras.io/examples/vision/near_dup_search/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# 중복에 가까운 이미지 검색
+# 중복에 가까운 이미지 검색 (Near-duplicate image search)
 {: .no_toc }
 
 ## 목차

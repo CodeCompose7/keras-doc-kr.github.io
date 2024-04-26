@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/consistency_training/](https://keras.io/examples/vision/consistency_training/){:target="_blank"}
 * 최종 수정일 : 2024-04-10
 
-# 지도를 통한 일관성 트레이닝
+# 지도를 통한 일관성 트레이닝 (Consistency training with supervision)
 {: .no_toc }
 
 ## 목차

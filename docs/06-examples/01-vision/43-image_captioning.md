@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/image_captioning/](https://keras.io/examples/vision/image_captioning/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# 이미지 캡션
+# 이미지 캡션 (Image captioning)
 {: .no_toc }
 
 ## 목차

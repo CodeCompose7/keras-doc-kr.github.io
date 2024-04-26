@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/segformer/](https://keras.io/examples/vision/segformer/){:target="_blank"}
 * 최종 수정일 : 2024-04-10
 
-# SegFormer와 Hugging Face 트랜스포머를 사용한 시맨틱 세그멘테이션
+# SegFormer와 Hugging Face 트랜스포머를 사용한 시맨틱 세그멘테이션 (Semantic segmentation with SegFormer and Hugging Face Transformers)
 {: .no_toc }
 
 ## 목차

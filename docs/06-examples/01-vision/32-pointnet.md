@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/pointnet/](https://keras.io/examples/vision/pointnet/){:target="_blank"}
 * 최종 수정일 : 2024-04-05
 
-# PointNet을 사용한 포인트 클라우드 분류
+# PointNet을 사용한 포인트 클라우드 분류 (Point cloud classification)
 {: .no_toc }
 
 ## 목차

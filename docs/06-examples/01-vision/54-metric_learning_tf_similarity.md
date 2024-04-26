@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/vision/metric_learning_tf_similarity/](https://keras.io/examples/vision/metric_learning_tf_similarity/){:target="_blank"}
 * 최종 수정일 : 2024-04-06
 
-# TensorFlow Similarity를 사용한 이미지 유사도 검색을 위한 메트릭 학습
+# TensorFlow Similarity를 사용한 이미지 유사도 검색을 위한 메트릭 학습 (Metric learning for image similarity search using TensorFlow Similarity)
 {: .no_toc }
 
 ## 목차
