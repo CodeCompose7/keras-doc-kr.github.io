@@ -8,7 +8,7 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/vision/swin_transformers/](https://keras.io/examples/vision/swin_transformers/){:target="_blank"}
-* 최종 수정일 : 2024-07-05
+* 최종 수정일 : 2024-07-21
 
 # Swin 트랜스포머를 사용한 이미지 분류 (Image classification with Swin Transformers)
 {: .no_toc }
@@ -24,7 +24,7 @@ grand_parent: 코드 예제
 **저자:** [Rishit Dagli](https://twitter.com/rishit_dagli)  
 **생성일:** 2021/09/08  
 **최종편집일:** 2021/09/08  
-**설명:** Image classification using Swin Transformers, a general-purpose backbone for computer vision.
+**설명:** 컴퓨터 비전용 범용 백본인 Swin Transformers를 사용한 이미지 분류.
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/swin_transformers.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/swin_transformers.py){: .btn .btn-blue }
