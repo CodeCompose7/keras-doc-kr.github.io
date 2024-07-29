@@ -174,7 +174,7 @@ ViT 파이프라인에서, 입력 이미지는 패치로 분할된 다음 선형
 * 모든 패치의 공간 차원을 평면화(Flatten)합니다.
 * 평면화된 패치를 레이어 정규화한 다음 프로젝션합니다.
 
-![Shifted Patch Toekenization](https://i.imgur.com/bUnHxd0.png)
+![Shifted Patch Toekenization]({{ site.baseurl }}/img/examples/vision/vit_small_ds/bUnHxd0.png)
 
 Shifted Patch Tokenization [Source](https://arxiv.org/abs/2112.13492v1)
 
@@ -391,7 +391,7 @@ class PatchEncoder(layers.Layer):
 
 스케일링 계수는 일반 어텐션 모듈에서 상수입니다. 이는 소프트맥스 함수를 조절할 수 있는 온도 항처럼 작동합니다. 저자는 상수 대신 학습 가능한 온도 항을 제안합니다.
 
-![Implementation of LSA](https://i.imgur.com/GTV99pk.png)
+![Implementation of LSA]({{ site.baseurl }}/img/examples/vision/vit_small_ds/GTV99pk.png)
 
 Locality Self Attention [Source](https://arxiv.org/abs/2112.13492v1)
 
