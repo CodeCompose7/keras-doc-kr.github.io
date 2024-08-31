@@ -6,7 +6,7 @@ permalink: /
 ---
 
 * 원본 링크 : [https://keras.io/keras_3/](https://keras.io/keras_3/){:target="_blank"}
-* 최종 수정일 : 2024-03-30
+* 최종 수정일 : 2024-08-31
 
 # Keras 3.0 소개
 
