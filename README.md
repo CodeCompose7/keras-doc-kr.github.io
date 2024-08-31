@@ -6,6 +6,11 @@ Keras 한글 문서 페이지는 GitHub Page에서 볼 수 있습니다.
 
 * [GitHub Page에서 보기](https://codecompose7.github.io/keras-doc-kr.github.io/)
 
+## 배포
+
+1. index.md 최종 편집일 변경
+2. Git flow release를 통해 main에 merge
+3. [Github](https://github.com/CodeCompose7/keras-doc-kr.github.io)에 main 푸시
 
 ## 주의사항
 
