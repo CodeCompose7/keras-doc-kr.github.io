@@ -10,6 +10,7 @@ parent: 시작하기
 * 최종 수정일 : 2024-03-29
 
 # Keras 3 에코시스템
+<!-- # The Keras ecosystem -->
 {: .no_toc }
 
 ## 목차
@@ -20,14 +21,13 @@ parent: 시작하기
 
 ---
 
-## Keras 에코시스템
-
 The Keras project isn't limited to the core Keras API for building and training neural networks. It spans a wide range of related initiatives that cover every step of the machine learning workflow.
 
 * * *
 
 KerasTuner
 ----------
+{: #kerastuner}
 
 [KerasTuner Documentation]({% link docs/07-keras_tuner/00-keras_tuner.md %}) - [KerasTuner GitHub repository](https://github.com/keras-team/keras-tuner)
 
@@ -37,6 +37,7 @@ KerasTuner is an easy-to-use, scalable hyperparameter optimization framework tha
 
 KerasNLP
 --------
+{: #kerasnlp}
 
 [KerasNLP Documentation]({% link docs/09-keras_nlp/00-keras_nlp.md %}) - [KerasNLP GitHub repository](https://github.com/keras-team/keras-nlp)
 
@@ -46,6 +47,7 @@ KerasNLP is a natural language processing library that supports users through th
 
 KerasCV
 -------
+{: #kerascv}
 
 [KerasCV Documentation]({% link docs/08-keras_cv/00-keras_cv.md %}) - [KerasCV GitHub repository](https://github.com/keras-team/keras-cv)
 
@@ -57,6 +59,7 @@ KerasCV can be understood as a horizontal extension of the Keras API: the compon
 
 AutoKeras
 ---------
+{: #autokeras}
 
 [AutoKeras Documentation](https://autokeras.com/) - [AutoKeras GitHub repository](https://github.com/keras-team/autokeras)
 

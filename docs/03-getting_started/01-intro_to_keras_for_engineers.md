@@ -10,6 +10,7 @@ parent: 시작하기
 * 최종 수정일 : 2024-03-28
 
 # 엔지니어를 위한 Keras 소개
+<!-- # Introduction to Keras for engineers -->
 {: .no_toc }
 
 ## 목차
@@ -31,12 +32,16 @@ parent: 시작하기
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 Keras 3는 TensorFlow, JAX 및 PyTorch와 상호 호환되는 딥러닝 프레임워크입니다. 이 노트북에서는 주요 Keras 3 워크플로우를 안내합니다.
 
 ----
 
 ## 셋업
+{: #setup}
+<!-- ## Setup -->
 
 여기서는 JAX 백엔드를 사용하지만, 아래 문자열을 ``"tensorflow"`` 또는 ``"torch"``로 수정하고, "Restart runtime"을 누르면, 노트북 전체가 똑같이 실행됩니다! 이 전체 가이드는 백엔드에 구애받지 않습니다.
 
@@ -55,6 +60,8 @@ import keras
 ----
 
 ## 첫 번째 예시: MNIST 컨브넷
+{: #a-first-example-a-mnist-convnet}
+<!-- ## A first example: A MNIST convnet -->
 
 MNIST 숫자를 분류하기 위해 convnet을 트레이닝하는 ML의 Hello World부터 시작하겠습니다.
 
@@ -234,6 +241,8 @@ predictions = model.predict(x_test)
 ----
 
 ## 크로스 프레임워크 사용자 정의 컴포넌트 작성
+{: #writing-cross-framework-custom-components}
+<!-- ## Writing cross-framework custom components -->
 
 Keras를 사용하면 동일한 코드베이스로 TensorFlow, JAX, PyTorch에서 작동하는 사용자 정의 레이어, 모델, 메트릭, 손실 및 옵티마이저를 작성할 수 있습니다. 먼저 사용자 정의 레이어를 살펴보겠습니다.
 
@@ -345,6 +354,8 @@ model.fit(
 ----
 
 ## 임의의 데이터 소스에 대해 모델 트레이닝
+{: #training-models-on-arbitrary-data-sources}
+<!-- ## Training models on arbitrary data sources -->
 
 모든 Keras 모델은 사용 중인 백엔드와 관계없이 다양한 데이터 소스에서 트레이닝 및 평가할 수 있습니다. 여기에는 다음이 포함됩니다:
 
@@ -430,10 +441,14 @@ model.fit(train_dataset, epochs=1, validation_data=test_dataset)
 ----
 
 ## 더 읽어보기
+{: #further-reading}
+<!-- ## Further reading -->
 
 이것으로 Keras 3의 새로운 멀티 백엔드 기능에 대한 간략한 개요를 마쳤습니다. 이제, 다음 것들에 대해 알아볼 수 있습니다:
 
 ### `fit()`에서 일어나는 일을 사용자 정의하는 방법
+{: #how-to-customize-what-happens-in-fit}
+<!-- ### How to customize what happens in fit() -->
 
 비표준 트레이닝 알고리즘을 직접 구현하고 싶지만, `fit()`의 강력한 성능과 유용성을 활용하고 싶으신가요? 임의의 사용 사례를 지원하도록 `fit()`을 쉽게 사용자 정의할 수 있습니다:
 
@@ -445,6 +460,7 @@ model.fit(train_dataset, epochs=1, validation_data=test_dataset)
 
 사용자 지정 트레이닝 루프를 작성하는 방법
 ----------------------------------
+{: #how-to-write-custom-training-loops}
 
 * [TensorFlow에서 처음부터 트레이닝 루프 작성하기]({% link docs/04-guides/09-writing_a_custom_training_loop_in_tensorflow.md %})
 * [JAX에서 처음부터 트레이닝 루프 작성하기]({% link docs/04-guides/08-writing_a_custom_training_loop_in_jax.md %})
@@ -454,6 +470,7 @@ model.fit(train_dataset, epochs=1, validation_data=test_dataset)
 
 트레이닝 배포 방법
 --------------------------
+{: #how-to-distribute-training}
 
 * [TensorFlow 분산 트레이닝 가이드]({% link docs/04-guides/16-distributed_training_with_tensorflow.md %})
 * [JAX 분산 트레이닝 예제](https://github.com/keras-team/keras/blob/master/examples/demo_jax_distributed.py)

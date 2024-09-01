@@ -9,6 +9,7 @@ permalink: /about/
 * 최종 수정일 : 2024-03-28
 
 # Keras 3에 대하여
+<!-- # About Keras 3 -->
 
 Keras는 Python으로 작성된 딥러닝 API로, [JAX](https://jax.readthedocs.io/), [TensorFlow](https://github.com/tensorflow/tensorflow) 또는 [PyTorch](https://pytorch.org/) 위에서 실행할 수 있습니다.
 
@@ -21,6 +22,9 @@ Keras는:
 ----
 
 ## Keras 3는 멀티 프레임워크 딥러닝 API입니다.
+{: #keras-3-is-a-multi-framework-deep-learning-api}
+<!-- ## Keras 3 is a multi-framework deep learning API -->
+
 
 멀티 프레임워크 API인 Keras는 JAX, TensorFlow, PyTorch 등의 프레임워크와 호환되는 모듈식 컴포넌트를 개발하는데 사용할 수 있습니다.
 
@@ -34,6 +38,8 @@ Keras는:
 ----
 
 ## Keras와의 첫 만남
+{: #first-contact-with-keras}
+<!-- ## First contact with Keras -->
 
 Keras의 핵심 데이터 구조는 **레이어(layers)**와 **모델(models)**입니다. 가장 간단한 모델 유형은 선형 레이어 스택인 [`Sequential` 모델]({% link docs/04-guides/02-sequential_model.md %})입니다. 더 복잡한 아키텍처의 경우, 임의의 레이어 그래프를 만들 수 있는 [Keras 함수형 API]({% link docs/04-guides/01-functional_api.md %})를 사용하거나, [서브클래싱을 통해 완전히 처음부터 모델 작성]({% link docs/04-guides/03-making_new_layers_and_models_via_subclassing.md %}) 방법을 사용해야 합니다.
 
@@ -137,6 +143,8 @@ Keras에 대한 자세한 튜토리얼은 여기에서 확인할 수 있습니�
 ----
 
 ## 지원
+{: #support}
+<!-- ## Support -->
 
 [Keras Google 그룹](https://groups.google.com/forum/#!forum/keras-users)에서 질문하고 개발 토론에 참여할 수 있습니다.
 
@@ -145,6 +153,8 @@ Keras에 대한 자세한 튜토리얼은 여기에서 확인할 수 있습니�
 ----
 
 ## 왜 Keras라는 이름인가요?
+{: #why-this-name-keras}
+<!-- ## Why this name, Keras? -->
 
 Keras(κέρας)는 고대 그리스어로 *horn*을 의미합니다. 고대 그리스와 라틴 문학에 등장하는 문학적 이미지로, *오디세이*에서 처음 등장하며, 꿈의 정령(*Oneiroi*, 단수형 *Oneiros*)을 거짓 환상으로 몽상가를 속이는(deceive) 자, ivory의 문을 통해 지구에 도착하는 자, 다가올 미래를 알리는 자, horn의 문을 통해 도착하는 자로 나누고 있습니다. κέρας(뿔)/κραίνω(성취하다), ἐλέφας(상아)/ἐλεφαίρομαι(속이다)라는 단어에서 유래한 말입니다.
 
