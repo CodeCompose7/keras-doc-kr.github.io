@@ -22,6 +22,8 @@ has_children: true
 ---
 
 ### 타임시리즈 분류
+{: #timeseries-classification}
+<!-- ### Timeseries classification -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -58,6 +60,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 이상 징후 탐지
+{: #anomaly-detection}
+<!-- ### Anomaly detection -->
 
 V3
 {: .label .label-green .mx-1}
@@ -68,6 +72,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 타임시리즈 예측
+{: #timeseries-forecasting}
+<!-- ### Timeseries forecasting -->
 
 V3
 {: .label .label-green .mx-1}

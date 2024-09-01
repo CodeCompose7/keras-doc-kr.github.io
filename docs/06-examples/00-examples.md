@@ -20,8 +20,10 @@ has_children: true
 
 ---
 
-코드 예제 (Code examples)
+코드 예제
 =============
+{: .no_toc}
+<!-- Code examples -->
 
 우리의 코드 예제는 300줄 미만의 짧은 코드이며, 수직적 딥러닝 워크플로우에 대한 집중적인 데모입니다.
 
@@ -37,8 +39,12 @@ Keras 3 예제
 
 [컴퓨터 비전]({% link docs/06-examples/01-vision.md %})
 ------------------------------------
+{: #computer-vision}
+<!-- Computer Vision -->
 
 ### 이미지 분류
+{: #image-classification}
+<!-- ### Image classification -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -207,6 +213,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 이미지 세그멘테이션
+{: #image-segmentation}
+<!-- ### Image segmentation -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -243,6 +251,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 객체 감지
+{: #object-detection}
+<!-- ### Object detection -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -269,6 +279,7 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 3D
+{: #3d}
 
 V3
 {: .label .label-green .mx-1}
@@ -313,6 +324,7 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### OCR
+{: #ocr}
 
 V3
 {: .label .label-green .mx-1}
@@ -331,6 +343,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 이미지 강화
+{: #image-enhancement}
+<!-- ### Image enhancement -->
 
 V3
 {: .label .label-green .mx-1}
@@ -373,6 +387,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 데이터 보강
+{: #data-augmentation}
+<!-- ### Data augmentation -->
 
 V3
 {: .label .label-green .mx-1}
@@ -399,6 +415,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 이미지 & 텍스트
+{: #image--text}
+<!-- ### Image & Text -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -418,7 +436,9 @@ V2
 .
 {: .lh-0 .my-0 .opacity-0}
 
-### 비전 모델 해석 가능성(interpretability)
+### 비전 모델 해석 가능성
+{: #vision-models-interpretability}
+<!-- ### Vision models interpretability -->
 
 V3
 {: .label .label-green .mx-1}
@@ -453,6 +473,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 이미지 유사도 검색
+{: #image-similarity-search}
+<!-- ### Image similarity search -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -511,6 +533,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 비디오
+{: #video}
+<!-- ### Video -->
 
 V3
 {: .label .label-green .mx-1}
@@ -545,6 +569,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 성능 레시피
+{: #performance-recipes}
+<!-- ### Performance recipes -->
 
 V3
 {: .label .label-green .mx-1}
@@ -603,6 +629,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -712,8 +740,12 @@ V2
 
 [자연어 처리 (Natural Language Processing)]({% link docs/06-examples/02-nlp.md %})
 ---------------------------------------------
+{: #natural-language-processing}
+<!-- Natural Language Processing -->
 
 ### 텍스트 분류
+{: #text-classification}
+<!-- ### Text classification -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -798,6 +830,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기계 번역
+{: #machine-translation}
+<!-- ### Machine translation -->
 
 V3
 {: .label .label-green .mx-1}
@@ -826,6 +860,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 연관성 예측 (Entailment prediction)
+{: #entailment-prediction}
+<!-- ### Entailment prediction -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -836,6 +872,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 명명된 엔티티 인식
+{: #named-entity-recognition}
+<!-- ### Named entity recognition -->
 
 V3
 {: .label .label-green .mx-1}
@@ -846,6 +884,7 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### Sequence-to-sequence
+{: #sequence-to-sequence}
 
 V2
 {: .label .label-yellow .mx-1}
@@ -864,6 +903,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 텍스트 유사도 검색
+{: #text-similarity-search}
+<!-- ### Text similarity search -->
 
 V3
 {: .label .label-green .mx-1}
@@ -890,6 +931,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 언어 모델링
+{: #language-modeling}
+<!-- ### Language modeling -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -908,6 +951,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 효율적인 매개변수 미세 조정
+{: #parameter-efficient-fine-tuning}
+<!-- ### Parameter efficient fine-tuning -->
 
 V3
 {: .label .label-green .mx-1}
@@ -918,6 +963,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other-1}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -963,8 +1010,12 @@ V2
 
 [구조화된 데이터]({% link docs/06-examples/03-structured_data.md %})
 ---------------------------------------------
+{: #structured-data}
+<!-- Structured Data -->
 
 ### 구조화된 데이터 분류
+{: #structured-data-classification}
+<!-- ### Structured data classification -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -1035,6 +1086,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 추천
+{: #recommendation}
+<!-- ### Recommendation -->
 
 V3
 {: .label .label-green .mx-1}
@@ -1053,6 +1106,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other-2}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -1066,8 +1121,12 @@ V2
 
 [타임시리즈]({% link docs/06-examples/04-timeseries.md %})
 -----------------------------------
+{: #timeseries}
+<!-- Timeseries -->
 
 ### 타임시리즈 분류
+{: #timeseries-classification}
+<!-- ### Timeseries classification -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -1104,6 +1163,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 이상 징후 탐지
+{: #anomaly-detection}
+<!-- ### Anomaly detection -->
 
 V3
 {: .label .label-green .mx-1}
@@ -1114,6 +1175,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 타임시리즈 예측
+{: #timeseries-forecasting}
+<!-- ### Timeseries forecasting -->
 
 V3
 {: .label .label-green .mx-1}
@@ -1135,8 +1198,12 @@ V3
 
 [생성형 딥러닝]({% link docs/06-examples/05-generative.md %})
 -------------------------------------------------
+{: #generative-deep-learning}
+<!-- Generative Deep Learning -->
 
 ### 이미지 생성
+{: #image-generation}
+<!-- ### Image generation -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -1262,6 +1329,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 스타일 전이
+{: #style-transfer}
+<!-- ### Style transfer -->
 
 V3
 {: .label .label-green .mx-1}
@@ -1278,6 +1347,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 텍스트 생성
+{: #text-generation}
+<!-- ### Text generation -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -1317,6 +1388,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 그래프 생성
+{: #graph-generation}
+<!-- ### Graph generation -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -1333,6 +1406,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other-3}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -1345,8 +1420,12 @@ V2
 
 [오디오 데이터]({% link docs/06-examples/06-audio.md %})
 ------------------------------
+{: #audio-data}
+<!-- Audio Data -->
 
 ### 음성 인식
+{: #speech-recognition}
+<!-- ### Speech recognition -->
 
 V3
 {: .label .label-green .mx-1}
@@ -1356,6 +1435,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other-4}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -1396,8 +1477,12 @@ V2
 
 [강화 학습]({% link docs/06-examples/07-rl.md %})
 ---------------------------------------
+{: #reinforcement-learning}
+<!-- Reinforcement Learning -->
 
 ### RL 알고리즘
+{: #rl-algorithm}
+<!-- ### RL Algorithm -->
 
 V3
 {: .label .label-green .mx-1}
@@ -1421,6 +1506,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other-5}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -1433,8 +1520,8 @@ V2
 
 [그래프 데이터]({% link docs/06-examples/08-graph.md %})
 ------------------------------
-
-### 그래프 데이터 (Graph Data)
+{: #graph-data}
+<!-- Graph Data -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -1468,8 +1555,12 @@ V2
 
 [빠른 Keras 레시피]({% link docs/06-examples/09-keras_recipes.md %})
 -----------------------------------------------
+{: #quick-keras-recipes}
+<!-- Quick Keras Recipes -->
 
-### 서비스
+### 서빙
+{: #serving}
+<!-- ### Serving -->
 
 V3
 {: .label .label-green .mx-1}
@@ -1479,6 +1570,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### Keras 사용 팁
+{: #keras-usage-tips}
+<!-- ### Keras usage tips -->
 
 V3
 {: .label .label-green .mx-1}
@@ -1537,6 +1630,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### ML 모범 사례
+{:#ml-best-practices}
+<!-- ### ML best practices -->
 
 V3
 {: .label .label-green .mx-1}
@@ -1560,6 +1655,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other-6}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -1600,6 +1697,8 @@ V2
 
 새 코드 예제 추가하기
 -------------------------
+{: #adding-a-new-code-example}
+<!-- Adding a new code example -->
 
 우리는 새로운 코드 예제를 환영합니다! 규칙은 다음과 같습니다:
 

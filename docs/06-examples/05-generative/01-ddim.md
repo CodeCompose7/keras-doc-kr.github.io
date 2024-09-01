@@ -36,9 +36,11 @@ grand_parent: 코드 예제
 
 ## 소개
 {: #introduction }
+<!-- ## Introduction -->
 
 ### 확산 모델(diffusion models)이란 무엇인가?
 {: #what-are-diffusion-models }
+<!-- ### What are diffusion models? -->
 
 최근, [점수 기반 생성 모델(score-based generative models)](https://arxiv.org/abs/1907.05600)을 포함한 [노이즈 제거 확산 모델(denoising diffusion models)](https://arxiv.org/abs/2006.11239)이 강력한 생성 모델 클래스로 인기를 얻었으며, 이미지 합성 품질에서 [생성적 적대 신경망(GAN)](https://arxiv.org/abs/1406.2661)과도 [경쟁](https://arxiv.org/abs/2105.05233)할 수 있습니다. 이러한 모델은 안정적으로 트레이닝하고 확장하기 쉬운 반면, 더 다양한 샘플을 생성하는 경향이 있습니다. ([DALL-E 2](https://openai.com/dall-e-2/) 및 [Imagen](https://imagen.research.google/)과 같은) 최근의 대규모 확산 모델은, 놀라운 텍스트-이미지(text-to-image) 생성 기능을 보여주었습니다. 그러나 단점 중 하나는, 이미지를 생성하기 위해 여러 차례의 전방 패스(forward passes)가 필요하기 때문에, 샘플링 속도가 느리다는 것입니다.
 
@@ -50,6 +52,7 @@ grand_parent: 코드 예제
 
 ### 이 예제의 목표
 {: #goal-of-this-example }
+<!-- ### Goal of this example -->
 
 이 코드 예제는, 적당한 컴퓨팅 요구 사항과 적절한 성능을 갖춘, 확산 모델의 최소이지만 (생성 품질 메트릭으로) 기능은 완전한 구현을 목표로 합니다. 이러한 목표를 염두에 두고, 구현 선택과 하이퍼파라미터 튜닝을 수행했습니다.
 
@@ -64,6 +67,7 @@ grand_parent: 코드 예제
 셋업
 -----
 {: #setup}
+<!-- Setup -->
 
 ```python
 import os
@@ -85,6 +89,7 @@ from keras import ops
 하이퍼파라미터
 ---------------
 {: #hyperparameters}
+<!-- Hyperparameters -->
 
 ```python
 # data
@@ -119,6 +124,7 @@ weight_decay = 1e-4
 데이터 파이프라인
 -------------
 {: #data-pipeline}
+<!-- Data pipeline -->
 
 우리는 꽃 이미지를 생성하기 위해 [Oxford Flowers 102](https://www.tensorflow.org/datasets/catalog/oxford_flowers102) 데이터 세트를 사용할 것입니다. 이는 약 8,000개의 이미지가 포함된 다양한 자연 데이터 세트입니다. 불행히도 공식 분할은 불균형합니다. 대부분의 이미지가 테스트 분할에 포함되어 있기 때문입니다. 우리는 [Tensorflow Datasets 슬라이싱 API](https://www.tensorflow.org/datasets/splits)를 사용하여 새로운 분할(80%는 트레이닝, 20%는 검증)을 만듭니다. 우리는 전처리로 중앙 자르기(center crops)를 적용하고, 데이터 세트를 여러 번 반복합니다. (이유는 다음 섹션에 나와 있습니다)
 
@@ -166,6 +172,7 @@ val_dataset = prepare_dataset("train[80%:]+validation[80%:]+test[80%:]")
 Kernel Inception Distance (KID, 커널 시작 거리)
 -------------------------
 {: #kernel-inception-distance}
+<!-- Kernel inception distance -->
 
 [Kernel Inception Distance(KID)](https://arxiv.org/abs/1801.01401)는 인기 있는 [Frechet Inception Distance(FID)](https://arxiv.org/abs/1706.08500)를 대체하기 위해 제안된 이미지 품질 메트릭입니다. 구현이 더 간단하고, 배치별로 추정할 수 있으며, 계산이 더 가볍기 때문에, FID보다 KID를 선호합니다. 자세한 내용은 [여기]({{ site.baseurl }}/examples/generative/gan_ada/#kernel-inception-distance)에서 확인하세요.
 
@@ -244,6 +251,7 @@ class KID(keras.metrics.Metric):
 네트워크 아키텍쳐
 --------------------
 {: #network-architecture}
+<!-- Network architecture -->
 
 여기서 우리는 노이즈 제거에 사용할 신경망의 아키텍처를 지정합니다. 
 우리는 동일한 입력 및 출력 차원을 가진 [U-Net](https://arxiv.org/abs/1505.04597)을 빌드합니다. 
@@ -358,9 +366,11 @@ def get_network(image_size, widths, block_depth):
 확산 모델 (Diffusion model)
 ---------------
 {: #diffusion-model}
+<!-- Diffusion model -->
 
 ### 확산 스케쥴 
 {: #diffusion-schedule}
+<!-- ### Diffusion schedule -->
 
 확산 과정이 time = 0에서 시작하여 time = 1에서 끝난다고 가정해 보겠습니다. 
 이 변수는 확산 시간(diffusion time)이라고 하며, 이산적(확산 모델에서 일반적)이거나 
@@ -388,6 +398,7 @@ def get_network(image_size, widths, block_depth):
 
 ### 트레이닝 과정 
 {: #training-process}
+<!-- ### Training process -->
 
 노이즈 제거 확산 모델의 트레이닝 절차(`train_step()` 및 `denoise()` 참조)는 다음과 같습니다. 
 랜덤 확산 시간을 균일하게 샘플링하고, 
@@ -402,6 +413,7 @@ def get_network(image_size, widths, block_depth):
 
 ### 샘플링 (역확산) 
 {: #sampling-reverse-diffusion}
+<!-- ### Sampling (reverse diffusion) -->
 
 샘플링(`reverse_diffusion()` 참조)할 때, 
 각 단계에서 우리는 노이즈가 있는 이미지의 이전 추정치를 가져와, 
@@ -604,6 +616,7 @@ class DiffusionModel(keras.Model):
 트레이닝
 --------
 {: #training}
+<!-- Training -->
 
 ```python
 # 모델을 생성하고 컴파일합니다.
@@ -665,6 +678,7 @@ Downloading data from https://storage.googleapis.com/tensorflow/keras-applicatio
 추론
 ---------
 {: #inference}
+<!-- Inference -->
 
 ```python
 # 최상의 모델을 로드하고 이미지를 생성합니다.
@@ -679,6 +693,7 @@ model.plot_images()
 결과
 -------
 {: #results}
+<!-- Results -->
 
 최소 50에포크 동안 트레이닝을 실행하면(T4 GPU에서는 2시간, A100 GPU에서는 30분 소요), 
 이 코드 예제를 사용하여 고품질 이미지 생성을 얻을 수 있습니다.
@@ -708,12 +723,14 @@ model.plot_images()
 배운 교훈
 ---------------
 {: #lessons-learned}
+<!-- Lessons learned -->
 
 이 코드 예제를 준비하는 동안, [이 저장소](https://github.com/beresandras/clear-diffusion-keras)를 사용하여 수많은 실험을 했습니다. 
 이 섹션에서는 배운 교훈과 제 권장 사항을 주관적인 중요도 순서대로 나열합니다.
 
 ### 알고리즘 팁
 {: #algorithmic-tips}
+<!-- ### Algorithmic tips -->
 
 * **최소 및 최대 신호 비율**: 최소 신호 비율이 중요한 하이퍼파라미터라는 것을 알았습니다. 
   너무 낮게 설정하면 생성된 이미지가 과포화(oversaturated)되고, 
@@ -756,6 +773,7 @@ model.plot_images()
 
 ### 아키텍처 팁
 {: #architectural-tips}
+<!-- ### Architectural tips -->
 
 * **사인파 임베딩**: 
   네트워크의 노이즈 레벨 입력에 사인파 임베딩(sinusoidal embeddings)을 사용하는 것은, 
@@ -793,6 +811,7 @@ GAN에 대한 유사한 리스트는 [이 Keras 튜토리얼]({{ site.baseurl }}
 다음에는 무엇을 시도해 볼까요?
 -----------------
 {: #what-to-try-next}
+<!-- What to try next? -->
 
 이 주제에 대해 더 자세히 알아보고 싶다면, 이 코드 예제를 준비하기 위해 제가 만든 [이 저장소](https://github.com/beresandras/clear-diffusion-keras)를 확인해 보는 것을 추천합니다. 
 이 저장소는 비슷한 스타일로 다음과 같은 더 광범위한 기능을 구현합니다.
@@ -808,6 +827,7 @@ GAN에 대한 유사한 리스트는 [이 Keras 튜토리얼]({{ site.baseurl }}
 관련된 내용
 -------------
 {: #related-works}
+<!-- Related works -->
 
 * [점수 기반 생성 모델링](https://yang-song.github.io/blog/2021/score/) (블로그 게시물)
 * [확산 모델이란?](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) (블로그 게시물)

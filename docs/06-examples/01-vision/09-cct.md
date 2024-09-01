@@ -44,6 +44,7 @@ grand_parent: 코드 예제
 
 Imports
 -------
+{: #imports}
 
 ```python
 from keras import layers
@@ -57,6 +58,8 @@ import numpy as np
 
 하이퍼파라미터 및 상수
 -----------------------------
+{: #hyperparameters-and-constants}
+<!-- Hyperparameters and constants -->
 
 ```python
 positional_emb = True
@@ -82,6 +85,8 @@ image_size = 32
 
 CIFAR-10 데이터세트 불러오기
 ---------------------
+{: #load-cifar-10-dataset}
+<!-- Load CIFAR-10 dataset -->
 
 ```python
 num_classes = 10
@@ -105,6 +110,8 @@ x_test shape: (10000, 32, 32, 3) - y_test shape: (10000, 10)
 
 CCT 토큰나이저
 -----------------
+{: #the-cct-tokenizer}
+<!-- The CCT tokenizer -->
 
 CCT 저자가 소개한 첫 번째 레시피는 이미지 처리를 위한 토큰화 도구(tokenizer)입니다. 표준 ViT에서는, 이미지가 균일한 _중첩되지 않는_ 패치로 구성됩니다. 이렇게 하면 서로 다른 패치 사이에 존재하는 경계 레벨 정보가 제거됩니다. 이는 신경망이 지역 정보를 효과적으로 활용하기 위해 중요합니다. 아래 그림은 이미지를 패치로 구성하는 방법을 보여주는 그림입니다.
 
@@ -222,6 +229,8 @@ class PositionEmbedding(keras.layers.Layer):
 
 시퀀스 풀링
 ----------------
+{: #sequence-pooling}
+<!-- Sequence Pooling -->
 
 CCT에 도입된 또 다른 방법은 어텐션 풀링 또는 시퀀스 풀링입니다. ViT에서는, 클래스 토큰에 해당하는 특성 맵만 풀링된 다음, 후속 분류 작업(또는 다른 다운스트림 작업)에 사용됩니다.
 
@@ -242,6 +251,8 @@ class SequencePooling(layers.Layer):
 
 정규화를 위한 확률적 깊이(Stochastic depth)
 -----------------------------------
+{: #stochastic-depth-for-regularization}
+<!-- Stochastic depth for regularization -->
 
 [확률적 깊이](https://arxiv.org/abs/1603.09382)는 레이어 세트를 무작위로 드롭하는 정규화 기법입니다. 추론 시에는 레이어가 그대로 유지됩니다. [드롭아웃](https://jmlr.org/papers/v15/srivastava14a.html)과 매우 유사하지만, 레이어 내부에 존재하는 개별 노드가 아닌 레이어 블록에서 작동한다는 점만 다릅니다. CCT에서, 확률적 깊이는 트랜스포머 인코더의 residual 블록 바로 직전에 사용됩니다.
 
@@ -269,6 +280,8 @@ class StochasticDepth(layers.Layer):
 
 트랜스포머 인코더를 위한 MLP
 --------------------------------
+{: #mlp-for-the-transformers-encoder}
+<!-- MLP for the Transformers encoder -->
 
 ```python
 def mlp(x, hidden_units, dropout_rate):
@@ -279,8 +292,11 @@ def mlp(x, hidden_units, dropout_rate):
 ```
 
 * * *
+
 데이터 보강
 -----------------
+{: #data-augmentation}
+<!-- Data augmentation -->
 
 [원본 논문](https://arxiv.org/abs/2104.05704)에서, 저자는 [AutoAugment](https://arxiv.org/abs/1805.09501)을 사용하여 더 강력한 정규화를 유도합니다. 이 예제에서는, 랜덤 자르기(random cropping) 및 뒤집기와 같은 표준 기하학적 보강을 사용합니다.
 
@@ -300,6 +316,8 @@ data_augmentation = keras.Sequential(
 
 최종 CCT 모델
 -------------------
+{: #the-final-cct-model}
+<!-- The final CCT model -->
 
 CCT에서는, 트랜스포머 인코더의 출력에 가중치를 부여한 다음, 최종 작업별 레이어로 전달합니다. (이 예에서는 분류를 수행합니다)
 
@@ -369,6 +387,8 @@ def create_cct_model(
 
 모델 트레이닝 및 평가
 -----------------------------
+{: #model-training-and-evaluation}
+<!-- Model training and evaluation -->
 
 ```python
 def run_experiment(model):

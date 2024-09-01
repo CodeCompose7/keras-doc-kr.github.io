@@ -35,6 +35,8 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 이 예제에서는 트랜스포머([Vaswani et al.](https://arxiv.org/abs/1706.03762))와 컨볼루션의 장점을 결합한, MobileViT 아키텍처([Mehta et al.](https://arxiv.org/abs/2110.02178))를 구현합니다. 트랜스포머를 사용하면, 글로벌 표현으로 이어지는 장거리 종속성을 포착할 수 있습니다. 컨볼루션을 사용하면, 지역성을 모델링하는 공간 관계를 캡처할 수 있습니다.
 
@@ -46,6 +48,8 @@ grand_parent: 코드 예제
 
 Imports
 -------
+{: #imports}
+<!-- Imports -->
 
 ```python
 import os
@@ -66,6 +70,8 @@ tfds.disable_progress_bar()
 
 하이퍼파라미터
 ---------------
+{: #hyperparameters}
+<!-- Hyperparameters -->
 
 ```python
 # 값은 표 4에서 가져온 것입니다.
@@ -78,6 +84,8 @@ expansion_factor = 2  # MobileNetV2 블록의 확장 계수(expansion factor).
 
 MobileViT 유틸리티
 -------------------
+{: #mobilevit-utilities}
+<!-- MobileViT utilities -->
 
 MobileViT 아키텍처는 다음 블록으로 구성됩니다:
 
@@ -664,6 +672,8 @@ ________________________________________________________________________________
 ```
 
 ## 데이터 세트 준비
+{: #dataset-preparation}
+<!-- ## Dataset preparation -->
 
 모델을 시연하기 위해 [`tf_flowers`](https://www.tensorflow.org/datasets/catalog/tf_flowers) 데이터 세트를 사용하겠습니다. 다른 Transformer 기반 아키텍처와 달리, MobileViT는 주로 CNN의 속성을 가지고 있기 때문에, 간단한 보강 파이프라인을 사용합니다.
 
@@ -700,6 +710,8 @@ def prepare_dataset(dataset, is_training=True):
 ---
 
 ## 데이터 세트 로드 및 준비
+{: #load-and-prepare-the-dataset}
+<!-- ## Load and prepare the dataset -->
 
 ```python
 train_dataset, val_dataset = tfds.load(
@@ -723,6 +735,8 @@ Number of validation examples: 367
 --- 
 
 ## MobileViT(XXS) 모델 트레이닝
+{: #train-a-mobilevit-xxs-model}
+<!-- ## Train a MobileViT (XXS) model -->
 
 ```python
 
@@ -829,6 +843,8 @@ Validation accuracy: 86.1%
 --- 
 
 ## 결과 및 TFLite 변환 
+{: #results-and-tflite-conversion}
+<!-- ## Results and TFLite conversion  -->
 
 약 100만 개의 파라미터를 사용하여, 256x256 해상도에서 ~85%의 top-1 정확도를 달성한 것은 강력한 결과입니다. 이 MobileViT 모바일은 TensorFlow Lite(TFLite)와 완벽하게 호환되며, 다음 코드를 사용하여 변환할 수 있습니다:
 

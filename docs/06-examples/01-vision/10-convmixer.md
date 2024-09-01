@@ -35,6 +35,8 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 비전 트랜스포머(ViT; [Dosovitskiy et al.](https://arxiv.org/abs/1612.00593))는 입력 이미지에서 작은 패치를 추출하여, 선형적으로 프로젝션 한 다음, 트랜스포머([Vaswani et al.](https://arxiv.org/abs/1706.03762)) 블록을 적용합니다. ViT는 지역성을 모델링하기 위해 강력한 귀납적 편향(컨볼루션과 같이)을 가질 필요가 없기 때문에, 이미지 인식 작업에 ViT를 적용하는 것은 유망한 연구 분야로 빠르게 자리 잡고 있습니다. 따라서 가능한 한 최소한의 귀납적 전제 조건으로 트레이닝 데이터만으로 학습할 수 있는 일반적인 계산 프리미티브입니다. 적절한 정규화, 데이터 보강, 비교적 큰 데이터 세트로 트레이닝하면 ViT는 뛰어난 다운스트림 성능을 발휘합니다.
 
@@ -60,6 +62,8 @@ import numpy as np
 
 하이퍼파라미터
 ---------------
+{: #hyperparameters}
+<!-- Hyperparameters -->
 
 실행 시간을 짧게 유지하기 위해, 우리는 모델을 10 에포크만 트레이닝합니다. ConvMixer의 핵심 아이디어에 집중하기 위해, RandAugment([Cubuk et al.](https://arxiv.org/abs/1909.13719))와 같은 다른 트레이닝 관련 요소는 사용하지 않습니다. 자세한 내용은 [원본 논문](https://openreview.net/pdf?id=TVHS5Y4dNvM)을 참조하시기 바랍니다.
 
@@ -74,6 +78,8 @@ num_epochs = 10
 
 CIFAR-10 데이터 세트 로드
 -------------------------
+{: #load-the-cifar-10-dataset}
+<!-- Load the CIFAR-10 dataset -->
 
 ```python
 (x_train, y_train), (x_test, y_test) = keras.datasets.cifar10.load_data()
@@ -97,7 +103,10 @@ Test data samples: 10000
 * * *
 
 [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset) 객체 준비
------------------------------------------------------------------------------------------------
+--------------------------------------
+---------------------------------------------------------
+{: #prepare-tfdatadataset-objects}
+<!-- Prepare `tf.data.Dataset` objects -->
 
 저희의 데이터 보강 파이프라인은 저자가 CIFAR-10 데이터 세트에 사용한 것과는 다르지만, 이 예제의 목적에는 문제가 없습니다. 데이터 전처리와 관련해서는 모든 기능을 갖춘 프레임워크이므로 다른 백엔드(jax, torch)와 함께 데이터 **I/O 및 전처리를 위한 TF API**를 사용해도 괜찮습니다.
 
@@ -138,6 +147,8 @@ test_dataset = make_datasets(x_test, y_test)
 
 ConvMixer 유틸리티
 -------------------
+{: #convmixer-utilities}
+<!-- ConvMixer utilities -->
 
 다음 그림(원본 문서에서 발췌)은 ConvMixer 모델을 설명합니다:
 
@@ -203,6 +214,8 @@ def get_conv_mixer_256_8(
 
 모델 트레이닝 및 평가 유틸리티
 -------------------------------------
+{: #model-training-and-evaluation-utility}
+<!-- Model training and evaluation utility -->
 
 ```python
 # Code reference:
@@ -246,6 +259,8 @@ def run_experiment(model):
 
 모델 트레이닝 및 평가
 ------------------------
+{: #train-and-evaluate-model}
+<!-- Train and evaluate model -->
 
 ```python
 conv_mixer_model = get_conv_mixer_256_8()
@@ -283,6 +298,8 @@ Test accuracy: 83.69%
 
 ConvMixer 내부 시각화하기
 --------------------------------------
+{: #visualizing-the-internals-of-convmixer}
+<!-- Visualizing the internals of ConvMixer -->
 
 패치 임베딩과 학습된 컨볼루션 필터를 시각화할 수 있습니다. 각 패치 임베딩과 중간 특성 맵의 채널 수는 동일합니다. (이 경우 256개) 이렇게 하면 시각화 유틸리티를 더 쉽게 구현할 수 있습니다.
 
@@ -354,6 +371,8 @@ visualization_plot(kernel)
 
 최종 참고 사항
 -----------
+{: #final-notes}
+<!-- Final notes -->
 
 최근 컨볼루션을 셀프 어텐션과 같은 데이터에 구애받지 않는 다른 연산과 융합하는 경향이 있습니다. 다음 연구도 이러한 흐름의 연장선상에 있습니다:
 

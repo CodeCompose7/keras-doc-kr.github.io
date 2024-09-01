@@ -35,6 +35,8 @@ grand_parent: 코드 예제
 ----
 
 ## 소개: EfficientNet이란?
+{: #introduction-what-is-efficientnet}
+<!-- ## Introduction: what is EfficientNet -->
 
 [Tan and Le, 2019](https://arxiv.org/abs/1905.11946)에서 처음 소개된 EfficientNet은 이미지넷과 일반적인 이미지 분류 전이 학습 작업 모두에서 SOTA 정확도에 도달하는 가장 효율적인 모델(즉, 추론에 최소의 FLOPS가 필요함)중 하나입니다.
 
@@ -46,6 +48,8 @@ grand_parent: 코드 예제
 
 B0~B7의 EfficientNet 버전
 ---------------------------------
+{: #b0-to-b7-variants-of-efficientnet}
+<!-- B0 to B7 variants of EfficientNet -->
 
 _(이 섹션에서는 "복합 스케일링(compound scaling)"에 대한 자세한 내용을 제공하며, 모델 사용에만 관심이 있는 경우 건너뛸 수 있습니다)_
 
@@ -63,6 +67,8 @@ _(이 섹션에서는 "복합 스케일링(compound scaling)"에 대한 자세�
 
 Keras EfficientNet 구현
 ------------------------------------
+{: #keras-implementation-of-efficientnet}
+<!-- Keras implementation of EfficientNet -->
 
 Keras 2.3 버전부터 Keras와 함께 EfficientNet B0~B7의 구현이 제공되었습니다. ImageNet으로부터의 1000개의 이미지 클래스를 분류하는데 EfficientNetB0을 사용하려면, 다음을 실행하세요:
 
@@ -108,6 +114,8 @@ model = EfficientNetB0(weights='imagenet', drop_connect_rate=0.4)
 
 예시: Stanford Dogs를 위한 EfficientNetB0
 ------------------------------------------
+{: #example-efficientnetb0-for-stanford-dogs}
+<!-- Example: EfficientNetB0 for Stanford Dogs. -->
 
 EfficientNet은 광범위한 이미지 분류 작업을 수행할 수 있습니다. 따라서, 전이 학습을 위한 좋은 모델입니다. 엔드투엔드 예시로, [Stanford Dogs](http://vision.stanford.edu/aditya86/ImageNetDogs/main.html) 데이터 세트에 대해 사전 트레이닝된 EfficientNetB0을 사용해 보여드리겠습니다.
 
@@ -115,6 +123,8 @@ EfficientNet은 광범위한 이미지 분류 작업을 수행할 수 있습니�
 
 셋업 및 데이터 로드
 ----------------------
+{: #setup-and-data-loading}
+<!-- Setup and data loading -->
 
 ```python
 import numpy as np
@@ -131,6 +141,8 @@ BATCH_SIZE = 64
 ```
 
 ### 데이터 로드
+{: #loading-data}
+<!-- ### Loading data -->
 
 여기서는 [tensorflow\_datasets](https://www.tensorflow.org/datasets)(이하 TFDS)에서 데이터를 로드합니다. Stanford Dogs 데이터 세트는 TFDS에서 [stanford\_dogs](https://www.tensorflow.org/datasets/catalog/stanford_dogs)로 제공됩니다. 120개 견종에 속하는 20,580개의 이미지(트레이닝용 12,000개, 테스트용 8,580개)가 포함되어 있습니다.
 
@@ -153,6 +165,8 @@ ds_test = ds_test.map(lambda image, label: (tf.image.resize(image, size), label)
 ```
 
 ### 데이터 시각화
+{: #visualizing-the-data}
+<!-- ### Visualizing the data -->
 
 다음 코드는 처음 9개의 이미지와 해당 레이블을 보여줍니다.
 
@@ -173,6 +187,8 @@ for i, (image, label) in enumerate(ds_train.take(9)):
 ![png]({{ site.baseurl }}/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_9_0.png)
 
 ### 데이터 보강
+{: #data-augmentation}
+<!-- ### Data augmentation -->
 
 이미지 보강을 위해 전처리 레이어 API를 사용할 수 있습니다.
 
@@ -207,6 +223,8 @@ for image, label in ds_train.take(1):
 ![png]({{ site.baseurl }}/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_13_0.png)
 
 ### 입력 준비
+{: #prepare-inputs}
+<!-- ### Prepare inputs -->
 
 입력 데이터와 보강이 제대로 작동하는지 확인하면, 트레이닝을 위한 데이터 세트를 준비합니다. 입력 데이터의 크기를 균일한 `IMG_SIZE`로 조정합니다. 레이블은 one-hot(일명 카테고리형) 인코딩에 넣습니다. 데이터 세트가 배치 처리됩니다.
 
@@ -237,6 +255,8 @@ ds_test = ds_test.batch(batch_size=BATCH_SIZE, drop_remainder=True)
 
 처음부터 모델 트레이닝하기
 -----------------------------
+{: #training-a-model-from-scratch}
+<!-- Training a model from scratch -->
 
 처음부터 초기화된, 120개의 출력 클래스가 있는 EfficientNetB0을 빌드합니다:
 
@@ -1101,6 +1121,8 @@ plot_hist(hist)
 
 사전 트레이닝된 가중치를 통한 전이 학습
 ------------------------------------------
+{: #transfer-learning-from-pre-trained-weights}
+<!-- Transfer learning from pre-trained weights -->
 
 여기서는 미리 트레이닝된 이미지넷 가중치로 모델을 초기화하고, 자체 데이터 세트에서 미세 조정합니다.
 
@@ -1238,6 +1260,8 @@ Epoch 4/4
 ![png]({{ site.baseurl }}/img/examples/vision/image_classification_efficientnet_fine_tuning/image_classification_efficientnet_fine_tuning_25_1.png)
 
 ### EfficientNet 미세 조정을 위한 팁
+{: #tips-for-fine-tuning-efficientnet}
+<!-- ### Tips for fine tuning EfficientNet -->
 
 동결 해제 레이어에서:
 

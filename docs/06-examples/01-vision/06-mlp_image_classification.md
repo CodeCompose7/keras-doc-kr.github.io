@@ -35,6 +35,8 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 이 예는 이미지 분류를 위한 세 가지 최신 어텐션 프리, 다층 퍼셉트론(MLP) 기반 모델을 구현하며, CIFAR-100 데이터 세트에 대해 시연합니다:
 
@@ -48,6 +50,8 @@ grand_parent: 코드 예제
 
 셋업
 -----
+{: #setup}
+<!-- Setup -->
 
 ```python
 import numpy as np
@@ -59,6 +63,8 @@ from keras import layers
 
 데이터 준비
 ----------------
+{: #prepare-the-data}
+<!-- Prepare the data -->
 
 ```python
 num_classes = 100
@@ -79,6 +85,8 @@ x_test shape: (10000, 32, 32, 3) - y_test shape: (10000, 1)
 
 하이퍼파라미터 구성
 -----------------------------
+{: #configure-the-hyperparameters}
+<!-- Configure the hyperparameters -->
 
 ```python
 
@@ -109,6 +117,8 @@ Elements per patch (3 channels): 192
 
 분류 모델 빌드
 ----------------------------
+{: #build-a-classification-model}
+<!-- Build a classification model -->
 
 주어진 처리 블록에 대해 분류기를 빌드하는 메서드를 구현합니다.
 
@@ -139,6 +149,8 @@ def build_classifier(blocks, positional_encoding=False):
 
 실험 정의하기
 --------------------
+{: #define-an-experiment}
+<!-- Define an experiment -->
 
 주어진 모델을 컴파일, 트레이닝 및 평가하는 유틸리티 함수를 구현합니다.
 
@@ -191,6 +203,8 @@ def run_experiment(model):
 
 데이터 보강 사용
 ---------------------
+{: #use-data-augmentation}
+<!-- Use data augmentation -->
 
 ```python
 data_augmentation = keras.Sequential(
@@ -210,6 +224,8 @@ data_augmentation.layers[0].adapt(x_train)
 
 패치 추출을 레이어로서 구현하기
 -------------------------------------
+{: #implement-patch-extraction-as-a-layer}
+<!-- Implement patch extraction as a layer -->
 
 ```python
 class Patches(layers.Layer):
@@ -230,6 +246,8 @@ class Patches(layers.Layer):
 
 위치 임베딩을 레이어로서 구현하기
 ---------------------------------------
+{: #implement-position-embedding-as-a-layer}
+<!-- Implement position embedding as a layer -->
 
 ```python
 class PositionEmbedding(keras.layers.Layer):
@@ -288,6 +306,8 @@ class PositionEmbedding(keras.layers.Layer):
 
 MLP-Mixer 모델
 -------------------
+{: #the-mlp-mixer-model}
+<!-- The MLP-Mixer model -->
 
 MLP-Mixer는 MLP(다층 퍼셉트론)에만 기반한 아키텍처로, 두 가지 유형의 MLP 레이어가 포함되어 있습니다:
 
@@ -297,6 +317,8 @@ MLP-Mixer는 MLP(다층 퍼셉트론)에만 기반한 아키텍처로, 두 가�
 이는 Xception 모델과 같은 [깊이 분리형 컨볼루션 기반 모델](https://arxiv.org/abs/1610.02357)과 유사하지만, 두 개의 체인된 Dense 변환, 최대 풀링 없음, 배치 정규화 대신 레이어 정규화라는 차이점이 있습니다.
 
 ### MLP-Mixer 모듈 구현하기
+{: #implement-the-mlp-mixer-module}
+<!-- ### Implement the MLP-Mixer module -->
 
 ```python
 class MLPMixerLayer(layers.Layer):
@@ -343,6 +365,8 @@ class MLPMixerLayer(layers.Layer):
 ```
 
 ### MLP-Mixer 모델 빌드, 트레이닝 및 평가하기
+{: #build-train-and-evaluate-the-mlp-mixer-model}
+<!-- ### Build, train, and evaluate the MLP-Mixer model -->
 
 V100 GPU에서 현재 설정으로 모델을 트레이닝하는 데는 에포크 당 약 8초가 소요됩니다.
 
@@ -368,6 +392,8 @@ MLP-Mixer 모델은 컨볼루션 및 트랜스포머 기반 모델에 비해 파
 
 FNet 모델
 --------------
+{: #the-fnet-model}
+<!-- The FNet model -->
 
 FNet은 트랜스포머 블록과 유사한 블록을 사용합니다. 하지만, FNet은 트랜스포머 블록의 셀프 어텐션 레이어를 파라미터가 없는 2D 푸리에 변환 레이어로 대체합니다:
 
@@ -375,6 +401,8 @@ FNet은 트랜스포머 블록과 유사한 블록을 사용합니다. 하지만
 2.  채널을 따라 하나의 1D 푸리에 변환이 적용됩니다.
 
 ### FNet 모듈 구현
+{: #implement-the-fnet-module}
+<!-- ### Implement the FNet module -->
 
 ```python
 class FNetLayer(layers.Layer):
@@ -410,6 +438,8 @@ class FNetLayer(layers.Layer):
 ```
 
 ### FNet 모델 빌드, 트레이닝 및 평가하기
+{: #build-train-and-evaluate-the-fnet-model}
+<!-- ### Build, train, and evaluate the FNet model -->
 
 V100 GPU에서 현재 설정으로 모델을 트레이닝하는 데는 에포크 당 약 8초가 소요됩니다.
 
@@ -434,6 +464,8 @@ Test top 5 accuracy: 36.15%
 
 gMLP 모델
 --------------
+{: #the-gmlp-model}
+<!-- The gMLP model -->
 
 gMLP는 공간 게이팅 유닛(SGU, Spatial Gating Unit)이 특징인 MLP 아키텍처입니다. SGU는 다음과 같이 공간(채널) 차원에 걸쳐 교차 패치 상호 작용을 가능하게 합니다:
 
@@ -441,6 +473,8 @@ gMLP는 공간 게이팅 유닛(SGU, Spatial Gating Unit)이 특징인 MLP 아�
 2.  입력의 요소별 곱셈과 공간 변환(spatial transformation)을 적용합니다.
 
 ### gMLP 모듈 구현
+{: #implement-the-gmlp-module}
+<!-- ### Implement the gMLP module -->
 
 ```python
 class gMLPLayer(layers.Layer):
@@ -490,6 +524,8 @@ class gMLPLayer(layers.Layer):
 ```
 
 ### gMLP 모델 빌드, 트레이닝 및 평가하기
+{: #build-train-and-evaluate-the-gmlp-model}
+<!-- ### Build, train, and evaluate the gMLP model -->
 
 V100 GPU에서 현재 설정으로 모델을 트레이닝하는 데는 에포크 당 약 9초가 소요됩니다.
 

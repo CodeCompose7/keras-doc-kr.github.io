@@ -35,6 +35,8 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 컨볼루션은 대부분의 최신 컴퓨터 비전을 위한 신경망의 기반이 되었습니다. 컨볼루션 커널은 공간에 구애받지 않고(spatial-agnostic) 채널에 따라(channel-specific) 달라집니다. 따라서, 공간적 위치에 따라 다른 시각적 패턴에 적응할 수 없습니다. 위치 관련 문제와 함께, 컨볼루션의 수용 영역은 장거리 공간 상호 작용을 캡처하는 데 어려움을 겪습니다.
 
@@ -46,6 +48,8 @@ grand_parent: 코드 예제
 
 셋업
 -----
+{: #setup}
+<!-- Setup -->
 
 ```python
 import os
@@ -64,6 +68,8 @@ tf.random.set_seed(42)
 
 컨볼루션
 -----------
+{: #convolution}
+<!-- Convolution -->
 
 컨볼루션은 컴퓨터 비전을 위한 심층 신경망의 주축을 이루고 있습니다. 인볼루션을 이해하려면, 컨볼루션 연산에 대해 이야기할 필요가 있습니다.
 
@@ -77,6 +83,8 @@ tf.random.set_seed(42)
 
 인볼루션 (Involution)
 ----------
+{: #involution}
+<!-- Involution -->
 
 이 아이디어는 **위치에 따라 달라지는(location-specific)** 작업과 **채널에 구애받지 않는(channel-agnostic)** 작업을 모두 구현하는 것입니다. 이러한 특정 속성을 구현하는 데는 어려움이 있습니다. (각 공간 위치에 대해) 고정된 수의 인볼루션 커널을 사용하면, 가변 해상도 입력 텐서를 처리할 수 **없게** 됩니다.
 
@@ -193,6 +201,8 @@ class Involution(keras.layers.Layer):
 
 인볼루션 레이어 테스트하기
 ----------------------------
+{: #testing-the-involution-layer}
+<!-- Testing the Involution layer -->
 
 ```python
 # 입력 텐서를 정의.
@@ -229,6 +239,8 @@ with channel 16 and reduction ratio 2 ouput shape: (32, 256, 256, 3)
 
 이미지 분류
 --------------------
+{: #image-classification}
+<!-- Image Classification -->
 
 이 섹션에서는, 이미지 분류기 모델을 빌드하겠습니다. 컨볼루션을 사용하는 모델과 인볼루션을 사용하는 모델 두 가지를 만들 것입니다.
 
@@ -238,6 +250,8 @@ with channel 16 and reduction ratio 2 ouput shape: (32, 256, 256, 3)
 
 CIFAR10 데이터세트 얻기
 -----------------------
+{: #get-the-cifar10-dataset}
+<!-- Get the CIFAR10 Dataset -->
 
 ```python
 # CIFAR10 데이터세트 로드.
@@ -266,6 +280,8 @@ test_ds = tf.data.Dataset.from_tensor_slices((test_images, test_labels)).batch(2
 
 데이터 시각화
 ------------------
+{: #visualise-the-data}
+<!-- Visualise the data -->
 
 ```python
 class_names = [
@@ -297,6 +313,8 @@ plt.show()
 
 컨볼루션 신경망
 ----------------------------
+{: #convolutional-neural-network}
+<!-- Convolutional Neural Network -->
 
 ```python
 # conv 모델 빌드.
@@ -380,6 +398,8 @@ Epoch 20/20
 
 인볼루션 신경망
 ---------------------------
+{: #involutional-neural-network}
+<!-- Involutional Neural Network -->
 
 ```python
 # 인볼루션 모델을 빌드.
@@ -469,10 +489,14 @@ Epoch 20/20
 
 비교
 -----------
+{: #comparisons}
+<!-- Comparisons -->
 
 이 섹션에서는, 두 모델을 살펴보고 몇 가지 요점을 비교해 보겠습니다.
 
 ### 파라미터
+{: #parameters}
+<!-- ### Parameters -->
 
 비슷한 아키텍처의 경우, CNN의 파라미터가 INN(인볼루션 신경망)보다 훨씬 더 크다는 것을 알 수 있습니다.
 
@@ -552,6 +576,8 @@ Model: "inv_model"
 ```
 
 ### 손실 및 정확도 플롯
+{: #loss-and-accuracy-plots}
+<!-- ### Loss and Accuracy Plots -->
 
 여기서, 손실 및 정확도 플롯은 INN이 (적은 매개변수로) 느린 학습자임을 보여줍니다.
 
@@ -597,6 +623,8 @@ plt.show()
 
 인볼루션 커널 시각화
 ------------------------------
+{: #visualizing-involution-kernels}
+<!-- Visualizing Involution Kernels -->
 
 커널을 시각화하기 위해, 각 인볼루션 커널에서 **K×K** 값의 합을 구합니다. **서로 다른 공간 위치에 있는 모든 대표자(representatives)가 해당 히트 맵의 프레임을 구성합니다.**
 
@@ -638,6 +666,8 @@ for ax, test_image in zip(axes, test_images[:10]):
 
 결론
 -----------
+{: #conclusions}
+<!-- Conclusions -->
 
 이 예제에서는, 쉽게 재사용할 수 있는 `Involution` 레이어를 만드는 데 중점을 두었습니다. 특정 작업을 기준으로 비교했지만, 다른 작업에도 자유롭게 이 레이어를 사용해 결과를 보고해 보세요.
 

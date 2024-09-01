@@ -35,6 +35,8 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 [Reptile](https://arxiv.org/abs/1803.02999) 알고리즘은 모델에 구애받지 않는 메타 학습(model-agnostic meta-learning)을 수행하기 위해 OpenAI에서 개발했습니다. 특히, 이 알고리즘은 최소한의 트레이닝(few-shot 학습)으로 새로운 작업을 수행하는 방법을 빠르게 학습하도록 설계되었습니다. 이 알고리즘은, 이전에 본 적 없는 데이터의 미니 배치에 대해 트레이닝된 가중치와 고정된 수의 메타 반복에 대한 트레이닝 전 모델 가중치 간의 차이를 사용하여, 확률적 경사 하강(Stochastic Gradient Descent)을 수행하는 방식으로 작동합니다.
 
@@ -57,6 +59,8 @@ import tensorflow_datasets as tfds
 
 하이퍼파라미터 정의
 --------------------------
+{: #define-the-hyperparameters}
+<!-- Define the Hyperparameters -->
 
 ```python
 learning_rate = 0.003
@@ -79,6 +83,8 @@ classes = 5
 
 데이터 준비
 ----------------
+{: #prepare-the-data}
+<!-- Prepare the data -->
 
 [Omniglot 데이터 세트](https://github.com/brendenlake/omniglot/)는 50개의 다른 알파벳에서 가져온 1,623개의 문자로 구성된 데이터 세트로, 각 문자에 대해 20개의 예시가 있습니다. 각 문자에 대한 20개의 샘플은 Amazon의 Mechanical Turk를 통해 온라인으로 추출했습니다. few-shot 학습 과제의 경우, 무작위로 선택된 `n`개의 클래스에서 `k`개의 샘플(또는 "shots")이 무작위로 추출됩니다. 이 `n`개의 숫자 값은 몇 개의 예제가 주어졌을 때 새로운 작업을 학습하는 모델의 능력을 테스트하는 데 사용할 새로운 임시 레이블 세트를 만드는 데 사용됩니다. 즉, 5개의 클래스를 트레이닝하는 경우, 새 클래스 레이블은 0, 1, 2, 3 또는 4가 됩니다. Omniglot은 각 클래스에 대해 적절한 수의 샘플과 함께 다양한 클래스를 추출할 수 있기 때문에, 이 작업에 훌륭한 데이터 세트입니다.
 
@@ -189,6 +195,8 @@ Shuffling /home/fchollet/tensorflow_datasets/omniglot/3.0.0.incomplete1MPXME/omn
 
 데이터 세트의 몇 가지 예를 시각화
 ----------------------------------------
+{: #visualize-some-examples-from-the-dataset}
+<!-- Visualize some examples from the dataset -->
 
 ```python
 _, axarr = plt.subplots(nrows=5, ncols=5, figsize=(20, 20))
@@ -215,6 +223,8 @@ plt.show()
 
 모델 빌드
 ---------------
+{: #build-the-model}
+<!-- Build the model -->
 
 ```python
 def conv_bn(x):
@@ -239,6 +249,8 @@ optimizer = keras.optimizers.SGD(learning_rate=learning_rate)
 
 모델 트레이닝
 ---------------
+{: #train-the-model}
+<!-- Train the model -->
 
 ```python
 training = []
@@ -323,6 +335,8 @@ batch 1900: train=1.000000 test=1.000000
 
 결과 시각화
 -----------------
+{: #visualize-results}
+<!-- Visualize Results -->
 
 ```python
 # 첫째, 표시할 트레이닝 및 테스트 배열을 원활(smooth)하게 하기 위한 일부 전처리입니다.

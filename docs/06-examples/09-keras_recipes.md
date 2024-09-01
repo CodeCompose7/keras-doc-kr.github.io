@@ -21,7 +21,9 @@ has_children: true
 
 ---
 
-### 서비스
+### 서빙
+{: #serving}
+<!-- ### Serving -->
 
 V3
 {: .label .label-green .mx-1}
@@ -31,6 +33,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### Keras 사용 팁
+{: #keras-usage-tips}
+<!-- ### Keras usage tips -->
 
 V3
 {: .label .label-green .mx-1}
@@ -89,6 +93,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### ML 모범 사례
+{:#ml-best-practices}
+<!-- ### ML best practices -->
 
 V3
 {: .label .label-green .mx-1}
@@ -112,6 +118,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}

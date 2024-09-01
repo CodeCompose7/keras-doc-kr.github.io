@@ -35,6 +35,8 @@ grand_parent: 코드 예제
 ----
 
 ## 셋업
+{: #setup}
+<!-- ## Setup -->
 
 ```python
 import numpy as np
@@ -46,6 +48,8 @@ from keras import layers
 
 데이터 준비
 ----------------
+{: #prepare-the-data}
+<!-- Prepare the data -->
 
 ```python
 # 모델 / 데이터 파라미터
@@ -80,6 +84,8 @@ x_train shape: (60000, 28, 28, 1)
 
 모델 빌드
 ---------------
+{: #build-the-model}
+<!-- Build the model -->
 
 ```python
 model = keras.Sequential(
@@ -126,6 +132,8 @@ Model: "sequential"
 
 모델 트레이닝
 ---------------
+{: #train-the-model}
+<!-- Train the model -->
 
 ```python
 batch_size = 128
@@ -175,6 +183,8 @@ Epoch 15/15
 
 트레이닝된 모델 평가하기
 --------------------------
+{: #evaluate-the-trained-model}
+<!-- Evaluate the trained model -->
 
 ```python
 score = model.evaluate(x_test, y_test, verbose=0)
