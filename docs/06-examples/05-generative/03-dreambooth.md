@@ -24,7 +24,7 @@ grand_parent: 코드 예제
 **저자:** [Sayak Paul](https://twitter.com/RisingSayak), [Chansung Park](https://twitter.com/algo_diver)  
 **생성일:** 2023/02/01  
 **최종편집일:** 2023/02/05  
-**설명:** Implementing DreamBooth.
+**설명:** DreamBooth 구현.
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/generative/ipynb/dreambooth.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/generative/dreambooth.py){: .btn .btn-blue }
@@ -34,15 +34,17 @@ grand_parent: 코드 예제
 
 ----
 
-## Introduction
+## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 In this example, we implement DreamBooth, a fine-tuning technique to teach new visual concepts to text-conditioned Diffusion models with just 3 - 5 images. DreamBooth was proposed in [DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/abs/2208.12242) by Ruiz et al.
 
-DreamBooth, in a sense, is similar to the [traditional way of fine-tuning a text-conditioned Diffusion model except](https://keras.io/examples/generative/finetune_stable_diffusion/) for a few gotchas. This example assumes that you have basic familiarity with Diffusion models and how to fine-tune them. Here are some reference examples that might help you to get familiarized quickly:
+DreamBooth, in a sense, is similar to the [traditional way of fine-tuning a text-conditioned Diffusion model except]({{ site.baseurl }}/examples/generative/finetune_stable_diffusion/) for a few gotchas. This example assumes that you have basic familiarity with Diffusion models and how to fine-tune them. Here are some reference examples that might help you to get familiarized quickly:
 
-*   [High-performance image generation using Stable Diffusion in KerasCV](https://keras.io/guides/keras_cv/generate_images_with_stable_diffusion/)
-*   [Teach StableDiffusion new concepts via Textual Inversion](https://keras.io/examples/generative/fine_tune_via_textual_inversion/)
-*   [Fine-tuning Stable Diffusion](https://keras.io/examples/generative/finetune_stable_diffusion/)
+*   [High-performance image generation using Stable Diffusion in KerasCV]({{ site.baseurl }}/guides/keras_cv/generate_images_with_stable_diffusion/)
+*   [Teach StableDiffusion new concepts via Textual Inversion]({{ site.baseurl }}/examples/generative/fine_tune_via_textual_inversion/)
+*   [Fine-tuning Stable Diffusion]({{ site.baseurl }}/examples/generative/finetune_stable_diffusion/)
 
 First, let's install the latest versions of KerasCV and TensorFlow.
 
@@ -55,8 +57,10 @@ If you're running the code, please ensure you're using a GPU with at least 24 GB
 
 * * *
 
-Initial imports
+초기 imports
 ---------------
+{: #initial-imports}
+<!-- Initial imports -->
 
 ```python
 import math
@@ -71,27 +75,31 @@ from tensorflow import keras
 
 * * *
 
-Usage of DreamBooth
+DreamBooth 사용법 
 -------------------
+{: #usage-of-dreambooth}
+<!-- Usage of DreamBooth -->
 
 ... is very versatile. By teaching Stable Diffusion about your favorite visual concepts, you can
 
 *   Recontextualize objects in interesting ways:
     
-    ![](https://i.imgur.com/4Da9ozw.png)
+    ![]({{ site.baseurl }}/img/examples/generative/dreambooth/4Da9ozw.png)
     
 
 *   Generate artistic renderings of the underlying visual concept:
     
-    ![](https://i.imgur.com/nI2N8bI.png)
+    ![]({{ site.baseurl }}/img/examples/generative/dreambooth/nI2N8bI.png)
     
 
 And many other applications. We welcome you to check out the original [DreamBooth paper](https://arxiv.org/abs/2208.12242) in this regard.
 
 * * *
 
-Download the instance and class images
+인스턴스 및 클래스 이미지 다운로드
 --------------------------------------
+{: #download-the-instance-and-class-images}
+<!-- Download the instance and class images -->
 
 DreamBooth uses a technique called "prior preservation" to meaningfully guide the training procedure such that the fine-tuned models can still preserve some of the prior semantics of the visual concept you're introducing. To know more about the idea of "prior preservation" refer to [this document](https://dreambooth.github.io/).
 
@@ -150,8 +158,10 @@ class_images_root = tf.keras.utils.get_file(
 
 * * *
 
-Visualize images
+이미지 시각화
 ----------------
+{: #visualize-images}
+<!-- Visualize images -->
 
 First, let's load the image paths.
 
@@ -199,12 +209,16 @@ plot_images(load_images(class_image_paths[:5]))
 
 * * *
 
-Prepare datasets
+데이터세트 준비
 ----------------
+{: #prepare-datasets}
+<!-- Prepare datasets -->
 
 Dataset preparation includes two stages: (1): preparing the captions, (2) processing the images.
 
-### Prepare the captions
+### 캡션 준비
+{: #prepare-the-captions}
+<!-- ### Prepare the captions -->
 
 ```python
 # Since we're using prior preservation, we need to match the number
@@ -276,8 +290,10 @@ del text_encoder
 
 * * *
 
-Prepare the images
+이미지 준비
 ------------------
+{: #prepare-the-images}
+<!-- Prepare the images -->
 
 ```python
 resolution = 512
@@ -335,8 +351,10 @@ def assemble_dataset(image_paths, embedded_texts, instance_only=True, batch_size
 
 * * *
 
-Assemble dataset
+데이터세트 모으기
 ----------------
+{: #assemble-dataset}
+<!-- Assemble dataset -->
 
 ```python
 instance_dataset = assemble_dataset(
@@ -353,8 +371,10 @@ train_dataset = tf.data.Dataset.zip((instance_dataset, class_dataset))
 
 * * *
 
-Check shapes
+모양 확인
 ------------
+{: #check-shapes}
+<!-- Check shapes -->
 
 Now that the dataset has been prepared, let's quickly check what's inside it.
 
@@ -381,8 +401,10 @@ During training, we make use of these keys to gather the images and text embeddi
 
 * * *
 
-DreamBooth training loop
+DreamBooth 트레이닝 루프
 ------------------------
+{: #dreambooth-training-loop}
+<!-- DreamBooth training loop -->
 
 Our DreamBooth training loop is very much inspired by [this script](https://github.com/huggingface/diffusers/blob/main/examples/dreambooth/train_dreambooth.py) provided by the Diffusers team at Hugging Face. However, there is an important difference to note. We only fine-tune the UNet (the model responsible for predicting noise) and don't fine-tune the text encoder in this example. If you're looking for an implementation that also performs the additional fine-tuning of the text encoder, refer to [this repository](https://github.com/sayakpaul/dreambooth-keras/).
 
@@ -536,8 +558,10 @@ class DreamBoothTrainer(tf.keras.Model):
 
 * * *
 
-Trainer initialization
+트레이너 초기화
 ----------------------
+{: #trainer-initialization}
+<!-- Trainer initialization -->
 
 ```python
 # Comment it if you are not using a GPU having tensor cores.
@@ -579,8 +603,10 @@ dreambooth_trainer.compile(optimizer=optimizer, loss="mse")
 
 * * *
 
-Train!
+트레이닝!
 ------
+{: #train}
+<!-- Train! -->
 
 We first calculate the number of epochs, we need to train for.
 
@@ -623,8 +649,10 @@ Epoch 4/4
 
 * * *
 
-Experiments and inference
+실험과 추론
 -------------------------
+{: #experiments-and-inference}
+<!-- Experiments and inference -->
 
 We ran various experiments with a slightly modified version of this example. Our experiments are based on [this repository](https://github.com/sayakpaul/dreambooth-keras/) and are inspired by [this blog post](https://huggingface.co/blog/dreambooth) from Hugging Face.
 
@@ -700,6 +728,8 @@ Feel free to experiment with different prompts (don't forget to add the unique i
 
 Acknowledgements
 ----------------
+{: #acknowledgements}
+<!-- Acknowledgements -->
 
 *   Thanks to the [DreamBooth example script](https://github.com/huggingface/diffusers/blob/main/examples/dreambooth/train_dreambooth.py) provided by Hugging Face which helped us a lot in getting the initial implementation ready quickly.
 *   Getting DreamBooth to work on human faces can be challenging. We have compiled some general recommendations [here](https://github.com/sayakpaul/dreambooth-keras#notes-on-preparing-data-for-dreambooth-training-of-faces). Thanks to [Abhishek Thakur](https://no.linkedin.com/in/abhi1thakur) for helping with these.
