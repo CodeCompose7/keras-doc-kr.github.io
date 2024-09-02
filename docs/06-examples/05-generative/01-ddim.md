@@ -24,7 +24,7 @@ grand_parent: 코드 예제
 **저자:** [András Béres](https://www.linkedin.com/in/andras-beres-789190210)  
 **생성일:** 2022/06/24  
 **최종편집일:** 2022/06/24  
-**설명:** Generating images of flowers with denoising diffusion implicit models.
+**설명:** 노이즈 제거 확산 암묵적 모델을 사용하여 꽃 이미지를 생성합니다.
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/generative/ipynb/ddim.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/generative/ddim.py){: .btn .btn-blue }
