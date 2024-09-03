@@ -28,6 +28,7 @@ grand_parent: 코드 예제
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/mnist_convnet.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet.py){: .btn .btn-blue }
+[Colab에서 보기2](https://colab.research.google.com/drive/1JLgtoTLlAP7Xo48JT-OfdZVgLEjBFwmJ){: .btn .btn-purple }
 
 ⓘ 이 예제는 Keras 3을 사용합니다.
 {: .label .label-green .px-10}

@@ -28,6 +28,7 @@ grand_parent: 코드 예제
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/image_classification_efficientnet_fine_tuning.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/image_classification_efficientnet_fine_tuning.py){: .btn .btn-blue }
+[Colab에서 보기2](https://colab.research.google.com/drive/1_YhcU6HWqDzM_kgqMgOazkEobu-hEafa){: .btn .btn-purple }
 
 ⓘ 이 예제는 Keras 3을 사용합니다.
 {: .label .label-green .px-10}
