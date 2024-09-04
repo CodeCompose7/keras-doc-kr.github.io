@@ -744,7 +744,7 @@ model.plot_images()
   MAE 손실은 더 부드러운 이미지를 생성합니다. 둘 다 시도해 보는 것이 좋습니다.
 * **가중치 감쇠(weight decay)**: 모델을 확장할 때 가끔 발산된 트레이닝에 부딪혔고, 
   가중치 감쇠가 낮은 성능 비용으로 불안정성을 피하는 데 도움이 된다는 것을 발견했습니다. 
-  이것이 이 예에서 [Adam](https://keras.io/api/optimizers/adam/) 대신 
+  이것이 이 예에서 [Adam]({{ site.baseurl }}/api/optimizers/adam/) 대신 
   [AdamW](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/experimental/AdamW)를 사용하는 이유입니다.
 * **가중치의 지수 이동 평균 (exponential moving average of weights)**: 
   이는 KID 메트릭의 분산을 줄이는 데 도움이 되며, 트레이닝 중 단기적 변화를 평균화하는 데 도움이 됩니다.
@@ -768,7 +768,7 @@ model.plot_images()
   1/sqrt(2)로 residual 연결을 스케일링하는 것이 도움이 될 수 있지만, 
   제 경우에는 도움이 되지 않았습니다.
 * **학습률**: 저에게는 
-  [Adam 최적화](https://keras.io/api/optimizers/adam/)의 기본 학습률 1e-3이 매우 잘 작동했지만, 
+  [Adam 최적화]({{ site.baseurl }}/api/optimizers/adam/)의 기본 학습률 1e-3이 매우 잘 작동했지만, 
   [문헌(표 11-13)](https://arxiv.org/abs/2105.05233)에서는 더 낮은 학습률이 더 일반적입니다.
 
 ### 아키텍처 팁
