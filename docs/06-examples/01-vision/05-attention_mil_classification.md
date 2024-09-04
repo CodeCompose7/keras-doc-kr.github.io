@@ -28,6 +28,7 @@ grand_parent: 코드 예제
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/attention_mil_classification.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/attention_mil_classification.py){: .btn .btn-blue }
+[Colab에서 보기2](https://colab.research.google.com/drive/1ehPYerts4Vzc6ZTSocGmT6vLEd-Zfoux){: .btn .btn-purple }
 
 ⓘ 이 예제는 Keras 3을 사용합니다.
 {: .label .label-green .px-10}
