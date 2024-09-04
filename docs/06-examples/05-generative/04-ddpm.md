@@ -24,7 +24,7 @@ grand_parent: 코드 예제
 **저자:** [A\_K\_Nain](https://twitter.com/A_K_Nain)  
 **생성일:** 2022/11/30  
 **최종편집일:** 2022/12/07  
-**설명:** Generating images of flowers with denoising diffusion probabilistic models.
+**설명:** 노이즈 제거 확산 확률론적 모델을 사용하여, 꽃 이미지를 생성합니다.
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/generative/ipynb/ddpm.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/generative/ddpm.py){: .btn .btn-blue }
