@@ -7,10 +7,9 @@ parent: 시작하기
 ---
 
 * 원본 링크 : [https://keras.io/getting_started/intro_to_keras_for_engineers/](https://keras.io/getting_started/intro_to_keras_for_engineers/){:target="_blank"}
-* 최종 수정일 : 2024-03-28
+* 최종 수정일 : 2024-09-09
 
-# 엔지니어를 위한 Keras 소개
-<!-- # Introduction to Keras for engineers -->
+# 엔지니어를 위한 Keras 소개 (Introduction to Keras for engineers)
 {: .no_toc }
 
 ## 목차
