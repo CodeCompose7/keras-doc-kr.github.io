@@ -89,7 +89,7 @@ More specifically, this is done by generating many anchor boxes of varying shape
 
 **Visualization of some sample anchor boxes**:
 
-![]({{ site.baseurl }}/img/guides/object_detection_keras_cv/cJIuiK9.jpg)
+![]({{ site.baseurl }}/img/guides/object_detection_keras_cv/cJIuiK9.jpeg)
 
 Objection detection is a technically complex problem but luckily we offer a bulletproof approach to getting great results. Let's do this!
 
