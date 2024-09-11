@@ -8,7 +8,7 @@ grand_parent: 개발자 가이드
 ---
 
 * 원본 링크 : [https://keras.io/guides/keras_cv/generate_images_with_stable_diffusion/](https://keras.io/guides/keras_cv/generate_images_with_stable_diffusion/){:target="_blank"}
-* 최종 수정일 : 2024-09-02
+* 최종 수정일 : 2024-09-12
 
 # High-performance image generation using Stable Diffusion in KerasCV
 {: .no_toc }
@@ -328,7 +328,7 @@ Mixed precision model: 6.65 seconds
 
 ### XLA Compilation
 
-TensorFlow and JAX come with the [XLA: Accelerated Linear Algebra](https://www.tensorflow.org/xla) compiler built-in. [`keras_cv.models.StableDiffusion`](/api/keras_cv/models/tasks/stable_diffusion#stablediffusion-class) supports a `jit_compile` argument out of the box. Setting this argument to `True` enables XLA compilation, resulting in a significant speed-up.
+TensorFlow and JAX come with the [XLA: Accelerated Linear Algebra](https://www.tensorflow.org/xla) compiler built-in. [`keras_cv.models.StableDiffusion`]({{ site.baseurl }}/api/keras_cv/models/tasks/stable_diffusion#stablediffusion-class) supports a `jit_compile` argument out of the box. Setting this argument to `True` enables XLA compilation, resulting in a significant speed-up.
 
 Let's use this below:
 
