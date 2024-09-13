@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 5) HyperXception
+title: HyperXception
 nav_order: 04+05
 permalink: /api/keras_tuner/hypermodels/hyper_xception/
-parent: KerasTuner
-grand_parent: Keras 3 API 문서
+parent: HyperModels
+grand_parent: KerasTuner
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_tuner/hypermodels/hyper_xception/](https://keras.io/api/keras_tuner/hypermodels/hyper_xception/){:target="_blank"}

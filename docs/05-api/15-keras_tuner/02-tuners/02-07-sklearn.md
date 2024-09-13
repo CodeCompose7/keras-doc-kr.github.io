@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 7) Sklearn Tuner
+title: Sklearn Tuner
 nav_order: 02+07
 permalink: /api/keras_tuner/tuners/sklearn/
-parent: KerasTuner
-grand_parent: Keras 3 API 문서
+parent: Tuners
+grand_parent: KerasTuner
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_tuner/tuners/sklearn/](https://keras.io/api/keras_tuner/tuners/sklearn/){:target="_blank"}

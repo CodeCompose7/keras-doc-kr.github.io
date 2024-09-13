@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 1) The base Oracle class
+title: The base Oracle class
 nav_order: 03+01
 permalink: /api/keras_tuner/oracles/base_oracle/
-parent: KerasTuner
-grand_parent: Keras 3 API 문서
+parent: Oracles
+grand_parent: KerasTuner
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_tuner/oracles/base_oracle/](https://keras.io/api/keras_tuner/oracles/base_oracle/){:target="_blank"}

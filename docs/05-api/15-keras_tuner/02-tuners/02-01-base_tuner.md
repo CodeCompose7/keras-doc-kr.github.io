@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 1) The base Tuner class
+title: The base Tuner class
 nav_order: 02+01
 permalink: /api/keras_tuner/tuners/base_tuner/
-parent: KerasTuner
-grand_parent: Keras 3 API 문서
+parent: Tuners
+grand_parent: KerasTuner
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_tuner/tuners/base_tuner/](https://keras.io/api/keras_tuner/tuners/base_tuner/){:target="_blank"}
