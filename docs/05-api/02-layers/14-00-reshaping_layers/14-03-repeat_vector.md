@@ -3,7 +3,7 @@ layout: default
 title: └ 3) RepeatVector layer
 nav_order: 14+03
 permalink: /api/layers/reshaping_layers/repeat_vector/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

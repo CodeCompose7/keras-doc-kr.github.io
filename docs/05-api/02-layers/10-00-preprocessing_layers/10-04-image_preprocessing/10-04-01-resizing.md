@@ -3,7 +3,7 @@ layout: default
 title: ... └ a> Resizing layer
 nav_order: 10+04+01
 permalink: /api/layers/preprocessing_layers/image_preprocessing/resizing/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

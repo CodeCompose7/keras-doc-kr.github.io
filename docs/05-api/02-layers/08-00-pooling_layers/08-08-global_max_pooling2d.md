@@ -3,7 +3,7 @@ layout: default
 title: └ 8) GlobalMaxPooling2D layer
 nav_order: 08+08
 permalink: /api/layers/pooling_layers/global_max_pooling2d/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

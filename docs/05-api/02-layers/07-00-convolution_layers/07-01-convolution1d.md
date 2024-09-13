@@ -3,7 +3,7 @@ layout: default
 title: └ 1) Conv1D layer
 nav_order: 07+01
 permalink: /api/layers/convolution_layers/convolution1d/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

@@ -3,7 +3,7 @@ layout: default
 title: └ 7) GaussianNoise layer
 nav_order: 12+07
 permalink: /api/layers/regularization_layers/gaussian_noise/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

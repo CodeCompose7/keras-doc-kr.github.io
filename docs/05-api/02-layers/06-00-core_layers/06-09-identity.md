@@ -3,7 +3,7 @@ layout: default
 title: └ 9) Identity layer
 nav_order: 06+09
 permalink: /api/layers/core_layers/identity/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

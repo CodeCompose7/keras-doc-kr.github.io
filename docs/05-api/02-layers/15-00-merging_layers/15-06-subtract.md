@@ -3,7 +3,7 @@ layout: default
 title: └ 6) Subtract layer
 nav_order: 15+06
 permalink: /api/layers/merging_layers/subtract/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

@@ -3,7 +3,7 @@ layout: default
 title: └ 3) Maximum layer
 nav_order: 15+03
 permalink: /api/layers/merging_layers/maximum/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

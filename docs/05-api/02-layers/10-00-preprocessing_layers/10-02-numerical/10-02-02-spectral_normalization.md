@@ -3,7 +3,7 @@ layout: default
 title: ... └ b> Spectral Normalization layer
 nav_order: 10+02+02
 permalink: /api/layers/preprocessing_layers/numerical/spectral_normalization/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

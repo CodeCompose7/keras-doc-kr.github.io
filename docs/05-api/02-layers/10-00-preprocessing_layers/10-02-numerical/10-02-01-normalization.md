@@ -3,7 +3,7 @@ layout: default
 title: ... └ a> Normalization layer
 nav_order: 10+02+01
 permalink: /api/layers/preprocessing_layers/numerical/normalization/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

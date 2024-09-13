@@ -3,7 +3,7 @@ layout: default
 title: └ 2) MultiHeadAttention 레이어
 nav_order: 13+02
 permalink: /api/layers/attention_layers/multi_head_attention/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

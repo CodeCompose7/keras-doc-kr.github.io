@@ -3,7 +3,7 @@ layout: default
 title: ... └ c> CenterCrop layer
 nav_order: 10+04+03
 permalink: /api/layers/preprocessing_layers/image_preprocessing/center_crop/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

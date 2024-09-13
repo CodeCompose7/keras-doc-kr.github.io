@@ -3,7 +3,7 @@ layout: default
 title: └ 3) UnitNormalization layer
 nav_order: 11+03
 permalink: /api/layers/normalization_layers/unit_normalization/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

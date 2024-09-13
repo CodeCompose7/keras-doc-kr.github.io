@@ -3,7 +3,7 @@ layout: default
 title: └ 2) Conv2D layer
 nav_order: 07+02
 permalink: /api/layers/convolution_layers/convolution2d/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

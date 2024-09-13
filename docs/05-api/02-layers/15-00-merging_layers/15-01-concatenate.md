@@ -3,7 +3,7 @@ layout: default
 title: └ 1) Concatenate layer
 nav_order: 15+01
 permalink: /api/layers/merging_layers/concatenate/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

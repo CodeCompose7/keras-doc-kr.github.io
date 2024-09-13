@@ -3,7 +3,7 @@ layout: default
 title: └ 6) TimeDistributed layer
 nav_order: 09+06
 permalink: /api/layers/recurrent_layers/time_distributed/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

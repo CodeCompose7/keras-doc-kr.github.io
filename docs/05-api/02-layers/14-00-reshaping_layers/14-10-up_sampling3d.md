@@ -3,7 +3,7 @@ layout: default
 title: └ 10) UpSampling3D layer
 nav_order: 14+10
 permalink: /api/layers/reshaping_layers/up_sampling3d/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

@@ -3,7 +3,7 @@ layout: default
 title: └ 12) GlobalAveragePooling3D layer
 nav_order: 08+12
 permalink: /api/layers/pooling_layers/global_average_pooling3d/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

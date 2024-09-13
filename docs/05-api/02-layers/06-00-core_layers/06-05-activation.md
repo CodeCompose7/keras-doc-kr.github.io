@@ -3,7 +3,7 @@ layout: default
 title: └ 5) Activation layer
 nav_order: 06+05
 permalink: /api/layers/core_layers/activation/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

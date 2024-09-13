@@ -3,7 +3,7 @@ layout: default
 title: └ 4) AdditiveAttention layer
 nav_order: 13+04
 permalink: /api/layers/attention_layers/additive_attention/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

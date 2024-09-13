@@ -3,7 +3,7 @@ layout: default
 title: └ 10) Conv3DTranspose layer
 nav_order: 07+10
 permalink: /api/layers/convolution_layers/convolution3d_transpose/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

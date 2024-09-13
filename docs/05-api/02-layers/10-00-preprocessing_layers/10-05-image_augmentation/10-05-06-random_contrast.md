@@ -3,7 +3,7 @@ layout: default
 title: ... └ f> RandomContrast layer
 nav_order: 10+05+06
 permalink: /api/layers/preprocessing_layers/image_augmentation/random_contrast/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

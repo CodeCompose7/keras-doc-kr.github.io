@@ -3,7 +3,7 @@ layout: default
 title: └ 2) Average layer
 nav_order: 15+02
 permalink: /api/layers/merging_layers/average/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

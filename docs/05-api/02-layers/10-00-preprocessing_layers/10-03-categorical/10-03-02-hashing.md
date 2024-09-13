@@ -3,7 +3,7 @@ layout: default
 title: ... └ b> Hashing layer
 nav_order: 10+03+02
 permalink: /api/layers/preprocessing_layers/categorical/hashing/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

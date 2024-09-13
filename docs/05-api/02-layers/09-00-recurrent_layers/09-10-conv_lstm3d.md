@@ -3,7 +3,7 @@ layout: default
 title: └ 10) ConvLSTM3D layer
 nav_order: 09+10
 permalink: /api/layers/recurrent_layers/conv_lstm3d/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

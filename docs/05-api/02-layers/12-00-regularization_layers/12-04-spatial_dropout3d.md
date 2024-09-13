@@ -3,7 +3,7 @@ layout: default
 title: └ 4) SpatialDropout3D layer
 nav_order: 12+04
 permalink: /api/layers/regularization_layers/spatial_dropout3d/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

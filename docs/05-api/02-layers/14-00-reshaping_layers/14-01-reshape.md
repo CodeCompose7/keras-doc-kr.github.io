@@ -3,7 +3,7 @@ layout: default
 title: └ 1) Reshape layer
 nav_order: 14+01
 permalink: /api/layers/reshaping_layers/reshape/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

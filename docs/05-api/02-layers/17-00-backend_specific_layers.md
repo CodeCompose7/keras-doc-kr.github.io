@@ -3,7 +3,7 @@ layout: default
 title: Backend-specific layers
 nav_order: 17+00
 permalink: /api/layers/backend_specific_layers/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

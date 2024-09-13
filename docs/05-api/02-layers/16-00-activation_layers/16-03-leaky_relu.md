@@ -3,7 +3,7 @@ layout: default
 title: └ 3) LeakyReLU layer
 nav_order: 16+03
 permalink: /api/layers/activation_layers/leaky_relu/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

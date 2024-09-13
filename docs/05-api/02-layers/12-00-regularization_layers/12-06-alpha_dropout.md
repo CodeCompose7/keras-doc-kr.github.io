@@ -3,7 +3,7 @@ layout: default
 title: └ 6) AlphaDropout layer
 nav_order: 12+06
 permalink: /api/layers/regularization_layers/alpha_dropout/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

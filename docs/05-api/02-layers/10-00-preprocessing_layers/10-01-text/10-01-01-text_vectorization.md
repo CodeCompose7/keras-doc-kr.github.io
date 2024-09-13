@@ -3,7 +3,7 @@ layout: default
 title: ... └ a> TextVectorization layer
 nav_order: 10+01+01
 permalink: /api/layers/preprocessing_layers/text/text_vectorization/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

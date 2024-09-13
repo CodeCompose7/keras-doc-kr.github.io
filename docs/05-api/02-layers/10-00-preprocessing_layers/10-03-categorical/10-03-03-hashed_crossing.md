@@ -3,7 +3,7 @@ layout: default
 title: ... └ c> HashedCrossing layer
 nav_order: 10+03+03
 permalink: /api/layers/preprocessing_layers/categorical/hashed_crossing/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

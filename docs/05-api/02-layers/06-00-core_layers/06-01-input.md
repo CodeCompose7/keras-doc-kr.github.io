@@ -3,8 +3,8 @@ layout: default
 title: └ 1) Input object
 nav_order: 06+01
 permalink: /api/layers/core_layers/input/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 코어 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/core_layers/input/](https://keras.io/api/layers/core_layers/input/){:target="_blank"}

@@ -3,7 +3,7 @@ layout: default
 title: └ 8) ActivityRegularization layer
 nav_order: 12+08
 permalink: /api/layers/regularization_layers/activity_regularization/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

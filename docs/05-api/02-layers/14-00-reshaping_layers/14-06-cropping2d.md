@@ -3,7 +3,7 @@ layout: default
 title: └ 6) Cropping2D layer
 nav_order: 14+06
 permalink: /api/layers/reshaping_layers/cropping2d/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

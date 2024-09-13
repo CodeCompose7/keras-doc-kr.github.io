@@ -3,7 +3,7 @@ layout: default
 title: └ 1) GroupQueryAttention
 nav_order: 13+01
 permalink: /api/layers/attention_layers/group_query_attention/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

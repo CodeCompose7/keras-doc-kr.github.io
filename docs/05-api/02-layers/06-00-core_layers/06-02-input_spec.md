@@ -3,7 +3,7 @@ layout: default
 title: └ 2) InputSpec object
 nav_order: 06+02
 permalink: /api/layers/core_layers/input_spec/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 
