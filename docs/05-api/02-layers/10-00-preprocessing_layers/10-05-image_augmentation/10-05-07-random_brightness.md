@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ g> RandomBrightness layer
+title: RandomBrightness layer
 nav_order: 10+05+07
 permalink: /api/layers/preprocessing_layers/image_augmentation/random_brightness/
-parent: Keras 레이어 API
-grand_parent: Keras 3 API 문서
+parent: 이미지 보강 레이어
+grand_parent: 전처리 레이어
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/preprocessing_layers/image_augmentation/random_brightness/](https://keras.io/api/layers/preprocessing_layers/image_augmentation/random_brightness/){:target="_blank"}

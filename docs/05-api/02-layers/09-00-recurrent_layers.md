@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Recurrent layers
+title: Recurrent 레이어
 nav_order: 09+00
 permalink: /api/layers/recurrent_layers/
 parent: Keras 레이어 API

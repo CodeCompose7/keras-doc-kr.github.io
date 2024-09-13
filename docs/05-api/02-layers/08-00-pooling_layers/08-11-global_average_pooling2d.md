@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 11) GlobalAveragePooling2D layer
+title: GlobalAveragePooling2D layer
 nav_order: 08+10
 permalink: /api/layers/pooling_layers/global_average_pooling2d/
-parent: Keras 레이어 API
-grand_parent: Keras 3 API 문서
+parent: 풀링 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/pooling_layers/global_average_pooling2d/](https://keras.io/api/layers/pooling_layers/global_average_pooling2d/){:target="_blank"}

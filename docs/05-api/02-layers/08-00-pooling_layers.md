@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pooling 레이어
+title: 풀링 레이어
 nav_order: 08+00
 permalink: /api/layers/pooling_layers/
 parent: Keras 레이어 API

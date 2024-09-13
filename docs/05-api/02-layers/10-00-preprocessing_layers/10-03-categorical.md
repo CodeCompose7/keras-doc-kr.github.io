@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 3) Categorical features preprocessing layers
+title: 카테고리 특성 전처리 레이어
 nav_order: 10+03
 permalink: /api/layers/preprocessing_layers/categorical/
-parent: Keras 레이어 API
-grand_parent: Keras 3 API 문서
+parent: 전처리 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/preprocessing_layers/categorical/](https://keras.io/api/layers/preprocessing_layers/categorical/){:target="_blank"}

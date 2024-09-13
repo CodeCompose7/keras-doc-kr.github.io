@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Preprocessing layers
+title: 전처리 레이어
 nav_order: 10+00
 permalink: /api/layers/preprocessing_layers/
 parent: Keras 레이어 API
