@@ -11,6 +11,10 @@ enable_copy_code_button: true
 
 aux_links_new_tab: true
 
+incremental: true
+future: false
+unpublished: false
+
 defaults:
   - scope:
       path: "img"
