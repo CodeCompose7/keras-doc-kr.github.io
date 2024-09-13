@@ -34,8 +34,10 @@ grand_parent: 코드 예제
 
 ----
 
-## 소개
+소개
 ------------
+{: #introduction}
+<!-- Introduction -->
 
 학술 논문 [이미지는 16x16 단어만큼의 가치가 있음: 스케일에서 이미지 인식을 위한 트랜스포머(An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale)](https://arxiv.org/abs/2010.11929)에서, 저자는 ViT(Vision Transformers)가 데이터를 많이 사용한다고 언급했습니다. 따라서, JFT300M과 같은 대규모 데이터 세트에서 ViT를 사전 트레이닝하고, 중간 크기 데이터 세트(예: ImageNet)에서 미세 조정하는 것이 최첨단 컨볼루셔널 신경망 모델을 이길 수 있는 유일한 방법입니다.
 
@@ -60,6 +62,8 @@ pip install -qq -U tensorflow-addons
 
 셋업
 -----
+{: #setup}
+<!-- Setup -->
 
 ```python
 import math
@@ -79,6 +83,8 @@ keras.utils.set_random_seed(SEED)
 
 데이터 준비
 ----------------
+{: #prepare-the-data}
+<!-- Prepare the data -->
 
 ```python
 NUM_CLASSES = 100
@@ -102,6 +108,8 @@ x_test shape: (10000, 32, 32, 3) - y_test shape: (10000, 1)
 
 하이퍼파라미터 설정
 -----------------------------
+{: #configure-the-hyperparameters}
+<!-- Configure the hyperparameters -->
 
 하이퍼파라미터는 논문과 다릅니다. 하이퍼파라미터를 직접 조정해 보세요.
 
@@ -138,6 +146,8 @@ MLP_HEAD_UNITS = [2048, 1024]
 
 데이터 보강 사용
 ---------------------
+{: #use-data-augmentation}
+<!-- Use data augmentation -->
 
 논문의 snippet:
 
@@ -164,6 +174,8 @@ data_augmentation.layers[0].adapt(x_train)
 
 이동된 패치 토큰화(Shifted Patch Tokenization) 구현
 ------------------------------------
+{: #implement-shifted-patch-tokenization}
+<!-- Implement Shifted Patch Tokenization -->
 
 ViT 파이프라인에서, 입력 이미지는 패치로 분할된 다음 선형적으로 토큰에 프로젝션됩니다. ViT의 낮은 수용 필드에 대처하기 위해 STP(Shifted Patch Tokenization)가 도입되었습니다. Shifted Patch Tokenization의 단계는 다음과 같습니다.
 
@@ -271,6 +283,8 @@ class ShiftedPatchTokenization(layers.Layer):
 ```
 
 ### 패치 시각화
+{: #visualize-the-patches}
+<!-- ### Visualize the patches -->
 
 ```python
 # 트레이닝 데이터 세트에서 임의의 이미지를 가져오고, 이미지 크기를 조정합니다.
@@ -353,6 +367,8 @@ RIGHT-DOWN
 
 패치 인코딩 레이어 구현
 ----------------------------------
+{: #implement-the-patch-encoding-layer}
+<!-- Implement the patch encoding layer -->
 
 이 레이어는 프로젝션된 패치를 받아들이고, 위치 정보를 추가합니다.
 
@@ -378,6 +394,8 @@ class PatchEncoder(layers.Layer):
 
 지역성 셀프 어텐션(Locality Self Attention) 구현 
 ---------------------------------
+{: #implement-locality-self-attention}
+<!-- Implement Locality Self Attention -->
 
 정규 어텐션 수식은 다음과 같습니다.
 
@@ -421,6 +439,8 @@ class MultiHeadAttentionLSA(tf.keras.layers.MultiHeadAttention):
 
 MLP 구현
 -----------------
+{: #implement-the-mlp}
+<!-- Implement the MLP -->
 
 ```python
 def mlp(x, hidden_units, dropout_rate):
@@ -439,6 +459,8 @@ diag_attn_mask = tf.cast([diag_attn_mask], dtype=tf.int8)
 
 ViT 빌드
 -------------
+{: #build-the-vit}
+<!-- Build the ViT -->
 
 ```python
 def create_vit_classifier(vanilla=False):
@@ -489,6 +511,8 @@ def create_vit_classifier(vanilla=False):
 
 모드 컴파일, 트레이닝, 평가
 -------------------------------------
+{: #compile-train-and-evaluate-the-mode}
+<!-- Compile, train, and evaluate the mode -->
 
 ```python
 # 일부 코드는 다음에서 가져옵니다.:
@@ -791,7 +815,9 @@ Test top 5 accuracy: 82.27%
 ```
 
 최종 노트
-===========
+-----------
+{: #final-notes}
+<!-- Final Notes -->
 
 Shifted Patch Tokenization과 Locality Self Attention의 도움으로, 우리는 CIFAR100에 대해 ~**3-4%**의 top-1 정확도 향상을 얻을 수 있었습니다.
 

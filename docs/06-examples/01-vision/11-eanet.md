@@ -35,6 +35,8 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 이 예는 이미지 분류를 위한 [EANet](https://arxiv.org/abs/2105.02358) 모델을 구현하고, CIFAR-100 데이터 세트에 대해 이를 시연합니다. EANet은 **_외부 어텐션(External attention)_**이라는 새로운 어텐션 메커니즘을 도입했는데, 이는 두 개의 계단식 선형 레이어와 두 개의 정규화 레이어를 사용하여 간단하게 구현할 수 있는, 두 개의 작은 학습 가능한 공유 메모리를 기반으로 합니다. 기존 아키텍처에서 사용되는 셀프 어텐션을 편리하게 대체합니다. 외부 어텐션은 모든 샘플 간의 상관관계만 암시적으로 고려하기 때문에, 선형적인 복잡성을 가집니다.
 
@@ -43,6 +45,8 @@ grand_parent: 코드 예제
 
 셋업
 -----
+{: #setup}
+<!-- Setup -->
 
 ```python
 import keras
@@ -56,6 +60,8 @@ import matplotlib.pyplot as plt
 
 데이터 준비
 ----------------
+{: #prepare-the-data}
+<!-- Prepare the data -->
 
 ```python
 num_classes = 100
@@ -79,6 +85,8 @@ x_test shape: (10000, 32, 32, 3) - y_test shape: (10000, 100)
 
 하이퍼파라미터 구성
 -----------------------------
+{: #configure-the-hyperparameters}
+<!-- Configure the hyperparameters -->
 
 ```python
 weight_decay = 0.0001
@@ -110,6 +118,8 @@ Patches per image: 256
 
 데이터 보강 사용
 ---------------------
+{: #use-data-augmentation}
+<!-- Use data augmentation -->
 
 ```python
 data_augmentation = keras.Sequential(
@@ -130,6 +140,8 @@ data_augmentation.layers[0].adapt(x_train)
 
 패치 추출 및 인코딩 레이어 구현하기
 -------------------------------------------------
+{: #implement-the-patch-extraction-and-encoding-layer}
+<!-- Implement the patch extraction and encoding layer -->
 
 ```python
 class PatchExtract(layers.Layer):
@@ -160,6 +172,8 @@ class PatchEmbedding(layers.Layer):
 
 외부 어텐션 블록 구현하기
 --------------------------------------
+{: #implement-the-external-attention-block}
+<!-- Implement the external attention block -->
 
 ```python
 def external_attention(
@@ -204,6 +218,8 @@ def external_attention(
 
 MLP 블록 구현
 -----------------------
+{: #implement-the-mlp-block}
+<!-- Implement the MLP block -->
 
 ```python
 def mlp(x, embedding_dim, mlp_dim, drop_rate=0.2):
@@ -218,6 +234,8 @@ def mlp(x, embedding_dim, mlp_dim, drop_rate=0.2):
 
 트랜스포머 블록 구현
 -------------------------------
+{: #implement-the-transformer-block}
+<!-- Implement the Transformer block -->
 
 ```python
 def transformer_encoder(
@@ -259,6 +277,8 @@ def transformer_encoder(
 
 EANet 모델 구현
 -------------------------
+{: #implement-the-eanet-model}
+<!-- Implement the EANet model -->
 
 EANet 모델은 외부 어텐션을 활용합니다. 전통적인 셀프 어텐션의 계산 복잡도는 `O(d * N ** 2)`이며, 여기서 `d`는 임베딩 크기, `N`은 패치 수입니다. 저자는 대부분의 픽셀이 소수의 다른 픽셀과만 밀접하게 관련되어 있으며, `N`-to-`N` 어텐션 행렬이 중복될 수 있음을 발견했습니다. 그래서, 그들은 외부 어텐션의 계산 복잡도가 `O(d * S * N)`인 외부 어텐션 모듈을 대안으로 제안합니다. `d`와 `S`는 하이퍼파라미터이므로, 제안된 알고리즘은 픽셀 수에 따라 선형적입니다. 사실, 이것은 이미지의 패치에 포함된 많은 정보가 중복되고 중요하지 않기 때문에, 드롭 패치 작업과 동일합니다.
 
@@ -294,6 +314,8 @@ def get_model(attention_type="external_attention"):
 
 CIFAR-100에 대해 트레이닝
 ------------------
+{: #train-on-cifar-100}
+<!-- Train on CIFAR-100 -->
 
 ```python
 model = get_model(attention_type="external_attention")
@@ -422,6 +444,8 @@ Epoch 50/50
 ```
 
 ### 모델의 트레이닝 진행 상황을 시각화해 보겠습니다.
+{: #lets-visualize-the-training-progress-of-the-model}
+<!-- ### Let's visualize the training progress of the model. -->
 
 ```python
 plt.plot(history.history["loss"], label="train_loss")
@@ -437,6 +461,8 @@ plt.show()
 ![png]({{ site.baseurl }}/img/examples/vision/eanet/eanet_24_0.png)
 
 ### CIFAR-100에 대해 테스트의 최종 결과를 표시해 보겠습니다.
+{: #lets-display-the-final-results-of-the-test-on-cifar-100}
+<!-- ### Let's display the final results of the test on CIFAR-100. -->
 
 ```python
 loss, accuracy, top_5_accuracy = model.evaluate(x_test, y_test)

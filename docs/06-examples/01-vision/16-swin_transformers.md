@@ -44,6 +44,8 @@ Swin Transformer (**S**hifted **Win**dow Transformer)는 컴퓨터 비전을 위
 
 셋업
 -----
+{: #setup}
+<!-- Setup -->
 
 ```python
 import matplotlib.pyplot as plt
@@ -58,6 +60,8 @@ from keras import ops
 
 하이퍼파라미터 구성
 -----------------------------
+{: #configure-the-hyperparameters}
+<!-- Configure the hyperparameters -->
 
 선택할 주요 매개변수는 입력 패치의 크기인 `patch_size`입니다. 각 픽셀을 개별 입력으로 사용하려면, `patch_size`를 `(1, 1)`로 설정하면 됩니다. 아래에서는, ImageNet-1K 트레이닝을 위한 원본 논문 설정에서 영감을 얻어, 이 예제에서는 원본 설정을 대부분 유지합니다.
 
@@ -91,6 +95,8 @@ label_smoothing = 0.1
 
 데이터 준비
 ----------------
+{: #prepare-the-data}
+<!-- Prepare the data -->
 
 CIFAR-100 데이터셋을 `keras.datasets`를 통해 로드하고, 이미지를 정규화하고, 정수 레이블을 원-핫 인코딩된 벡터로 변환합니다.
 
@@ -127,6 +133,8 @@ x_test shape: (10000, 32, 32, 3) - y_test shape: (10000, 100)
 
 헬퍼 함수
 ----------------
+{: #helper-functions}
+<!-- Helper functions -->
 
 이미지에서 패치 시퀀스를 얻고, 패치를 병합하고, 드롭아웃을 적용하는 두 개의 헬퍼 함수를 만듭니다.
 
@@ -174,6 +182,8 @@ def window_reverse(windows, window_size, height, width, channels):
 
 윈도우 기반 멀티 헤드 셀프 어텐션
 --------------------------------------
+{: #window-based-multi-head-self-attention}
+<!-- Window based multi-head self-attention -->
 
 일반적으로 트랜스포머는 글로벌 셀프 어텐션을 수행하여, 토큰과 다른 모든 토큰 간의 관계를 계산합니다. 글로벌 계산은 토큰 수에 대해 이차적인 복잡도로 이어집니다. 여기서는, [원본 논문](https://arxiv.org/abs/2103.14030)이 제안하는대로, 겹치지 않는 방식으로, 로컬 윈도우 내에서 셀프 어텐션을 계산합니다. 글로벌 셀프 어텐션은 패치 수에 대해 이차적인 계산 복잡도를 가지지만, 윈도우 기반 셀프 어텐션은 선형적인 복잡도를 가지며 쉽게 확장 가능합니다.
 
@@ -274,6 +284,8 @@ class WindowAttention(layers.Layer):
 
 완전한 Swin Transformer 모델
 -----------------------------------
+{: #the-complete-swin-transformer-model}
+<!-- The complete Swin Transformer model -->
 
 마지막으로, 표준 멀티 헤드 어텐션(MHA, multi-head attention)를 이동된 윈도우 어텐션으로 대체하여 완전한 Swin Transformer를 구성합니다. 원본 논문에서 제안한 대로, 이동된 윈도우 기반 MHA 레이어 다음에, GELU 비선형성을 가진 2-레이어 MLP를 사용하고, 각 MSA 레이어와 각 MLP 전에 `LayerNormalization`을 적용하며, 이 레이어들 각각 후에 residual 연결을 적용하는 모델을 만듭니다.
 
@@ -416,8 +428,12 @@ class SwinTransformer(layers.Layer):
 
 모델 트레이닝 및 평가
 -----------------------------
+{: #model-training-and-evaluation}
+<!-- Model training and evaluation -->
 
 ### 추출 및 패치 임베딩
+{: #extract-and-embed-patches}
+<!-- ### Extract and embed patches -->
 
 우선, 이미지에서 패치를 추출하고, 임베딩하며 병합하는 데 도움이 되는 3개의 레이어를 만듭니다. 이후에 우리가 구축한 Swin Transformer 클래스를 사용할 것입니다.
 
@@ -470,6 +486,8 @@ class PatchMerging(keras.layers.Layer):
 ```
 
 ### tf.data.Dataset 준비
+{: #prepare-the-tfdatadataset}
+<!-- ### Prepare the tf.data.Dataset -->
 
 모든 단계를 트레이닝 가능한 가중치가 없는 tf.data로 수행합니다. 트레이닝, 검증, 테스트 세트를 준비합니다.
 
@@ -504,6 +522,8 @@ dataset_test = (
 ```
 
 ### 모델 빌드
+{: #build-the-model}
+<!-- ### Build the model -->
 
 이제 Swin Transformer 모델로 합쳐봅시다.
 
@@ -540,6 +560,8 @@ An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not i
 ```
 
 ### CIFAR-100에 대해 트레이닝
+{: #train-on-cifar-100}
+<!-- ### Train on CIFAR-100 -->
 
 우리는 CIFAR-100에 대해 모델을 트레이닝합니다. 여기에서는, 트레이닝 시간을 짧게 유지하기 위해 40 에포크 동안만 모델을 트레이닝합니다. 실제로, 수렴에 도달하려면 150 에포크 정도로 트레이닝해야 합니다.
 

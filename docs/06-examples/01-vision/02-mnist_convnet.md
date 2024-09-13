@@ -28,6 +28,7 @@ grand_parent: 코드 예제
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/mnist_convnet.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet.py){: .btn .btn-blue }
+[Colab에서 보기2](https://colab.research.google.com/drive/1JLgtoTLlAP7Xo48JT-OfdZVgLEjBFwmJ){: .btn .btn-purple }
 
 ⓘ 이 예제는 Keras 3을 사용합니다.
 {: .label .label-green .px-10}
@@ -35,6 +36,8 @@ grand_parent: 코드 예제
 ----
 
 ## 셋업
+{: #setup}
+<!-- ## Setup -->
 
 ```python
 import numpy as np
@@ -46,6 +49,8 @@ from keras import layers
 
 데이터 준비
 ----------------
+{: #prepare-the-data}
+<!-- Prepare the data -->
 
 ```python
 # 모델 / 데이터 파라미터
@@ -80,6 +85,8 @@ x_train shape: (60000, 28, 28, 1)
 
 모델 빌드
 ---------------
+{: #build-the-model}
+<!-- Build the model -->
 
 ```python
 model = keras.Sequential(
@@ -126,6 +133,8 @@ Model: "sequential"
 
 모델 트레이닝
 ---------------
+{: #train-the-model}
+<!-- Train the model -->
 
 ```python
 batch_size = 128
@@ -175,6 +184,8 @@ Epoch 15/15
 
 트레이닝된 모델 평가하기
 --------------------------
+{: #evaluate-the-trained-model}
+<!-- Evaluate the trained model -->
 
 ```python
 score = model.evaluate(x_test, y_test, verbose=0)

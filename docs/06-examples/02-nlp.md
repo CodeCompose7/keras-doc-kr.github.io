@@ -22,6 +22,8 @@ has_children: true
 ---
 
 ### 텍스트 분류
+{: #text-classification}
+<!-- ### Text classification -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -106,6 +108,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기계 번역
+{: #machine-translation}
+<!-- ### Machine translation -->
 
 V3
 {: .label .label-green .mx-1}
@@ -134,6 +138,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 연관성 예측 (Entailment prediction)
+{: #entailment-prediction}
+<!-- ### Entailment prediction -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -144,6 +150,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 명명된 엔티티 인식
+{: #named-entity-recognition}
+<!-- ### Named entity recognition -->
 
 V3
 {: .label .label-green .mx-1}
@@ -154,6 +162,7 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### Sequence-to-sequence
+{: #sequence-to-sequence}
 
 V2
 {: .label .label-yellow .mx-1}
@@ -172,6 +181,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 텍스트 유사도 검색
+{: #text-similarity-search}
+<!-- ### Text similarity search -->
 
 V3
 {: .label .label-green .mx-1}
@@ -198,6 +209,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 언어 모델링
+{: #language-modeling}
+<!-- ### Language modeling -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -216,6 +229,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 효율적인 매개변수 미세 조정
+{: #parameter-efficient-fine-tuning}
+<!-- ### Parameter efficient fine-tuning -->
 
 V3
 {: .label .label-green .mx-1}
@@ -226,6 +241,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}

@@ -35,6 +35,8 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 이 예는 이미지 분류를 위해 Andrew Jaegle et al.이 개발한 [Perceiver: 반복적 어텐션이 있는 일반적 Perception(Perceiver: General Perception with Iterative Attention)](https://arxiv.org/abs/2103.03206) 모델을 구현하고, CIFAR-100 데이터 세트에 대해 이를 시연합니다.
 
@@ -51,6 +53,8 @@ Perceiver 모델은 비대칭 어텐션 메커니즘을 활용하여 입력을 �
 
 셋업
 -----
+{: #setup}
+<!-- Setup -->
 
 ```python
 import keras
@@ -61,6 +65,8 @@ from keras import layers, activations, ops
 
 데이터 준비
 ----------------
+{: #prepare-the-data}
+<!-- Prepare the data -->
 
 ```python
 num_classes = 100
@@ -81,6 +87,8 @@ x_test shape: (10000, 32, 32, 3) - y_test shape: (10000, 1)
 
 하이퍼파라미터 구성
 -----------------------------
+{: #configure-the-hyperparameters}
+<!-- Configure the hyperparameters -->
 
 ```python
 learning_rate = 0.001
@@ -128,6 +136,8 @@ Data array shape: 1024 X 256
 
 데이터 보강 사용
 ---------------------
+{: #use-data-augmentation}
+<!-- Use data augmentation -->
 
 ```python
 data_augmentation = keras.Sequential(
@@ -147,6 +157,8 @@ data_augmentation.layers[0].adapt(x_train)
 
 피드포워드 네트워크(FFN, Feedforward network) 구현
 -----------------------------------
+{: #implement-feedforward-network-ffn}
+<!-- Implement Feedforward network (FFN) -->
 
 ```python
 def create_ffn(hidden_units, dropout_rate):
@@ -165,6 +177,8 @@ def create_ffn(hidden_units, dropout_rate):
 
 레이어로 패치 생성 구현
 -----------------------------------
+{: #implement-patch-creation-as-a-layer}
+<!-- Implement patch creation as a layer -->
 
 ```python
 class Patches(layers.Layer):
@@ -190,6 +204,8 @@ class Patches(layers.Layer):
 
 패치 인코딩 레이어 구현
 ----------------------------------
+{: #implement-the-patch-encoding-layer}
+<!-- Implement the patch encoding layer -->
 
 `PatchEncoder` 레이어는 패치를 `latent_dim` 크기의 벡터로 프로젝션하여 선형적으로 변환합니다. 또한, 프로젝션된 벡터에 학습 가능한 위치 임베딩을 추가합니다.
 
@@ -215,10 +231,14 @@ class PatchEncoder(layers.Layer):
 
 Perceiver 모델 빌드
 -------------------------
+{: #build-the-perceiver-model}
+<!-- Build the Perceiver model -->
 
 Perceiver는 크로스 어텐션 모듈과 셀프 어텐션이 있는 표준 트랜스포머의 두 가지 모듈로 구성됩니다.
 
 ### 크로스 어텐션 모듈
+{: #cross-attention-module}
+<!-- ### Cross-attention module -->
 
 크로스 어텐션은 `(latent_dim, projection_dim)` 잠재 배열과 `(data_dim, projection_dim)` 데이터 배열을 입력으로 받아, `(latent_dim, projection_dim)` 잠재 배열을 출력으로 생성합니다. 크로스 어텐션을 적용하기 위해, `query` 벡터는 잠재 배열에서 생성되고, `key` 및 `value` 벡터는 인코딩된 이미지에서 생성됩니다.
 
@@ -269,6 +289,8 @@ def create_cross_attention_module(
 ```
 
 ### 트랜스포머 모듈
+{: #transformer-module}
+<!-- ### Transformer module -->
 
 트랜스포머는 크로스 어텐션 모듈의 출력 잠재 벡터를 입력으로 예상하고, `latent_dim` 요소에 멀티 헤드 셀프 어텐션을 적용한 다음, 피드포워드 네트워크를 통해 또다른 `(latent_dim, projection_dim)` 잠재 배열을 생성합니다.
 
@@ -308,11 +330,9 @@ def create_transformer_module(
     return model
 ```
 
-### Perceiver model
-
-The Perceiver model repeats the cross-attention and Transformer modules `num_iterations` times—with shared weights and skip connections—to allow the latent array to iteratively extract information from the input image as it is needed.
-
 ### Perceiver 모델
+{: #perceiver-model}
+<!-- ### Perceiver model -->
 
 Perceiver 모델은 (공유 가중치와 스킵 연결을 통해) 크로스 어텐션과 트랜스포머 모듈 `num_iterations`번 반복하여, 잠재 배열이 필요에 따라 입력 이미지에서 정보를 반복적으로 추출할 수 있도록 합니다.
 
@@ -416,6 +436,8 @@ class Perceiver(keras.Model):
 
 모드 컴파일, 트레이닝 및 평가하기
 -------------------------------------
+{: #compile-train-and-evaluate-the-mode}
+<!-- Compile, train, and evaluate the mode -->
 
 ```python
 def run_experiment(model):

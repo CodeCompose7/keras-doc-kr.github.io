@@ -28,6 +28,7 @@ grand_parent: 코드 예제
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/image_classification_with_vision_transformer.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/image_classification_with_vision_transformer.py){: .btn .btn-blue }
+[Colab에서 보기2](https://colab.research.google.com/drive/1_62HrMy9lsZA1QDq6wzzqNGrsCtlnjTS){: .btn .btn-purple }
 
 ⓘ 이 예제는 Keras 3을 사용합니다.
 {: .label .label-green .px-10}
@@ -35,6 +36,8 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 이 예는 이미지 분류를 위해 Alexey Dosovitskiy 등이 개발한 [Vision Transformer (ViT)](https://arxiv.org/abs/2010.11929) 모델을 구현하고, CIFAR-100 데이터 세트에 대해 이를 시연합니다. ViT 모델은, 컨볼루션 레이어를 사용하지 않고, 이미지 패치 시퀀스에 셀프 어텐션으로 트랜스포머 아키텍처를 적용합니다.
 
@@ -42,6 +45,8 @@ grand_parent: 코드 예제
 
 셋업
 -----
+{: #setup}
+<!-- Setup -->
 
 ```python
 import os
@@ -60,6 +65,8 @@ import matplotlib.pyplot as plt
 
 데이터 준비
 ----------------
+{: #prepare-the-data}
+<!-- Prepare the data -->
 
 ```python
 num_classes = 100
@@ -78,8 +85,10 @@ x_test shape: (10000, 32, 32, 3) - y_test shape: (10000, 1)
 
 * * *
 
-Configure the hyperparameters
+하이퍼파라미터 구성
 -----------------------------
+{: #configure-the-hyperparameters}
+<!-- Configure the hyperparameters -->
 
 ```python
 learning_rate = 0.001
@@ -106,6 +115,8 @@ mlp_head_units = [
 
 데이터 보강 사용
 ---------------------
+{: #use-data-augmentation}
+<!-- Use data augmentation -->
 
 ```python
 data_augmentation = keras.Sequential(
@@ -126,6 +137,8 @@ data_augmentation.layers[0].adapt(x_train)
 
 다층 퍼셉트론(MLP) 구현
 -------------------------------------
+{: #implement-multilayer-perceptron-mlp}
+<!-- Implement multilayer perceptron (MLP) -->
 
 ```python
 def mlp(x, hidden_units, dropout_rate):
@@ -139,6 +152,8 @@ def mlp(x, hidden_units, dropout_rate):
 
 레이어로서 패치 생성 구현
 -----------------------------------
+{: #implement-patch-creation-as-a-layer}
+<!-- Implement patch creation as a layer -->
 
 ```python
 class Patches(layers.Layer):
@@ -212,6 +227,8 @@ Elements per patch: 108
 
 패치 인코딩 레이어 구현
 ----------------------------------
+{: #implement-the-patch-encoding-layer}
+<!-- Implement the patch encoding layer -->
 
 `PatchEncoder` 레이어는 패치를 `projection_dim` 크기의 벡터로 투영하여 선형적으로 변환합니다. 또한, 투영된 벡터에 학습 가능한 위치 임베딩을 추가합니다.
 
@@ -243,6 +260,8 @@ class PatchEncoder(layers.Layer):
 
 ViT 모델 빌드
 -------------------
+{: #build-the-vit-model}
+<!-- Build the ViT model -->
 
 ViT 모델은 패치 시퀀스에 적용되는 셀프 어텐션 메커니즘으로서 `layers.MultiHeadAttention` 레이어를 사용하는, 여러 트랜스포머 블록으로 구성됩니다. 트랜스포머 블록은 `[batch_size, num_patches, projection_dim]` 텐서를 생성하고, 이 텐서는 소프트맥스가 있는 분류기 헤드를 통해 처리되어 최종 클래스 확률 출력을 생성합니다.
 
@@ -292,6 +311,8 @@ def create_vit_classifier():
 
 모드 컴파일, 트레이닝 및 평가하기
 -------------------------------------
+{: #compile-train-and-evaluate-the-mode}
+<!-- Compile, train, and evaluate the mode -->
 
 ```python
 def run_experiment(model):
