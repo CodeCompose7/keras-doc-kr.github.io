@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ b> The RetinaNet model
+title: The RetinaNet model
 nav_order: 02+02+02
 permalink: /api/keras_cv/models/tasks/retinanet/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Tasks
+grand_parent: KerasCV 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/models/tasks/retinanet/](https://keras.io/api/keras_cv/models/tasks/retinanet/){:target="_blank"}

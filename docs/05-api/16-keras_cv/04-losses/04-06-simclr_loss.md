@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 6) SimCLR Loss
+title: SimCLR Loss
 nav_order: 04+06
 permalink: /api/keras_cv/losses/simclr_loss/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Losses
+grand_parent: KerasCV
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/losses/simclr_loss/](https://keras.io/api/keras_cv/losses/simclr_loss/){:target="_blank"}

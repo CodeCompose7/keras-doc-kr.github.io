@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ e> EfficientNetV2 models
+title: EfficientNetV2 models
 nav_order: 02+01+05
 permalink: /api/keras_cv/models/backbones/efficientnetv2/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Backbones
+grand_parent: KerasCV 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/models/backbones/efficientnetv2/](https://keras.io/api/keras_cv/models/backbones/efficientnetv2/){:target="_blank"}

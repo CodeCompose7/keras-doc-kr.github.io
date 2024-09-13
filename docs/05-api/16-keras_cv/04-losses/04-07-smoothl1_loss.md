@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 7) SmoothL1Loss Loss
+title: SmoothL1Loss Loss
 nav_order: 04+07
 permalink: /api/keras_cv/losses/smoothl1_loss/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Losses
+grand_parent: KerasCV
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/losses/smoothl1_loss/](https://keras.io/api/keras_cv/losses/smoothl1_loss/){:target="_blank"}

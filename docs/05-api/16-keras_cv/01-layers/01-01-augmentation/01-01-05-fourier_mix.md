@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ e> FourierMix layer
+title: FourierMix layer
 nav_order: 01+01+05
 permalink: /api/keras_cv/layers/augmentation/fourier_mix/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Augmentation 레이어
+grand_parent: KerasCV 레이어
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/layers/augmentation/fourier_mix/](https://keras.io/api/keras_cv/layers/augmentation/fourier_mix/){:target="_blank"}

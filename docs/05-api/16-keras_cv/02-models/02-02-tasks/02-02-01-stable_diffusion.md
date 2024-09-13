@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> StableDiffusion image-generation model
+title: StableDiffusion image-generation model
 nav_order: 02+02+01
 permalink: /api/keras_cv/models/tasks/stable_diffusion/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Tasks
+grand_parent: KerasCV 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/models/tasks/stable_diffusion/](https://keras.io/api/keras_cv/models/tasks/stable_diffusion/){:target="_blank"}

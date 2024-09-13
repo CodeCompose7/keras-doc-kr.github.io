@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> DropBlock2D layer
+title: DropBlock2D layer
 nav_order: 01+03+01
 permalink: /api/keras_cv/layers/regularization/dropblock2d/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: KerasCV Regularization 레이어
+grand_parent: KerasCV 레이어
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/layers/regularization/dropblock2d/](https://keras.io/api/keras_cv/layers/regularization/dropblock2d/){:target="_blank"}

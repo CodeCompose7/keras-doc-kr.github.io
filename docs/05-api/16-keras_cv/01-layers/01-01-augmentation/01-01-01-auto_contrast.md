@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> AutoContrast layer
+title: AutoContrast layer
 nav_order: 01+01+01
 permalink: /api/keras_cv/layers/augmentation/auto_contrast/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Augmentation 레이어
+grand_parent: KerasCV 레이어
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/layers/augmentation/auto_contrast/](https://keras.io/api/keras_cv/layers/augmentation/auto_contrast/){:target="_blank"}
