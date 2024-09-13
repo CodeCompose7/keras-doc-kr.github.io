@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 4) EinsumDense layer
+title: EinsumDense layer
 nav_order: 06+04
 permalink: /api/layers/core_layers/einsum_dense/
-parent: Keras 레이어 API
-grand_parent: Keras 3 API 문서
+parent: 코어 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/core_layers/einsum_dense/](https://keras.io/api/layers/core_layers/einsum_dense/){:target="_blank"}

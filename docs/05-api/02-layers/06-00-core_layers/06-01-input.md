@@ -1,6 +1,6 @@
 ---
 layout: default
-title: └ 1) Input object
+title: Input object
 nav_order: 06+01
 permalink: /api/layers/core_layers/input/
 parent: 코어 레이어
