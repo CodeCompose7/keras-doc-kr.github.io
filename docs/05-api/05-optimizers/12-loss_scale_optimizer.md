@@ -3,7 +3,7 @@ layout: default
 title: Loss Scale Optimizer
 nav_order: 12+00
 permalink: /api/optimizers/loss_scale_optimizer/
-parent: Optimizers
+parent: 옵티마이저
 grand_parent: Keras 3 API 문서
 ---
 

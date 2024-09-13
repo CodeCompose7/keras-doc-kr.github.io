@@ -3,7 +3,7 @@ layout: default
 title: SGD
 nav_order: 01+00
 permalink: /api/optimizers/sgd/
-parent: Optimizers
+parent: 옵티마이저
 grand_parent: Keras 3 API 문서
 ---
 

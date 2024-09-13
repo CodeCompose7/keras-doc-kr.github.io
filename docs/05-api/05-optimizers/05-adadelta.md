@@ -3,7 +3,7 @@ layout: default
 title: Adadelta
 nav_order: 05+00
 permalink: /api/optimizers/adadelta/
-parent: Optimizers
+parent: 옵티마이저
 grand_parent: Keras 3 API 문서
 ---
 

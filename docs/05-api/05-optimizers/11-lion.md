@@ -3,7 +3,7 @@ layout: default
 title: Lion
 nav_order: 11+00
 permalink: /api/optimizers/lion/
-parent: Optimizers
+parent: 옵티마이저
 grand_parent: Keras 3 API 문서
 ---
 
