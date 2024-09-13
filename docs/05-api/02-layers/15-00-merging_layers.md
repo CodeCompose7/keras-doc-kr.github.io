@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Merging layers
+title: Merging 레이어
 nav_order: 15+00
 permalink: /api/layers/merging_layers/
 parent: Keras 레이어 API

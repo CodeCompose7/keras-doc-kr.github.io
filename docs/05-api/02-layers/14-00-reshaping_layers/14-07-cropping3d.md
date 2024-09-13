@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 7) Cropping3D layer
+title: Cropping3D layer
 nav_order: 14+07
 permalink: /api/layers/reshaping_layers/cropping3d/
-parent: Keras 레이어 API
-grand_parent: Keras 3 API 문서
+parent: Reshaping 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/reshaping_layers/cropping3d/](https://keras.io/api/layers/reshaping_layers/cropping3d/){:target="_blank"}

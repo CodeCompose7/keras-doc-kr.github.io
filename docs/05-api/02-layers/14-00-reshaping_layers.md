@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Reshaping layers
+title: Reshaping 레이어
 nav_order: 14+00
 permalink: /api/layers/reshaping_layers/
 parent: Keras 레이어 API

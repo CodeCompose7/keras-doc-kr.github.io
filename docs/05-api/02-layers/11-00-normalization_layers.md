@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Normalization layers
+title: Normalization 레이어
 nav_order: 11+00
 permalink: /api/layers/normalization_layers/
 parent: Keras 레이어 API

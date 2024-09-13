@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Attention layers
+title: Attention 레이어
 nav_order: 13+00
 permalink: /api/layers/attention_layers/
 parent: Keras 레이어 API

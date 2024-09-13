@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 3) Attention layer
+title: Attention layer
 nav_order: 13+03
 permalink: /api/layers/attention_layers/attention/
-parent: Keras 레이어 API
-grand_parent: Keras 3 API 문서
+parent: Attention 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/attention_layers/attention/](https://keras.io/api/layers/attention_layers/attention/){:target="_blank"}

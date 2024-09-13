@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 1) BatchNormalization 레이어
+title: BatchNormalization 레이어
 nav_order: 11+01
 permalink: /api/layers/normalization_layers/batch_normalization/
-parent: Keras 레이어 API
-grand_parent: Keras 3 API 문서
+parent: Normalization 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/normalization_layers/batch_normalization/](https://keras.io/api/layers/normalization_layers/batch_normalization/){:target="_blank"}
