@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Convolution layers
+title: 컨볼루션 레이어
 nav_order: 07+00
 permalink: /api/layers/convolution_layers/
 parent: Keras 레이어 API
