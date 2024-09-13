@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> GemmaTokenizer
+title: GemmaTokenizer
 nav_order: 01+06+01
 permalink: /api/keras_nlp/models/gemma/gemma_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Gemma
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/gemma/gemma_tokenizer/](https://keras.io/api/keras_nlp/models/gemma/gemma_tokenizer/){:target="_blank"}

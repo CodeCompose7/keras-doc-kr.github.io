@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ d> BertClassifier model
+title: BertClassifier model
 nav_order: 01+03+04
 permalink: /api/keras_nlp/models/bert/bert_classifier/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Bert
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/bert/bert_classifier/](https://keras.io/api/keras_nlp/models/bert/bert_classifier/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ e> MistralCausalLMPreprocessor layer
+title: MistralCausalLMPreprocessor layer
 nav_order: 01+09+05
 permalink: /api/keras_nlp/models/mistral/mistral_causal_lm_preprocessor/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Mistral
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/mistral/mistral_causal_lm_preprocessor/](https://keras.io/api/keras_nlp/models/mistral/mistral_causal_lm_preprocessor/){:target="_blank"}

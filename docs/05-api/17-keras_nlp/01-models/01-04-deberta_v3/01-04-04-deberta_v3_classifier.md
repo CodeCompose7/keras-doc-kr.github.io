@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ d> DebertaV3Classifier model
+title: DebertaV3Classifier model
 nav_order: 01+04+04
 permalink: /api/keras_nlp/models/deberta_v3/deberta_v3_classifier/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: DebertaV3
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/deberta_v3/deberta_v3_classifier/](https://keras.io/api/keras_nlp/models/deberta_v3/deberta_v3_classifier/){:target="_blank"}

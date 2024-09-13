@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 9) Mistral
+title: Mistral
 nav_order: 01+09
 permalink: /api/keras_nlp/models/mistral/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: 모델
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/mistral/](https://keras.io/api/keras_nlp/models/mistral/){:target="_blank"}

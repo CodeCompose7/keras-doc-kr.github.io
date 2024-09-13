@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> RobertaTokenizer
+title: RobertaTokenizer
 nav_order: 01+11+01
 permalink: /api/keras_nlp/models/roberta/roberta_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: RoBERTa
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/roberta/roberta_tokenizer/](https://keras.io/api/keras_nlp/models/roberta/roberta_tokenizer/){:target="_blank"}

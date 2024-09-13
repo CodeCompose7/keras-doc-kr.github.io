@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 1) Albert
+title: Albert
 nav_order: 01+01
 permalink: /api/keras_nlp/models/albert/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: 모델
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/albert/](https://keras.io/api/keras_nlp/models/albert/){:target="_blank"}

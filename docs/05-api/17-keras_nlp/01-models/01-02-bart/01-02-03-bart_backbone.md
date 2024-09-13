@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ c> BertBackbone model
+title: BertBackbone model
 nav_order: 01+02+03
 permalink: /api/keras_nlp/models/bart/bart_backbone/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Bart
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/bart/bart_backbone/](https://keras.io/api/keras_nlp/models/bart/bart_backbone/){:target="_blank"}

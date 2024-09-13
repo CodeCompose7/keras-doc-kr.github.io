@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ d> BartSeq2SeqLM model
+title: BartSeq2SeqLM model
 nav_order: 01+02+04
 permalink: /api/keras_nlp/models/bart/bart_seq_2_seq_lm/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Bart
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/bart/bart_seq_2_seq_lm/](https://keras.io/api/keras_nlp/models/bart/bart_seq_2_seq_lm/){:target="_blank"}

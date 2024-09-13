@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ d> AlbertClassifier model
+title: AlbertClassifier model
 nav_order: 01+01+04
 permalink: /api/keras_nlp/models/albert/albert_classifier/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Albert
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/albert/albert_classifier/](https://keras.io/api/keras_nlp/models/albert/albert_classifier/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ c> DebertaV3Backbone model
+title: DebertaV3Backbone model
 nav_order: 01+04+03
 permalink: /api/keras_nlp/models/deberta_v3/deberta_v3_backbone/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: DebertaV3
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/deberta_v3/deberta_v3_backbone/](https://keras.io/api/keras_nlp/models/deberta_v3/deberta_v3_backbone/){:target="_blank"}

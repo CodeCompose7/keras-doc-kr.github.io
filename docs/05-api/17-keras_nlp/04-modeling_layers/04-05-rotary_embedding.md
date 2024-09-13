@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 5) RotaryEmbedding layer
+title: RotaryEmbedding layer
 nav_order: 04+05
 permalink: /api/keras_nlp/modeling_layers/rotary_embedding/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Modeling 레이어
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/modeling_layers/rotary_embedding/](https://keras.io/api/keras_nlp/modeling_layers/rotary_embedding/){:target="_blank"}

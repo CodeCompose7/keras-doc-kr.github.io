@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> DebertaV3Tokenizer
+title: DebertaV3Tokenizer
 nav_order: 01+04+01
 permalink: /api/keras_nlp/models/deberta_v3/deberta_v3_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: DebertaV3
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/deberta_v3/deberta_v3_tokenizer/](https://keras.io/api/keras_nlp/models/deberta_v3/deberta_v3_tokenizer/){:target="_blank"}

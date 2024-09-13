@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 4) RandomDeletion layer
+title: RandomDeletion layer
 nav_order: 03+04
 permalink: /api/keras_nlp/preprocessing_layers/random_deletion/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Preprocessing 레이어
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/preprocessing_layers/random_deletion/](https://keras.io/api/keras_nlp/preprocessing_layers/random_deletion/){:target="_blank"}

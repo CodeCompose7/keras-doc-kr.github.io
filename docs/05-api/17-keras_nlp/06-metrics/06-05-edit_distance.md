@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 5) EditDistance metric
+title: EditDistance metric
 nav_order: 06+05
 permalink: /api/keras_nlp/metrics/edit_distance/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Metrics
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/metrics/edit_distance/](https://keras.io/api/keras_nlp/metrics/edit_distance/){:target="_blank"}

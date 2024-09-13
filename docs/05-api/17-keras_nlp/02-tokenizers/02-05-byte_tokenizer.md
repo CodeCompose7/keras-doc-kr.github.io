@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 5) ByteTokenizer
+title: ByteTokenizer
 nav_order: 02+05
 permalink: /api/keras_nlp/tokenizers/byte_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Tokenizers
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/tokenizers/byte_tokenizer/](https://keras.io/api/keras_nlp/tokenizers/byte_tokenizer/){:target="_blank"}

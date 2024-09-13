@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Modeling Layers
+title: Modeling 레이어
 nav_order: 04+00
 permalink: /api/keras_nlp/modeling_layers/
 parent: KerasNLP

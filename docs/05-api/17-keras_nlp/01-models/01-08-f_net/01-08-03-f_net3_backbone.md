@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ c> FNetBackbone model
+title: FNetBackbone model
 nav_order: 01+08+03
 permalink: /api/keras_nlp/models/f_net/f_net3_backbone/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: FNet
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/f_net/f_net3_backbone/](https://keras.io/api/keras_nlp/models/f_net/f_net3_backbone/){:target="_blank"}

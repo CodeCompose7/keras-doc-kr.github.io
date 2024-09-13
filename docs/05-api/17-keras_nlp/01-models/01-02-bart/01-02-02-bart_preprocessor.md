@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ b> BertPreprocessor layer
+title: BertPreprocessor layer
 nav_order: 01+02+02
 permalink: /api/keras_nlp/models/bart/bart_preprocessor/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Bart
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/bart/bart_preprocessor/](https://keras.io/api/keras_nlp/models/bart/bart_preprocessor/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ f> DistilBertMaskedLMPreprocessor layer
+title: DistilBertMaskedLMPreprocessor layer
 nav_order: 01+05+06
 permalink: /api/keras_nlp/models/distil_bert/distil_bert_masked_lm_preprocessor/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: DistilBERT
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/distil_bert/distil_bert_masked_lm_preprocessor/](https://keras.io/api/keras_nlp/models/distil_bert/distil_bert_masked_lm_preprocessor/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 6) UnicodeCodepointTokenizer
+title: UnicodeCodepointTokenizer
 nav_order: 02+06
 permalink: /api/keras_nlp/tokenizers/unicode_codepoint_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Tokenizers
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/tokenizers/unicode_codepoint_tokenizer/](https://keras.io/api/keras_nlp/tokenizers/unicode_codepoint_tokenizer/){:target="_blank"}
