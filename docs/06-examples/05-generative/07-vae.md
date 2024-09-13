@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 변형 자동인코더
+title: Variational AutoEncoder
 nav_order: 07+00
 permalink: /examples/generative/vae/
 parent: 생성형 딥러닝
@@ -8,9 +8,9 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/generative/vae/](https://keras.io/examples/generative/vae/){:target="_blank"}
-* 최종 수정일 : 2024-04-21
+* 최종 수정일 : 2024-09-13
 
-# 변형 자동인코더 (Variational AutoEncoder)
+# Variational AutoEncoder
 {: .no_toc }
 
 ## 목차
@@ -23,8 +23,8 @@ grand_parent: 코드 예제
 
 **저자:** [fchollet](https://twitter.com/fchollet)  
 **생성일:** 2020/05/03  
-**최종편집일:** 2023/11/22  
-**설명:** Convolutional Variational AutoEncoder (VAE) trained on MNIST digits.
+**최종편집일:** 2024/04/24  
+**설명:** MNIST 숫자로 트레이닝된 컨볼루션 Variational AutoEncoder(VAE)
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/generative/ipynb/vae.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/generative/vae.py){: .btn .btn-blue }
@@ -34,7 +34,9 @@ grand_parent: 코드 예제
 
 ----
 
-## Setup
+## 셋업
+{: #setup}
+<!-- ## Setup -->
 
 ```python
 import os
@@ -44,30 +46,39 @@ os.environ["KERAS_BACKEND"] = "tensorflow"
 import numpy as np
 import tensorflow as tf
 import keras
+from keras import ops
 from keras import layers
 ```
 
 * * *
 
-Create a sampling layer
+샘플링 레이어 생성
 -----------------------
+{: #create-a-sampling-layer}
+<!-- Create a sampling layer -->
 
 ```python
 class Sampling(layers.Layer):
-    """Uses (z_mean, z_log_var) to sample z, the vector encoding a digit."""
+    """(z_mean, z_log_var)를 사용하여, 숫자를 인코딩하는 벡터 z를 샘플링합니다."""
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.seed_generator = keras.random.SeedGenerator(1337)
 
     def call(self, inputs):
         z_mean, z_log_var = inputs
-        batch = tf.shape(z_mean)[0]
-        dim = tf.shape(z_mean)[1]
-        epsilon = tf.random.normal(shape=(batch, dim))
-        return z_mean + tf.exp(0.5 * z_log_var) * epsilon
+        batch = ops.shape(z_mean)[0]
+        dim = ops.shape(z_mean)[1]
+        epsilon = keras.random.normal(shape=(batch, dim), seed=self.seed_generator)
+        return z_mean + ops.exp(0.5 * z_log_var) * epsilon
 ```
 
 * * *
 
-Build the encoder
+인코더 빌드
 -----------------
+{: #build-the-encoder}
+<!-- Build the encoder -->
 
 ```python
 latent_dim = 2
@@ -115,8 +126,10 @@ Model: "encoder"
 
 * * *
 
-Build the decoder
+디코더 빌드
 -----------------
+{: #build-the-decoder}
+<!-- Build the decoder -->
 
 ```python
 latent_inputs = keras.Input(shape=(latent_dim,))
@@ -156,8 +169,10 @@ Model: "decoder"
 
 * * *
 
-Define the VAE as a `Model` with a custom `train_step`
+VAE를 커스텀 `train_step`을 사용하여 `Model`로 정의
 ------------------------------------------------------
+{: #define-the-vae-as-a-model-with-a-custom-train_step}
+<!-- Define the VAE as a `Model` with a custom `train_step` -->
 
 ```python
 class VAE(keras.Model):
@@ -183,14 +198,14 @@ class VAE(keras.Model):
         with tf.GradientTape() as tape:
             z_mean, z_log_var, z = self.encoder(data)
             reconstruction = self.decoder(z)
-            reconstruction_loss = tf.reduce_mean(
-                tf.reduce_sum(
+            reconstruction_loss = ops.mean(
+                ops.sum(
                     keras.losses.binary_crossentropy(data, reconstruction),
                     axis=(1, 2),
                 )
             )
-            kl_loss = -0.5 * (1 + z_log_var - tf.square(z_mean) - tf.exp(z_log_var))
-            kl_loss = tf.reduce_mean(tf.reduce_sum(kl_loss, axis=1))
+            kl_loss = -0.5 * (1 + z_log_var - ops.square(z_mean) - ops.exp(z_log_var))
+            kl_loss = ops.mean(ops.sum(kl_loss, axis=1))
             total_loss = reconstruction_loss + kl_loss
         grads = tape.gradient(total_loss, self.trainable_weights)
         self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
@@ -206,8 +221,10 @@ class VAE(keras.Model):
 
 * * *
 
-Train the VAE
+VAE 트레이닝
 -------------
+{: #train-the-vae}
+<!-- Train the VAE -->
 
 ```python
 (x_train, _), (x_test, _) = keras.datasets.mnist.load_data()
@@ -298,20 +315,21 @@ Epoch 30/30
 
 * * *
 
-Display a grid of sampled digits
+샘플링된 숫자의 그리드 표시
 --------------------------------
+{: #display-a-grid-of-sampled-digits}
+<!-- Display a grid of sampled digits -->
 
 ```python
 import matplotlib.pyplot as plt
 
 
 def plot_latent_space(vae, n=30, figsize=15):
-    # display a n*n 2D manifold of digits
+    # n*n 2차원 숫자 매니폴드를 표시합니다.
     digit_size = 28
     scale = 1.0
     figure = np.zeros((digit_size * n, digit_size * n))
-    # linearly spaced coordinates corresponding to the 2D plot
-    # of digit classes in the latent space
+    # 잠재 공간의 숫자 클래스 2D 플롯에 해당하는 선형 간격 좌표
     grid_x = np.linspace(-scale, scale, n)
     grid_y = np.linspace(-scale, scale, n)[::-1]
 
@@ -346,12 +364,14 @@ plot_latent_space(vae)
 
 * * *
 
-Display how the latent space clusters different digit classes
+잠재 공간이 어떻게 다양한 숫자 클래스를 클러스터링하는지 표시
 -------------------------------------------------------------
+{: #display-how-the-latent-space-clusters-different-digit-classes}
+<!-- Display how the latent space clusters different digit classes -->
 
 ```python
 def plot_label_clusters(vae, data, labels):
-    # display a 2D plot of the digit classes in the latent space
+    # 잠재 공간에 있는 숫자 클래스의 2D 플롯을 표시합니다.
     z_mean, _, _ = vae.encoder.predict(data, verbose=0)
     plt.figure(figsize=(12, 10))
     plt.scatter(z_mean[:, 0], z_mean[:, 1], c=labels)
