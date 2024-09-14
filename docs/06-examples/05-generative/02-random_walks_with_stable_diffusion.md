@@ -24,7 +24,7 @@ grand_parent: 코드 예제
 **저자:** Ian Stenbit, [fchollet](https://twitter.com/fchollet), [lukewood](https://twitter.com/luke_wood_ml)  
 **생성일:** 2022/09/28  
 **최종편집일:** 2022/09/28  
-**설명:** 안정 확산의 잠재 매니폴드를 탐색해 보십시오.
+**설명:** Stable Diffusion의 잠재 매니폴드를 탐색해 보십시오.
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/generative/ipynb/random_walks_with_stable_diffusion.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/generative/random_walks_with_stable_diffusion.py){: .btn .btn-blue }
@@ -41,7 +41,7 @@ grand_parent: 코드 예제
 생성 이미지 모델은 시각 세계의 "잠재적 매니폴드(latent manifold)"를 학습합니다. 
 이는 각 지점이 이미지에 매핑되는 저차원 벡터 공간입니다. 
 매니폴드의 이러한 지점에서 표시 가능한 이미지로 돌아가는 것을 "디코딩(decoding)"이라고 합니다. 
-안정적 확산 모델(Stable Diffusion model)에서는 "디코더(decoder)" 모델이 이를 처리합니다.
+Stable Diffusion 모델에서는 "디코더(decoder)" 모델이 이를 처리합니다.
 
 ![The Stable Diffusion architecture]({{ site.baseurl }}/img/examples/generative/random_walks_with_stable_diffusion/2uC8rYJ.png)
 
@@ -53,7 +53,7 @@ grand_parent: 코드 예제
    A에서 B로 이동할 수 있습니다. 
    중간 지점은 두 시작 이미지 사이의 "보간"이라고 합니다.
 
-그러나 안정적 확산은 이미지 모델일 뿐만 아니라, 자연어 모델이기도 합니다. 
+그러나 Stable Diffusion은 이미지 모델일 뿐만 아니라, 자연어 모델이기도 합니다. 
 여기에는 두 개의 잠재 공간이 있습니다. 
 (1) 즉, 트레이닝 중에 사용된 인코더가 학습한 **이미지 표현 공간**과, 
 (2) 사전 트레이닝과 트레이닝 시간 미세 조정을 결합하여 학습한 **프롬프트 잠재 공간**입니다.
