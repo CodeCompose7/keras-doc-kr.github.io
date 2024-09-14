@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CutMix, MixUp, and RandAugment image augmentation with KerasCV
+title: KerasCV로 CutMix, MixUp 및 RandAugment 이미지 보강
 nav_order: 3
 permalink: /guides/keras_cv/cut_mix_mix_up_and_rand_augment/
 parent: KerasCV
@@ -8,9 +8,9 @@ grand_parent: 개발자 가이드
 ---
 
 * 원본 링크 : [https://keras.io/guides/keras_cv/cut_mix_mix_up_and_rand_augment/](https://keras.io/guides/keras_cv/cut_mix_mix_up_and_rand_augment/){:target="_blank"}
-* 최종 수정일 : 2024-09-12
+* 최종 수정일 : 2024-09-14
 
-# CutMix, MixUp, and RandAugment image augmentation with KerasCV
+# KerasCV로 CutMix, MixUp 및 RandAugment 이미지 보강 (CutMix, MixUp, and RandAugment image augmentation with KerasCV)
 {: .no_toc }
 
 ## 목차
@@ -24,7 +24,7 @@ grand_parent: 개발자 가이드
 **저자:** [lukewood](https://twitter.com/luke_wood_ml)  
 **생성일:** 2022/04/08  
 **최종편집일:** 2022/04/08  
-**설명:** Use KerasCV to augment images with CutMix, MixUp, RandAugment, and more.
+**설명:** KerasCV를 사용하면 CutMix, MixUp, RandAugment 등을 통해 이미지를 보강할 수 있습니다.
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/keras_cv/cut_mix_mix_up_and_rand_augment.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/guides/keras_cv/cut_mix_mix_up_and_rand_augment.py){: .btn .btn-blue }
@@ -33,6 +33,8 @@ grand_parent: 개발자 가이드
 
 Overview
 --------
+{: #overview}
+<!-- Overview -->
 
 KerasCV makes it easy to assemble state-of-the-art, industry-grade data augmentation pipelines for image classification and object detection tasks. KerasCV offers a wide suite of preprocessing layers implementing common data augmentation techniques.
 
@@ -44,6 +46,8 @@ This guide will show you how to compose these layers into your own data augmenta
 
 Imports & setup
 ---------------
+{: #imports--setup}
+<!-- Imports & setup -->
 
 KerasCV uses Keras 3 to work with any of TensorFlow, PyTorch or Jax. In the guide below, we will use the `jax` backend. This guide runs in TensorFlow or PyTorch backends with zero changes, simply update the `KERAS_BACKEND` below.
 
@@ -72,6 +76,8 @@ import keras_cv
 
 Data loading
 ------------
+{: #data-loading}
+<!-- Data loading -->
 
 This guide uses the [102 Category Flower Dataset](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/) for demonstration purposes.
 
@@ -148,6 +154,8 @@ Great! Now we can move onto the augmentation step.
 
 RandAugment
 -----------
+{: #randaugment}
+<!-- RandAugment -->
 
 [RandAugment](https://arxiv.org/abs/1909.13719) has been shown to provide improved image classification results across numerous datasets. It performs a standard set of augmentations on an image.
 
@@ -195,6 +203,8 @@ Try tweaking the magnitude settings to see a wider variety of results.
 
 CutMix and MixUp: generate high-quality inter-class examples
 ------------------------------------------------------------
+{: #cutmix-and-mixup-generate-high-quality-inter-class-examples}
+<!-- CutMix and MixUp: generate high-quality inter-class examples -->
 
 `CutMix` and `MixUp` allow us to produce inter-class examples. `CutMix` randomly cuts out portions of one image and places them over another, and `MixUp` interpolates the pixel values between two images. Both of these prevent the model from overfitting the training distribution and improve the likelihood that the model can generalize to out of distribution examples. Additionally, `CutMix` prevents your model from over-relying on any particular feature to perform its classifications. You can read more about these techniques in their respective papers:
 
@@ -227,6 +237,8 @@ Great! Looks like we have successfully added `CutMix` and `MixUp` to our preproc
 
 Customizing your augmentation pipeline
 --------------------------------------
+{: #customizing-your-augmentation-pipeline}
+<!-- Customizing your augmentation pipeline -->
 
 Perhaps you want to exclude an augmentation from `RandAugment`, or perhaps you want to include the [`keras_cv.layers.GridMask`]({{ site.baseurl }}/api/keras_cv/layers/augmentation/grid_mask#gridmask-class) as an option alongside the default `RandAugment` augmentations.
 
@@ -302,6 +314,8 @@ Looks great! You can use `RandomAugmentationPipeline` however you want.
 
 Training a CNN
 --------------
+{: #training-a-cnn}
+<!-- Training a CNN -->
 
 As a final exercise, let's take some of these layers for a spin. In this section, we will use `CutMix`, `MixUp`, and `RandAugment` to train a state of the art `ResNet50` image classifier on the Oxford flowers dataset.
 
@@ -370,6 +384,8 @@ model.fit(
 
 Conclusion & next steps
 -----------------------
+{: #conclusion--next-steps}
+<!-- Conclusion & next steps -->
 
 That's all it takes to assemble state of the art image augmentation pipeliens with KerasCV!
 
