@@ -1,6 +1,6 @@
 ---
 layout: default
-title: High-performance image generation using Stable Diffusion in KerasCV
+title: KerasCV에서 Stable Diffusion을 사용한 고성능 이미지 생성
 nav_order: 4
 permalink: /guides/keras_cv/generate_images_with_stable_diffusion/
 parent: KerasCV
@@ -10,7 +10,7 @@ grand_parent: 개발자 가이드
 * 원본 링크 : [https://keras.io/guides/keras_cv/generate_images_with_stable_diffusion/](https://keras.io/guides/keras_cv/generate_images_with_stable_diffusion/){:target="_blank"}
 * 최종 수정일 : 2024-09-12
 
-# High-performance image generation using Stable Diffusion in KerasCV
+# KerasCV에서 Stable Diffusion을 사용한 고성능 이미지 생성 (High-performance image generation using Stable Diffusion in KerasCV)
 {: .no_toc }
 
 ## 목차
@@ -32,6 +32,8 @@ grand_parent: 개발자 가이드
 ----
 
 ## Overview
+{: #overview}
+<!-- ## Overview -->
 
 In this guide, we will show how to generate novel images based on a text prompt using
 the KerasCV implementation of [stability.ai](https://stability.ai/)'s text-to-image model,
@@ -68,6 +70,8 @@ import matplotlib.pyplot as plt
 ```
 
 ## Introduction
+{: #introduction}
+<!-- ## Introduction -->
 
 Unlike most tutorials, where we first explain a topic then show how to implement it,
 with text-to-image generation it is easier to show instead of tell.
@@ -132,6 +136,8 @@ The possibilities are literally endless (or at least extend to the boundaries of
 Stable Diffusion's latent manifold).
 
 ## Wait, how does this even work?
+{: #wait-how-does-this-even-work}
+<!-- ## Wait, how does this even work? -->
 
 Unlike what you might expect at this point, Stable Diffusion doesn't actually run on magic.
 It's a kind of "latent diffusion model". Let's dig into what that means.
@@ -190,6 +196,8 @@ But this relatively simple system starts looking like magic once you train on bi
 As Feynman said about the universe: _"It's not complicated, it's just a lot of it!"_
 
 ## Perks of KerasCV
+{: #perks-of-kerascv}
+<!-- ## Perks of KerasCV -->
 
 With several implementations of Stable Diffusion publicly available why should you use
 `keras_cv.models.StableDiffusion`?
@@ -272,10 +280,12 @@ Standard model: 10.57 seconds
 ```
 
 ### Mixed precision
+{: #mixed-precision}
+<!-- ### Mixed precision -->
 
 "Mixed precision" consists of performing computation using `float16` precision, while storing weights in the `float32` format. This is done to take advantage of the fact that `float16` operations are backed by significantly faster kernels than their `float32` counterparts on modern NVIDIA GPUs.
 
-Enabling mixed precision computation in Keras (and therefore for [`keras_cv.models.StableDiffusion`](/api/keras_cv/models/tasks/stable_diffusion#stablediffusion-class)) is as simple as calling:
+Enabling mixed precision computation in Keras (and therefore for [`keras_cv.models.StableDiffusion`]({{ site.baseurl }}/api/keras_cv/models/tasks/stable_diffusion#stablediffusion-class)) is as simple as calling:
 
 ```python
 keras.mixed_precision.set_global_policy("mixed_float16")
@@ -327,6 +337,8 @@ Mixed precision model: 6.65 seconds
 ![png]({{ site.baseurl }}/img/guides/generate_images_with_stable_diffusion/generate_images_with_stable_diffusion_19_1.png)
 
 ### XLA Compilation
+{: #xla-compilation}
+<!-- ### XLA Compilation -->
 
 TensorFlow and JAX come with the [XLA: Accelerated Linear Algebra](https://www.tensorflow.org/xla) compiler built-in. [`keras_cv.models.StableDiffusion`]({{ site.baseurl }}/api/keras_cv/models/tasks/stable_diffusion#stablediffusion-class) supports a `jit_compile` argument out of the box. Setting this argument to `True` enables XLA compilation, resulting in a significant speed-up.
 
@@ -379,6 +391,8 @@ On an A100 GPU, we get about a 2x speedup. Fantastic!
 
 Putting it all together
 -----------------------
+{: #putting-it-all-together}
+<!-- Putting it all together -->
 
 So, how do you assemble the world's most performant stable diffusion inference pipeline (as of September 2022).
 
@@ -457,6 +471,8 @@ It only took our fully-optimized model four seconds to generate three novel imag
 
 Conclusions
 -----------
+{: #conclusions}
+<!-- Conclusions -->
 
 KerasCV offers a state-of-the-art implementation of Stable Diffusion – and through the use of XLA and mixed precision, it delivers the fastest Stable Diffusion pipeline available as of September 2022.
 

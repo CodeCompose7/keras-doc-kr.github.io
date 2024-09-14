@@ -33,6 +33,8 @@ grand_parent: 개발자 가이드
 
 Overview
 --------
+{: #overview}
+<!-- Overview -->
 
 Data augmentation is an integral part of training any robust computer vision model. While KerasCV offers a plethora of prebuild high quality data augmentation techniques, you may still want to implement your own custom technique. KerasCV offers a helpful base class for writing data augmentation layers: `BaseImageAugmentationLayer`. Any augmentation layer built with `BaseImageAugmentationLayer` will automatically be compatible with the KerasCV `RandomAugmentationPipeline` class.
 
@@ -97,6 +99,8 @@ def parse_factor(param, min_value=0.0, max_value=1.0, seed=None):
 
 BaseImageAugmentationLayer Introduction
 ---------------------------------------
+{: #baseimageaugmentationlayer-introduction}
+<!-- BaseImageAugmentationLayer Introduction -->
 
 Image augmentation should operate on a sample-wise basis; not batch-wise. This is a common mistake many machine learning practitioners make when implementing custom techniques. `BaseImageAugmentation` offers a set of clean abstractions to make implementing image augmentation techniques on a sample wise basis much easier. This is done by allowing the end user to override an `augment_image()` method and then performing automatic vectorization under the hood.
 
@@ -110,6 +114,8 @@ In our example, we will use the `FactorSampler` API, the `value_range` API, and 
 
 Overriding `augment_image()`
 ----------------------------
+{: #overriding-augment_image}
+<!-- Overriding `augment_image()` -->
 
 Let's start off with the minimum:
 
@@ -171,6 +177,8 @@ imshow(ops.convert_to_numpy(augmented)[0])
 
 Adding Random Behavior with the `FactorSampler` API.
 ----------------------------------------------------
+{: #adding-random-behavior-with-the-factorsampler-api}
+<!-- Adding Random Behavior with the `FactorSampler` API. -->
 
 Usually an image augmentation technique should not do the same thing on every invocation of the layer's `__call__` method. KerasCV offers the `FactorSampler` API to allow users to provide configurable random distributions.
 
@@ -236,6 +244,8 @@ As you can see, the augmentations now are drawn from a normal distributions. The
 
 Overriding `get_random_transformation()`
 ----------------------------------------
+{: #overriding-get_random_transformation}
+<!-- Overriding `get_random_transformation()` -->
 
 Now, suppose that your layer impacts the prediction targets: whether they are bounding boxes, classification labels, or regression targets. Your layer will need to have information about what augmentations are taken on the image when augmenting the label. Luckily, `BaseImageAugmentationLayer` was designed with this in mind.
 
@@ -321,6 +331,8 @@ Both the inputs and labels are augmented. Note how when `transformation` is > 10
 
 `value_range` support
 ---------------------
+{: #value_range-support}
+<!-- `value_range` support -->
 
 Imagine you are using your new augmentation layer in many pipelines. Some pipelines have values in the range `[0, 255]`, some pipelines have normalized their images to the range `[-1, 1]`, and some use a value range of `[0, 1]`.
 
@@ -433,6 +445,8 @@ Now users can configure the layer to support any value range they may need. Note
 
 Auto vectorization performance
 ------------------------------
+{: #auto-vectorization-performance}
+<!-- Auto vectorization performance -->
 
 If you are wondering:
 
@@ -454,6 +468,8 @@ Please note that Eager mode performance will be drastically different.
 
 Common gotchas
 --------------
+{: #common-gotchas}
+<!-- Common gotchas -->
 
 Some layers are not able to be automatically vectorizated. An example of this is [GridMask](https://tinyurl.com/ffb5zzf7).
 
@@ -473,6 +489,8 @@ Additionally, be sure to accept `**kwargs` to your `augment_*` methods to ensure
 
 Conclusion and next steps
 -------------------------
+{: #conclusion-and-next-steps}
+<!-- Conclusion and next steps -->
 
 KerasCV offers a standard set of APIs to streamline the process of implementing your own data augmentation techniques. These include `BaseImageAugmentationLayer`, the `FactorSampler` API and the `value_range` API.
 
