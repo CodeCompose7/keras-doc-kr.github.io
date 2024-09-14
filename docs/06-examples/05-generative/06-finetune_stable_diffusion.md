@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 안정적인 확산 미세 조정
+title: Stable Diffusion 미세 조정
 nav_order: 06+00
 permalink: /examples/generative/finetune_stable_diffusion/
 parent: 생성형 딥러닝
@@ -10,7 +10,7 @@ grand_parent: 코드 예제
 * 원본 링크 : [https://keras.io/examples/generative/finetune_stable_diffusion/](https://keras.io/examples/generative/finetune_stable_diffusion/){:target="_blank"}
 * 최종 수정일 : 2024-09-12
 
-# 안정적인 확산 미세 조정 (Fine-tuning Stable Diffusion)
+# Stable Diffusion 미세 조정 (Fine-tuning Stable Diffusion)
 {: .no_toc }
 
 ## 목차
@@ -24,7 +24,7 @@ grand_parent: 코드 예제
 **저자:** [Sayak Paul](https://twitter.com/RisingSayak), [Chansung Park](https://twitter.com/algo_diver)  
 **생성일:** 2022/12/28  
 **최종편집일:** 2023/01/13  
-**설명:** 사용자 정의 이미지 캡션 데이터 세트를 사용하여 안정적인 확산(Stable Diffusion)을 미세 조정합니다.
+**설명:** 사용자 정의 이미지 캡션 데이터 세트를 사용하여 Stable Diffusion을 미세 조정합니다.
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/generative/ipynb/finetune_stable_diffusion.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/generative/finetune_stable_diffusion.py){: .btn .btn-blue }
@@ -38,14 +38,14 @@ grand_parent: 코드 예제
 {: #introduction}
 <!-- ## Introduction -->
 
-이 튜토리얼은 `{image, caption}` 쌍의 커스텀 데이터 세트에서 [안정적인 확산(Stable Diffusion) 모델]({{ site.baseurl }}/guides/keras_cv/generate_images_with_stable_diffusion/)을 미세 조정하는 방법을 보여줍니다. 
+이 튜토리얼은 `{image, caption}` 쌍의 커스텀 데이터 세트에서 [Stable Diffusion 모델]({{ site.baseurl }}/guides/keras_cv/generate_images_with_stable_diffusion/)을 미세 조정하는 방법을 보여줍니다. 
 우리는 Hugging Face [여기](https://github.com/huggingface/diffusers/blob/main/examples/text_to_image/train_text_to_image.py)에서 제공하는 미세 조정 스크립트를 기반으로 구축합니다.
 
-우리는 당신이 안정적인 확산 모델에 대한 높은 수준의 이해를 가지고 있다고 가정합니다. 
+우리는 당신이 Stable Diffusion 모델에 대한 높은 수준의 이해를 가지고 있다고 가정합니다. 
 다음 리소스는 이와 관련하여 더 많은 정보를 찾는 데 도움이 될 수 있습니다.
 
-* [KerasCV에서 안정적 확산을 사용한 고성능 이미지 생성]({{ site.baseurl }}/guides/keras_cv/generate_images_with_stable_diffusion/)
-* [확산기를 사용한 안정적 확산](https://huggingface.co/blog/stable_diffusion)
+* [KerasCV에서 Stable Diffusion을 사용한 고성능 이미지 생성]({{ site.baseurl }}/guides/keras_cv/generate_images_with_stable_diffusion/)
+* [확산기를 사용한 Stable Diffusion](https://huggingface.co/blog/stable_diffusion)
 
 코드를 실행하려면 최소 30GB의 메모리가 있는 GPU를 사용하는 것이 좋습니다.
 
@@ -68,7 +68,7 @@ grand_parent: 코드 예제
 {: #what-are-we-fine-tuning}
 <!-- What are we fine-tuning? -->
 
-안정적인 확산 모델은 몇 가지 핵심 모델로 분해될 수 있습니다.
+Stable Diffusion 모델은 몇 가지 핵심 모델로 분해될 수 있습니다.
 
 * 입력 프롬프트를 잠재 공간에 프로젝션하는 텍스트 인코더. (이미지와 관련된 캡션을 "프롬프트"라고 합니다.)
 * 입력 이미지를 이미지 벡터 공간으로 작용하는 잠재 공간에 투사하는 변형 자동 인코더(VAE, variational autoencoder).
@@ -248,7 +248,7 @@ def prepare_dataset(image_paths, tokenized_texts, batch_size=1):
     return dataset.prefetch(AUTO)
 ```
 
-베이스라인 안정적인 확산 모델은 512x512 해상도의 이미지를 사용하여 트레이닝되었습니다. 
+베이스라인 Stable Diffusion 모델은 512x512 해상도의 이미지를 사용하여 트레이닝되었습니다. 
 고해상도 이미지를 사용하여 트레이닝된 모델이 저해상도 이미지로 잘 전환될 가능성은 낮습니다. 
 그러나, 현재 모델은 해상도를 512x512로 유지하면(혼합 정밀도를 활성화하지 않고) OOM으로 이어질 것입니다. 
 따라서, 대화형 데모의 이익을 위해, 입력 해상도를 256x256으로 유지했습니다.
@@ -565,12 +565,12 @@ for prompt in outputs:
 {: #conclusion-and-acknowledgements}
 <!-- Conclusion and acknowledgements -->
 
-커스텀 데이터 세트에서 안정적인 확산 모델을 미세 조정하는 방법을 보여주었습니다. 
+커스텀 데이터 세트에서 Stable Diffusion 모델을 미세 조정하는 방법을 보여주었습니다. 
 결과가 미적으로 만족스럽지 않지만, 미세 조정의 에포크가 더 많아지면, 개선될 가능성이 있다고 생각합니다. 
 이를 가능하게 하려면, 그래디언트 축적 및 분산 트레이닝을 지원하는 것이 중요합니다. 
 이는 이 튜토리얼의 다음 단계로 생각할 수 있습니다.
 
-안정적인 확산 모델을 미세 조정할 수 있는 또 다른 흥미로운 방법이 있는데, textual inversion이라고 합니다. 
+Stable Diffusion 모델을 미세 조정할 수 있는 또 다른 흥미로운 방법이 있는데, textual inversion이라고 합니다. 
 자세한 내용은 [이 튜토리얼]({{ site.baseurl }}/examples/generative/fine_tune_via_textual_inversion/)을 참조하세요.
 
 Google의 ML 개발자 프로그램 팀의 GCP 크레딧 지원에 감사드립니다. 

@@ -1246,7 +1246,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[안정적인 확산 미세 조정 (Fine-tuning Stable Diffusion)]({% link docs/06-examples/05-generative/06-finetune_stable_diffusion.md %})
+[Stable Diffusion 미세 조정]({% link docs/06-examples/05-generative/06-finetune_stable_diffusion.md %})
 {: .d-inline .v-align-middle}
 .
 {: .lh-0 .my-0 .opacity-0}
