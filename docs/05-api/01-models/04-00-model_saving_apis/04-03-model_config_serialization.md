@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 3) Model config serialization
+title: Model config serialization
 nav_order: 04+03
 permalink: /api/models/model_saving_apis/model_config_serialization/
-parent: Models API
-grand_parent: Keras 3 API 문서
+parent: 저장 & 직렬화
+grand_parent: Models API
 ---
 
 * 원본 링크 : [https://keras.io/api/models/model_saving_apis/model_config_serialization/](https://keras.io/api/models/model_saving_apis/model_config_serialization/){:target="_blank"}

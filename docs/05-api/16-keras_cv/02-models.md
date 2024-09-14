@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Models
+title: KerasCV 모델
 nav_order: 02+00
 permalink: /api/keras_cv/models/
 parent: KerasCV

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 2) Tensorflow SavedModel layer
+title: Tensorflow SavedModel layer
 nav_order: 17+02
 permalink: /api/layers/backend_specific_layers/tfsm_layer/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 백엔드별 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/backend_specific_layers/tfsm_layer/](https://keras.io/api/layers/backend_specific_layers/tfsm_layer/){:target="_blank"}

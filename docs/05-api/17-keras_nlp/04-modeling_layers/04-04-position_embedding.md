@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 4) PositionEmbedding layer
+title: PositionEmbedding layer
 nav_order: 04+04
 permalink: /api/keras_nlp/modeling_layers/position_embedding/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Modeling 레이어
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/modeling_layers/position_embedding/](https://keras.io/api/keras_nlp/modeling_layers/position_embedding/){:target="_blank"}

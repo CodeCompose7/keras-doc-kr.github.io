@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 9) Identity layer
+title: Identity layer
 nav_order: 06+09
 permalink: /api/layers/core_layers/identity/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 코어 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/core_layers/identity/](https://keras.io/api/layers/core_layers/identity/){:target="_blank"}

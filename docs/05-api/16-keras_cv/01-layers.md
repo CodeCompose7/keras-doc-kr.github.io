@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Layers
+title: KerasCV 레이어
 nav_order: 01+00
 permalink: /api/keras_cv/layers/
 parent: KerasCV

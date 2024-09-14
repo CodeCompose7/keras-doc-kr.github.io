@@ -3,7 +3,7 @@ layout: default
 title: Adafactor
 nav_order: 08+00
 permalink: /api/optimizers/adafactor/
-parent: Optimizers
+parent: 옵티마이저
 grand_parent: Keras 3 API 문서
 ---
 

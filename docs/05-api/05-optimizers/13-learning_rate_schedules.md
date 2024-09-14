@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Learning rate schedules API
+title: 학습률 스케쥴 API
 nav_order: 13+00
 permalink: /api/optimizers/learning_rate_schedules/
-parent: Optimizers
+parent: 옵티마이저
 grand_parent: Keras 3 API 문서
 ---
 

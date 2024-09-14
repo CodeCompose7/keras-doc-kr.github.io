@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 2) Flatten layer
+title: Flatten layer
 nav_order: 14+02
 permalink: /api/layers/reshaping_layers/flatten/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: Reshaping 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/reshaping_layers/flatten/](https://keras.io/api/layers/reshaping_layers/flatten/){:target="_blank"}

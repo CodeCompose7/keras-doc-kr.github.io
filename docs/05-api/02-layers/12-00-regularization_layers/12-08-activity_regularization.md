@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 8) ActivityRegularization layer
+title: ActivityRegularization layer
 nav_order: 12+08
 permalink: /api/layers/regularization_layers/activity_regularization/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: Regularization 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/regularization_layers/activity_regularization/](https://keras.io/api/layers/regularization_layers/activity_regularization/){:target="_blank"}

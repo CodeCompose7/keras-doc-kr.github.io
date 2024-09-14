@@ -3,7 +3,7 @@ layout: default
 title: Adamax
 nav_order: 07+00
 permalink: /api/optimizers/adamax/
-parent: Optimizers
+parent: 옵티마이저
 grand_parent: Keras 3 API 문서
 ---
 

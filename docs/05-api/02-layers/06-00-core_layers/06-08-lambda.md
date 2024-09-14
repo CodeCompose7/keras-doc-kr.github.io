@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 8) Lambda 레이어
+title: Lambda 레이어
 nav_order: 06+08
 permalink: /api/layers/core_layers/lambda/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 코어 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/core_layers/lambda/](https://keras.io/api/layers/core_layers/lambda/){:target="_blank"}

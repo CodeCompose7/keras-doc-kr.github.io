@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ c> Clip bounding boxes to be within the bounds of provided images
+title: Clip bounding boxes to be within the bounds of provided images
 nav_order: 03+02+03
 permalink: /api/keras_cv/bounding_box/utils/clip_to_image/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Bounding box 유틸리티
+grand_parent: 경계 상자 형식과 유틸리티
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/bounding_box/utils/clip_to_image/](https://keras.io/api/keras_cv/bounding_box/utils/clip_to_image/){:target="_blank"}

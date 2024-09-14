@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ c> XLMRobertaBackbone model
+title: XLMRobertaBackbone model
 nav_order: 01+12+03
 permalink: /api/keras_nlp/models/xlm_roberta/xlm_roberta_backbone/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: XLM-RoBERTa
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/xlm_roberta/xlm_roberta_backbone/](https://keras.io/api/keras_nlp/models/xlm_roberta/xlm_roberta_backbone/){:target="_blank"}

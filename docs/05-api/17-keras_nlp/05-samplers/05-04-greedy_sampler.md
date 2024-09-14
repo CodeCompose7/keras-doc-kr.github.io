@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 4) GreedySampler
+title: GreedySampler
 nav_order: 05+04
 permalink: /api/keras_nlp/samplers/greedy_sampler/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Samplers
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/samplers/greedy_sampler/](https://keras.io/api/keras_nlp/samplers/greedy_sampler/){:target="_blank"}

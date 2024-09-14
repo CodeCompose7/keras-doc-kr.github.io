@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> DistilBertTokenizer
+title: DistilBertTokenizer
 nav_order: 01+05+01
 permalink: /api/keras_nlp/models/distil_bert/distil_bert_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: DistilBERT
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/distil_bert/distil_bert_tokenizer/](https://keras.io/api/keras_nlp/models/distil_bert/distil_bert_tokenizer/){:target="_blank"}

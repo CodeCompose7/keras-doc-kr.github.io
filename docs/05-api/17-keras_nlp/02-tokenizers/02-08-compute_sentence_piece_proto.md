@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 8) compute_sentence_piece_proto function
+title: compute_sentence_piece_proto function
 nav_order: 02+08
 permalink: /api/keras_nlp/tokenizers/compute_sentence_piece_proto/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Tokenizers
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/tokenizers/compute_sentence_piece_proto/](https://keras.io/api/keras_nlp/tokenizers/compute_sentence_piece_proto/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 1) TorchModuleWrapper layer
+title: TorchModuleWrapper layer
 nav_order: 17+01
 permalink: /api/layers/backend_specific_layers/torch_module_wrapper/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 백엔드별 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/backend_specific_layers/torch_module_wrapper/](https://keras.io/api/layers/backend_specific_layers/torch_module_wrapper/){:target="_blank"}

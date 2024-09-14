@@ -3,7 +3,7 @@ layout: default
 title: Adam
 nav_order: 03+00
 permalink: /api/optimizers/adam/
-parent: Optimizers
+parent: 옵티마이저
 grand_parent: Keras 3 API 문서
 ---
 

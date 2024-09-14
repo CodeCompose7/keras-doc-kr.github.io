@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 5) DistilBERT
+title: DistilBERT
 nav_order: 01+05
 permalink: /api/keras_nlp/models/distil_bert/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: 모델
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/distil_bert/](https://keras.io/api/keras_nlp/models/distil_bert/){:target="_blank"}

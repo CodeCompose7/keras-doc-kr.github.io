@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 6) Hyperband Oracle
+title: Hyperband Oracle
 nav_order: 03+06
 permalink: /api/keras_tuner/oracles/hyperband/
-parent: KerasTuner
-grand_parent: Keras 3 API 문서
+parent: Oracles
+grand_parent: KerasTuner
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_tuner/oracles/hyperband/](https://keras.io/api/keras_tuner/oracles/hyperband/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 1) Sampler base class
+title: Sampler base class
 nav_order: 05+01
 permalink: /api/keras_nlp/samplers/samplers/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Samplers
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/samplers/samplers/](https://keras.io/api/keras_nlp/samplers/samplers/){:target="_blank"}

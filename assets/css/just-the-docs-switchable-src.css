@@ -796,7 +796,7 @@ blockquote {
 @media (min-width: 50rem) {
   .site-nav {
     display: block;
-    padding-top: 3rem;
+    padding-top: 0.5rem;
     padding-bottom: 1rem;
     overflow-y: auto;
     flex: 1 1 auto;
@@ -8781,7 +8781,7 @@ html.dark-mode .main-header {
 		display: flex;
 		justify-content: space-between;
 		height: 60px;
-		background-color: #27262b;
+		background-color: #27262b !important;
 		border-bottom: 1px solid #44434d;
 	}
 }
@@ -8821,7 +8821,7 @@ html.dark-mode .site-nav.nav-open {
 @media (min-width: 50rem) {
 	html.dark-mode .site-nav {
 		display: block;
-		padding-top: 3rem;
+		padding-top: 0.5rem;
 		padding-bottom: 1rem;
 		overflow-y: auto;
 		flex: 1 1 auto;

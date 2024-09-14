@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> OPTTokenizer
+title: OPTTokenizer
 nav_order: 01+10+01
 permalink: /api/keras_nlp/models/opt/opt_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: OPT
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/opt/opt_tokenizer/](https://keras.io/api/keras_nlp/models/opt/opt_tokenizer/){:target="_blank"}

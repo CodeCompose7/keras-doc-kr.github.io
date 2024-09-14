@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 9) GlobalMaxPooling3D layer
+title: GlobalMaxPooling3D layer
 nav_order: 08+09
 permalink: /api/layers/pooling_layers/global_max_pooling3d/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 풀링 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/pooling_layers/global_max_pooling3d/](https://keras.io/api/layers/pooling_layers/global_max_pooling3d/){:target="_blank"}

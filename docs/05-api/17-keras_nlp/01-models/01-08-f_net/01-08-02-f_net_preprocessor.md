@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ b> FNetPreprocessor layer
+title: FNetPreprocessor layer
 nav_order: 01+08+02
 permalink: /api/keras_nlp/models/f_net/f_net_preprocessor/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: FNet
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/f_net/f_net_preprocessor/](https://keras.io/api/keras_nlp/models/f_net/f_net_preprocessor/){:target="_blank"}

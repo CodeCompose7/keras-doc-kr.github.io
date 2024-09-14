@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 6) AveragePooling3D layer
+title: AveragePooling3D layer
 nav_order: 08+06
 permalink: /api/layers/pooling_layers/average_pooling3d/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 풀링 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/pooling_layers/average_pooling3d/](https://keras.io/api/layers/pooling_layers/average_pooling3d/){:target="_blank"}

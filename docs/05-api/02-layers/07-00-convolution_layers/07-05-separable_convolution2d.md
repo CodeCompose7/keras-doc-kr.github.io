@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 5) SeparableConv2D layer
+title: SeparableConv2D layer
 nav_order: 07+05
 permalink: /api/layers/convolution_layers/separable_convolution2d/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 컨볼루션 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/convolution_layers/separable_convolution2d/](https://keras.io/api/layers/convolution_layers/separable_convolution2d/){:target="_blank"}

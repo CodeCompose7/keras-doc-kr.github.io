@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 1) Perplexity metric
+title: Perplexity metric
 nav_order: 06+01
 permalink: /api/keras_nlp/metrics/perplexity/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Metrics
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/metrics/perplexity/](https://keras.io/api/keras_nlp/metrics/perplexity/){:target="_blank"}

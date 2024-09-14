@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ e> OPTCausalLMPreprocessor layer
+title: OPTCausalLMPreprocessor layer
 nav_order: 01+10+05
 permalink: /api/keras_nlp/models/opt/opt_causal_lm_preprocessor/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: OPT
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/opt/opt_causal_lm_preprocessor/](https://keras.io/api/keras_nlp/models/opt/opt_causal_lm_preprocessor/){:target="_blank"}

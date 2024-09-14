@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 2) LSTM cell layer
+title: LSTM cell layer
 nav_order: 09+02
 permalink: /api/layers/recurrent_layers/lstm_cell/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: Recurrent 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/recurrent_layers/lstm_cell/](https://keras.io/api/layers/recurrent_layers/lstm_cell/){:target="_blank"}

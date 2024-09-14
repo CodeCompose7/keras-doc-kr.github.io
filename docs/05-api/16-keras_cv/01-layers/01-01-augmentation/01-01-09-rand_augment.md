@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ i> RandAugment layer
+title: RandAugment layer
 nav_order: 01+01+09
 permalink: /api/keras_cv/layers/augmentation/rand_augment/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Augmentation 레이어
+grand_parent: KerasCV 레이어
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/layers/augmentation/rand_augment/](https://keras.io/api/keras_cv/layers/augmentation/rand_augment/){:target="_blank"}

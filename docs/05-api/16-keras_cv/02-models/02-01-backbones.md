@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 1) Backbones
+title: Backbones
 nav_order: 02+01
 permalink: /api/keras_cv/models/backbones/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: KerasCV 모델
+grand_parent: KerasCV
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/models/backbones/](https://keras.io/api/keras_cv/models/backbones/){:target="_blank"}

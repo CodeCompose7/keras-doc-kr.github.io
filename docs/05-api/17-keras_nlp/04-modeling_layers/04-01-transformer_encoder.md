@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 1) TransformerEncoder layer
+title: TransformerEncoder layer
 nav_order: 04+01
 permalink: /api/keras_nlp/modeling_layers/transformer_encoder/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Modeling 레이어
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/modeling_layers/transformer_encoder/](https://keras.io/api/keras_nlp/modeling_layers/transformer_encoder/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ c> The ImageClassifier model
+title: The ImageClassifier model
 nav_order: 02+02+03
 permalink: /api/keras_cv/models/tasks/image_classifier/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Tasks
+grand_parent: KerasCV 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/models/tasks/image_classifier/](https://keras.io/api/keras_cv/models/tasks/image_classifier/){:target="_blank"}

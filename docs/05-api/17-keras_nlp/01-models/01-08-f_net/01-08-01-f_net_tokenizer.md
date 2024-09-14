@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> FNetTokenizer
+title: FNetTokenizer
 nav_order: 01+08+01
 permalink: /api/keras_nlp/models/f_net/f_net_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: FNet
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/f_net/f_net_tokenizer/](https://keras.io/api/keras_nlp/models/f_net/f_net_tokenizer/){:target="_blank"}

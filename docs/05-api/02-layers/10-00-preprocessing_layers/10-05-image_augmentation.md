@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 5) Image augmentation layers
+title: 이미지 보강 레이어
 nav_order: 10+05
 permalink: /api/layers/preprocessing_layers/image_augmentation/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 전처리 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/preprocessing_layers/image_augmentation/](https://keras.io/api/layers/preprocessing_layers/image_augmentation/){:target="_blank"}

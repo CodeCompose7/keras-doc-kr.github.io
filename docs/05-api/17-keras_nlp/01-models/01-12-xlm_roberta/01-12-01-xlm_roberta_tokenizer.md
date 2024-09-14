@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> XLMRobertaTokenizer
+title: XLMRobertaTokenizer
 nav_order: 01+12+01
 permalink: /api/keras_nlp/models/xlm_roberta/xlm_roberta_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: XLM-RoBERTa
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/xlm_roberta/xlm_roberta_tokenizer/](https://keras.io/api/keras_nlp/models/xlm_roberta/xlm_roberta_tokenizer/){:target="_blank"}

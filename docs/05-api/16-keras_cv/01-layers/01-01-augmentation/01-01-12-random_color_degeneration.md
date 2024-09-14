@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ l> RandomColorDegeneration layer
+title: RandomColorDegeneration layer
 nav_order: 01+01+12
 permalink: /api/keras_cv/layers/augmentation/random_color_degeneration/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Augmentation 레이어
+grand_parent: KerasCV 레이어
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/layers/augmentation/random_color_degeneration/](https://keras.io/api/keras_cv/layers/augmentation/random_color_degeneration/){:target="_blank"}

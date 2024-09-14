@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ e> RobertaMaskedLM model
+title: RobertaMaskedLM model
 nav_order: 01+11+05
 permalink: /api/keras_nlp/models/roberta/roberta_masked_lm/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: RoBERTa
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/roberta/roberta_masked_lm/](https://keras.io/api/keras_nlp/models/roberta/roberta_masked_lm/){:target="_blank"}

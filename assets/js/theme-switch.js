@@ -42,18 +42,26 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 
     function getTheme() {
+        // return jtd.getTheme();
         return document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light';
+        // return document.body.classList.contains('dark-mode') ? 'dark' : 'light';
     }
 
     function setTheme(theme) {
         if (theme === 'dark') {
+            // jtd.setTheme('dark');
             toggleDarkMode.innerHTML = `<svg width='18px' height='18px'><use href="#svg-moon"></use></svg>`;
             document.documentElement.classList.add('dark-mode');
             document.documentElement.classList.remove('light-mode');
+            // document.body.classList.add('dark-mode');
+            // document.body.classList.remove('light-mode');
         } else {
+            // jtd.setTheme('light');
             toggleDarkMode.innerHTML = `<svg width='18px' height='18px'><use href="#svg-sun"></use></svg>`;
             document.documentElement.classList.add('light-mode');
             document.documentElement.classList.remove('dark-mode');
+            // document.body.classList.add('light-mode');
+            // document.body.classList.remove('dark-mode');
         }
     }
 

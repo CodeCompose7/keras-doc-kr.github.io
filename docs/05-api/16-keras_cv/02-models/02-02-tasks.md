@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 2) Tasks
+title: Tasks
 nav_order: 02+02
 permalink: /api/keras_cv/models/tasks/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: KerasCV 모델
+grand_parent: KerasCV
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/models/tasks/](https://keras.io/api/keras_cv/models/tasks/){:target="_blank"}

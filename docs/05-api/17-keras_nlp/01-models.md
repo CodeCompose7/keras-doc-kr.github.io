@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Models
+title: 모델
 nav_order: 01+00
 permalink: /api/keras_nlp/models/
 parent: KerasNLP

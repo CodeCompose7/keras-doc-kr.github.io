@@ -9,6 +9,7 @@ WORKDIR /usr/src/app
 
 # Gemfile과 Gemfile.lock을 복사합니다.
 COPY Gemfile Gemfile.lock ./
+# COPY Gemfile ./
 
 # Bundler 버전을 설정합니다.
 RUN gem install bundler -v 2.3.26

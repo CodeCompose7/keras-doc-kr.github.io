@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 5) MaskedLMMaskGenerator layer
+title: MaskedLMMaskGenerator layer
 nav_order: 03+05
 permalink: /api/keras_nlp/preprocessing_layers/masked_lm_mask_generator/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Preprocessing 레이어
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/preprocessing_layers/masked_lm_mask_generator/](https://keras.io/api/keras_nlp/preprocessing_layers/masked_lm_mask_generator/){:target="_blank"}

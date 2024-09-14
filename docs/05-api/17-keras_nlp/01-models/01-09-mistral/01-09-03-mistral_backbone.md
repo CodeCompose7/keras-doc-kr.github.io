@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ c> MistralBackbone model
+title: MistralBackbone model
 nav_order: 01+09+03
 permalink: /api/keras_nlp/models/mistral/mistral_backbone/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Mistral
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/mistral/mistral_backbone/](https://keras.io/api/keras_nlp/models/mistral/mistral_backbone/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 6) TopKSampler
+title: TopKSampler
 nav_order: 05+06
 permalink: /api/keras_nlp/samplers/top_k_sampler/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Samplers
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/samplers/top_k_sampler/](https://keras.io/api/keras_nlp/samplers/top_k_sampler/){:target="_blank"}

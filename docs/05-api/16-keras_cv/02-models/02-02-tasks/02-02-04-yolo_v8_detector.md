@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ d> The YOLOV8Detector model
+title: The YOLOV8Detector model
 nav_order: 02+02+04
 permalink: /api/keras_cv/models/tasks/yolo_v8_detector/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Tasks
+grand_parent: KerasCV 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/models/tasks/yolo_v8_detector/](https://keras.io/api/keras_cv/models/tasks/yolo_v8_detector/){:target="_blank"}

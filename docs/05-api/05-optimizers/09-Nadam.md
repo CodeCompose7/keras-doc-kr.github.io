@@ -3,7 +3,7 @@ layout: default
 title: Nadam
 nav_order: 09+00
 permalink: /api/optimizers/Nadam/
-parent: Optimizers
+parent: 옵티마이저
 grand_parent: Keras 3 API 문서
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ d> GPT2CausalLM model
+title: GPT2CausalLM model
 nav_order: 01+07+04
 permalink: /api/keras_nlp/models/gpt2/gpt2_causal_lm/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: GPT2
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/gpt2/gpt2_causal_lm/](https://keras.io/api/keras_nlp/models/gpt2/gpt2_causal_lm/){:target="_blank"}

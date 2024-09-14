@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 10) MaskedLMHead layer
+title: MaskedLMHead layer
 nav_order: 04+10
 permalink: /api/keras_nlp/modeling_layers/masked_lm_head/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Modeling 레이어
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/modeling_layers/masked_lm_head/](https://keras.io/api/keras_nlp/modeling_layers/masked_lm_head/){:target="_blank"}
