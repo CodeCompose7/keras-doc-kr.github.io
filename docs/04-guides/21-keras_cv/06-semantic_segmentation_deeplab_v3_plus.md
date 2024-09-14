@@ -35,6 +35,8 @@ grand_parent: 개발자 가이드
 
 Background
 ----------
+{: #background}
+<!-- Background -->
 
 Semantic segmentation is a type of computer vision task that involves assigning a class label such as person, bike, or background to each individual pixel of an image, effectively dividing the image into regions that correspond to different fobject classes or categories.
 
@@ -43,6 +45,8 @@ Semantic segmentation is a type of computer vision task that involves assigning 
 KerasCV offers the DeepLabv3+ model developed by Google for semantic segmentation. This guide demonstrates how to finetune and use DeepLabv3+ model for image semantic segmentaion with KerasCV. Its architecture that combines atrous convolutions, contextual information aggregation, and powerful backbones to achieve accurate and detailed semantic segmentation. The DeepLabv3+ model has been shown to achieve state-of-the-art results on a variety of image segmentation benchmarks.
 
 ### References
+{: #references}
+<!-- ### References -->
 
 [Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation](https://arxiv.org/abs/1802.02611)  
 [Rethinking Atrous Convolution for Semantic Image Segmentation](https://arxiv.org/abs/1706.05587)
@@ -51,6 +55,8 @@ KerasCV offers the DeepLabv3+ model developed by Google for semantic segmentatio
 
 Setup and Imports
 -----------------
+{: #setup-and-imports}
+<!-- Setup and Imports -->
 
 Let's install the dependencies and import the necessary modules.
 
@@ -86,6 +92,8 @@ from keras_cv.datasets.pascal_voc.segmentation import load as load_voc
 
 Perform semantic segmentation with a pretrained DeepLabv3+ model
 ----------------------------------------------------------------
+{: #perform-semantic-segmentation-with-a-pretrained-deeplabv3-model}
+<!-- Perform semantic segmentation with a pretrained DeepLabv3+ model -->
 
 The highest level API in the KerasCV semantic segmentation API is the `keras_cv.models` API. This API includes fully pretrained semantic segmentation models, such as [`keras_cv.models.DeepLabV3Plus`]({{ site.baseurl }}/api/keras_cv/models/tasks/deeplab_v3_segmentation#deeplabv3plus-class).
 
@@ -127,6 +135,8 @@ keras_cv.visualization.plot_segmentation_mask_gallery(
 
 Train a custom semantic segmentation model
 ------------------------------------------
+{: #train-a-custom-semantic-segmentation-model}
+<!-- Train a custom semantic segmentation model -->
 
 In this guide, we'll assemble a full training pipeline for a KerasCV DeepLabV3 semantic segmentation model. This includes data loading, augmentation, training, metric evaluation, and inference!
 
@@ -134,6 +144,8 @@ In this guide, we'll assemble a full training pipeline for a KerasCV DeepLabV3 s
 
 Download the data
 -----------------
+{: #download-the-data}
+<!-- Download the data -->
 
 We download [Pascal VOC dataset](https://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/semantic_contours/benchmark.tgz) with KerasCV datasets and split them into train dataset `train_ds` and `eval_ds`.
 
@@ -146,6 +158,8 @@ eval_ds = load_voc(split="sbd_eval")
 
 Preprocess the data
 -------------------
+{: #preprocess-the-data}
+<!-- Preprocess the data -->
 
 The `preprocess_tfds_inputs` utility function preprocesses the inputs to a dictionary of `images` and `segmentation_masks`. The images and segmentation masks are resized to 512x512. The resulting dataset is then batched into groups of 4 image and segmentation mask pairs.
 
@@ -190,6 +204,8 @@ eval_ds = preprocess_tfds_inputs(eval_ds)
 
 Data Augmentation
 -----------------
+{: #data-augmentation}
+<!-- Data Augmentation -->
 
 KerasCV provides a variety of image augmentation options. In this example, we will use the `RandomFlip` augmentation to augment the training dataset. The `RandomFlip` augmentation randomly flips the images in the training dataset horizontally or vertically. This can help to improve the model's robustness to changes in the orientation of the objects in the images.
 
@@ -214,6 +230,8 @@ keras_cv.visualization.plot_segmentation_mask_gallery(
 
 Model Configuration
 -------------------
+{: #model-configuration}
+<!-- Model Configuration -->
 
 Please feel free to modify the configurations for model training and note how the training results changes. This is an great exercise to get a better understanding of the training pipeline.
 
@@ -249,6 +267,8 @@ Downloading data from https://storage.googleapis.com/keras-cv/models/resnet50v2/
 
 Compile the model
 -----------------
+{: #compile-the-model}
+<!-- Compile the model -->
 
 The model.compile() function sets up the training process for the model. It defines the - optimization algorithm - Stochastic Gradient Descent (SGD) - the loss function - categorical cross-entropy - the evaluation metrics - Mean IoU and categorical accuracy
 
@@ -342,6 +362,8 @@ model.fit(train_ds, validation_data=eval_ds, epochs=EPOCHS)
 
 Predictions with trained model
 ------------------------------
+{: #predictions-with-trained-model}
+<!-- Predictions with trained model -->
 
 Now that the model training of DeepLabv3+ has completed, let's test it by making predications on a few sample images.
 

@@ -33,6 +33,8 @@ grand_parent: 개발자 가이드
 
 Overview
 --------
+{: #overview}
+<!-- Overview -->
 
 The Segment Anything Model (SAM) produces high quality object masks from input prompts such as points or boxes, and it can be used to generate masks for all objects in an image. It has been trained on a [dataset](https://segment-anything.com/dataset/index.html) of 11 million images and 1.1 billion masks, and has strong zero-shot performance on a variety of segmentation tasks.
 
@@ -53,6 +55,8 @@ First, let's get all our dependencies and images for our demo.
 
 Choose your backend
 -------------------
+{: #choose-your-backend}
+<!-- Choose your backend -->
 
 With Keras 3, you can choose to use your favorite backend!
 
@@ -73,6 +77,8 @@ import keras_cv
 
 Helper functions
 ----------------
+{: #helper-functions}
+<!-- Helper functions -->
 
 Let's define some helper functions for visulazing the images, prompts, and the segmentation results.
 
@@ -151,6 +157,8 @@ def inference_resizing(image, pad=True):
 
 Get the pretrained SAM model
 ----------------------------
+{: #get-the-pretrained-sam-model}
+<!-- Get the pretrained SAM model -->
 
 We can initialize a trained SAM model using KerasCV's `from_preset` factory method. Here, we use the huge ViT backbone trained on the SA-1B dataset (`sam_huge_sa1b`) for high-quality segmentation masks. You can also use one of the `sam_large_sa1b` or `sam_base_sa1b` for better performance (at the cost of decreasing quality of segmentation masks).
 
@@ -162,6 +170,8 @@ model = keras_cv.models.SegmentAnythingModel.from_preset("sam_huge_sa1b")
 
 Understanding Prompts
 ---------------------
+{: #understanding-prompts}
+<!-- Understanding Prompts -->
 
 Segment Anything allows prompting an image using points, boxes, and masks:
 
@@ -185,6 +195,8 @@ Placeholder prompts are only required when calling the model directly (i.e. `mod
 
 Point prompts
 -------------
+{: #point-prompts}
+<!-- Point prompts -->
 
 First, let's segment an image using point prompts. We load the image and resize it to shape `(1024, 1024)`, the image size the pretrained SAM model expects.
 
@@ -289,6 +301,8 @@ Nice! SAM was able to capture the ambiguity of our point prompt and also returne
 
 Box Prompts
 -----------
+{: #box-prompts}
+<!-- Box Prompts -->
 
 Now, let's see how we can prompt the model using boxes. The box is specified using two points, the top-left corner and the bottom-right corner of the bounding box in xyxy format. Let's prompt the model using a bounding box around the left front tyre of the truck.
 
@@ -322,6 +336,8 @@ Boom! The model perfectly segments out the left front tyre in our bounding box.
 
 Combining prompts
 -----------------
+{: #combining-prompts}
+<!-- Combining prompts -->
 
 To get the true potential of the model out, let's combine box and point prompts and see what the model does.
 
@@ -364,6 +380,8 @@ Voila! The model understood that the object we wanted to exclude from our mask w
 
 Text prompts
 ------------
+{: #text-prompts}
+<!-- Text prompts -->
 
 Finally, let's see how text prompts can be used along with KerasCV's `SegmentAnythingModel`.
 
@@ -476,6 +494,8 @@ Clipping input data to the valid range for imshow with RGB data ([0..1] for floa
 
 Optimizing SAM
 --------------
+{: #optimizing-sam}
+<!-- Optimizing SAM -->
 
 You can use `mixed_float16` or `bfloat16` dtype policies to gain huge speedups and memory optimizations at releatively low precision loss.
 
@@ -525,6 +545,8 @@ The script used to generate the benchmarks is present [here](https://github.com/
 
 Conclusion
 ----------
+{: #conclusion}
+<!-- Conclusion -->
 
 KerasCV's `SegmentAnythingModel` supports a variety of applications and, with the help of Keras 3, enables running the model on TensorFlow, JAX, and PyTorch! With the help of XLA in JAX and TensorFlow, the model runs several times faster than the original implementation. Moreover, using Keras's mixed precision support helps optimize memory use and computation time with just one line of code!
 
