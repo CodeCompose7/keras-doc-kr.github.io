@@ -36,10 +36,11 @@
    document.documentElement.setAttribute('data-theme', theme);
 </script>
 <script>
-   if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark-mode');
+   // if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark-mode');
+   if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
 </script>
 <script type="text/javascript" src="{{ '/assets/js/theme-switch.js' | relative_url }}"></script>
-<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-switchable.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-switchable-src.css' | relative_url }}">
 
 <style>
    @media (min-width: 50rem) {
@@ -58,7 +59,8 @@
       html.dark-mode .site-header,
       .site-footer,
       html.dark-mode .site-footer {
-         width: 20.5rem;
+         /* width: 20.5rem; */
+         padding-right: 0.5em;
       }
    }
 </style>
