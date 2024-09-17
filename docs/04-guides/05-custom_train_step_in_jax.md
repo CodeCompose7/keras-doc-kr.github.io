@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JAX의 `fit()`에서 발생하는 일 커스터마이즈
+title: JAX에서 `fit()`의 동작을 커스터마이즈하기
 nav_order: 5
 permalink: /guides/custom_train_step_in_jax/
 parent: 개발자 가이드
@@ -9,7 +9,7 @@ parent: 개발자 가이드
 * 원본 링크 : [https://keras.io/guides/custom_train_step_in_jax/](https://keras.io/guides/custom_train_step_in_jax/){:target="_blank"}
 * 최종 수정일 : 2024-03-29
 
-# JAX의 `fit()`에서 발생하는 일 커스터마이즈 (Customizing what happens in `fit()` with JAX)
+# JAX에서 `fit()`의 동작을 커스터마이즈하기 (Customizing what happens in `fit()` with JAX)
 {: .no_toc }
 
 ## 목차
