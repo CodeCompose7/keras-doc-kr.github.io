@@ -24,7 +24,7 @@ grand_parent: 코드 예제
 **저자:** [András Béres](https://www.linkedin.com/in/andras-beres-789190210)  
 **생성일:** 2021/10/28  
 **최종편집일:** 2021/10/28  
-**설명:** Generating images from limited data using the Caltech Birds dataset.
+**설명:** Caltech Birds 데이터셋을 사용하여 제한된 데이터로 이미지 생성하기
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/generative/ipynb/gan_ada.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/generative/gan_ada.py){: .btn .btn-blue }
@@ -35,20 +35,28 @@ grand_parent: 코드 예제
 ----
 
 ## Introduction
+{: #introduction}
+<!-- ## Introduction -->
 
 ### GANs
+{: #gans}
+<!-- ### GANs -->
 
 [Generative Adversarial Networks (GANs)](https://arxiv.org/abs/1406.2661) are a popular class of generative deep learning models, commonly used for image generation. They consist of a pair of dueling neural networks, called the discriminator and the generator. The discriminator's task is to distinguish real images from generated (fake) ones, while the generator network tries to fool the discriminator by generating more and more realistic images. If the generator is however too easy or too hard to fool, it might fail to provide useful learning signal for the generator, therefore training GANs is usually considered a difficult task.
 
 ### Data augmentation for GANS
+{: #data-augmentation-for-gans}
+<!-- ### Data augmentation for GANS -->
 
 Data augmentation, a popular technique in deep learning, is the process of randomly applying semantics-preserving transformations to the input data to generate multiple realistic versions of it, thereby effectively multiplying the amount of training data available. The simplest example is left-right flipping an image, which preserves its contents while generating a second unique training sample. Data augmentation is commonly used in supervised learning to prevent overfitting and enhance generalization.
 
 The authors of [StyleGAN2-ADA](https://arxiv.org/abs/2006.06676) show that discriminator overfitting can be an issue in GANs, especially when only low amounts of training data is available. They propose Adaptive Discriminator Augmentation to mitigate this issue.
 
-Applying data augmentation to GANs however is not straightforward. Since the generator is updated using the discriminator's gradients, if the generated images are augmented, the augmentation pipeline has to be differentiable and also has to be GPU-compatible for computational efficiency. Luckily, the [Keras image augmentation layers](https://keras.io/api/layers/preprocessing_layers/image_augmentation/) fulfill both these requirements, and are therefore very well suited for this task.
+Applying data augmentation to GANs however is not straightforward. Since the generator is updated using the discriminator's gradients, if the generated images are augmented, the augmentation pipeline has to be differentiable and also has to be GPU-compatible for computational efficiency. Luckily, the [Keras image augmentation layers]({{ site.baseurl }}/api/layers/preprocessing_layers/image_augmentation/) fulfill both these requirements, and are therefore very well suited for this task.
 
 ### Invertible data augmentation
+{: #invertible-data-augmentation}
+<!-- ### Invertible data augmentation -->
 
 A possible difficulty when using data augmentation in generative models is the issue of ["leaky augmentations" (section 2.2)](https://arxiv.org/abs/2006.06676), namely when the model generates images that are already augmented. This would mean that it was not able to separate the augmentation from the underlying data distribution, which can be caused by using non-invertible data transformations. For example, if either 0, 90, 180 or 270 degree rotations are performed with equal probability, the original orientation of the images is impossible to infer, and this information is destroyed.
 
@@ -56,8 +64,9 @@ A simple trick to make data augmentations invertible is to only apply them with 
 
 * * *
 
-Setup
------
+## Setup
+{: #setup}
+<!-- ## Setup -->
 
 ```python
 import matplotlib.pyplot as plt
@@ -70,8 +79,9 @@ from tensorflow.keras import layers
 
 * * *
 
-Hyperparameterers
------------------
+## Hyperparameterers
+{: #hyperparameterers}
+<!-- ## Hyperparameterers -->
 
 ```python
 # data
@@ -105,8 +115,9 @@ ema = 0.99
 
 * * *
 
-Data pipeline
--------------
+## Data pipeline
+{: #data-pipeline}
+<!-- ## Data pipeline -->
 
 In this example, we will use the [Caltech Birds (2011)](https://www.tensorflow.org/datasets/catalog/caltech_birds2011) dataset for generating images of birds, which is a diverse natural dataset containing less then 6000 images for training. When working with such low amounts of data, one has to take extra care to retain as high data quality as possible. In this example, we use the provided bounding boxes of the birds to cut them out with square crops while preserving their aspect ratios when possible.
 
@@ -173,14 +184,15 @@ val_dataset = prepare_dataset("test")
 
 After preprocessing the training images look like the following: 
 
-![birds dataset](https://i.imgur.com/Ru5HgBM.png)
+![birds dataset]({{ site.baseurl }}/img/examples/generative/gan_ada/Ru5HgBM.png)
 
 * * *
 
-Kernel inception distance
--------------------------
+## Kernel inception distance
+{: #kernel-inception-distance}
+<!-- ## Kernel inception distance -->
 
-[Kernel Inception Distance (KID)](https://arxiv.org/abs/1801.01401) was proposed as a replacement for the popular [Frechet Inception Distance (FID)](https://arxiv.org/abs/1706.08500) metric for measuring image generation quality. Both metrics measure the difference in the generated and training distributions in the representation space of an [InceptionV3](https://keras.io/api/applications/inceptionv3/) network pretrained on [ImageNet](https://www.tensorflow.org/datasets/catalog/imagenet2012).
+[Kernel Inception Distance (KID)](https://arxiv.org/abs/1801.01401) was proposed as a replacement for the popular [Frechet Inception Distance (FID)](https://arxiv.org/abs/1706.08500) metric for measuring image generation quality. Both metrics measure the difference in the generated and training distributions in the representation space of an [InceptionV3]({{ site.baseurl }}/api/applications/inceptionv3/) network pretrained on [ImageNet](https://www.tensorflow.org/datasets/catalog/imagenet2012).
 
 According to the paper, KID was proposed because FID has no unbiased estimator, its expected value is higher when it is measured on fewer images. KID is more suitable for small datasets because its expected value does not depend on the number of samples it is measured on. In my experience it is also computationally lighter, numerically more stable, and simpler to implement because it can be estimated in a per-batch manner.
 
@@ -252,8 +264,9 @@ class KID(keras.metrics.Metric):
 
 * * *
 
-Adaptive discriminator augmentation
------------------------------------
+## Adaptive discriminator augmentation
+{: #adaptive-discriminator-augmentation}
+<!-- ## Adaptive discriminator augmentation -->
 
 The authors of [StyleGAN2-ADA](https://arxiv.org/abs/2006.06676) propose to change the augmentation probability adaptively during training. Though it is explained differently in the paper, they use [integral control](https://en.wikipedia.org/wiki/PID_controller#Integral) on the augmentation probability to keep the discriminator's accuracy on real images close to a target value. Note, that their controlled variable is actually the average sign of the discriminator logits (r\_t in the paper), which corresponds to 2 \* accuracy - 1.
 
@@ -332,8 +345,9 @@ class AdaptiveAugmenter(keras.Model):
 
 * * *
 
-Network architecture
---------------------
+## Network architecture
+{: #network-architecture}
+<!-- ## Network architecture -->
 
 Here we specify the architecture of the two networks:
 
@@ -342,7 +356,7 @@ Here we specify the architecture of the two networks:
 
 GANs tend to be sensitive to the network architecture, I implemented a DCGAN architecture in this example, because it is relatively stable during training while being simple to implement. We use a constant number of filters throughout the network, use a sigmoid instead of tanh in the last layer of the generator, and use default initialization instead of random normal as further simplifications.
 
-As a good practice, we disable the learnable scale parameter in the batch normalization layers, because on one hand the following relu + convolutional layers make it redundant (as noted in the [documentation](https://keras.io/api/layers/normalization_layers/batch_normalization/)). But also because it should be disabled based on theory when using [spectral normalization (section 4.1)](https://arxiv.org/abs/1802.05957), which is not used here, but is common in GANs. We also disable the bias in the fully connected and convolutional layers, because the following batch normalization makes it redundant.
+As a good practice, we disable the learnable scale parameter in the batch normalization layers, because on one hand the following relu + convolutional layers make it redundant (as noted in the [documentation]({{ site.baseurl }}/api/layers/normalization_layers/batch_normalization/)). But also because it should be disabled based on theory when using [spectral normalization (section 4.1)](https://arxiv.org/abs/1802.05957), which is not used here, but is common in GANs. We also disable the bias in the fully connected and convolutional layers, because the following batch normalization makes it redundant.
 
 ```python
 # DCGAN generator
@@ -384,8 +398,9 @@ def get_discriminator():
 
 * * *
 
-GAN model
----------
+## GAN model
+{: #gan-model}
+<!-- ## GAN model -->
 
 ```python
 class GAN_ADA(keras.Model):
@@ -532,8 +547,9 @@ class GAN_ADA(keras.Model):
 
 * * *
 
-Training
---------
+## Training
+{: #training}
+<!-- ## Training -->
 
 One can should see from the metrics during training, that if the real accuracy (discriminator's accuracy on real images) is below the target accuracy, the augmentation probability is increased, and vice versa. In my experience, during a healthy GAN training, the discriminator accuracy should stay in the 80-95% range. Below that, the discriminator is too weak, above that it is too strong.
 
@@ -568,6 +584,9 @@ model.fit(
     ],
 )
 ```
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
 Model: "generator"
@@ -681,10 +700,13 @@ Epoch 10/10
 <keras.callbacks.History at 0x7fefcc2cb9d0>
 ```
 
+</details>
+
 * * *
 
-Inference
----------
+## Inference
+{: #inference}
+<!-- ## Inference -->
 
 ```python
 # load the best model and generate images
@@ -696,21 +718,25 @@ model.plot_images()
 
 * * *
 
-Results
--------
+## Results
+{: #results}
+<!-- ## Results -->
 
 By running the training for 400 epochs (which takes 2-3 hours in a Colab notebook), one can get high quality image generations using this code example.
 
-The evolution of a random batch of images over a 400 epoch training (ema=0.999 for animation smoothness): ![birds evolution gif](https://i.imgur.com/ecGuCcz.gif)
+The evolution of a random batch of images over a 400 epoch training (ema=0.999 for animation smoothness): 
+![birds evolution gif]({{ site.baseurl }}/img/examples/generative/gan_ada/ecGuCcz.gif)
 
-Latent-space interpolation between a batch of selected images: ![birds interpolation gif](https://i.imgur.com/nGvzlsC.gif)
+Latent-space interpolation between a batch of selected images: 
+![birds evolution gif]({{ site.baseurl }}/img/examples/generative/gan_ada/nGvzlsC.gif)
 
 I also recommend trying out training on other datasets, such as [CelebA](https://www.tensorflow.org/datasets/catalog/celeb_a) for example. In my experience good results can be achieved without changing any hyperparameters (though discriminator augmentation might not be necessary).
 
 * * *
 
-GAN tips and tricks
--------------------
+## GAN tips and tricks
+{: #gan-tips-and-tricks}
+<!-- ## GAN tips and tricks -->
 
 My goal with this example was to find a good tradeoff between ease of implementation and generation quality for GANs. During preparation, I have run numerous ablations using [this repository](https://github.com/beresandras/gan-flavours-keras).
 
@@ -719,17 +745,21 @@ In this section I list the lessons learned and my recommendations in my subjecti
 I recommend checking out the [DCGAN paper](https://arxiv.org/abs/1511.06434), this [NeurIPS talk](https://www.youtube.com/watch?v=myGAju4L7O8), and this [large scale GAN study](https://arxiv.org/abs/1711.10337) for others' takes on this subject.
 
 ### Architectural tips
+{: #architectural-tips}
+<!-- ### Architectural tips -->
 
 *   **resolution**: Training GANs at higher resolutions tends to get more difficult, I recommend experimenting at 32x32 or 64x64 resolutions initially.
-*   **initialization**: If you see strong colorful patterns early on in the training, the initialization might be the issue. Set the kernel\_initializer parameters of layers to [random normal](https://keras.io/api/layers/initializers/#randomnormal-class), and decrease the standard deviation (recommended value: 0.02, following DCGAN) until the issue disappears.
-*   **upsampling**: There are two main methods for upsampling in the generator. [Transposed convolution](https://keras.io/api/layers/convolution_layers/convolution2d_transpose/) is faster, but can lead to [checkerboard artifacts](https://distill.pub/2016/deconv-checkerboard/), which can be reduced by using a kernel size that is divisible with the stride (recommended kernel size is 4 for a stride of 2). [Upsampling](https://keras.io/api/layers/reshaping_layers/up_sampling2d/) + [standard convolution](https://keras.io/api/layers/convolution_layers/convolution2d/) can have slightly lower quality, but checkerboard artifacts are not an issue. I recommend using nearest-neighbor interpolation over bilinear for it.
+*   **initialization**: If you see strong colorful patterns early on in the training, the initialization might be the issue. Set the kernel\_initializer parameters of layers to [random normal]({{ site.baseurl }}/api/layers/initializers/#randomnormal-class), and decrease the standard deviation (recommended value: 0.02, following DCGAN) until the issue disappears.
+*   **upsampling**: There are two main methods for upsampling in the generator. [Transposed convolution]({{ site.baseurl }}/api/layers/convolution_layers/convolution2d_transpose/) is faster, but can lead to [checkerboard artifacts](https://distill.pub/2016/deconv-checkerboard/), which can be reduced by using a kernel size that is divisible with the stride (recommended kernel size is 4 for a stride of 2). [Upsampling]({{ site.baseurl }}/api/layers/reshaping_layers/up_sampling2d/) + [standard convolution]({{ site.baseurl }}/api/layers/convolution_layers/convolution2d/) can have slightly lower quality, but checkerboard artifacts are not an issue. I recommend using nearest-neighbor interpolation over bilinear for it.
 *   **batch normalization in discriminator**: Sometimes has a high impact, I recommend trying out both ways.
 *   **[spectral normalization](https://www.tensorflow.org/addons/api_docs/python/tfa/layers/SpectralNormalization)**: A popular technique for training GANs, can help with stability. I recommend disabling batch normalization's learnable scale parameters along with it.
-*   **[residual connections](https://keras.io/guides/functional_api/#a-toy-resnet-model)**: While residual discriminators behave similarly, residual generators are more difficult to train in my experience. They are however necessary for training large and deep architectures. I recommend starting with non-residual architectures.
+*   **[residual connections]({{ site.baseurl }}/guides/functional_api/#a-toy-resnet-model)**: While residual discriminators behave similarly, residual generators are more difficult to train in my experience. They are however necessary for training large and deep architectures. I recommend starting with non-residual architectures.
 *   **dropout**: Using dropout before the last layer of the discriminator improves generation quality in my experience. Recommended dropout rate is below 0.5.
-*   **[leaky ReLU](https://keras.io/api/layers/activation_layers/leaky_relu/)**: Use leaky ReLU activations in the discriminator to make its gradients less sparse. Recommended slope/alpha is 0.2 following DCGAN.
+*   **[leaky ReLU]({{ site.baseurl }}/api/layers/activation_layers/leaky_relu/)**: Use leaky ReLU activations in the discriminator to make its gradients less sparse. Recommended slope/alpha is 0.2 following DCGAN.
 
 ### Algorithmic tips
+{: #algorithmic-tips}
+<!-- ### Algorithmic tips -->
 
 *   **loss functions**: Numerous losses have been proposed over the years for training GANs, promising improved performance and stability. I have implemented 5 of them in [this repository](https://github.com/beresandras/gan-flavours-keras), and my experience is in line with [this GAN study](https://arxiv.org/abs/1711.10337): no loss seems to consistently outperform the default non-saturating GAN loss. I recommend using that as a default.
 *   **Adam's beta\_1 parameter**: The beta\_1 parameter in Adam can be interpreted as the momentum of mean gradient estimation. Using 0.5 or even 0.0 instead of the default 0.9 value was proposed in DCGAN and is important. This example would not work using its default value.
@@ -741,17 +771,18 @@ I recommend checking out the [DCGAN paper](https://arxiv.org/abs/1511.06434), th
 
 * * *
 
-Related works
--------------
+## Related works
+{: #related-works}
+<!-- ## Related works -->
 
 Other GAN-related Keras code examples:
 
-*   [DCGAN + CelebA](https://keras.io/examples/generative/dcgan_overriding_train_step/)
-*   [WGAN + FashionMNIST](https://keras.io/examples/generative/wgan_gp/)
-*   [WGAN + Molecules](https://keras.io/examples/generative/wgan-graphs/)
-*   [ConditionalGAN + MNIST](https://keras.io/examples/generative/conditional_gan/)
-*   [CycleGAN + Horse2Zebra](https://keras.io/examples/generative/cyclegan/)
-*   [StyleGAN](https://keras.io/examples/generative/stylegan/)
+*   [DCGAN + CelebA]({{ site.baseurl }}/examples/generative/dcgan_overriding_train_step/)
+*   [WGAN + FashionMNIST]({{ site.baseurl }}/examples/generative/wgan_gp/)
+*   [WGAN + Molecules]({{ site.baseurl }}/examples/generative/wgan-graphs/)
+*   [ConditionalGAN + MNIST]({{ site.baseurl }}/examples/generative/conditional_gan/)
+*   [CycleGAN + Horse2Zebra]({{ site.baseurl }}/examples/generative/cyclegan/)
+*   [StyleGAN]({{ site.baseurl }}/examples/generative/stylegan/)
 
 Modern GAN architecture-lines:
 
