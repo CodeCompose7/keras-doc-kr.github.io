@@ -8,7 +8,7 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/generative/deep_dream/](https://keras.io/examples/generative/deep_dream/){:target="_blank"}
-* 최종 수정일 : 2024-03-30
+* 최종 수정일 : 2024-09-18
 
 # Deep Dream
 {: .no_toc }
@@ -35,6 +35,8 @@ grand_parent: 코드 예제
 ----
 
 ## Introduction
+{: #introduction}
+<!-- ## Introduction -->
 
 "Deep dream" is an image-filtering technique which consists of taking an image classification model, and running gradient ascent over an input image to try to maximize the activations of specific layers (and sometimes, specific units in specific layers) for this input. It produces hallucination-like visuals.
 
@@ -50,8 +52,9 @@ Process:
 
 * * *
 
-Setup
------
+## Setup
+{: #setup}
+<!-- ## Setup -->
 
 ```python
 import os
@@ -123,8 +126,9 @@ def deprocess_image(x):
 
 * * *
 
-Compute the Deep Dream loss
----------------------------
+## Compute the Deep Dream loss
+{: #compute-the-deep-dream-loss}
+<!-- ## Compute the Deep Dream loss -->
 
 First, build a feature extraction model to retrieve the activations of our target layers given an input image.
 
@@ -163,8 +167,9 @@ def compute_loss(input_image):
 
 * * *
 
-Set up the gradient ascent loop for one octave
-----------------------------------------------
+## Set up the gradient ascent loop for one octave
+{: #set-up-the-gradient-ascent-loop-for-one-octave}
+<!-- ## Set up the gradient ascent loop for one octave -->
 
 ```python
 @tf.function
@@ -191,8 +196,9 @@ def gradient_ascent_loop(img, iterations, learning_rate, max_loss=None):
 
 * * *
 
-Run the training loop, iterating over different octaves
--------------------------------------------------------
+## Run the training loop, iterating over different octaves
+{: #run-the-training-loop-iterating-over-different-octaves}
+<!-- ## Run the training loop, iterating over different octaves -->
 
 ```python
 original_img = preprocess_image(base_image_path)
@@ -221,6 +227,9 @@ for i, shape in enumerate(successive_shapes):
 
 keras.utils.save_img(result_prefix + ".png", deprocess_image(img.numpy()))
 ```
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
 Processing octave 0 with shape (326, 489)
@@ -287,6 +296,8 @@ Processing octave 2 with shape (640, 960)
 ... Loss value at step 18: 8.80
 ... Loss value at step 19: 9.10
 ```
+
+</details>
 
 Display the result.
 
