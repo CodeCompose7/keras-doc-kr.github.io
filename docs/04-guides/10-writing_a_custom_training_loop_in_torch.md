@@ -23,21 +23,21 @@ parent: 개발자 가이드
 **저자:** [fchollet](https://twitter.com/fchollet)  
 **생성일:** 2023/06/25  
 **최종편집일:** 2023/06/25  
-**설명:** Writing low-level training & evaluation loops in PyTorch.
+**설명:** PyTorch에서 낮은 레벨의 트레이닝 및 평가 루프 작성하기
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/writing_a_custom_training_loop_in_torch.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/guides/writing_a_custom_training_loop_in_torch.py){: .btn .btn-blue }
 
 ----
 
-## Setup
+## 셋업
 {: #setup}
 <!-- ## Setup -->
 
 ```python
 import os
 
-# This guide can only be run with the torch backend.
+# # 이 가이드는 torch 백엔드에서만 실행할 수 있습니다.
 os.environ["KERAS_BACKEND"] = "torch"
 
 import torch
@@ -47,19 +47,25 @@ import numpy as np
 
 ------------------------------------------------------------------------
 
-## Introduction
+## 소개
 {: #introduction}
 <!-- ## Introduction -->
 
-Keras provides default training and evaluation loops, `fit()` and `evaluate()`. Their usage is covered in the guide [Training & evaluation with the built-in methods]({{ site.baseurl }}/guides/training_with_built_in_methods/).
+Keras는 `fit()`과 `evaluate()`라는 기본 트레이닝 및 평가 루프를 제공합니다. 
+이들의 사용법은 [빌트인 메서드를 사용한 트레이닝 및 평가]({{ site.baseurl }}/guides/training_with_built_in_methods/) 가이드에서 다룹니다.
 
-If you want to customize the learning algorithm of your model while still leveraging the convenience of `fit()` (for instance, to train a GAN using `fit()`), you can subclass the `Model` class and implement your own `train_step()` method, which is called repeatedly during `fit()`.
+모델의 학습 알고리즘을 커스터마이즈하면서도 `fit()`의 편리함을 활용하고 싶다면 
+(예를 들어, `fit()`을 사용해 GAN을 트레이닝하려는 경우), 
+`Model` 클래스를 서브클래싱하고, 
+`fit()` 동안 반복적으로 호출되는 `train_step()` 메서드를 직접 구현할 수 있습니다.
 
-Now, if you want very low-level control over training & evaluation, you should write your own training & evaluation loops from scratch. This is what this guide is about.
+이제, 트레이닝 및 평가를 아주 낮은 레벨에서 제어하려면, 
+처음부터 직접 트레이닝 및 평가 루프를 작성해야 합니다. 
+이 가이드는 바로 이러한 방법에 대해 설명합니다.
 
 ------------------------------------------------------------------------
 
-## A first end-to-end example
+## 첫 번째 엔드 투 엔드 예제
 {: #a-first-end-to-end-example}
 <!-- ## A first end-to-end example -->
 
