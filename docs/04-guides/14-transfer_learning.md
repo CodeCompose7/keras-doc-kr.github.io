@@ -31,6 +31,8 @@ parent: 개발자 가이드
 ----
 
 ## Setup
+{: #setup}
+<!-- ## Setup -->
 
 ```python
 import numpy as np
@@ -42,8 +44,9 @@ import matplotlib.pyplot as plt
 
 * * *
 
-Introduction
-------------
+## Introduction
+{: #introduction}
+<!-- ## Introduction -->
 
 **Transfer learning** consists of taking features learned on one problem, and leveraging them on a new, similar problem. For instance, features from a model that has learned to identify racoons may be useful to kick-start a model meant to identify tanukis.
 
@@ -66,8 +69,9 @@ This is adapted from [Deep Learning with Python](https://www.manning.com/books/d
 
 * * *
 
-Freezing layers: understanding the `trainable` attribute
---------------------------------------------------------
+## Freezing layers: understanding the `trainable` attribute
+{: #freezing-layers-understanding-the-trainable-attribute}
+<!-- ## Freezing layers: understanding the `trainable` attribute -->
 
 Layers & models have three weight attributes:
 
@@ -86,13 +90,18 @@ print("trainable_weights:", len(layer.trainable_weights))
 print("non_trainable_weights:", len(layer.non_trainable_weights))
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 weights: 2
 trainable_weights: 2
 non_trainable_weights: 0
 ```
 
-In general, all weights are trainable weights. The only built-in layer that has non-trainable weights is the `BatchNormalization` layer. It uses non-trainable weights to keep track of the mean and variance of its inputs during training. To learn how to use non-trainable weights in your own custom layers, see the [guide to writing new layers from scratch](/guides/making_new_layers_and_models_via_subclassing/).
+</details>
+
+In general, all weights are trainable weights. The only built-in layer that has non-trainable weights is the `BatchNormalization` layer. It uses non-trainable weights to keep track of the mean and variance of its inputs during training. To learn how to use non-trainable weights in your own custom layers, see the [guide to writing new layers from scratch]({{ site.baseurl }}/guides/making_new_layers_and_models_via_subclassing/).
 
 **Example: the `BatchNormalization` layer has 2 trainable weights and 2 non-trainable weights**
 
@@ -105,11 +114,16 @@ print("trainable_weights:", len(layer.trainable_weights))
 print("non_trainable_weights:", len(layer.non_trainable_weights))
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 weights: 4
 trainable_weights: 2
 non_trainable_weights: 2
 ```
+
+</details>
 
 Layers & models also feature a boolean attribute `trainable`. Its value can be changed. Setting `layer.trainable` to `False` moves all the layer's weights from trainable to non-trainable. This is called "freezing" the layer: the state of a frozen layer won't be updated during training (either when training with `fit()` or when training with any custom loop that relies on `trainable_weights` to apply gradient updates).
 
@@ -125,11 +139,16 @@ print("trainable_weights:", len(layer.trainable_weights))
 print("non_trainable_weights:", len(layer.non_trainable_weights))
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 weights: 2
 trainable_weights: 0
 non_trainable_weights: 2
 ```
+
+</details>
 
 When a trainable weight becomes non-trainable, its value is no longer updated during training.
 
@@ -159,16 +178,22 @@ np.testing.assert_allclose(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
- 1/1 ━━━━━━━━━━━━━━━━━━━━ 1s 766ms/step - loss: 0.0615
+    1/1 ━━━━━━━━━━━━━━━━━━━━ 1s 766ms/step - loss: 0.0615
 ```
 
-Do not confuse the `layer.trainable` attribute with the argument `training` in `layer.__call__()` (which controls whether the layer should run its forward pass in inference mode or training mode). For more information, see the [Keras FAQ](https://keras.io/getting_started/faq/#whats-the-difference-between-the-training-argument-in-call-and-the-trainable-attribute).
+</details>
+
+Do not confuse the `layer.trainable` attribute with the argument `training` in `layer.__call__()` (which controls whether the layer should run its forward pass in inference mode or training mode). For more information, see the [Keras FAQ]({{ site.baseurl }}/getting_started/faq/#whats-the-difference-between-the-training-argument-in-call-and-the-trainable-attribute).
 
 * * *
 
-Recursive setting of the `trainable` attribute
-----------------------------------------------
+## Recursive setting of the `trainable` attribute
+{: #recursive-setting-of-the-trainable-attribute}
+<!-- ## Recursive setting of the `trainable` attribute -->
 
 If you set `trainable = False` on a model or on any layer that has sublayers, all children layers become non-trainable as well.
 
@@ -199,8 +224,9 @@ assert inner_model.layers[0].trainable == False  # `trainable` is propagated rec
 
 * * *
 
-The typical transfer-learning workflow
---------------------------------------
+## The typical transfer-learning workflow
+{: #the-typical-transfer-learning-workflow}
+<!-- ## The typical transfer-learning workflow -->
 
 This leads us to how a typical transfer learning workflow can be implemented in Keras:
 
@@ -262,8 +288,9 @@ model.fit(new_dataset, epochs=20, callbacks=..., validation_data=...)
 
 * * *
 
-Fine-tuning
------------
+## Fine-tuning
+{: #fine-tuning}
+<!-- ## Fine-tuning -->
 
 Once your model has converged on the new data, you can try to unfreeze all or part of the base model and retrain the whole model end-to-end with a very low learning rate.
 
@@ -299,21 +326,24 @@ Calling `compile()` on a model is meant to "freeze" the behavior of that model. 
 Many image models contain `BatchNormalization` layers. That layer is a special case on every imaginable count. Here are a few things to keep in mind.
 
 *   `BatchNormalization` contains 2 non-trainable weights that get updated during training. These are the variables tracking the mean and variance of the inputs.
-*   When you set `bn_layer.trainable = False`, the `BatchNormalization` layer will run in inference mode, and will not update its mean & variance statistics. This is not the case for other layers in general, as [weight trainability & inference/training modes are two orthogonal concepts](https://keras.io/getting_started/faq/#whats-the-difference-between-the-training-argument-in-call-and-the-trainable-attribute). But the two are tied in the case of the `BatchNormalization` layer.
+*   When you set `bn_layer.trainable = False`, the `BatchNormalization` layer will run in inference mode, and will not update its mean & variance statistics. This is not the case for other layers in general, as [weight trainability & inference/training modes are two orthogonal concepts]({{ site.baseurl }}/getting_started/faq/#whats-the-difference-between-the-training-argument-in-call-and-the-trainable-attribute). But the two are tied in the case of the `BatchNormalization` layer.
 *   When you unfreeze a model that contains `BatchNormalization` layers in order to do fine-tuning, you should keep the `BatchNormalization` layers in inference mode by passing `training=False` when calling the base model. Otherwise the updates applied to the non-trainable weights will suddenly destroy what the model has learned.
 
 You'll see this pattern in action in the end-to-end example at the end of this guide.
 
 * * *
 
-An end-to-end example: fine-tuning an image classification model on a cats vs. dogs dataset
--------------------------------------------------------------------------------------------
+## An end-to-end example: fine-tuning an image classification model on a cats vs. dogs dataset
+{: #an-end-to-end-example-fine-tuning-an-image-classification-model-on-a-cats-vs-dogs-dataset}
+<!-- ## An end-to-end example: fine-tuning an image classification model on a cats vs. dogs dataset -->
 
 To solidify these concepts, let's walk you through a concrete end-to-end transfer learning & fine-tuning example. We will load the Xception model, pre-trained on ImageNet, and use it on the Kaggle "cats vs. dogs" classification dataset.
 
 ### Getting the data
+{: #getting-the-data}
+<!-- ### Getting the data -->
 
-First, let's fetch the cats vs. dogs dataset using TFDS. If you have your own dataset, you'll probably want to use the utility [`keras.utils.image_dataset_from_directory`](/api/data_loading/image#imagedatasetfromdirectory-function) to generate similar labeled dataset objects from a set of images on disk filed into class-specific folders.
+First, let's fetch the cats vs. dogs dataset using TFDS. If you have your own dataset, you'll probably want to use the utility [`keras.utils.image_dataset_from_directory`]({{ site.baseurl }}/api/data_loading/image#imagedatasetfromdirectory-function) to generate similar labeled dataset objects from a set of images on disk filed into class-specific folders.
 
 Transfer learning is most useful when working with very small datasets. To keep our dataset small, we will use 40% of the original training data (25,000 images) for training, 10% for validation, and 10% for testing.
 
@@ -332,16 +362,21 @@ print(f"Number of validation samples: {validation_ds.cardinality()}")
 print(f"Number of test samples: {test_ds.cardinality()}")
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
- Downloading and preparing dataset 786.68 MiB (download: 786.68 MiB, generated: Unknown size, total: 786.68 MiB) to /home/mattdangerw/tensorflow_datasets/cats_vs_dogs/4.0.0...
+    Downloading and preparing dataset 786.68 MiB (download: 786.68 MiB, generated: Unknown size, total: 786.68 MiB) to /home/mattdangerw/tensorflow_datasets/cats_vs_dogs/4.0.0...
 
 WARNING:absl:1738 images were corrupted and were skipped
 
- Dataset cats_vs_dogs downloaded and prepared to /home/mattdangerw/tensorflow_datasets/cats_vs_dogs/4.0.0. Subsequent calls will reuse this data.
+    Dataset cats_vs_dogs downloaded and prepared to /home/mattdangerw/tensorflow_datasets/cats_vs_dogs/4.0.0. Subsequent calls will reuse this data.
 Number of training samples: 9305
 Number of validation samples: 2326
 Number of test samples: 2326
 ```
+
+</details>
 
 These are the first 9 images in the training dataset – as you can see, they're all different sizes.
 
@@ -354,11 +389,13 @@ for i, (image, label) in enumerate(train_ds.take(9)):
     plt.axis("off")
 ```
 
-![png](/img/guides/transfer_learning/transfer_learning_21_0.png)
+![png]({{ site.baseurl }}/img/guides/transfer_learning/transfer_learning_21_0.png)
 
 We can also see that label 1 is "dog" and label 0 is "cat".
 
 ### Standardizing the data
+{: #standardizing-the-data}
+<!-- ### Standardizing the data -->
 
 Our raw images have a variety of sizes. In addition, each pixel consists of 3 integer values between 0 and 255 (RGB level values). This isn't a great fit for feeding a neural network. We need to do 2 things:
 
@@ -380,6 +417,8 @@ test_ds = test_ds.map(lambda x, y: (resize_fn(x), y))
 ```
 
 ### Using random data augmentation
+{: #using-random-data-augmentation}
+<!-- ### Using random data augmentation -->
 
 When you don't have a large image dataset, it's a good practice to artificially introduce sample diversity by applying random yet realistic transformations to the training images, such as random horizontal flipping or small random rotations. This helps expose the model to different aspects of the training data while slowing down overfitting.
 
@@ -425,12 +464,13 @@ for images, labels in train_ds.take(1):
         plt.axis("off")
 ```
 
-![png](/img/guides/transfer_learning/transfer_learning_30_0.png)
+![png]({{ site.baseurl }}/img/guides/transfer_learning/transfer_learning_30_0.png)
 
 * * *
 
-Build a model
--------------
+## Build a model
+{: #build-a-model}
+<!-- ## Build a model -->
 
 Now let's built a model that follows the blueprint we've explained earlier.
 
@@ -471,12 +511,13 @@ model = keras.Model(inputs, outputs)
 model.summary(show_trainable=True)
 ```
 
-```
-Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/xception/xception_weights_tf_dim_ordering_tf_kernels_notop.h5
- 83683744/83683744 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step
-```
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/xception/xception_weights_tf_dim_ordering_tf_kernels_notop.h5
+    83683744/83683744 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step
+
 Model: "functional_4"
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━┓
 ┃ Layer (type)                ┃ Output Shape             ┃ Param # ┃ Trai… ┃
@@ -494,15 +535,18 @@ Model: "functional_4"
 ├─────────────────────────────┼──────────────────────────┼─────────┼───────┤
 │ dense_7 (Dense)             │ (None, 1)                │   2,049 │   Y   │
 └─────────────────────────────┴──────────────────────────┴─────────┴───────┘
- Total params: 20,863,529 (79.59 MB)
- Trainable params: 2,049 (8.00 KB)
- Non-trainable params: 20,861,480 (79.58 MB)
+    Total params: 20,863,529 (79.59 MB)
+    Trainable params: 2,049 (8.00 KB)
+    Non-trainable params: 20,861,480 (79.58 MB)
 ```
 
+</details>
+    
 * * *
 
-Train the top layer
--------------------
+## Train the top layer
+{: #train-the-top-layer}
+<!-- ## Train the top layer -->
 
 ```python
 model.compile(
@@ -516,40 +560,46 @@ print("Fitting the top layer of the model")
 model.fit(train_ds, epochs=epochs, validation_data=validation_ds)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Fitting the top layer of the model
 Epoch 1/2
-  78/146 ━━━━━━━━━━[37m━━━━━━━━━━  15s 226ms/step - binary_accuracy: 0.7995 - loss: 0.4088
+    78/146 ━━━━━━━━━━[37m━━━━━━━━━━  15s 226ms/step - binary_accuracy: 0.7995 - loss: 0.4088
 
 Corrupt JPEG data: 65 extraneous bytes before marker 0xd9
 
- 136/146 ━━━━━━━━━━━━━━━━━━[37m━━  2s 231ms/step - binary_accuracy: 0.8430 - loss: 0.3298
+    136/146 ━━━━━━━━━━━━━━━━━━[37m━━  2s 231ms/step - binary_accuracy: 0.8430 - loss: 0.3298
 
 Corrupt JPEG data: 239 extraneous bytes before marker 0xd9
 
- 143/146 ━━━━━━━━━━━━━━━━━━━[37m━  0s 231ms/step - binary_accuracy: 0.8464 - loss: 0.3235
+    143/146 ━━━━━━━━━━━━━━━━━━━[37m━  0s 231ms/step - binary_accuracy: 0.8464 - loss: 0.3235
 
 Corrupt JPEG data: 1153 extraneous bytes before marker 0xd9
 
- 144/146 ━━━━━━━━━━━━━━━━━━━[37m━  0s 231ms/step - binary_accuracy: 0.8468 - loss: 0.3226
+    144/146 ━━━━━━━━━━━━━━━━━━━[37m━  0s 231ms/step - binary_accuracy: 0.8468 - loss: 0.3226
 
 Corrupt JPEG data: 228 extraneous bytes before marker 0xd9
 
- 146/146 ━━━━━━━━━━━━━━━━━━━━ 0s 260ms/step - binary_accuracy: 0.8478 - loss: 0.3209
+    146/146 ━━━━━━━━━━━━━━━━━━━━ 0s 260ms/step - binary_accuracy: 0.8478 - loss: 0.3209
 
 Corrupt JPEG data: 2226 extraneous bytes before marker 0xd9
 
- 146/146 ━━━━━━━━━━━━━━━━━━━━ 54s 317ms/step - binary_accuracy: 0.8482 - loss: 0.3200 - val_binary_accuracy: 0.9667 - val_loss: 0.0877
+    146/146 ━━━━━━━━━━━━━━━━━━━━ 54s 317ms/step - binary_accuracy: 0.8482 - loss: 0.3200 - val_binary_accuracy: 0.9667 - val_loss: 0.0877
 Epoch 2/2
- 146/146 ━━━━━━━━━━━━━━━━━━━━ 7s 51ms/step - binary_accuracy: 0.9483 - loss: 0.1232 - val_binary_accuracy: 0.9705 - val_loss: 0.0786
+    146/146 ━━━━━━━━━━━━━━━━━━━━ 7s 51ms/step - binary_accuracy: 0.9483 - loss: 0.1232 - val_binary_accuracy: 0.9705 - val_loss: 0.0786
 
 <keras.src.callbacks.history.History at 0x7fc8b7f1db70>
 ```
 
+</details>
+    
 * * *
 
-Do a round of fine-tuning of the entire model
----------------------------------------------
+## Do a round of fine-tuning of the entire model
+{: #do-a-round-of-fine-tuning-of-the-entire-model}
+<!-- ## Do a round of fine-tuning of the entire model -->
 
 Finally, let's unfreeze the base model and train the entire model end-to-end with a low learning rate.
 
@@ -575,6 +625,9 @@ print("Fitting the end-to-end model")
 model.fit(train_ds, epochs=epochs, validation_data=validation_ds)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Model: "functional_4"
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━┓
@@ -593,19 +646,20 @@ Model: "functional_4"
 ├─────────────────────────────┼──────────────────────────┼─────────┼───────┤
 │ dense_7 (Dense)             │ (None, 1)                │   2,049 │   Y   │
 └─────────────────────────────┴──────────────────────────┴─────────┴───────┘
- Total params: 20,867,629 (79.60 MB)
- Trainable params: 20,809,001 (79.38 MB)
- Non-trainable params: 54,528 (213.00 KB)
- Optimizer params: 4,100 (16.02 KB)
-```
+    Total params: 20,867,629 (79.60 MB)
+    Trainable params: 20,809,001 (79.38 MB)
+    Non-trainable params: 54,528 (213.00 KB)
+    Optimizer params: 4,100 (16.02 KB)
 
-```
+
 Fitting the end-to-end model
- 146/146 ━━━━━━━━━━━━━━━━━━━━ 75s 327ms/step - binary_accuracy: 0.8487 - loss: 0.3760 - val_binary_accuracy: 0.9494 - val_loss: 0.1160
+    146/146 ━━━━━━━━━━━━━━━━━━━━ 75s 327ms/step - binary_accuracy: 0.8487 - loss: 0.3760 - val_binary_accuracy: 0.9494 - val_loss: 0.1160
 
 <keras.src.callbacks.history.History at 0x7fcd1c755090>
 ```
 
+</details>
+    
 After 10 epochs, fine-tuning gains us a nice improvement here. Let's evaluate the model on the test dataset:
 
 ```python
@@ -613,13 +667,19 @@ print("Test dataset evaluation")
 model.evaluate(test_ds)
 ```
 
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Test dataset evaluation
- 11/37 ━━━━━[37m━━━━━━━━━━━━━━━  1s 52ms/step - binary_accuracy: 0.9407 - loss: 0.1155
+    11/37 ━━━━━[37m━━━━━━━━━━━━━━━  1s 52ms/step - binary_accuracy: 0.9407 - loss: 0.1155
 
 Corrupt JPEG data: 99 extraneous bytes before marker 0xd9
 
- 37/37 ━━━━━━━━━━━━━━━━━━━━ 2s 47ms/step - binary_accuracy: 0.9427 - loss: 0.1259
+    37/37 ━━━━━━━━━━━━━━━━━━━━ 2s 47ms/step - binary_accuracy: 0.9427 - loss: 0.1259
 
 [0.13755160570144653, 0.941300630569458]
 ```
+
+</details>    
