@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Writing your own callbacks
+title: 커스텀 콜백 작성하기
 nav_order: 13
 permalink: /guides/writing_your_own_callbacks/
 parent: 개발자 가이드
@@ -9,7 +9,7 @@ parent: 개발자 가이드
 * 원본 링크 : [https://keras.io/guides/writing_your_own_callbacks/](https://keras.io/guides/writing_your_own_callbacks/){:target="_blank"}
 * 최종 수정일 : 2024-09-18
 
-# Writing your own callbacks
+# 커스텀 콜백 작성하기 (Writing your own callbacks)
 {: .no_toc }
 
 ## 목차
@@ -23,24 +23,28 @@ parent: 개발자 가이드
 **저자:** Rick Chao, Francois Chollet  
 **생성일:** 2019/03/20  
 **최종편집일:** 2023/06/25  
-**설명:** Complete guide to writing new Keras callbacks.
+**설명:** Keras에서 새로운 콜백을 작성하는 완벽한 가이드
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/writing_your_own_callbacks.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/guides/writing_your_own_callbacks.py){: .btn .btn-blue }
 
 ----
 
-## Introduction
+## 소개
 {: #introduction}
 <!-- ## Introduction -->
 
-A callback is a powerful tool to customize the behavior of a Keras model during training, evaluation, or inference. Examples include [`keras.callbacks.TensorBoard`]({{ site.baseurl }}/api/callbacks/tensorboard#tensorboard-class) to visualize training progress and results with TensorBoard, or [`keras.callbacks.ModelCheckpoint`]({{ site.baseurl }}/api/callbacks/model_checkpoint#modelcheckpoint-class) to periodically save your model during training.
+콜백(callback)은 Keras 모델의 트레이닝, 평가, 또는 추론 중에 동작을 커스터마이즈할 수 있는 강력한 도구입니다. 
+예를 들어, [`keras.callbacks.TensorBoard`]({{ site.baseurl }}/api/callbacks/tensorboard#tensorboard-class)는 TensorBoard로 트레이닝 진행 상황과 결과를 시각화하고, 
+[`keras.callbacks.ModelCheckpoint`]({{ site.baseurl }}/api/callbacks/model_checkpoint#modelcheckpoint-class)는 트레이닝 중 주기적으로 모델을 저장합니다.
 
-In this guide, you will learn what a Keras callback is, what it can do, and how you can build your own. We provide a few demos of simple callback applications to get you started.
+이 가이드에서는 Keras 콜백이 무엇인지, 무엇을 할 수 있는지, 
+그리고 어떻게 직접 콜백을 작성할 수 있는지 배우게 됩니다. 
+간단한 콜백 애플리케이션의 예시를 제공하여 시작할 수 있도록 도와드립니다.
 
 ------------------------------------------------------------------------
 
-## Setup
+## 셋업
 {: #setup}
 <!-- ## Setup -->
 
@@ -51,13 +55,15 @@ import keras
 
 ------------------------------------------------------------------------
 
-## Keras callbacks overview
+## Keras 콜백 개요
 {: #keras-callbacks-overview}
 <!-- ## Keras callbacks overview -->
 
-All callbacks subclass the [`keras.callbacks.Callback`]({{ site.baseurl }}/api/callbacks/base_callback#callback-class) class, and override a set of methods called at various stages of training, testing, and predicting. Callbacks are useful to get a view on internal states and statistics of the model during training.
+모든 콜백은 [`keras.callbacks.Callback`]({{ site.baseurl }}/api/callbacks/base_callback#callback-class) 클래스를 서브클래싱(subclass)하며, 
+트레이닝, 테스트, 예측의 다양한 단계에서 호출되는 일련의 메서드를 오버라이드합니다. 
+콜백은 트레이닝 중에 모델의 내부 상태와 통계를 확인하는 데 유용합니다.
 
-You can pass a list of callbacks (as the keyword argument `callbacks`) to the following model methods:
+다음 모델 메서드에 `callbacks`라는 키워드 인자로 콜백 리스트를 전달할 수 있습니다:
 
 -   `keras.Model.fit()`
 -   `keras.Model.evaluate()`
@@ -65,62 +71,64 @@ You can pass a list of callbacks (as the keyword argument `callbacks`) to the fo
 
 ------------------------------------------------------------------------
 
-## An overview of callback methods
+## 콜백 메서드 개요
 {: #an-overview-of-callback-methods}
 <!-- ## An overview of callback methods -->
 
-### Global methods
+### Global 메서드
 {: #global-methods}
 <!-- ### Global methods -->
 
 #### `on_(train|test|predict)_begin(self, logs=None)`
 <!-- #### `on_(train|test|predict)_begin(self, logs=None)` -->
 
-Called at the beginning of `fit`/`evaluate`/`predict`.
+`fit`/`evaluate`/`predict` 시작 시 호출됩니다.
 
 #### `on_(train|test|predict)_end(self, logs=None)`
 <!-- #### `on_(train|test|predict)_end(self, logs=None)` -->
 
-Called at the end of `fit`/`evaluate`/`predict`.
+`fit`/`evaluate`/`predict` 종료 시 호출됩니다.
 
-### Batch-level methods for training/testing/predicting
+### 트레이닝/테스트/예측을 위한 배치 레벨 메서드
 {: #batch-level-methods-for-training-testing-predicting}
 <!-- ### Batch-level methods for training/testing/predicting -->
 
 #### `on_(train|test|predict)_batch_begin(self, batch, logs=None)`
 <!-- #### `on_(train|test|predict)_batch_begin(self, batch, logs=None)` -->
 
-Called right before processing a batch during training/testing/predicting.
+트레이닝/테스트/예측 중 배치 처리를 시작하기 직전에 호출됩니다.
 
 #### `on_(train|test|predict)_batch_end(self, batch, logs=None)`
 <!-- #### `on_(train|test|predict)_batch_end(self, batch, logs=None)` -->
 
-Called at the end of training/testing/predicting a batch. Within this method, `logs` is a dict containing the metrics results.
+배치 트레이닝/테스트/예측이 완료된 후 호출됩니다. 
+이 메서드 내에서 `logs`는 메트릭 결과를 포함하는 딕셔너리입니다.
 
-### Epoch-level methods (training only)
+### 에포크 레벨 메서드 (트레이닝 전용)
 {: #epoch-level-methods-training-only-}
 <!-- ### Epoch-level methods (training only) -->
 
 #### `on_epoch_begin(self, epoch, logs=None)`
 <!-- #### `on_epoch_begin(self, epoch, logs=None)` -->
 
-Called at the beginning of an epoch during training.
+트레이닝 중 에포크가 시작될 때 호출됩니다.
 
 #### `on_epoch_end(self, epoch, logs=None)`
 <!-- #### `on_epoch_end(self, epoch, logs=None)` -->
 
-Called at the end of an epoch during training.
+트레이닝 중 에포크가 끝날 때 호출됩니다.
 
 ------------------------------------------------------------------------
 
-## A basic example
+## 기본 예제
 {: #a-basic-example}
 <!-- ## A basic example -->
 
-Let's take a look at a concrete example. To get started, let's import tensorflow and define a simple Sequential Keras model:
+구체적인 예시를 살펴보겠습니다. 
+먼저, TensorFlow를 임포트하고 간단한 Sequential Keras 모델을 정의해봅시다:
 
 ```python
-# Define the Keras model to add callbacks to
+# 콜백을 추가할 Keras 모델 정의
 def get_model():
     model = keras.Sequential()
     model.add(keras.layers.Dense(1))
@@ -132,28 +140,28 @@ def get_model():
     return model
 ```
 
-Then, load the MNIST data for training and testing from Keras datasets API:
+그런 다음, Keras 데이터셋 API를 사용하여 트레이닝 및 테스트용 MNIST 데이터를 로드합니다:
 
 ```python
-# Load example MNIST data and pre-process it
+# 예시 MNIST 데이터를 로드하고 전처리합니다.
 (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
 x_train = x_train.reshape(-1, 784).astype("float32") / 255.0
 x_test = x_test.reshape(-1, 784).astype("float32") / 255.0
 
-# Limit the data to 1000 samples
+# 데이터를 1000개의 샘플로 제한합니다.
 x_train = x_train[:1000]
 y_train = y_train[:1000]
 x_test = x_test[:1000]
 y_test = y_test[:1000]
 ```
 
-Now, define a simple custom callback that logs:
+이제, 다음을 로그하는 간단한 커스텀 콜백을 정의해봅시다:
 
--   When `fit`/`evaluate`/`predict` starts & ends
--   When each epoch starts & ends
--   When each training batch starts & ends
--   When each evaluation (test) batch starts & ends
--   When each inference (prediction) batch starts & ends
+-   `fit`/`evaluate`/`predict`가 시작하고 끝날 때
+-   각 에포크가 시작하고 끝날 때
+-   각 트레이닝 배치가 시작하고 끝날 때
+-   각 평가(테스트) 배치가 시작하고 끝날 때
+-   각 추론(예측) 배치가 시작하고 끝날 때
 
 ```python
 class CustomCallback(keras.callbacks.Callback):
@@ -214,7 +222,7 @@ class CustomCallback(keras.callbacks.Callback):
         print("...Predicting: end of batch {}; got log keys: {}".format(batch, keys))
 ```
 
-Let's try it out:
+한번 실행해봅시다:
 
 ```python
 model = get_model()
@@ -302,11 +310,12 @@ Stop predicting; got log keys: []
 
 </details>
 
-### Usage of `logs` dict
+### `logs` 딕셔너리의 사용
 {: #usage-of-logs-dict}
 <!-- ### Usage of `logs` dict -->
 
-The `logs` dict contains the loss value, and all the metrics at the end of a batch or epoch. Example includes the loss and mean absolute error.
+`logs` 딕셔너리는 배치나 에포크가 끝날 때 손실 값과 모든 메트릭을 포함합니다. 
+예시로는 손실 값과 평균 절대 오차(mean absolute error)가 있습니다.
 
 ```python
 class LossAndErrorPrintingCallback(keras.callbacks.Callback):
@@ -384,58 +393,62 @@ Up to batch 7, the average loss is    4.72.
 
 ------------------------------------------------------------------------
 
-## Usage of `self.model` attribute
+## `self.model` 속성의 사용
 {: #usage-of-self-model-attribute}
 <!-- ## Usage of `self.model` attribute -->
 
-In addition to receiving log information when one of their methods is called, callbacks have access to the model associated with the current round of training/evaluation/inference: `self.model`.
+메서드가 호출될 때 로그 정보를 받는 것 외에도, 
+콜백은 현재 트레이닝/평가/추론 라운드와 연결된 모델인 `self.model`에 접근할 수 있습니다.
 
-Here are a few of the things you can do with `self.model` in a callback:
+콜백에서 `self.model`을 사용하여 할 수 있는 몇 가지 예는 다음과 같습니다:
 
--   Set `self.model.stop_training = True` to immediately interrupt training.
--   Mutate hyperparameters of the optimizer (available as `self.model.optimizer`), such as `self.model.optimizer.learning_rate`.
--   Save the model at period intervals.
--   Record the output of `model.predict()` on a few test samples at the end of each epoch, to use as a sanity check during training.
--   Extract visualizations of intermediate features at the end of each epoch, to monitor what the model is learning over time.
--   etc.
+-   `self.model.stop_training = True`를 설정하여, 트레이닝을 즉시 중단할 수 있습니다.
+-   옵티마이저(`self.model.optimizer`로서 사용가능)의 하이퍼파라미터(예: `self.model.optimizer.learning_rate`)를 변경할 수 있습니다.
+-   주기적으로 모델을 저장할 수 있습니다.
+-   에포크가 끝날 때 몇 가지 테스트 샘플에 대해 `model.predict()`의 출력을 기록하여, 트레이닝 중 검증(sanity check)할 수 있습니다.
+-   에포크가 끝날 때 중간 특성의 시각화를 추출하여, 모델이 학습하는 내용을 모니터링할 수 있습니다.
+-   기타 등등.
 
-Let's see this in action in a couple of examples.
+몇 가지 예시를 통해 이를 실제로 확인해보겠습니다.
 
 ------------------------------------------------------------------------
 
-## Examples of Keras callback applications
+## Keras 콜백 애플리케이션 예시
 {: #examples-of-keras-callback-applications}
 <!-- ## Examples of Keras callback applications -->
 
-### Early stopping at minimum loss
+### 최소 손실에서의 조기 종료
 {: #early-stopping-at-minimum-loss}
 <!-- ### Early stopping at minimum loss -->
 
-This first example shows the creation of a `Callback` that stops training when the minimum of loss has been reached, by setting the attribute `self.model.stop_training` (boolean). Optionally, you can provide an argument `patience` to specify how many epochs we should wait before stopping after having reached a local minimum.
+첫 번째 예시는 손실의 최소값에 도달하면 트레이닝을 중지하는 `Callback`을 생성하는 방법을 보여줍니다. 
+이때 `self.model.stop_training` (boolean) 속성을 설정합니다. 
+선택적으로, `patience`라는 인자를 제공하여 로컬 최소값에 도달한 후, 
+몇 에포크 동안 대기한 뒤 트레이닝을 중지할지 지정할 수 있습니다.
 
-[`keras.callbacks.EarlyStopping`]({{ site.baseurl }}/api/callbacks/early_stopping#earlystopping-class) provides a more complete and general implementation.
+[`keras.callbacks.EarlyStopping`]({{ site.baseurl }}/api/callbacks/early_stopping#earlystopping-class)는 더 완전하고 일반적인 구현을 제공합니다.
 
 ```python
 class EarlyStoppingAtMinLoss(keras.callbacks.Callback):
-    """Stop training when the loss is at its min, i.e. the loss stops decreasing.
+    """손실이 최소값에 도달하면 트레이닝을 중지합니다, 즉 손실이 더 이상 감소하지 않을 때.
 
     Arguments:
-        patience: Number of epochs to wait after min has been hit. After this
-        number of no improvement, training stops.
+        patience: 최소값에 도달한 후 대기할 에포크 수. 
+            개선되지 않은 상태에서 지정된 에포크 수가 지나면, 트레이닝이 중지됩니다.
     """
 
     def __init__(self, patience=0):
         super().__init__()
         self.patience = patience
-        # best_weights to store the weights at which the minimum loss occurs.
+        # 최소 손실이 발생한 지점에서의 가중치를 저장하기 위한 best_weights.
         self.best_weights = None
 
     def on_train_begin(self, logs=None):
-        # The number of epoch it has waited when loss is no longer minimum.
+        # 손실이 더 이상 최소가 아닐 때 기다린 에포크 수.
         self.wait = 0
-        # The epoch the training stops at.
+        # 트레이닝이 중지되는 에포크.
         self.stopped_epoch = 0
-        # Initialize the best as infinity.
+        # 초기값을 무한대로 설정.
         self.best = np.inf
 
     def on_epoch_end(self, epoch, logs=None):
@@ -443,19 +456,19 @@ class EarlyStoppingAtMinLoss(keras.callbacks.Callback):
         if np.less(current, self.best):
             self.best = current
             self.wait = 0
-            # Record the best weights if current results is better (less).
+            # 현재 결과가 더 좋으면(작으면) 최상의 가중치를 기록합니다.
             self.best_weights = self.model.get_weights()
         else:
             self.wait += 1
             if self.wait >= self.patience:
                 self.stopped_epoch = epoch
                 self.model.stop_training = True
-                print("Restoring model weights from the end of the best epoch.")
+                print("최상의 에포크 끝에서 모델 가중치를 복원합니다.")
                 self.model.set_weights(self.best_weights)
 
     def on_train_end(self, logs=None):
         if self.stopped_epoch > 0:
-            print(f"Epoch {self.stopped_epoch + 1}: early stopping")
+            print(f"Epoch {self.stopped_epoch + 1}: 조기 종료")
 
 
 model = get_model()
@@ -532,22 +545,20 @@ Epoch 3: early stopping
 
 </details>
 
-### Learning rate scheduling
+### 학습률 스케줄링
 {: #learning-rate-scheduling}
 <!-- ### Learning rate scheduling -->
 
-In this example, we show how a custom Callback can be used to dynamically change the learning rate of the optimizer during the course of training.
+이 예시에서는, 커스텀 콜백을 사용하여 트레이닝 과정에서 옵티마이저의 학습률을 동적으로 변경하는 방법을 보여줍니다.
 
-See `callbacks.LearningRateScheduler` for a more general implementations.
+일반적인 구현을 위해서는 `callbacks.LearningRateScheduler`를 참고하세요.
 
 ```python
 class CustomLearningRateScheduler(keras.callbacks.Callback):
-    """Learning rate scheduler which sets the learning rate according to schedule.
+    """스케줄에 따라 학습률을 설정하는 학습률 스케줄러.
 
     Arguments:
-        schedule: a function that takes an epoch index
-            (integer, indexed from 0) and current learning rate
-            as inputs and returns a new learning rate as output (float).
+        schedule: 에포크 인덱스(정수, 0부터 시작)와 현재 학습률을 입력으로 받아 새로운 학습률(float)을 출력으로 반환하는 함수.
     """
 
     def __init__(self, schedule):
@@ -556,18 +567,18 @@ class CustomLearningRateScheduler(keras.callbacks.Callback):
 
     def on_epoch_begin(self, epoch, logs=None):
         if not hasattr(self.model.optimizer, "learning_rate"):
-            raise ValueError('Optimizer must have a "learning_rate" attribute.')
-        # Get the current learning rate from model's optimizer.
+            raise ValueError('Optimizer에는 "learning_rate" 속성이 있어야 합니다.')
+        # 모델의 옵티마이저에서 현재 학습률을 가져옵니다.
         lr = self.model.optimizer.learning_rate
-        # Call schedule function to get the scheduled learning rate.
+        # 스케줄 함수 호출하여 스케줄된 학습률을 가져옵니다.
         scheduled_lr = self.schedule(epoch, lr)
-        # Set the value back to the optimizer before this epoch starts
+        # 이 에포크가 시작되기 전에 옵티마이저에 값 설정.
         self.model.optimizer.learning_rate = scheduled_lr
-        print(f"\nEpoch {epoch}: Learning rate is {float(np.array(scheduled_lr))}.")
+        print(f"\n에포크 {epoch}: 학습률은 {float(np.array(scheduled_lr))}입니다.")
 
 
 LR_SCHEDULE = [
-    # (epoch to start, learning rate) tuples
+    # (시작 할 에포크, 학습률) 튜플
     (3, 0.05),
     (6, 0.01),
     (9, 0.005),
@@ -576,7 +587,7 @@ LR_SCHEDULE = [
 
 
 def lr_schedule(epoch, lr):
-    """Helper function to retrieve the scheduled learning rate based on epoch."""
+    """에포크에 기반하여 스케줄된 학습률을 가져오는 헬퍼 함수."""
     if epoch < LR_SCHEDULE[0][0] or epoch > LR_SCHEDULE[-1][0]:
         return lr
     for i in range(len(LR_SCHEDULE)):
@@ -893,8 +904,9 @@ The average loss for epoch 14 is   11.50 and mean absolute error is    2.06.
 
 </details>
 
-### Built-in Keras callbacks
+### Keras 내장 콜백
 {: #built-in-keras-callbacks}
 <!-- ### Built-in Keras callbacks -->
 
-Be sure to check out the existing Keras callbacks by reading the [API docs]({{ site.baseurl }}/api/callbacks/). Applications include logging to CSV, saving the model, visualizing metrics in TensorBoard, and a lot more!
+기존 Keras 콜백들을 확인하려면 [API 문서]({{ site.baseurl }}/api/callbacks/)를 참고하세요. 
+애플리케이션에는 CSV에 로그 기록, 모델 저장, TensorBoard에서 메트릭 시각화 등 다양한 기능이 포함됩니다!
