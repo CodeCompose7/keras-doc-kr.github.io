@@ -8,7 +8,7 @@ has_children: true
 ---
 
 * 원본 링크 : [https://keras.io/guides/keras_tuner/](https://keras.io/guides/keras_tuner/){:target="_blank"}
-* 최종 수정일 : 2024-03-29
+* 최종 수정일 : 2024-09-18
 
 # KerasTuner
 {: .no_toc }
@@ -20,3 +20,5 @@ has_children: true
 {:toc}
 
 ---
+
+These guides cover KerasTuner best practices.

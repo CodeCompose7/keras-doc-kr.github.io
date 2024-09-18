@@ -7,7 +7,7 @@ parent: 개발자 가이드
 ---
 
 * 원본 링크 : [https://keras.io/guides/customizing_saving_and_serialization/](https://keras.io/guides/customizing_saving_and_serialization/){:target="_blank"}
-* 최종 수정일 : 2024-03-29
+* 최종 수정일 : 2024-09-18
 
 # Customizing Saving and Serialization
 {: .no_toc }

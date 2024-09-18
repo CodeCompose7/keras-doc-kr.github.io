@@ -8,7 +8,7 @@ has_children: true
 ---
 
 * 원본 링크 : [https://keras.io/guides/keras_nlp/](https://keras.io/guides/keras_nlp/){:target="_blank"}
-* 최종 수정일 : 2024-03-29
+* 최종 수정일 : 2024-09-18
 
 # KerasNLP
 {: .no_toc }
@@ -20,3 +20,5 @@ has_children: true
 {:toc}
 
 ---
+
+These guides cover the [KerasNLP]({{ site.baseurl }}/keras_nlp/) library.

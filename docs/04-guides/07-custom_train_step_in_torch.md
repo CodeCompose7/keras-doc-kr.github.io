@@ -7,7 +7,7 @@ parent: 개발자 가이드
 ---
 
 * 원본 링크 : [https://keras.io/guides/custom_train_step_in_torch/](https://keras.io/guides/custom_train_step_in_torch/){:target="_blank"}
-* 최종 수정일 : 2024-03-29
+* 최종 수정일 : 2024-09-18
 
 # PyTorch에서 `fit()`의 동작을 커스터마이즈하기 (Customizing what happens in `fit()` with PyTorch)
 {: .no_toc }

@@ -7,7 +7,7 @@ parent: 개발자 가이드
 ---
 
 * 원본 링크 : [https://keras.io/guides/writing_a_custom_training_loop_in_torch/](https://keras.io/guides/writing_a_custom_training_loop_in_torch/){:target="_blank"}
-* 최종 수정일 : 2024-03-29
+* 최종 수정일 : 2024-09-18
 
 # PyTorch에서 처음부터 트레이닝 루프 작성하기 (Writing a training loop from scratch in PyTorch)
 {: .no_toc }

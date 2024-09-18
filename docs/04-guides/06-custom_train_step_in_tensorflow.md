@@ -7,7 +7,7 @@ parent: 개발자 가이드
 ---
 
 * 원본 링크 : [https://keras.io/guides/custom_train_step_in_tensorflow/](https://keras.io/guides/custom_train_step_in_tensorflow/){:target="_blank"}
-* 최종 수정일 : 2024-03-29
+* 최종 수정일 : 2024-09-18
 
 # TensorFlow에서 `fit()`의 동작을 커스터마이즈하기 (Customizing what happens in `fit()` with TensorFlow)
 {: .no_toc }
