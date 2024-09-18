@@ -8,7 +8,7 @@ grand_parent: 개발자 가이드
 ---
 
 * 원본 링크 : [https://keras.io/guides/keras_tuner/failed_trials/](https://keras.io/guides/keras_tuner/failed_trials/){:target="_blank"}
-* 최종 수정일 : 2024-03-29
+* 최종 수정일 : 2024-09-19
 
 # Handling failed trials in KerasTuner
 {: .no_toc }
