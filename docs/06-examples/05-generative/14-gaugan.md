@@ -35,10 +35,12 @@ grand_parent: 코드 예제
 ----
 
 ## Introduction
+{: #introduction}
+<!-- ## Introduction -->
 
 In this example, we present an implementation of the GauGAN architecture proposed in [Semantic Image Synthesis with Spatially-Adaptive Normalization](https://arxiv.org/abs/1903.07291). Briefly, GauGAN uses a Generative Adversarial Network (GAN) to generate realistic images that are conditioned on cue images and segmentation maps, as shown below ([image source](https://nvlabs.github.io/SPADE/)):
 
-![](https://i.ibb.co/p305dzv/image.png)
+![image]({{ site.baseurl }}/img/examples/generative/gaugan/image.png)
 
 The main components of a GauGAN are:
 
@@ -52,14 +54,15 @@ For a thorough review of GauGAN, please refer to [this article](https://blog.pap
 
 *   [Chapter on GANs](https://livebook.manning.com/book/deep-learning-with-python/chapter-8) from the Deep Learning with Python book by François Chollet.
 *   GAN implementations on keras.io:
-    * [Data efficient GANs](https://keras.io/examples/generative/gan_ada) 
-    * [CycleGAN](https://keras.io/examples/generative/cyclegan) 
-    * [Conditional GAN](https://keras.io/examples/generative/conditional_gan)
+    * [Data efficient GANs]({{ site.baseurl }}/examples/generative/gan_ada) 
+    * [CycleGAN]({{ site.baseurl }}/examples/generative/cyclegan) 
+    * [Conditional GAN]({{ site.baseurl }}/examples/generative/conditional_gan)
 
 * * *
 
-Data collection
----------------
+## Data collection
+{: #data-collection}
+<!-- ## Data collection -->
 
 We will be using the [Facades dataset](https://cmp.felk.cvut.cz/~tylecr1/facade/) for training our GauGAN model. Let's first download it.
 
@@ -67,6 +70,9 @@ We will be using the [Facades dataset](https://cmp.felk.cvut.cz/~tylecr1/facade/
 !wget https://drive.google.com/uc?id=1q4FEjQg1YSb4mPx2VdxL7LXKYu3voTMj -O facades_data.zip
 !unzip -q facades_data.zip
 ```
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
 --2024-01-11 22:46:32--  https://drive.google.com/uc?id=1q4FEjQg1YSb4mPx2VdxL7LXKYu3voTMj
@@ -84,10 +90,13 @@ facades_data.zip    100%[===================>]  24.83M  94.3MB/s    in 0.3s
 2024-01-11 22:46:42 (94.3 MB/s) - ‘facades_data.zip’ saved [26036052/26036052]
 ```
 
+</details>
+
 * * *
 
-Imports
--------
+## Imports
+{: #imports}
+<!-- ## Imports -->
 
 ```python
 import os
@@ -108,8 +117,9 @@ from glob import glob
 
 * * *
 
-Data splitting
---------------
+## Data splitting
+{: #data-splitting}
+<!-- ## Data splitting -->
 
 ```python
 PATH = "./facades_data/"
@@ -127,16 +137,22 @@ print(f"Total training samples: {len(train_files)}.")
 print(f"Total validation samples: {len(val_files)}.")
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Total samples: 378.
 Total training samples: 302.
 Total validation samples: 76.
 ```
 
+</details>
+
 * * *
 
-Data loader
------------
+## Data loader
+{: #data-loader}
+<!-- ## Data loader -->
 
 ```python
 BATCH_SIZE = 4
@@ -225,11 +241,16 @@ for segmentation_map, real_image in zip(sample_train_batch[0], sample_train_batc
     plt.show()
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Segmentation map batch shape: (4, 256, 256, 3).
 Image batch shape: (4, 256, 256, 3).
 One-hot encoded label map shape: (4, 256, 256, 12).
 ```
+
+</details>
 
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_11_1.png)
 
@@ -241,8 +262,9 @@ Note that in the rest of this example, we use a couple of figures from the [orig
 
 * * *
 
-Custom layers
--------------
+## Custom layers
+{: #custom-layers}
+<!-- ## Custom layers -->
 
 In the following section, we implement the following layers:
 
@@ -251,8 +273,10 @@ In the following section, we implement the following layers:
 *   Gaussian sampler
 
 ### Some more notes on SPADE
+{: #some-more-notes-on-spade}
+<!-- ### Some more notes on SPADE -->
 
-![](https://i.imgur.com/DgMWrrs.png)
+![png]({{ site.baseurl }}/img/examples/generative/gaugan/DgMWrrs.png)
 
 **SPatially-Adaptive (DE) normalization** or **SPADE** is a simple but effective layer for synthesizing photorealistic images given an input semantic layout. Previous methods for conditional image generation from semantic input such as Pix2Pix ([Isola et al.](https://arxiv.org/abs/1611.07004)) or Pix2PixHD ([Wang et al.](https://arxiv.org/abs/1711.11585)) directly feed the semantic layout as input to the deep network, which is then processed through stacks of convolution, normalization, and nonlinearity layers. This is often suboptimal as the normalization layers have a tendency to wash away semantic information.
 
@@ -368,7 +392,7 @@ def downsample(
 
 The GauGAN encoder consists of a few downsampling blocks. It outputs the mean and variance of a distribution.
 
-![](https://i.imgur.com/JgAv1EW.png)
+![image]({{ site.baseurl }}/img/examples/generative/gaugan/JgAv1EW.png)
 
 ```python
 def build_encoder(image_shape, encoder_downsample_factor=64, latent_dim=256):
@@ -386,7 +410,7 @@ def build_encoder(image_shape, encoder_downsample_factor=64, latent_dim=256):
 
 Next, we implement the generator, which consists of the modified residual blocks and upsampling blocks. It takes latent vectors and one-hot encoded segmentation labels, and produces new images.
 
-![](https://i.imgur.com/9iP1TsB.png)
+![image]({{ site.baseurl }}/img/examples/generative/gaugan/9iP1TsB.png)
 
 With SPADE, there is no need to feed the segmentation map to the first layer of the generator, since the latent inputs have enough structural information about the style we want the generator to emulate. We also discard the encoder part of the generator, which is commonly used in prior architectures. This results in a more lightweight generator network, which can also take a random vector as input, enabling a simple and natural path to multi-modal synthesis.
 
@@ -415,7 +439,7 @@ def build_generator(mask_shape, latent_dim=256):
 
 The discriminator takes a segmentation map and an image and concatenates them. It then predicts if patches of the concatenated image are real or fake.
 
-![](https://i.imgur.com/rn71PlM.png)
+![image]({{ site.baseurl }}/img/examples/generative/gaugan/rn71PlM.png)
 
 ```python
 def build_discriminator(image_shape, downsample_factor=64):
@@ -433,8 +457,9 @@ def build_discriminator(image_shape, downsample_factor=64):
 
 * * *
 
-Loss functions
---------------
+## Loss functions
+{: #loss-functions}
+<!-- ## Loss functions -->
 
 GauGAN uses the following loss functions:
 
@@ -509,8 +534,9 @@ class DiscriminatorLoss(keras.losses.Loss):
 
 * * *
 
-GAN monitor callback
---------------------
+## GAN monitor callback
+{: #gan-monitor-callback}
+<!-- ## GAN monitor callback -->
 
 Next, we implement a callback to monitor the GauGAN results while it is training.
 
@@ -553,10 +579,11 @@ class GanMonitor(keras.callbacks.Callback):
 
 * * *
 
-Subclassed GauGAN model
------------------------
+## Subclassed GauGAN model
+{: #subclassed-gaugan-model}
+<!-- ## Subclassed GauGAN model -->
 
-Finally, we put everything together inside a subclassed model (from [`tf.keras.Model`](/api/models/model#model-class)) overriding its `train_step()` method.
+Finally, we put everything together inside a subclassed model (from [`tf.keras.Model`]({{ site.baseurl }}/api/models/model#model-class)) overriding its `train_step()` method.
 
 ```python
 class GauGAN(keras.Model):
@@ -756,8 +783,9 @@ class GauGAN(keras.Model):
 
 * * *
 
-GauGAN training
----------------
+## GauGAN training
+{: #gaugan-training}
+<!-- ## GauGAN training -->
 
 ```python
 gaugan = GauGAN(IMG_HEIGHT, NUM_CLASSES, BATCH_SIZE, latent_dim=256)
@@ -788,6 +816,9 @@ plot_history("vgg_loss")
 plot_history("kl_loss")
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Epoch 1/15
 
@@ -804,6 +835,8 @@ W0000 00:00:1705013326.657730   30384 graph_launch.cc:671] Fallback to op-by-op 
  1/1 ━━━━━━━━━━━━━━━━━━━━ 3s 3s/step
 ```
 
+</details>
+
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_5.png)
 
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_6.png)
@@ -811,6 +844,9 @@ W0000 00:00:1705013326.657730   30384 graph_launch.cc:671] Fallback to op-by-op 
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_7.png)
 
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_8.png)
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
  75/75 ━━━━━━━━━━━━━━━━━━━━ 114s 426ms/step - disc_loss: 1.3051 - feat_loss: 11.2902 - gen_loss: 113.0590 - kl_loss: 83.1493 - vgg_loss: 18.4890 - val_disc_loss: 1.0374 - val_feat_loss: 9.2344 - val_gen_loss: 110.1001 - val_kl_loss: 83.8935 - val_vgg_loss: 16.6412
@@ -826,6 +862,8 @@ Epoch 6/15
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 35ms/step
 ```
 
+</details>
+
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_10.png)
 
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_11.png)
@@ -833,6 +871,9 @@ Epoch 6/15
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_12.png)
 
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_13.png)
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
  75/75 ━━━━━━━━━━━━━━━━━━━━ 19s 258ms/step - disc_loss: 0.8982 - feat_loss: 9.2486 - gen_loss: 109.9399 - kl_loss: 83.8095 - vgg_loss: 16.5587 - val_disc_loss: 0.8061 - val_feat_loss: 8.5935 - val_gen_loss: 109.5937 - val_kl_loss: 84.5844 - val_vgg_loss: 15.8794
@@ -848,6 +889,8 @@ Epoch 11/15
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 30ms/step
 ```
 
+</details>
+
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_15.png)
 
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_16.png)
@@ -855,6 +898,9 @@ Epoch 11/15
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_17.png)
 
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_18.png)
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
  75/75 ━━━━━━━━━━━━━━━━━━━━ 20s 263ms/step - disc_loss: 0.9047 - feat_loss: 7.5019 - gen_loss: 107.6317 - kl_loss: 83.6812 - vgg_loss: 16.1292 - val_disc_loss: 0.8788 - val_feat_loss: 7.7651 - val_gen_loss: 109.1731 - val_kl_loss: 84.3094 - val_vgg_loss: 16.0356
@@ -868,6 +914,8 @@ Epoch 15/15
  75/75 ━━━━━━━━━━━━━━━━━━━━ 15s 194ms/step - disc_loss: 0.8939 - feat_loss: 7.5489 - gen_loss: 108.8330 - kl_loss: 85.0358 - vgg_loss: 15.9147 - val_disc_loss: 0.9616 - val_feat_loss: 8.0080 - val_gen_loss: 108.1650 - val_kl_loss: 84.7754 - val_vgg_loss: 15.9561
 ```
 
+</details>
+
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_20.png)
 
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_31_21.png)
@@ -880,8 +928,9 @@ Epoch 15/15
 
 * * *
 
-Inference
----------
+## Inference
+{: #inference}
+<!-- ## Inference -->
 
 ```python
 val_iterator = iter(val_dataset)
@@ -913,28 +962,44 @@ for _ in range(5):
     plt.show()
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 29ms/step
 ```
 
+</details>
+
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_33_1.png)
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 25ms/step
 ```
 
+</details>
+
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_33_3.png)
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
  ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 25ms/step
 ```
 
+</details>
+
 ![png]({{ site.baseurl }}/img/examples/generative/gaugan/gaugan_33_5.png)
 
 * * *
 
-Final words
------------
+## Final words
+{: #final-words}
+<!-- ## Final words -->
 
 *   The dataset we used in this example is a small one. For obtaining even better results we recommend to use a bigger dataset. GauGAN results were demonstrated with the [COCO-Stuff](https://github.com/nightrome/cocostuff) and [CityScapes](https://www.cityscapes-dataset.com/) datasets.
 *   This example was inspired the Chapter 6 of [Hands-On Image Generation with TensorFlow](https://www.packtpub.com/product/hands-on-image-generation-with-tensorflow/9781838826789) by [Soon-Yau Cheong](https://www.linkedin.com/in/soonyau/) and [Implementing SPADE using fastai](https://towardsdatascience.com/implementing-spade-using-fastai-6ad86b94030a) by [Divyansh Jha](https://medium.com/@divyanshj.16).
