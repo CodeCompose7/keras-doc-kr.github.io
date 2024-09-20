@@ -82,12 +82,17 @@ print(x_train.shape[0], "train samples")
 print(x_test.shape[0], "test samples")
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 x_train shape: (60000, 28, 28, 1)
 y_train shape: (60000,)
 60000 train samples
 10000 test samples
 ```
+
+</details>
 
 이것이 우리의 모델입니다.
 
@@ -123,6 +128,9 @@ model = keras.Sequential(
 model.summary()
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Model: "sequential"
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
@@ -149,6 +157,8 @@ Model: "sequential"
  Trainable params: 260,298 (1016.79 KB)
  Non-trainable params: 0 (0.00 B)
 ```
+
+</details>
 
 `compile()` 메서드를 사용하여 옵티마이저, 손실 함수, 모니터링할 메트릭을 지정합니다. JAX 및 TensorFlow 백엔드에서는 기본적으로 XLA 컴파일이 켜져 있다는 점에 유의하세요.
 
@@ -184,6 +194,9 @@ model.fit(
 score = model.evaluate(x_test, y_test, verbose=0)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Epoch 1/20
  399/399 ━━━━━━━━━━━━━━━━━━━━ 74s 184ms/step - acc: 0.4980 - loss: 1.3832 - val_acc: 0.9609 - val_loss: 0.1513
@@ -213,6 +226,8 @@ Epoch 13/20
  399/399 ━━━━━━━━━━━━━━━━━━━━ 70s 176ms/step - acc: 0.9843 - loss: 0.0504 - val_acc: 0.9918 - val_loss: 0.0316
 ```
 
+</details>
+
 트레이닝 중에, 각 에포크가 끝날 때마다 모델을 저장했습니다. 아래처럼 모델을 최신 상태로 저장할 수도 있습니다:
 
 ```python
@@ -231,9 +246,14 @@ model = keras.saving.load_model("final_model.keras")
 predictions = model.predict(x_test)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  313/313 ━━━━━━━━━━━━━━━━━━━━ 3s 9ms/step
 ```
+
+</details>
 
 기본 사항은 여기까지입니다!
 
@@ -344,11 +364,16 @@ model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  399/399 ━━━━━━━━━━━━━━━━━━━━ 70s 174ms/step - acc: 0.5104 - loss: 1.3473 - val_acc: 0.9256 - val_loss: 0.2484
 
 <keras.src.callbacks.history.History at 0x105608670>
 ```
+
+</details>
 
 ----
 
@@ -398,11 +423,16 @@ model.compile(
 model.fit(train_dataloader, epochs=1, validation_data=val_dataloader)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  469/469 ━━━━━━━━━━━━━━━━━━━━ 81s 172ms/step - acc: 0.5502 - loss: 1.2550 - val_acc: 0.9419 - val_loss: 0.1972
 
 <keras.src.callbacks.history.History at 0x2b3385480>
 ```
+
+</details>
 
 이제 이것을 [`tf.data`](https://www.tensorflow.org/api_docs/python/tf/data)를 사용하여 시도해 보겠습니다:
 
@@ -431,11 +461,16 @@ model.compile(
 model.fit(train_dataset, epochs=1, validation_data=test_dataset)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  469/469 ━━━━━━━━━━━━━━━━━━━━ 81s 172ms/step - acc: 0.5771 - loss: 1.1948 - val_acc: 0.9229 - val_loss: 0.2502
 
 <keras.src.callbacks.history.History at 0x2b33e7df0>
 ```
+
+</details>
 
 ----
 

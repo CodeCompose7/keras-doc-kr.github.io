@@ -21,4 +21,4 @@ has_children: true
 
 ---
 
-These guides cover KerasTuner best practices.
+이 가이드들은 KerasTuner의 모범 사례를 다룹니다.

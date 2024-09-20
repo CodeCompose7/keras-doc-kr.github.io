@@ -105,10 +105,15 @@ train_steps_per_epoch = dataset_info.splits["train"].num_examples // BATCH_SIZE
 val_steps_per_epoch = dataset_info.splits["test"].num_examples // BATCH_SIZE
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  Downloading and preparing dataset 328.90 MiB (download: 328.90 MiB, generated: 331.34 MiB, total: 660.25 MiB) to /usr/local/google/home/rameshsampath/tensorflow_datasets/oxford_flowers102/2.1.1...
  Dataset oxford_flowers102 downloaded and prepared to /usr/local/google/home/rameshsampath/tensorflow_datasets/oxford_flowers102/2.1.1. Subsequent calls will reuse this data.
 ```
+
+</details>
 
 다음으로, 이미지를 constant 크기인 `(224, 224)`로 조정하고, 레이블을 원핫 인코딩합니다. 
 [`keras_cv.layers.CutMix`]({{ site.baseurl }}/api/keras_cv/layers/augmentation/cut_mix#cutmix-class)와 [`keras_cv.layers.MixUp`]({{ site.baseurl }}/api/keras_cv/layers/augmentation/mix_up#mixup-class)은 대상이 원핫 인코딩되기를 기대합니다. 
@@ -416,11 +421,16 @@ model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  32/32 ━━━━━━━━━━━━━━━━━━━━ 103s 2s/step - accuracy: 0.0059 - loss: 4.6941 - val_accuracy: 0.0114 - val_loss: 10.4028
 
 <keras.src.callbacks.history.History at 0x7fd0d00e07c0>
 ```
+
+</details>
 
 * * *
 

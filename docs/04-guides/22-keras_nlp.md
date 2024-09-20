@@ -21,4 +21,4 @@ has_children: true
 
 ---
 
-These guides cover the [KerasNLP]({{ site.baseurl }}/keras_nlp/) library.
+이 가이드에서는 [KerasNLP]({{ site.baseurl }}/keras_nlp/) 라이브러리에 대해 설명합니다.

@@ -156,6 +156,9 @@ history = model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Fit model on training data
 Epoch 1/2
@@ -164,15 +167,22 @@ Epoch 2/2
  782/782 ━━━━━━━━━━━━━━━━━━━━ 0s 390us/step - loss: 0.1745 - sparse_categorical_accuracy: 0.9492 - val_loss: 0.1415 - val_sparse_categorical_accuracy: 0.9581
 ```
 
+</details>
+
 반환된 `history` 객체는 트레이닝 중의 손실 값과 메트릭 값의 기록을 보관합니다.
 
 ```python
 print(history.history)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 {'loss': [0.34448376297950745, 0.16419583559036255], 'sparse_categorical_accuracy': [0.9008600115776062, 0.9509199857711792], 'val_loss': [0.20404714345932007, 0.14145156741142273], 'val_sparse_categorical_accuracy': [0.9419999718666077, 0.9581000208854675]}
 ```
+
+</details>
 
 `evaluate()`를 통해, 테스트 데이터에 대해 모델을 평가합니다.
 
@@ -188,6 +198,9 @@ predictions = model.predict(x_test[:3])
 print("predictions shape:", predictions.shape)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Evaluate on test data
  79/79 ━━━━━━━━━━━━━━━━━━━━ 0s 271us/step - loss: 0.1670 - sparse_categorical_accuracy: 0.9489
@@ -196,6 +209,8 @@ Generate predictions for 3 samples
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 33ms/step
 predictions shape: (3, 10)
 ```
+
+</details>
 
 이제, 이 워크플로의 각 부분을 자세히 살펴보겠습니다.
 
@@ -307,11 +322,16 @@ y_train_one_hot = ops.one_hot(y_train, num_classes=10)
 model.fit(x_train, y_train_one_hot, batch_size=64, epochs=1)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 525us/step - loss: 0.0277
 
 <keras.src.callbacks.history.History at 0x2e5dde350>
 ```
+
+</details>
 
 `y_true`와 `y_pred` 외의 매개변수를 사용하는 손실 함수가 필요한 경우, 
 `keras.losses.Loss` 클래스를 하위 클래스화하고, 다음 두 가지 메서드를 구현합니다.
@@ -346,11 +366,16 @@ y_train_one_hot = ops.one_hot(y_train, num_classes=10)
 model.fit(x_train, y_train_one_hot, batch_size=64, epochs=1)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 532us/step - loss: 0.0492
 
 <keras.src.callbacks.history.History at 0x2e5d0d360>
 ```
+
+</details>
 
 ### 커스텀 메트릭
 {: #custom-metrics}
@@ -406,6 +431,9 @@ model.compile(
 model.fit(x_train, y_train, batch_size=64, epochs=3)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Epoch 1/3
  782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 568us/step - categorical_true_positives: 180967.9219 - loss: 0.5876
@@ -416,6 +444,8 @@ Epoch 3/3
 
 <keras.src.callbacks.history.History at 0x2e5f02d10>
 ```
+
+</details>
 
 ### 표준 서명에 맞지 않는 손실 및 메트릭 처리
 {: #handling-losses-and-metrics-that-dont-fit-the-standard-signature}
@@ -457,11 +487,16 @@ model.compile(
 model.fit(x_train, y_train, batch_size=64, epochs=1)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 505us/step - loss: 3.4083
 
 <keras.src.callbacks.history.History at 0x2e60226b0>
 ```
+
+</details>
 
 `add_loss()`를 통해 손실을 전달할 때, 
 모델에 이미 최소화해야 할 손실이 있으므로, 
@@ -503,11 +538,16 @@ data = {
 model.fit(data)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 89ms/step - loss: 0.6982
 
 <keras.src.callbacks.history.History at 0x2e5cc91e0>
 ```
+
+</details>
 
 다중 입력 모델을 트레이닝하는 방법에 대한 자세한 내용은, 
 **다중 입력, 다중 출력 모델에 데이터 전달** 섹션을 참조하세요.
@@ -535,11 +575,16 @@ model = get_compiled_model()
 model.fit(x_train, y_train, batch_size=64, validation_split=0.2, epochs=1)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  625/625 ━━━━━━━━━━━━━━━━━━━━ 1s 563us/step - loss: 0.6161 - sparse_categorical_accuracy: 0.8259 - val_loss: 0.2379 - val_sparse_categorical_accuracy: 0.9302
 
 <keras.src.callbacks.history.History at 0x2e6007610>
 ```
+
+</details>
 
 * * *
 
@@ -583,6 +628,9 @@ result = model.evaluate(test_dataset)
 dict(zip(model.metrics_names, result))
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Epoch 1/3
  782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 688us/step - loss: 0.5631 - sparse_categorical_accuracy: 0.8458
@@ -595,6 +643,8 @@ Evaluate
 
 {'loss': 0.11913617700338364, 'compile_metrics': 0.965399980545044}
 ```
+
+</details>
 
 각 에포크가 끝나면 Dataset이 재설정되므로, 다음 에포크에서 재사용할 수 있습니다.
 
@@ -613,6 +663,9 @@ train_dataset = train_dataset.shuffle(buffer_size=1024).batch(64)
 model.fit(train_dataset, epochs=3, steps_per_epoch=100)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Epoch 1/3
  100/100 ━━━━━━━━━━━━━━━━━━━━ 0s 508us/step - loss: 1.2000 - sparse_categorical_accuracy: 0.6822 
@@ -623,6 +676,8 @@ Epoch 3/3
 
 <keras.src.callbacks.history.History at 0x2e64df400>
 ```
+
+</details>
 
 `fit()`에서 `validation_data` 인수로 `Dataset` 인스턴스를 전달할 수도 있습니다.
 
@@ -640,11 +695,16 @@ val_dataset = val_dataset.batch(64)
 model.fit(train_dataset, epochs=1, validation_data=val_dataset)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 837us/step - loss: 0.5569 - sparse_categorical_accuracy: 0.8508 - val_loss: 0.1711 - val_sparse_categorical_accuracy: 0.9527
 
 <keras.src.callbacks.history.History at 0x2e641e920>
 ```
+
+</details>
 
 각 에포크가 끝나면, 모델은 검증 데이터 세트에 걸쳐 반복하고, 검증 손실과 검증 메트릭을 계산합니다.
 
@@ -673,11 +733,16 @@ model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 771us/step - loss: 0.5562 - sparse_categorical_accuracy: 0.8436 - val_loss: 0.3345 - val_sparse_categorical_accuracy: 0.9062
 
 <keras.src.callbacks.history.History at 0x2f9542e00>
 ```
+
+</details>
 
 검증 데이터 세트는 각 사용 후 재설정되므로, 항상 에포크마다 동일한 샘플에 대해 평가하게 됩니다.
 
@@ -738,11 +803,16 @@ model = get_compiled_model()
 model.fit(train_py_dataset, batch_size=64, validation_data=val_py_dataset, epochs=1)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1563/1563 ━━━━━━━━━━━━━━━━━━━━ 1s 443us/step - loss: 0.5217 - sparse_categorical_accuracy: 0.8473 - val_loss: 0.1576 - val_sparse_categorical_accuracy: 0.9525
 
 <keras.src.callbacks.history.History at 0x2f9c8d120>
 ```
+
+</details>
 
 모델을 평가하는 것도 마찬가지로 쉽습니다.
 
@@ -750,11 +820,16 @@ model.fit(train_py_dataset, batch_size=64, validation_data=val_py_dataset, epoch
 model.evaluate(val_py_dataset)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  313/313 ━━━━━━━━━━━━━━━━━━━━ 0s 157us/step - loss: 0.1821 - sparse_categorical_accuracy: 0.9450
 
 [0.15764616429805756, 0.9524999856948853]
 ```
+
+</details>
 
 중요한 점은, `PyDataset` 객체가 병렬 처리 구성을 처리하는 세 가지 일반적인 생성자 인수를 지원한다는 것입니다.
 
@@ -781,11 +856,16 @@ model = get_compiled_model()
 model.fit(train_py_dataset, batch_size=64, validation_data=val_py_dataset, epochs=1)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1563/1563 ━━━━━━━━━━━━━━━━━━━━ 1s 561us/step - loss: 0.5146 - sparse_categorical_accuracy: 0.8516 - val_loss: 0.1623 - val_sparse_categorical_accuracy: 0.9514
 
 <keras.src.callbacks.history.History at 0x2e7fd5ea0>
 ```
+
+</details>
 
 * * *
 
@@ -836,12 +916,17 @@ model.fit(train_dataloader, batch_size=64, validation_data=val_dataloader, epoch
 model.evaluate(val_dataloader)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1563/1563 ━━━━━━━━━━━━━━━━━━━━ 1s 575us/step - loss: 0.5051 - sparse_categorical_accuracy: 0.8568 - val_loss: 0.1613 - val_sparse_categorical_accuracy: 0.9528
  313/313 ━━━━━━━━━━━━━━━━━━━━ 0s 278us/step - loss: 0.1551 - sparse_categorical_accuracy: 0.9541
 
 [0.16209803521633148, 0.9527999758720398]
 ```
+
+</details>
 
 * * *
 
@@ -892,12 +977,17 @@ model = get_compiled_model()
 model.fit(x_train, y_train, class_weight=class_weight, batch_size=64, epochs=1)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Fit with class weight
  782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 534us/step - loss: 0.6205 - sparse_categorical_accuracy: 0.8375
 
 <keras.src.callbacks.history.History at 0x298d44eb0>
 ```
+
+</details>
 
 ### 샘플 가중치
 {: #sample-weights}
@@ -924,12 +1014,17 @@ model = get_compiled_model()
 model.fit(x_train, y_train, sample_weight=sample_weight, batch_size=64, epochs=1)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Fit with sample weight
  782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 546us/step - loss: 0.6397 - sparse_categorical_accuracy: 0.8388
 
 <keras.src.callbacks.history.History at 0x298e066e0>
 ```
+
+</details>
 
 다음은 일치하는 `Dataset` 예입니다.
 
@@ -948,11 +1043,16 @@ model = get_compiled_model()
 model.fit(train_dataset, epochs=1)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 651us/step - loss: 0.5971 - sparse_categorical_accuracy: 0.8445
 
 <keras.src.callbacks.history.History at 0x312854100>
 ```
+
+</details>
 
 * * *
 
@@ -1125,12 +1225,17 @@ model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 62ms/step - loss: 18.0146
  4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 56ms/step - loss: 17.6494
 
 <keras.src.callbacks.history.History at 0x31a6c5810>
 ```
+
+</details>
 
 `Dataset`의 사용 사례는 다음과 같습니다. 
 NumPy 배열에서 한 것과 비슷하게, `Dataset`은 dict 튜플을 반환해야 합니다.
@@ -1147,11 +1252,16 @@ train_dataset = train_dataset.shuffle(buffer_size=1024).batch(64)
 model.fit(train_dataset, epochs=1)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 197ms/step - loss: 17.8578
 
 <keras.src.callbacks.history.History at 0x17c7e5690>
 ```
+
+</details>
 
 * * *
 
@@ -1196,6 +1306,9 @@ model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Epoch 1/20
  625/625 ━━━━━━━━━━━━━━━━━━━━ 1s 622us/step - loss: 0.6245 - sparse_categorical_accuracy: 0.8275 - val_loss: 0.2231 - val_sparse_categorical_accuracy: 0.9330
@@ -1215,6 +1328,8 @@ Epoch 7: early stopping
 
 <keras.src.callbacks.history.History at 0x31ae37c10>
 ```
+
+</details>
 
 ### 다양한 빌트인 콜백을 사용할 수 있습니다
 {: #many-built-in-callbacks-are-available}
@@ -1287,6 +1402,9 @@ model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 
 Epoch 1/2
@@ -1300,6 +1418,8 @@ Epoch 2: val_loss improved from 0.22393 to 0.16868, saving model to mymodel_2.ke
 
 <keras.src.callbacks.history.History at 0x2e5cb7250>
 ```
+
+</details>
 
 `ModelCheckpoint` 콜백은 결함 허용성(fault-tolerance)을 구현하는 데 사용할 수 있습니다. 
 즉, 트레이닝이 무작위로 중단되는 경우, 
@@ -1336,12 +1456,17 @@ callbacks = [
 model.fit(x_train, y_train, epochs=1, callbacks=callbacks)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Creating a new model
  1563/1563 ━━━━━━━━━━━━━━━━━━━━ 1s 390us/step - loss: 0.4910 - sparse_categorical_accuracy: 0.8623
 
 <keras.src.callbacks.history.History at 0x2e5c454e0>
 ```
+
+</details>
 
 모델을 저장하고 복원하기 위한 콜백을 직접 작성합니다.
 
@@ -1427,8 +1552,13 @@ keras.callbacks.TensorBoard(
 )  # 로그를 작성하는 빈도(기본값: 에포크당 한 번)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 <keras.src.callbacks.tensorboard.TensorBoard at 0x31b0188b0>
 ```
+
+</details>
 
 자세한 내용은 [`TensorBoard` 콜백에 대한 문서]({{ site.baseurl }}/api/callbacks/tensorboard/)를 참조하세요.

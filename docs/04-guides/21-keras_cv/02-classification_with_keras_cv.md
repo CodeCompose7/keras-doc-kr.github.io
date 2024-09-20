@@ -133,9 +133,14 @@ keras_cv.visualization.plot_image_gallery(
 predictions = classifier.predict(np.expand_dims(image, axis=0))
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 4s 4s/step
 ```
+
+</details>
 
 예측은 소프트맥스된 카테고리 순위의 형태로 제공됩니다. 
 간단한 argsort 함수를 사용하여, 상위 클래스의 인덱스를 찾을 수 있습니다.
@@ -157,10 +162,15 @@ with open(classes, "rb") as f:
     classes = json.load(f)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Downloading data from https://gist.githubusercontent.com/LukeWood/62eebcd5c5c4a4d0e0b7845780f76d55/raw/fde63e5e4c09e2fa0a3436680f436bdcb8325aac/ImagenetClassnames.json
  33567/33567 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step
 ```
+
+</details>
 
 이제 우리는 인덱스를 통해 간단히 클래스 이름을 조회할 수 있습니다.
 
@@ -169,9 +179,14 @@ top_two = [classes[str(i)] for i in top_classes[-2:]]
 print("Top two classes are:", top_two)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Top two classes are: ['Egyptian cat', 'velvet']
 ```
+
+</details>
 
 좋습니다! 둘 다 맞는 것 같습니다! 
 하지만 클래스 중 하나는 "Velvet"입니다. 
@@ -258,10 +273,15 @@ model.compile(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Downloading data from https://storage.googleapis.com/keras-cv/models/efficientnetv2b0/imagenet/classification-v0-notop.h5
  24029184/24029184 ━━━━━━━━━━━━━━━━━━━━ 1s 0us/step
 ```
+
+</details>
 
 여기서 우리의 분류기는 단순한 [`keras.Sequential`]({{ site.baseurl }}/api/models/sequential#sequential-class)입니다. 
 남은 것은 `model.fit()`를 호출하는 것뿐입니다.
@@ -269,6 +289,9 @@ Downloading data from https://storage.googleapis.com/keras-cv/models/efficientne
 ```python
 model.fit(train_dataset)
 ```
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
  216/727 ━━━━━[37m━━━━━━━━━━━━━━━  15s 30ms/step - accuracy: 0.8433 - loss: 0.5113
@@ -325,6 +348,8 @@ Corrupt JPEG data: 228 extraneous bytes before marker 0xd9
 <keras.src.callbacks.history.History at 0x7fce380df100>
 ```
 
+</details>
+
 미세 조정 후 모델이 어떻게 수행되는지 살펴보겠습니다.
 
 ```python
@@ -334,10 +359,15 @@ classes = {0: "cat", 1: "dog"}
 print("Top class is:", classes[predictions[0].argmax()])
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 3s 3s/step
 Top class is: cat
 ```
+
+</details>
 
 훌륭하네요. 모델이 이미지를 올바르게 분류한 것 같아요.
 
@@ -376,10 +406,15 @@ eval_ds = eval_ds.map(package_inputs, num_parallel_calls=tf.data.AUTOTUNE)
 train_ds = train_ds.shuffle(BATCH_SIZE * 16)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  Downloading and preparing dataset 125.64 MiB (download: 125.64 MiB, generated: 132.86 MiB, total: 258.50 MiB) to /usr/local/google/home/rameshsampath/tensorflow_datasets/caltech101/3.0.1...
  Dataset caltech101 downloaded and prepared to /usr/local/google/home/rameshsampath/tensorflow_datasets/caltech101/3.0.1. Subsequent calls will reuse this data.
 ```
+
+</details>
 
 CalTech101 데이터 세트는 각 이미지의 크기가 다르기 때문에, 
 `ragged_batch()` API를 사용하여 각 개별 이미지의 모양 정보를 유지하면서 이를 배치 처리합니다.
@@ -608,7 +643,7 @@ cut_mix_or_mix_up = keras_cv.layers.RandomChoice([cut_mix, mix_up], batchwise=Tr
 augmenters += [cut_mix_or_mix_up]
 ```
 
-이제 최종 증강기를 트레이닝 데이터에 적용해 보겠습니다.
+이제 최종 보강기를 트레이닝 데이터에 적용해 보겠습니다.
 
 ```python
 def create_augmenter_fn(augmenters):
@@ -814,11 +849,16 @@ model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  96/96 ━━━━━━━━━━━━━━━━━━━━ 65s 462ms/step - categorical_accuracy: 0.0068 - loss: 6.6096 - top_k_categorical_accuracy: 0.0497 - val_categorical_accuracy: 0.0122 - val_loss: 4.7151 - val_top_k_categorical_accuracy: 0.1596
 
 <keras.src.callbacks.history.History at 0x7fc7142c2e80>
 ```
+
+</details>
 
 축하합니다! 이제 KerasCV에서 강력한 이미지 분류기를 처음부터 트레이닝하는 방법을 알게 되었습니다. 
 애플리케이션에 레이블이 지정된 데이터의 가용성에 따라, 
