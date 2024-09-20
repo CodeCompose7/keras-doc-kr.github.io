@@ -267,9 +267,14 @@ visualization.plot_bounding_box_gallery(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 11s 11s/step
 ```
+
+</details>
 
 ![png]({{ site.baseurl }}/img/guides/object_detection_keras_cv/object_detection_keras_cv_16_1.png)
 
@@ -315,9 +320,14 @@ visualization.plot_bounding_box_gallery(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 5s 5s/step
 ```
+
+</details>
 
 ![png]({{ site.baseurl }}/img/guides/object_detection_keras_cv/object_detection_keras_cv_18_1.png)
 
@@ -359,9 +369,14 @@ visualization.plot_bounding_box_gallery(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 5s 5s/step
 ```
+
+</details>
 
 ![png]({{ site.baseurl }}/img/guides/object_detection_keras_cv/object_detection_keras_cv_20_1.png)
 
@@ -745,6 +760,9 @@ model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  20/20 ━━━━━━━━━━━━━━━━━━━━ 7s 59ms/step
 creating index...
@@ -772,6 +790,8 @@ DONE (t=0.07s).
 
 <keras.src.callbacks.history.History at 0x7fb23010a850>
 ```
+
+</details>
 
 * * *
 
@@ -834,9 +854,14 @@ model.prediction_decoder = keras_cv.layers.NonMaxSuppression(
 visualize_detections(model, dataset=visualization_ds, bounding_box_format="xywh")
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 16s 16s/step
 ```
+
+</details>
 
 ![png]({{ site.baseurl }}/img/guides/object_detection_keras_cv/object_detection_keras_cv_60_1.png)
 
@@ -896,10 +921,15 @@ visualization.plot_bounding_box_gallery(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 By using this model checkpoint, you acknowledge that its usage is subject to the terms of the CreativeML Open RAIL++-M license at https://github.com/Stability-AI/stablediffusion/blob/main/LICENSE-MODEL
  50/50 ━━━━━━━━━━━━━━━━━━━━ 47s 356ms/step
 ```
+
+</details>
 
 ![png]({{ site.baseurl }}/img/guides/object_detection_keras_cv/object_detection_keras_cv_64_1.png)
 

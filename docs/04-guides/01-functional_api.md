@@ -93,9 +93,14 @@ img_inputs = keras.Input(shape=(32, 32, 3))
 inputs.shape
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 (None, 784)
 ```
+
+</details>
 
 dtype은 다음과 같습니다.
 
@@ -103,9 +108,14 @@ dtype은 다음과 같습니다.
 inputs.dtype
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 'float32'
 ```
+
+</details>
 
 이 `inputs` 객체에서 레이어를 호출하여, 레이어 그래프에 새 노드를 만듭니다.
 
@@ -136,6 +146,9 @@ model = keras.Model(inputs=inputs, outputs=outputs, name="mnist_model")
 model.summary()
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Model: "mnist_model"
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
@@ -153,6 +166,8 @@ Model: "mnist_model"
  Trainable params: 55,050 (215.04 KB)
  Non-trainable params: 0 (0.00 B)
 ```
+
+</details>
 
 모델을 그래프로 표시할 수도 있습니다.
 
@@ -216,6 +231,9 @@ print("Test loss:", test_scores[0])
 print("Test accuracy:", test_scores[1])
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Epoch 1/2
  750/750 ━━━━━━━━━━━━━━━━━━━━ 1s 863us/step - accuracy: 0.8425 - loss: 0.5733 - val_accuracy: 0.9496 - val_loss: 0.1711
@@ -225,6 +243,8 @@ Epoch 2/2
 Test loss: 0.12876172363758087
 Test accuracy: 0.9613000154495239
 ```
+
+</details>
 
 자세한 내용은 [트레이닝 및 평가]({{ site.baseurl }}/guides/training_with_built_in_methods/) 가이드를 참조하세요.
 
@@ -296,6 +316,9 @@ autoencoder = keras.Model(encoder_input, decoder_output, name="autoencoder")
 autoencoder.summary()
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Model: "encoder"
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
@@ -359,6 +382,8 @@ Model: "autoencoder"
  Non-trainable params: 0 (0.00 B)
 ```
 
+</details>
+
 여기서, 디코딩 아키텍처는 인코딩 아키텍처와 엄격히 대칭적이므로, 
 출력 모양은 입력 모양 `(28, 28, 1)`과 동일합니다.
 
@@ -407,6 +432,9 @@ decoded_img = decoder(encoded_img)
 autoencoder = keras.Model(autoencoder_input, decoded_img, name="autoencoder")
 autoencoder.summary()
 ```
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
 Model: "encoder"
@@ -470,6 +498,8 @@ Model: "autoencoder"
  Trainable params: 28,241 (110.32 KB)
  Non-trainable params: 0 (0.00 B)
 ```
+
+</details>
 
 보시다시피, 모델은 중첩될 수 있습니다. 
 모델은 하위 모델을 포함할 수 있습니다. (모델은 레이어와 같기 때문입니다) 
@@ -617,6 +647,9 @@ model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Epoch 1/2
  40/40 ━━━━━━━━━━━━━━━━━━━━ 3s 57ms/step - loss: 1108.3792
@@ -625,6 +658,8 @@ Epoch 2/2
 
 <keras.src.callbacks.history.History at 0x34afc3d90>
 ```
+
+</details>
 
 `Dataset` 객체로 fit을 호출할 때, 
 `([title_data, body_data, tags_data], [priority_targets, dept_targets])`와 같은 리스트 튜플이나, 
@@ -665,6 +700,9 @@ outputs = layers.Dense(10)(x)
 model = keras.Model(inputs, outputs, name="toy_resnet")
 model.summary()
 ```
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
 Model: "toy_resnet"
@@ -712,6 +750,8 @@ Model: "toy_resnet"
  Non-trainable params: 0 (0.00 B)
 ```
 
+</details>
+
 모델을 플롯합니다:
 
 ```python
@@ -746,11 +786,16 @@ model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  13/13 ━━━━━━━━━━━━━━━━━━━━ 1s 60ms/step - acc: 0.1096 - loss: 2.3053 - val_acc: 0.1150 - val_loss: 2.2973
 
 <keras.src.callbacks.history.History at 0x1758bed40>
 ```
+
+</details>
 
 * * *
 
@@ -1087,10 +1132,15 @@ rnn_model = CustomRNN()
 _ = rnn_model(ops.zeros((1, timesteps, input_dim)))
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 (1, 10, 32)
 (1, 10, 32)
 ```
+
+</details>
 
 다음 패턴 중 하나를 따르는 `call` 메서드를 구현하는 한, 
 함수형 API에서 모든 하위 클래스화된 레이어 또는 모델을 사용할 수 있습니다.

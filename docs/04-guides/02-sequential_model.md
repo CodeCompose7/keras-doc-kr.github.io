@@ -113,11 +113,16 @@ model = keras.Sequential(
 model.layers
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 [<Dense name=dense, built=False>,
  <Dense name=dense_1, built=False>,
  <Dense name=dense_2, built=False>]
 ```
+
+</details>
 
 `add()` 메서드를 통해 Sequential 모델을 증분 방식(incrementally)으로 생성할 수도 있습니다.
 
@@ -136,9 +141,14 @@ model.pop()
 print(len(model.layers))  # 2
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 2
 ```
+
+</details>
 
 또한 Sequential 생성자는 (Keras의 모든 레이어나 모델과 마찬가지로) `name` 인수를 허용합니다. 
 이는 의미적으로 의미 있는 이름으로 TensorBoard 그래프에 어노테이션 하기에 유용합니다.
@@ -165,9 +175,14 @@ layer = layers.Dense(3)
 layer.weights  # 비어 있음
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 []
 ```
+
+</details>
 
 입력에 대해 처음 호출될 때 가중치를 생성합니다. 
 가중치의 모양은 입력의 모양에 따라 달라지기 때문입니다.
@@ -179,10 +194,15 @@ y = layer(x)
 layer.weights  # 이제 (4, 3) 및 (3,) 모양의 가중치가 있습니다.
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 [<KerasVariable shape=(4, 3), dtype=float32, path=dense_6/kernel>,
  <KerasVariable shape=(3,), dtype=float32, path=dense_6/bias>]
 ```
+
+</details>
 
 당연히, 이는 Sequential 모델에도 적용됩니다. 
 입력 모양 없이 Sequential 모델을 인스턴스화하면, "빌드"되지 않습니다. 
@@ -210,15 +230,23 @@ y = model(x)
 print("Number of weights after calling the model:", len(model.weights))  # 6
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Number of weights after calling the model: 6
 ```
+
+</details>
 
 모델이 "빌드"되면, `summary()` 메서드를 호출하여 내용을 표시할 수 있습니다.
 
 ```python
 model.summary()
 ```
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
 Model: "sequential_3"
@@ -236,6 +264,8 @@ Model: "sequential_3"
  Non-trainable params: 0 (0.00 B)
 ```
 
+</details>
+
 그러나, Sequential 모델을 점진적으로(incrementally) 빌드할 때, 
 지금까지의 모델 요약을 현재 출력 모양을 포함하여 표시할 수 있다면 매우 유용할 수 있습니다. 
 이 경우, `Input` 객체를 모델에 전달하여 모델을 시작해야 하므로, 처음부터 입력 모양을 알 수 있습니다.
@@ -247,6 +277,9 @@ model.add(layers.Dense(2, activation="relu"))
 
 model.summary()
 ```
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
 Model: "sequential_4"
@@ -260,15 +293,22 @@ Model: "sequential_4"
  Non-trainable params: 0 (0.00 B)
 ```
 
+</details>
+
 `Input` 객체는 레이어가 아니기 때문에, `model.layers`의 일부로 표시되지 않습니다.
 
 ```python
 model.layers
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 [<Dense name=dense_10, built=True>]
 ```
+
+</details>
 
 이와 같이 미리 정의된 입력 모양으로 빌드된 모델은, 
 항상 가중치를 갖고(데이터를 보기 전에도) 항상 정의된 출력 모양을 갖습니다.
@@ -318,6 +358,9 @@ model.add(layers.GlobalMaxPooling2D())
 model.add(layers.Dense(10))
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Model: "sequential_5"
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
@@ -358,6 +401,8 @@ Model: "sequential_5"
  Trainable params: 48,672 (190.12 KB)
  Non-trainable params: 0 (0.00 B)
 ```
+
+</details>
 
 매우 실용적이죠?
 

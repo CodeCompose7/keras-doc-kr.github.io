@@ -101,10 +101,15 @@ y = linear_layer(x)
 print(y)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 [[ 0.085416   -0.06821361 -0.00741937 -0.03429271]
  [ 0.085416   -0.06821361 -0.00741937 -0.03429271]]
 ```
+
+</details>
 
 가중치 `w`와 `b`는 레이어 속성으로 설정되면, 레이어에서 자동으로 추적됩니다.
 
@@ -145,10 +150,15 @@ y = my_sum(x)
 print(y.numpy())
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 [2. 2.]
 [4. 4.]
 ```
+
+</details>
 
 이는 `layer.weights`의 일부이지만, 트레이닝 불가능한 가중치로 분류됩니다.
 
@@ -160,11 +170,16 @@ print("non-trainable weights:", len(my_sum.non_trainable_weights))
 print("trainable_weights:", my_sum.trainable_weights)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 weights: 1
 non-trainable weights: 1
 trainable_weights: []
 ```
+
+</details>
 
 * * *
 
@@ -268,10 +283,15 @@ print("weights:", len(mlp.weights))
 print("trainable weights:", len(mlp.trainable_weights))
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 weights: 6
 trainable weights: 6
 ```
+
+</details>
 
 * * *
 
@@ -402,9 +422,14 @@ _ = layer(ops.zeros((1, 1)))
 print(layer.losses)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 [Array(0.00217911, dtype=float32)]
 ```
+
+</details>
 
 이러한 손실은 커스텀 트레이닝 루프를 작성할 때 고려해야 합니다.
 
@@ -426,12 +451,17 @@ model.compile(optimizer="adam")
 model.fit(np.random.random((2, 3)), np.random.random((2, 3)))
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 0.2650
  1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 15ms/step - loss: 0.0050
 
 <keras.src.callbacks.history.History at 0x146f71960>
 ```
+
+</details>
 
 * * *
 
@@ -473,9 +503,14 @@ print(config)
 new_layer = Linear.from_config(config)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 {'units': 64}
 ```
+
+</details>
 
 베이스 `Layer` 클래스의 `__init__()` 메서드는 일부 키워드 인수, 특히 `name`과 `dtype`을 취합니다. 
 이러한 인수를 `__init__()`에서 부모 클래스에 전달하고, 레이어 config에 포함하는 것이 좋습니다.
@@ -511,9 +546,14 @@ print(config)
 new_layer = Linear.from_config(config)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 {'name': 'linear_7', 'trainable': True, 'dtype': 'float32', 'units': 64}
 ```
+
+</details>
 
 레이어를 config에서 역직렬화할 때 더 많은 유연성이 필요한 경우, 
 `from_config()` 클래스 메서드를 재정의할 수도 있습니다. 
@@ -741,6 +781,9 @@ vae.compile(optimizer, loss=keras.losses.MeanSquaredError())
 vae.fit(x_train, x_train, epochs=2, batch_size=64)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Epoch 1/2
  938/938 ━━━━━━━━━━━━━━━━━━━━ 2s 1ms/step - loss: 0.0942
@@ -749,3 +792,5 @@ Epoch 2/2
 
 <keras.src.callbacks.history.History at 0x146fe62f0>
 ```
+
+</details>
