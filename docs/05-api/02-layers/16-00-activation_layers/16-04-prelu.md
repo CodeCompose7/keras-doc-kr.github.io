@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 4) PReLU layer
+title: PReLU layer
 nav_order: 16+04
 permalink: /api/layers/activation_layers/prelu/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: Activation 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/activation_layers/prelu/](https://keras.io/api/layers/activation_layers/prelu/){:target="_blank"}

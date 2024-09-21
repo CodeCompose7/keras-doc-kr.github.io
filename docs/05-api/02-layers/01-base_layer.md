@@ -3,7 +3,7 @@ layout: default
 title: The base Layer class
 nav_order: 01+00
 permalink: /api/layers/base_layer/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

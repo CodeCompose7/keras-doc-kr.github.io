@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 12) Simple RNN cell layer
+title: Simple RNN cell layer
 nav_order: 09+12
 permalink: /api/layers/recurrent_layers/simple_rnn_cell/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: Recurrent 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/recurrent_layers/simple_rnn_cell/](https://keras.io/api/layers/recurrent_layers/simple_rnn_cell/){:target="_blank"}

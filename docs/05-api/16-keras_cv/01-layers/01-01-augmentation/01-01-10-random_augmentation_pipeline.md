@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ j> RandomAugmentationPipeline layer
+title: RandomAugmentationPipeline layer
 nav_order: 01+01+10
 permalink: /api/keras_cv/layers/augmentation/random_augmentation_pipeline/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Augmentation 레이어
+grand_parent: KerasCV 레이어
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/layers/augmentation/random_augmentation_pipeline/](https://keras.io/api/keras_cv/layers/augmentation/random_augmentation_pipeline/){:target="_blank"}

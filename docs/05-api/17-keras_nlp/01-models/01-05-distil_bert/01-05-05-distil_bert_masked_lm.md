@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ e> DistilBertMaskedLM model
+title: DistilBertMaskedLM model
 nav_order: 01+05+05
 permalink: /api/keras_nlp/models/distil_bert/distil_bert_masked_lm/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: DistilBERT
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/distil_bert/distil_bert_masked_lm/](https://keras.io/api/keras_nlp/models/distil_bert/distil_bert_masked_lm/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 13) ZeroPadding3D layer
+title: ZeroPadding3D layer
 nav_order: 14+13
 permalink: /api/layers/reshaping_layers/zero_padding3d/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: Reshaping 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/reshaping_layers/zero_padding3d/](https://keras.io/api/layers/reshaping_layers/zero_padding3d/){:target="_blank"}

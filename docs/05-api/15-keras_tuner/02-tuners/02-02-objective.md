@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 2) Objective class
+title: Objective class
 nav_order: 02+02
 permalink: /api/keras_tuner/tuners/objective/
-parent: KerasTuner
-grand_parent: Keras 3 API 문서
+parent: Tuners
+grand_parent: KerasTuner
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_tuner/tuners/objective/](https://keras.io/api/keras_tuner/tuners/objective/){:target="_blank"}

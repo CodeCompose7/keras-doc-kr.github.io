@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 1) Tokenizer base class
+title: Tokenizer base class
 nav_order: 02+01
 permalink: /api/keras_nlp/tokenizers/tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Tokenizers
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/tokenizers/tokenizer/](https://keras.io/api/keras_nlp/tokenizers/tokenizer/){:target="_blank"}

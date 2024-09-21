@@ -28,6 +28,7 @@ grand_parent: 코드 예제
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/image_classification_from_scratch.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/image_classification_from_scratch.py){: .btn .btn-blue }
+[Colab에서 보기2](https://colab.research.google.com/drive/1MaSuWbYh0Q8uIoqx6s4j9SYQtGgIOwBh){: .btn .btn-purple }
 
 ⓘ 이 예제는 Keras 3을 사용합니다.
 {: .label .label-green .px-10}
@@ -35,6 +36,8 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 이 예는 사전 트레이닝된 가중치나 미리 만들어진 Keras 애플리케이션 모델을 활용하지 않고, 디스크의 JPEG 이미지 파일에서 시작하여, 처음부터 이미지 분류를 수행하는 방법을 보여줍니다. Kaggle Cats vs Dogs 이진 분류 데이터 세트에 대한 워크플로우를 보여드립니다.
 
@@ -44,6 +47,8 @@ grand_parent: 코드 예제
 
 셋업
 -----
+{: #setup}
+<!-- Setup -->
 
 ```python
 import os
@@ -58,8 +63,12 @@ import matplotlib.pyplot as plt
 
 데이터 로드: Cats vs Dogs 데이터 세트
 ---------------------------------------
+{: #load-the-data-the-cats-vs-dogs-dataset}
+<!-- Load the data: the Cats vs Dogs dataset -->
 
 ### Raw 데이터 다운로드
+{: #raw-data-download}
+<!-- ### Raw data download -->
 
 먼저, raw 데이터의 786M ZIP 아카이브를 다운로드해 보겠습니다:
 
@@ -93,6 +102,8 @@ Cat  Dog
 ```
 
 ### 손상된 이미지 필터링
+{: #filter-out-corrupted-images}
+<!-- ### Filter out corrupted images -->
 
 많은 실제 이미지 데이터로 작업할 때, 손상된 이미지가 흔히 발생합니다. 헤더에 "JFIF" 문자열이 없는 잘못 인코딩된 이미지를 필터링해 보겠습니다.
 
@@ -124,6 +135,8 @@ Deleted 1590 images.
 
 `Dataset` 생성
 --------------------
+{: #generate-a-dataset}
+<!-- Generate a `Dataset` -->
 
 ```python
 image_size = (180, 180)
@@ -150,6 +163,8 @@ Using 4682 files for validation.
 
 데이터 시각화
 ------------------
+{: #visualize-the-data}
+<!-- Visualize the data -->
 
 다음은 트레이닝 데이터 세트의 처음 9개 이미지입니다.
 
@@ -169,6 +184,8 @@ for images, labels in train_ds.take(1):
 
 이미지 데이터 보강 사용
 -----------------------------
+{: #using-image-data-augmentation}
+<!-- Using image data augmentation -->
 
 이미지 데이터 세트가 크지 않은 경우, 무작위 수평 뒤집기나 작은 무작위 회전 등 트레이닝 이미지에 무작위적이지만 사실적인 변형을 적용하여 샘플 다양성을 인위적으로 도입하는 것이 좋습니다. 이렇게 하면 모델이 트레이닝 데이터의 다양한 측면에 노출되는 동시에, 과적합 속도를 늦추는 데 도움이 됩니다.
 
@@ -203,6 +220,8 @@ for images, _ in train_ds.take(1):
 
 데이터 표준화
 ----------------------
+{: #standardizing-the-data}
+<!-- Standardizing the data -->
 
 이미지는 데이터 세트에 의해 연속적인 `float32` 배치로 산출되기 때문에, 이미 표준 크기(180x180)로 되어 있습니다. 그러나, RGB 채널 값은 `[0, 255]` 범위에 있습니다. 이는 신경망에 이상적이지 않으며, 일반적으로 입력 값을 작게 만드는 것이 좋습니다. 여기서는 모델을 시작할 때 `Rescaling` 레이어를 사용하여, 값을 `[0, 1]` 범위로 표준화하겠습니다.
 
@@ -210,6 +229,8 @@ for images, _ in train_ds.take(1):
 
 데이터 전처리를 위한 두 가지 옵션
 ----------------------------------
+{: #two-options-to-preprocess-the-data}
+<!-- Two options to preprocess the data -->
 
 `data_augmentation` 전처리기를 사용하는 방법에는 두 가지가 있습니다:
 
@@ -245,6 +266,8 @@ CPU에서 트레이닝하는 경우, 이 옵션이 데이터 보강을 비동기
 
 성능을 위한 데이터 세트 구성
 -------------------------------------
+{: #configure-the-dataset-for-performance}
+<!-- Configure the dataset for performance -->
 
 트레이닝 데이터 세트에 데이터 보강을 적용하고, 버퍼링된 프리페칭(prefetching)을 사용하여 I/O가 차단(blocking)되지 않고, 디스크에서 데이터를 가져올 수 있도록 해 보겠습니다:
 
@@ -264,6 +287,8 @@ val_ds = val_ds.prefetch(tf_data.AUTOTUNE)
 
 모델 구축
 -------------
+{: #build-a-model}
+<!-- Build a model -->
 
 Xception 네트워크의 작은 버전을 구축하겠습니다. 아키텍처 최적화를 특별히 시도하지 않았으므로, 최적의 모델 구성을 체계적으로 검색하려면 [KerasTuner](https://github.com/keras-team/keras-tuner)를 사용하는 것이 좋습니다.
 
@@ -328,6 +353,8 @@ keras.utils.plot_model(model, show_shapes=True)
 
 모델 트레이닝
 ---------------
+{: #train-the-model}
+<!-- Train the model -->
 
 ```python
 epochs = 25
@@ -363,6 +390,8 @@ Epoch 25/25
 
 새 데이터에 대한 추론 실행
 -------------------------
+{: #run-inference-on-new-data}
+<!-- Run inference on new data -->
 
 추론 시에는 데이터 보강 및 드롭아웃이 비활성 상태입니다.
 

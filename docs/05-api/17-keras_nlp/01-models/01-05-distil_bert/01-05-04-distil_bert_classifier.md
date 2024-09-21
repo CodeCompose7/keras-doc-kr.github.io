@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ d> DistilBertClassifier model
+title: DistilBertClassifier model
 nav_order: 01+05+04
 permalink: /api/keras_nlp/models/distil_bert/distil_bert_classifier/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: DistilBERT
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/distil_bert/distil_bert_classifier/](https://keras.io/api/keras_nlp/models/distil_bert/distil_bert_classifier/){:target="_blank"}

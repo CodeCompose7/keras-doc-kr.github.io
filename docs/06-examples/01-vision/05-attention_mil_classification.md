@@ -28,6 +28,7 @@ grand_parent: 코드 예제
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/attention_mil_classification.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/vision/attention_mil_classification.py){: .btn .btn-blue }
+[Colab에서 보기2](https://colab.research.google.com/drive/1ehPYerts4Vzc6ZTSocGmT6vLEd-Zfoux){: .btn .btn-purple }
 
 ⓘ 이 예제는 Keras 3을 사용합니다.
 {: .label .label-green .px-10}
@@ -35,12 +36,19 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 ### 다중 인스턴스 학습(MIL, Multiple Instance Learning)이란 무엇인가요?
+{: #what-is-multiple-instance-learning-mil}
+<!-- ### What is Multiple Instance Learning (MIL)? -->
+
 
 일반적으로, 지도 학습 알고리즘을 사용하면, 학습자는 인스턴스 집합에 대한 레이블을 받습니다. MIL의 경우, 학습자는 인스턴스 집합을 포함하는 가방 집합에 대한 레이블을 받습니다. 가방에 양성 인스턴스가 하나 이상 포함되어 있으면 양성, 하나도 포함되어 있지 않으면 음성으로 레이블이 지정됩니다.
 
 ### 동기
+{: #motivation}
+<!-- ### Motivation -->
 
 이미지 분류 작업에서는 각 이미지가 클래스 레이블을 명확하게 나타낸다고 가정하는 경우가 많습니다. 의료 영상(예: 컴퓨터 병리학 등)에서는 _전체 이미지_ 가 단일 클래스 레이블(암/비암)로 표현되거나 관심 영역이 주어질 수 있습니다. 그러나, 이미지의 어떤 패턴이 실제로 해당 클래스에 속하게 만드는지 알고 싶을 것입니다. 이러한 맥락에서, 이미지를 분할하고 서브 이미지가 인스턴스 백을 형성하게 할 것입니다.
 
@@ -50,6 +58,8 @@ grand_parent: 코드 예제
 2.  가방 내에서 어떤 인스턴스가 위치 클래스 레이블 예측을 일으켰는지 알아냅니다.
 
 ### 구현
+{: #implementation}
+<!-- ### Implementation -->
 
 다음 단계에서는 모델 작동 방식을 설명합니다:
 
@@ -59,6 +69,8 @@ grand_parent: 코드 예제
 4.  결과 출력은 분류를 위해 소프트맥스 함수로 전달됩니다.
 
 ### 참조
+{: #references}
+<!-- ### References -->
 
 * [어텐션 기반 심층 다중 인스턴스 학습](https://arxiv.org/abs/1802.04712).
 * 어텐션 연산자 코드 구현 중 일부는 [https://github.com/utayao/Atten_Deep_MIL](https://github.com/utayao/Atten_Deep_MIL)에서 영감을 얻었습니다.
@@ -68,6 +80,8 @@ grand_parent: 코드 예제
 
 셋업
 -----
+{: #setup}
+<!-- Setup -->
 
 ```python
 import numpy as np
@@ -84,10 +98,14 @@ plt.style.use("ggplot")
 
 데이터 세트 만들기
 --------------
+{: #create-dataset}
+<!-- Create dataset -->
 
 가방 세트를 생성하고 내용물에 따라 라벨을 할당합니다. 가방에 하나 이상의 양성 인스턴스가 있으면 해당 가방은 양성 가방으로 간주됩니다. 양성 인스턴스가 하나도 포함되어 있지 않으면 해당 백은 음성 백으로 간주됩니다.
 
 ### 구성 매개변수
+{: #configuration-parameters}
+<!-- ### Configuration parameters -->
 
 * `POSITIVE_CLASS`: 포지티브 백에 보관할 원하는 클래스입니다.
 * `BAG_COUNT`: 트레이닝 백의 개수입니다.
@@ -106,6 +124,8 @@ ENSEMBLE_AVG_COUNT = 1
 ```
 
 ### 가방 준비하기
+{: #prepare-bags}
+<!-- ### Prepare bags -->
 
 어텐션 연산자는 순열 불변 연산자이므로, 클래스 레이블이 양성인 인스턴스는 양성 가방에 있는 인스턴스 중에서 무작위로 배치됩니다.
 
@@ -170,10 +190,14 @@ Negative bags: 196
 
 모델 만들기
 ----------------
+{: #create-the-model}
+<!-- Create the model -->
 
 이제 어텐션 레이어를 빌드하고, 몇 가지 유틸리티를 준비한 다음, 전체 모델을 빌드하고 트레이닝하겠습니다.
 
 ### 어텐션 연산자 구현하기
+{: #attention-operator-implementation}
+<!-- ### Attention operator implementation -->
 
 이 레이어의 출력 크기는 단일 백의 크기에 따라 결정됩니다.
 
@@ -290,6 +314,8 @@ class MILAttentionLayer(layers.Layer):
 
 시각화 도구
 ---------------
+{: #visualizer-tool}
+<!-- Visualizer tool -->
 
 클래스에 대한 가방 수(`PLOT_SIZE`로 제공됨)를 플롯합니다.
 
@@ -356,6 +382,8 @@ plot(val_data, val_labels, "negative")
 
 모델 만들기
 ------------
+{: #create-model}
+<!-- Create model -->
 
 먼저 인스턴스당 몇 개의 임베딩을 생성하고, 어텐션 연산자를 호출한 다음, 소프트맥스 함수를 사용하여 클래스 확률을 출력합니다.
 
@@ -399,6 +427,8 @@ def create_model(instance_shape):
 
 클래스 가중치
 -------------
+{: #class-weights}
+<!-- Class weights -->
 
 이러한 종류의 문제는 단순히 불균형한 데이터 분류 문제로 바뀔 수 있으므로, 클래스 가중치를 고려해야 합니다.
 
@@ -424,6 +454,8 @@ def compute_class_weights(labels):
 
 모델 빌드 및 트레이닝
 ---------------------
+{: #build-and-train-model}
+<!-- Build and train model -->
 
 이 섹션에서는 모델을 빌드하고 트레이닝합니다.
 
@@ -551,6 +583,8 @@ None
 
 모델 평가
 ----------------
+{: #model-evaluation}
+<!-- Model evaluation -->
 
 이제 모델을 평가할 준비가 되었습니다. 각 모델에 대해 어텐션 레이어에서 가중치를 얻기 위해 연결된 중간 모델도 생성합니다.
 
@@ -623,6 +657,8 @@ The average loss and accuracy are 0.03 and 99.00 % resp.
 
 결론
 ----------
+{: #conclusion}
+<!-- Conclusion -->
 
 위의 플롯에서, 가중치가 항상 1로 합산되는 것을 볼 수 있습니다. 양성으로 예측된 가방에서는, 양성으로 라벨링된 인스턴스가 나머지 가방보다 훨씬 더 높은 어텐션 점수를 갖게 됩니다. 그러나, 음성으로 예측된 가방에는 두 가지 경우가 있습니다:
 
@@ -633,6 +669,8 @@ The average loss and accuracy are 0.03 and 99.00 % resp.
 
 비고
 -------
+{: #remarks}
+<!-- Remarks -->
 
 * 모델이 과적합하면, 모든 가방에 가중치가 동일하게 분포됩니다. 따라서, 정규화 기법이 필요합니다.
 * 본 논문에서, 가방 크기는 가방마다 다를 수 있습니다. 편의를 위해, 여기서는 가방 크기를 고정했습니다.

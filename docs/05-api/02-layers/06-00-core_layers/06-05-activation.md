@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 5) Activation layer
+title: Activation layer
 nav_order: 06+05
 permalink: /api/layers/core_layers/activation/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 코어 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/core_layers/activation/](https://keras.io/api/layers/core_layers/activation/){:target="_blank"}

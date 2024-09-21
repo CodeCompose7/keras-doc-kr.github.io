@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 3) SpatialDropout2D layer
+title: SpatialDropout2D layer
 nav_order: 12+03
 permalink: /api/layers/regularization_layers/spatial_dropout2d/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: Regularization 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/regularization_layers/spatial_dropout2d/](https://keras.io/api/layers/regularization_layers/spatial_dropout2d/){:target="_blank"}

@@ -22,6 +22,8 @@ has_children: true
 ---
 
 ### 이미지 분류
+{: #image-classification}
+<!-- ### Image classification -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -190,6 +192,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 이미지 세그멘테이션
+{: #image-segmentation}
+<!-- ### Image segmentation -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -226,6 +230,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 객체 감지
+{: #object-detection}
+<!-- ### Object detection -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -252,6 +258,7 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 3D
+{: #3d}
 
 V3
 {: .label .label-green .mx-1}
@@ -296,6 +303,7 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### OCR
+{: #ocr}
 
 V3
 {: .label .label-green .mx-1}
@@ -314,6 +322,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 이미지 강화
+{: #image-enhancement}
+<!-- ### Image enhancement -->
 
 V3
 {: .label .label-green .mx-1}
@@ -356,6 +366,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 데이터 보강
+{: #data-augmentation}
+<!-- ### Data augmentation -->
 
 V3
 {: .label .label-green .mx-1}
@@ -382,6 +394,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 이미지 & 텍스트
+{: #image--text}
+<!-- ### Image & Text -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -401,7 +415,9 @@ V2
 .
 {: .lh-0 .my-0 .opacity-0}
 
-### 비전 모델 해석 가능성(interpretability)
+### 비전 모델 해석 가능성
+{: #vision-models-interpretability}
+<!-- ### Vision models interpretability -->
 
 V3
 {: .label .label-green .mx-1}
@@ -436,6 +452,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 이미지 유사도 검색
+{: #image-similarity-search}
+<!-- ### Image similarity search -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -494,6 +512,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 비디오
+{: #video}
+<!-- ### Video -->
 
 V3
 {: .label .label-green .mx-1}
@@ -528,6 +548,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 성능 레시피
+{: #performance-recipes}
+<!-- ### Performance recipes -->
 
 V3
 {: .label .label-green .mx-1}
@@ -586,6 +608,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}

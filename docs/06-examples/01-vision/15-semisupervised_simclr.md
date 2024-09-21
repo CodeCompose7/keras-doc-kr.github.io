@@ -35,8 +35,12 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 ### 반지도 학습 (Semi-supervised learning)
+{: #semi-supervised-learning}
+<!-- ### Semi-supervised learning -->
 
 반지도 학습은 **부분적으로 레이블이 지정된 데이터 세트**를 다루는 기계 학습 패러다임입니다. 딥러닝을 현실 세계에 적용할 때, 일반적으로 제대로 작동하려면 대규모 데이터 세트를 수집해야 합니다. 그러나, 라벨링 비용은 데이터세트 크기에 따라 선형적으로 확장되지만(각 예시에 라벨링하는 데 일정한 시간이 소요됨), 모델 성능은 이에 따라 [하선형적(sublinearly)](https://arxiv.org/abs/2001.08361)으로 확장됩니다. 이는 점점 더 많은 샘플에 라벨을 붙이는 것이 비용 효율성이 떨어지는 반면, 라벨이 없는 데이터를 수집하는 것은 일반적으로 대량으로 쉽게 사용할 수 있으므로 일반적으로 저렴하다는 것을 의미합니다.
 
@@ -45,6 +49,8 @@ grand_parent: 코드 예제
 이 예에서는, 레이블을 전혀 사용하지 않고 [STL-10](https://ai.stanford.edu/~acoates/stl10/) 반지도 데이터 세트에 대한 대조(contrastive) 학습을 통해 인코더를 사전 트레이닝한 다음, 레이블이 지정된 하위 집합만 사용하여 미세 조정합니다.
 
 ### 대조 학습(Contrastive learning)
+{: #contrastive-learning}
+<!-- ### Contrastive learning -->
 
 가장 높은 레벨에서, 대조 학습의 기본 아이디어는 자기 지도(self-supervised) 방식으로 **이미지 보강에 불변(invariant)하는 표현**을 학습하는 것입니다. 이 목표의 한 가지 문제점은 사소한 퇴화(degenerate) 솔루션이 있다는 것입니다. 즉, 표현이 일정(constant)하고, 입력 이미지에 전혀 의존하지 않는 경우입니다.
 
@@ -60,6 +66,8 @@ SimCLR에 대한 자세한 내용은 [공식 Google AI 블로그 게시물](http
 
 셋업
 -----
+{: #setup}
+<!-- Setup -->
 
 ```python
 import os
@@ -87,6 +95,8 @@ from keras import layers
 
 하이퍼파라미터 셋업
 --------------------
+{: #hyperparameter-setup}
+<!-- Hyperparameter setup -->
 
 ```python
 # 데이터세트 하이퍼파라미터
@@ -112,6 +122,8 @@ classification_augmentation = {
 
 데이터세트
 -------
+{: #dataset}
+<!-- Dataset -->
 
 트레이닝하는 동안 우리는 라벨이 붙은 이미지의 작은 배치와 함께 라벨이 지정되지 않은 대량의 이미지를 동시에 로드합니다.
 
@@ -162,6 +174,8 @@ batch size is 500 (unlabeled) + 25 (labeled)
 
 이미지 보강
 -------------------
+{: #image-augmentations}
+<!-- Image augmentations -->
 
 대조 학습을 위한 가장 중요한 두 가지 이미지 보강은 다음과 같습니다.
 
@@ -270,6 +284,8 @@ visualize_augmentations(num_images=8)
 
 인코더 아키텍쳐
 --------------------
+{: #encoder-architecture}
+<!-- Encoder architecture -->
 
 ```python
 # 인코더 아키텍쳐 정의
@@ -291,6 +307,8 @@ def get_encoder():
 
 지도 베이스라인 모델
 -------------------------
+{: #supervised-baseline-model}
+<!-- Supervised baseline model -->
 
 베이스라인 지도 모델은 무작위 초기화를 사용하여 트레이닝됩니다.
 
@@ -369,6 +387,8 @@ Maximal validation accuracy: 59.90%
 
 대조 사전 트레이닝을 위한 셀프 지도 모델
 -------------------------------------------------
+{: #self-supervised-model-for-contrastive-pretraining}
+<!-- Self-supervised model for contrastive pretraining -->
 
 대비 손실이 있는 레이블이 지정되지 않은 이미지에 대해 인코더를 사전 트레이닝합니다. 비선형 프로젝션 헤드는 인코더 표현의 품질을 향상시키기 위해 인코더 top에 부착됩니다.
 
@@ -647,6 +667,8 @@ Maximal validation accuracy: 56.65%
 
 사전 트레이닝된 인코더의 지도 미세 조정
 -----------------------------------------------
+{: #supervised-finetuning-of-the-pretrained-encoder}
+<!-- Supervised finetuning of the pretrained encoder -->
 
 그런 다음, 무작위로 초기화된 단일 완전 연결 분류 레이어를 top에 연결하여, 레이블이 지정된 예제에 대해 인코더를 미세 조정합니다.
 
@@ -724,6 +746,8 @@ Maximal validation accuracy: 65.32%
 
 베이스라인과의 비교
 -------------------------------
+{: #comparison-against-the-baseline}
+<!-- Comparison against the baseline -->
 
 ```python
 # 베이스라인 및 사전 트레이닝 + 미세 조정 프로세스의 분류 정확도:
@@ -762,14 +786,20 @@ plot_training_curves(pretraining_history, finetuning_history, baseline_history)
 
 더욱 개선하기
 -----------------
+{: #improving-further}
+<!-- Improving further -->
 
 ### 아키텍쳐
+{: #architecture}
+<!-- ### Architecture -->
 
 원본 논문의 실험에서는 모델의 너비와 깊이를 늘리면, 지도 학습보다 더 높은 속도로 성능이 향상된다는 사실이 입증되었습니다. 또한, [ResNet-50]({% link docs/05-api/10-applications/06-resnet.md %}#resnet50-function) 인코더를 사용하는 것은 문헌에서 매우 표준적인 것입니다. 그러나 더 강력한 모델은 트레이닝 시간을 늘릴 뿐만 아니라 더 많은 메모리가 필요하고 사용할 수 있는 최대 배치 크기가 제한된다는 점을 명심하세요.
 
 BatchNorm 레이어를 사용하면 때때로 성능이 저하될 수 있다는 것이 [보고되고](https://arxiv.org/abs/1911.05722) [있습니다](https://arxiv.org/abs/1905.09272). - 샘플 간 배치(intra-batch) 종속성으로 인해, 이 예제에서는 샘플을 사용하지 않았습니다. 그러나 내 실험에서는, 특히 프로젝션 헤드에서, BatchNorm을 사용하면 성능이 향상되었습니다.
 
 ### 하이퍼파라미터
+{: #hyperparameters}
+<!-- ### Hyperparameters -->
 
 이 예에 사용된 하이퍼파라미터는 이 작업 및 아키텍처에 대해 수동으로 조정되었습니다. 따라서, 이를 변경하지 않으면, 추가적인 하이퍼파라미터 튜닝을 통해 미미한 이득만 기대할 수 있습니다.
 
@@ -785,6 +815,8 @@ BatchNorm 레이어를 사용하면 때때로 성능이 저하될 수 있다는 
 
 연관된 작업들
 -------------
+{: #related-works}
+<!-- Related works -->
 
 기타 인스턴스 레벨(이미지 레벨) 대비 학습 방법:
 

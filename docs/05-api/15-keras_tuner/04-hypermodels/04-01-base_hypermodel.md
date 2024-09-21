@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 1) The base HyperModel class
+title: The base HyperModel class
 nav_order: 04+01
 permalink: /api/keras_tuner/hypermodels/base_hypermodel/
-parent: KerasTuner
-grand_parent: Keras 3 API 문서
+parent: HyperModels
+grand_parent: KerasTuner
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_tuner/hypermodels/base_hypermodel/](https://keras.io/api/keras_tuner/hypermodels/base_hypermodel/){:target="_blank"}

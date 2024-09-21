@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> BertTokenizer
+title: BertTokenizer
 nav_order: 01+02+01
 permalink: /api/keras_nlp/models/bart/bart_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Bart
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/bart/bart_tokenizer/](https://keras.io/api/keras_nlp/models/bart/bart_tokenizer/){:target="_blank"}

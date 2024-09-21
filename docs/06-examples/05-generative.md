@@ -22,6 +22,8 @@ has_children: true
 ---
 
 ### 이미지 생성
+{: #image-generation}
+<!-- ### Image generation -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -64,7 +66,7 @@ V2
 
 V2
 {: .label .label-yellow .mx-1}
-[안정적인 확산 미세 조정 (Fine-tuning Stable Diffusion)]({% link docs/06-examples/05-generative/06-finetune_stable_diffusion.md %})
+[Stable Diffusion 미세 조정]({% link docs/06-examples/05-generative/06-finetune_stable_diffusion.md %})
 {: .d-inline .v-align-middle}
 .
 {: .lh-0 .my-0 .opacity-0}
@@ -147,6 +149,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 스타일 전이
+{: #style-transfer}
+<!-- ### Style transfer -->
 
 V3
 {: .label .label-green .mx-1}
@@ -163,6 +167,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 텍스트 생성
+{: #text-generation}
+<!-- ### Text generation -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -202,6 +208,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 그래프 생성
+{: #graph-generation}
+<!-- ### Graph generation -->
 
 V2
 {: .label .label-yellow .mx-1}
@@ -218,6 +226,8 @@ V2
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}

@@ -3,7 +3,7 @@ layout: default
 title: AdamW
 nav_order: 04+00
 permalink: /api/optimizers/adamw/
-parent: Optimizers
+parent: 옵티마이저
 grand_parent: Keras 3 API 문서
 ---
 

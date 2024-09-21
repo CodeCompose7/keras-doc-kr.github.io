@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ p> RandomSharpness layer
+title: RandomSharpness layer
 nav_order: 01+01+16
 permalink: /api/keras_cv/layers/augmentation/random_sharpness/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Augmentation 레이어
+grand_parent: KerasCV 레이어
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/layers/augmentation/random_sharpness/](https://keras.io/api/keras_cv/layers/augmentation/random_sharpness/){:target="_blank"}

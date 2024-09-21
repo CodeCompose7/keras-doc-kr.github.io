@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 7) Masking layer
+title: Masking layer
 nav_order: 06+07
 permalink: /api/layers/core_layers/masking/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 코어 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/core_layers/masking/](https://keras.io/api/layers/core_layers/masking/){:target="_blank"}

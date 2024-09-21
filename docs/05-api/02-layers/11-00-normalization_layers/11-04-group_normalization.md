@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 4) GroupNormalization layer
+title: GroupNormalization layer
 nav_order: 11+04
 permalink: /api/layers/normalization_layers/group_normalization/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: Normalization 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/normalization_layers/group_normalization/](https://keras.io/api/layers/normalization_layers/group_normalization/){:target="_blank"}

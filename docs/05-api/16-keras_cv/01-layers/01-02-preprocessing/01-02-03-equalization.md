@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ c> Equalization layer
+title: Equalization layer
 nav_order: 01+02+03
 permalink: /api/keras_cv/layers/preprocessing/equalization/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: KerasCV 전처리 레이어
+grand_parent: KerasCV 레이어
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/layers/preprocessing/equalization/](https://keras.io/api/keras_cv/layers/preprocessing/equalization/){:target="_blank"}

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Keras Layers API
+title: Keras 레이어 API
 nav_order: 2
 permalink: /api/layers/
 parent: Keras 3 API 문서

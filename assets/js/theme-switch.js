@@ -42,36 +42,44 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 
     function getTheme() {
-        return document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light';
+        return jtd.getTheme();
+        // return document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light';
+        // return document.body.classList.contains('dark-mode') ? 'dark' : 'light';
     }
 
     function setTheme(theme) {
         if (theme === 'dark') {
+            jtd.setTheme('dark');
             toggleDarkMode.innerHTML = `<svg width='18px' height='18px'><use href="#svg-moon"></use></svg>`;
-            document.documentElement.classList.add('dark-mode');
-            document.documentElement.classList.remove('light-mode');
+            // document.documentElement.classList.add('dark-mode');
+            // document.documentElement.classList.remove('light-mode');
+            // document.body.classList.add('dark-mode');
+            // document.body.classList.remove('light-mode');
         } else {
+            jtd.setTheme('light');
             toggleDarkMode.innerHTML = `<svg width='18px' height='18px'><use href="#svg-sun"></use></svg>`;
-            document.documentElement.classList.add('light-mode');
-            document.documentElement.classList.remove('dark-mode');
+            // document.documentElement.classList.add('light-mode');
+            // document.documentElement.classList.remove('dark-mode');
+            // document.body.classList.add('light-mode');
+            // document.body.classList.remove('dark-mode');
         }
     }
 
-    function loadTheme() {
-        const theme = localStorage.getItem('theme'); // localStorage에서 'theme' 값을 가져옵니다.
+    // function loadTheme() {
+    //     const theme = localStorage.getItem('theme'); // localStorage에서 'theme' 값을 가져옵니다.
     
-        let themeLink = document.createElement('link'); // 새로운 <link> 요소를 생성합니다.
-        themeLink.rel = 'stylesheet';
+    //     let themeLink = document.createElement('link'); // 새로운 <link> 요소를 생성합니다.
+    //     themeLink.rel = 'stylesheet';
     
-        // 'theme' 값에 따라 적용할 CSS 파일을 결정합니다.
-        if (theme === 'dark') {
-          themeLink.href = '/assets/css/just-the-docs-dark-2.css';
-        } else {
-          themeLink.href = '/assets/css/just-the-docs-default-2.css';
-        }
+    //     // 'theme' 값에 따라 적용할 CSS 파일을 결정합니다.
+    //     if (theme === 'dark') {
+    //       themeLink.href = '/assets/css/just-the-docs-dark-2.css';
+    //     } else {
+    //       themeLink.href = '/assets/css/just-the-docs-default-2.css';
+    //     }
     
-        document.head.appendChild(themeLink); // 생성된 <link> 요소를 <head>에 추가합니다.
-    }
+    //     document.head.appendChild(themeLink); // 생성된 <link> 요소를 <head>에 추가합니다.
+    // }
 
-    loadTheme();
+    // loadTheme();
 });

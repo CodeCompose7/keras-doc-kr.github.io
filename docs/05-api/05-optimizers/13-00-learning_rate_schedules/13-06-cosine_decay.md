@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 6) CosineDecay
+title: CosineDecay
 nav_order: 13+06
 permalink: /api/optimizers/learning_rate_schedules/cosine_decay/
-parent: Optimizers
-grand_parent: Keras 3 API 문서
+parent: 학습률 스케쥴 API
+grand_parent: 옵티마이저
 ---
 
 * 원본 링크 : [https://keras.io/api/optimizers/learning_rate_schedules/cosine_decay/](https://keras.io/api/optimizers/learning_rate_schedules/cosine_decay/){:target="_blank"}

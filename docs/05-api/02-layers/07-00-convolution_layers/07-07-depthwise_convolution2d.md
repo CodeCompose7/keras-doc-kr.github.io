@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 7) DepthwiseConv2D layer
+title: DepthwiseConv2D layer
 nav_order: 07+07
 permalink: /api/layers/convolution_layers/depthwise_convolution2d/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 컨볼루션 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/convolution_layers/depthwise_convolution2d/](https://keras.io/api/layers/convolution_layers/depthwise_convolution2d/){:target="_blank"}

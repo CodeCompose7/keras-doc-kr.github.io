@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 11) RoBERTa
+title: RoBERTa
 nav_order: 01+11
 permalink: /api/keras_nlp/models/roberta/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: 모델
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/roberta/](https://keras.io/api/keras_nlp/models/roberta/){:target="_blank"}

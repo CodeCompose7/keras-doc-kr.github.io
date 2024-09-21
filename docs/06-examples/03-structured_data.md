@@ -22,6 +22,8 @@ has_children: true
 ---
 
 ### 구조화된 데이터 분류
+{: #structured-data-classification}
+<!-- ### Structured data classification -->
 
 ★
 {: .label .label-purple .mx-1}
@@ -92,6 +94,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 추천
+{: #recommendation}
+<!-- ### Recommendation -->
 
 V3
 {: .label .label-green .mx-1}
@@ -110,6 +114,8 @@ V3
 {: .lh-0 .my-0 .opacity-0}
 
 ### 기타
+{: #other}
+<!-- ### Other -->
 
 V2
 {: .label .label-yellow .mx-1}

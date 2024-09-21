@@ -3,7 +3,7 @@ layout: default
 title: RMSprop
 nav_order: 02+00
 permalink: /api/optimizers/rmsprop/
-parent: Optimizers
+parent: 옵티마이저
 grand_parent: Keras 3 API 문서
 ---
 

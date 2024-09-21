@@ -793,7 +793,7 @@ blockquote {
 @media (min-width: 50rem) {
   .site-nav {
     display: block;
-    padding-top: 3rem;
+    padding-top: 0.5rem;
     padding-bottom: 1rem;
     overflow-y: auto;
     flex: 1 1 auto;

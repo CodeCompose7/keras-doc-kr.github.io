@@ -8,7 +8,7 @@ has_children: true
 ---
 
 * 원본 링크 : [https://keras.io/guides/keras_cv/](https://keras.io/guides/keras_cv/){:target="_blank"}
-* 최종 수정일 : 2024-03-29
+* 최종 수정일 : 2024-09-14
 
 # KerasCV
 {: .no_toc }
@@ -20,3 +20,5 @@ has_children: true
 {:toc}
 
 ---
+
+이 가이드에서는 [KerasCV]({{ site.baseurl }}/keras_cv/) 라이브러리에 대해 설명합니다.

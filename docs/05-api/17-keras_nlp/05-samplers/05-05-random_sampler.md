@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 5) RandomSampler
+title: RandomSampler
 nav_order: 05+05
 permalink: /api/keras_nlp/samplers/random_sampler/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Samplers
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/samplers/random_sampler/](https://keras.io/api/keras_nlp/samplers/random_sampler/){:target="_blank"}

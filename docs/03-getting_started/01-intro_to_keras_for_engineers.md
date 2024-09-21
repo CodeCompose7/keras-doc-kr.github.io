@@ -7,9 +7,9 @@ parent: 시작하기
 ---
 
 * 원본 링크 : [https://keras.io/getting_started/intro_to_keras_for_engineers/](https://keras.io/getting_started/intro_to_keras_for_engineers/){:target="_blank"}
-* 최종 수정일 : 2024-03-28
+* 최종 수정일 : 2024-09-09
 
-# 엔지니어를 위한 Keras 소개
+# 엔지니어를 위한 Keras 소개 (Introduction to Keras for engineers)
 {: .no_toc }
 
 ## 목차
@@ -31,12 +31,16 @@ parent: 시작하기
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 Keras 3는 TensorFlow, JAX 및 PyTorch와 상호 호환되는 딥러닝 프레임워크입니다. 이 노트북에서는 주요 Keras 3 워크플로우를 안내합니다.
 
 ----
 
 ## 셋업
+{: #setup}
+<!-- ## Setup -->
 
 여기서는 JAX 백엔드를 사용하지만, 아래 문자열을 ``"tensorflow"`` 또는 ``"torch"``로 수정하고, "Restart runtime"을 누르면, 노트북 전체가 똑같이 실행됩니다! 이 전체 가이드는 백엔드에 구애받지 않습니다.
 
@@ -55,6 +59,8 @@ import keras
 ----
 
 ## 첫 번째 예시: MNIST 컨브넷
+{: #a-first-example-a-mnist-convnet}
+<!-- ## A first example: A MNIST convnet -->
 
 MNIST 숫자를 분류하기 위해 convnet을 트레이닝하는 ML의 Hello World부터 시작하겠습니다.
 
@@ -76,12 +82,17 @@ print(x_train.shape[0], "train samples")
 print(x_test.shape[0], "test samples")
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 x_train shape: (60000, 28, 28, 1)
 y_train shape: (60000,)
 60000 train samples
 10000 test samples
 ```
+
+</details>
 
 이것이 우리의 모델입니다.
 
@@ -117,6 +128,9 @@ model = keras.Sequential(
 model.summary()
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Model: "sequential"
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
@@ -143,6 +157,8 @@ Model: "sequential"
  Trainable params: 260,298 (1016.79 KB)
  Non-trainable params: 0 (0.00 B)
 ```
+
+</details>
 
 `compile()` 메서드를 사용하여 옵티마이저, 손실 함수, 모니터링할 메트릭을 지정합니다. JAX 및 TensorFlow 백엔드에서는 기본적으로 XLA 컴파일이 켜져 있다는 점에 유의하세요.
 
@@ -178,6 +194,9 @@ model.fit(
 score = model.evaluate(x_test, y_test, verbose=0)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 Epoch 1/20
  399/399 ━━━━━━━━━━━━━━━━━━━━ 74s 184ms/step - acc: 0.4980 - loss: 1.3832 - val_acc: 0.9609 - val_loss: 0.1513
@@ -207,6 +226,8 @@ Epoch 13/20
  399/399 ━━━━━━━━━━━━━━━━━━━━ 70s 176ms/step - acc: 0.9843 - loss: 0.0504 - val_acc: 0.9918 - val_loss: 0.0316
 ```
 
+</details>
+
 트레이닝 중에, 각 에포크가 끝날 때마다 모델을 저장했습니다. 아래처럼 모델을 최신 상태로 저장할 수도 있습니다:
 
 ```python
@@ -225,15 +246,22 @@ model = keras.saving.load_model("final_model.keras")
 predictions = model.predict(x_test)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  313/313 ━━━━━━━━━━━━━━━━━━━━ 3s 9ms/step
 ```
+
+</details>
 
 기본 사항은 여기까지입니다!
 
 ----
 
 ## 크로스 프레임워크 사용자 정의 컴포넌트 작성
+{: #writing-cross-framework-custom-components}
+<!-- ## Writing cross-framework custom components -->
 
 Keras를 사용하면 동일한 코드베이스로 TensorFlow, JAX, PyTorch에서 작동하는 사용자 정의 레이어, 모델, 메트릭, 손실 및 옵티마이저를 작성할 수 있습니다. 먼저 사용자 정의 레이어를 살펴보겠습니다.
 
@@ -336,15 +364,22 @@ model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  399/399 ━━━━━━━━━━━━━━━━━━━━ 70s 174ms/step - acc: 0.5104 - loss: 1.3473 - val_acc: 0.9256 - val_loss: 0.2484
 
 <keras.src.callbacks.history.History at 0x105608670>
 ```
 
+</details>
+
 ----
 
 ## 임의의 데이터 소스에 대해 모델 트레이닝
+{: #training-models-on-arbitrary-data-sources}
+<!-- ## Training models on arbitrary data sources -->
 
 모든 Keras 모델은 사용 중인 백엔드와 관계없이 다양한 데이터 소스에서 트레이닝 및 평가할 수 있습니다. 여기에는 다음이 포함됩니다:
 
@@ -388,11 +423,16 @@ model.compile(
 model.fit(train_dataloader, epochs=1, validation_data=val_dataloader)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  469/469 ━━━━━━━━━━━━━━━━━━━━ 81s 172ms/step - acc: 0.5502 - loss: 1.2550 - val_acc: 0.9419 - val_loss: 0.1972
 
 <keras.src.callbacks.history.History at 0x2b3385480>
 ```
+
+</details>
 
 이제 이것을 [`tf.data`](https://www.tensorflow.org/api_docs/python/tf/data)를 사용하여 시도해 보겠습니다:
 
@@ -421,19 +461,28 @@ model.compile(
 model.fit(train_dataset, epochs=1, validation_data=test_dataset)
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
  469/469 ━━━━━━━━━━━━━━━━━━━━ 81s 172ms/step - acc: 0.5771 - loss: 1.1948 - val_acc: 0.9229 - val_loss: 0.2502
 
 <keras.src.callbacks.history.History at 0x2b33e7df0>
 ```
 
+</details>
+
 ----
 
 ## 더 읽어보기
+{: #further-reading}
+<!-- ## Further reading -->
 
 이것으로 Keras 3의 새로운 멀티 백엔드 기능에 대한 간략한 개요를 마쳤습니다. 이제, 다음 것들에 대해 알아볼 수 있습니다:
 
 ### `fit()`에서 일어나는 일을 사용자 정의하는 방법
+{: #how-to-customize-what-happens-in-fit}
+<!-- ### How to customize what happens in fit() -->
 
 비표준 트레이닝 알고리즘을 직접 구현하고 싶지만, `fit()`의 강력한 성능과 유용성을 활용하고 싶으신가요? 임의의 사용 사례를 지원하도록 `fit()`을 쉽게 사용자 정의할 수 있습니다:
 
@@ -445,6 +494,7 @@ model.fit(train_dataset, epochs=1, validation_data=test_dataset)
 
 사용자 지정 트레이닝 루프를 작성하는 방법
 ----------------------------------
+{: #how-to-write-custom-training-loops}
 
 * [TensorFlow에서 처음부터 트레이닝 루프 작성하기]({% link docs/04-guides/09-writing_a_custom_training_loop_in_tensorflow.md %})
 * [JAX에서 처음부터 트레이닝 루프 작성하기]({% link docs/04-guides/08-writing_a_custom_training_loop_in_jax.md %})
@@ -454,6 +504,7 @@ model.fit(train_dataset, epochs=1, validation_data=test_dataset)
 
 트레이닝 배포 방법
 --------------------------
+{: #how-to-distribute-training}
 
 * [TensorFlow 분산 트레이닝 가이드]({% link docs/04-guides/16-distributed_training_with_tensorflow.md %})
 * [JAX 분산 트레이닝 예제](https://github.com/keras-team/keras/blob/master/examples/demo_jax_distributed.py)

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 4) Image preprocessing layers
+title: 이미지 전처리 레이어
 nav_order: 10+04
 permalink: /api/layers/preprocessing_layers/image_preprocessing/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 전처리 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/preprocessing_layers/image_preprocessing/](https://keras.io/api/layers/preprocessing_layers/image_preprocessing/){:target="_blank"}

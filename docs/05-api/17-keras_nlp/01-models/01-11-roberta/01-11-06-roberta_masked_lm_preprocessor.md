@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ f> RobertaMaskedLMPreprocessor layer
+title: RobertaMaskedLMPreprocessor layer
 nav_order: 01+11+06
 permalink: /api/keras_nlp/models/roberta/roberta_masked_lm_preprocessor/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: RoBERTa
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/roberta/roberta_masked_lm_preprocessor/](https://keras.io/api/keras_nlp/models/roberta/roberta_masked_lm_preprocessor/){:target="_blank"}

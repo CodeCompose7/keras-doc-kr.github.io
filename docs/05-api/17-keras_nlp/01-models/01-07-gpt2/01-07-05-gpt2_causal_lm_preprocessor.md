@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ e> GPT2CausalLMPreprocessor layer
+title: GPT2CausalLMPreprocessor layer
 nav_order: 01+07+05
 permalink: /api/keras_nlp/models/gpt2/gpt2_causal_lm_preprocessor/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: GPT2
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/gpt2/gpt2_causal_lm_preprocessor/](https://keras.io/api/keras_nlp/models/gpt2/gpt2_causal_lm_preprocessor/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 2) @synchronized decorator
+title: "@synchronized decorator"
 nav_order: 03+02
 permalink: /api/keras_tuner/oracles/synchronized/
-parent: KerasTuner
-grand_parent: Keras 3 API 문서
+parent: Oracles
+grand_parent: KerasTuner
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_tuner/oracles/synchronized/](https://keras.io/api/keras_tuner/oracles/synchronized/){:target="_blank"}

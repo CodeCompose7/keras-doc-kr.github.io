@@ -8,7 +8,7 @@ grand_parent: 코드 예제
 ---
 
 * 원본 링크 : [https://keras.io/examples/generative/cyclegan/](https://keras.io/examples/generative/cyclegan/){:target="_blank"}
-* 최종 수정일 : 2024-04-21
+* 최종 수정일 : 2024-09-17
 
 # CycleGAN
 {: .no_toc }
@@ -24,7 +24,7 @@ grand_parent: 코드 예제
 **저자:** [A\_K\_Nain](https://twitter.com/A_K_Nain)  
 **생성일:** 2020/08/12  
 **최종편집일:** 2020/08/12  
-**설명:** Implementation of CycleGAN.
+**설명:** CycleGAN 구현.
 
 [Colab에서 보기](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/generative/ipynb/cyclegan.ipynb){: .btn .btn-blue }
 [GitHub 소스](https://github.com/keras-team/keras-io/blob/master/examples/generative/cyclegan.py){: .btn .btn-blue }
@@ -35,16 +35,24 @@ grand_parent: 코드 예제
 ----
 
 ## CycleGAN
+{: #cyclegan}
+<!-- ## CycleGAN -->
 
-CycleGAN is a model that aims to solve the image-to-image translation problem. The goal of the image-to-image translation problem is to learn the mapping between an input image and an output image using a training set of aligned image pairs. However, obtaining paired examples isn't always feasible. CycleGAN tries to learn this mapping without requiring paired input-output images, using cycle-consistent adversarial networks.
+CycleGAN은 이미지-투-이미지 변환 문제를 해결하려는 모델입니다. 
+이미지-투-이미지 변환 문제의 목표는 정렬된 이미지 쌍으로 구성된 트레이닝 세트를 사용하여, 
+입력 이미지와 출력 이미지 간의 매핑을 학습하는 것입니다. 
+하지만, 매칭된 예시를 얻는 것은 항상 가능한 일이 아닙니다. 
+CycleGAN은 페어링된 입력-출력 이미지 없이 이 매핑을 학습하려고 시도하며, 
+사이클-일관성 적대적 신경망(cycle-consistent adversarial networks)을 사용합니다.
 
-*   [Paper](https://arxiv.org/pdf/1703.10593.pdf)
-*   [Original implementation](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
+* [논문](https://arxiv.org/pdf/1703.10593.pdf)
+* [원본 구현](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 
 * * *
 
-Setup
------
+## 셋업
+{: #setup}
+<!-- ## Setup -->
 
 ```python
 import numpy as np
@@ -63,24 +71,25 @@ autotune = tf.data.AUTOTUNE
 
 * * *
 
-Prepare the dataset
--------------------
+## 데이터셋 준비
+{: #prepare-the-dataset}
+<!-- ## Prepare the dataset -->
 
-In this example, we will be using the [horse to zebra](https://www.tensorflow.org/datasets/catalog/cycle_gan#cycle_ganhorse2zebra) dataset.
+이 예제에서는 [horse to zebra](https://www.tensorflow.org/datasets/catalog/cycle_gan#cycle_ganhorse2zebra) 데이터셋을 사용할 것입니다.
 
 ```python
-# Load the horse-zebra dataset using tensorflow-datasets.
+# TensorFlow 데이터셋을 사용하여 horse-zebra 데이터셋을 로드합니다.
 dataset, _ = tfds.load("cycle_gan/horse2zebra", with_info=True, as_supervised=True)
 train_horses, train_zebras = dataset["trainA"], dataset["trainB"]
 test_horses, test_zebras = dataset["testA"], dataset["testB"]
 
-# Define the standard image size.
+# 표준 이미지 크기를 정의합니다.
 orig_img_size = (286, 286)
-# Size of the random crops to be used during training.
+# 트레이닝 동안 사용할 랜덤 크롭의 크기입니다.
 input_img_size = (256, 256, 3)
-# Weights initializer for the layers.
+# 레이어의 가중치 초기화 함수입니다.
 kernel_init = keras.initializers.RandomNormal(mean=0.0, stddev=0.02)
-# Gamma initializer for instance normalization.
+# 인스턴스 정규화를 위한 감마 초기화 함수입니다.
 gamma_init = keras.initializers.RandomNormal(mean=0.0, stddev=0.02)
 
 buffer_size = 256
@@ -89,24 +98,24 @@ batch_size = 1
 
 def normalize_img(img):
     img = tf.cast(img, dtype=tf.float32)
-    # Map values in the range [-1, 1]
+    # 값을 [-1, 1] 범위로 매핑합니다.
     return (img / 127.5) - 1.0
 
 
 def preprocess_train_image(img, label):
-    # Random flip
+    # 랜덤 플립
     img = tf.image.random_flip_left_right(img)
-    # Resize to the original size first
+    # 먼저 원래 크기로 리사이즈합니다.
     img = tf.image.resize(img, [*orig_img_size])
-    # Random crop to 256X256
+    # 256X256 크기로 랜덤 크롭합니다.
     img = tf.image.random_crop(img, size=[*input_img_size])
-    # Normalize the pixel values in the range [-1, 1]
+    # 픽셀 값을 [-1, 1] 범위로 정규화합니다.
     img = normalize_img(img)
     return img
 
 
 def preprocess_test_image(img, label):
-    # Only resizing and normalization for the test images.
+    # 테스트 이미지의 경우, 리사이즈와 정규화만 수행합니다.
     img = tf.image.resize(img, [input_img_size[0], input_img_size[1]])
     img = normalize_img(img)
     return img
@@ -114,11 +123,12 @@ def preprocess_test_image(img, label):
 
 * * *
 
-Create `Dataset` objects
-------------------------
+## `Dataset` 객체 만들기
+{: #create-dataset-objects}
+<!-- ## Create `Dataset` objects -->
 
 ```python
-# Apply the preprocessing operations to the training data
+# 트레이닝 데이터에 전처리 작업을 적용합니다.
 train_horses = (
     train_horses.map(preprocess_train_image, num_parallel_calls=autotune)
     .cache()
@@ -132,7 +142,7 @@ train_zebras = (
     .batch(batch_size)
 )
 
-# Apply the preprocessing operations to the test data
+# 테스트 데이터에 전처리 작업을 적용합니다.
 test_horses = (
     test_horses.map(preprocess_test_image, num_parallel_calls=autotune)
     .cache()
@@ -149,8 +159,9 @@ test_zebras = (
 
 * * *
 
-Visualize some samples
-----------------------
+## 일부 샘플 시각화
+{: #visualize-some-samples}
+<!-- ## Visualize some samples -->
 
 ```python
 _, ax = plt.subplots(4, 2, figsize=(10, 15))
@@ -166,19 +177,19 @@ plt.show()
 
 * * *
 
-Building blocks used in the CycleGAN generators and discriminators
-------------------------------------------------------------------
+## CycleGAN 생성자와 판별자에 사용된 빌딩 블록
+{: #building-blocks-used-in-the-cyclegan-generators-and-discriminators}
+<!-- ## Building blocks used in the CycleGAN generators and discriminators -->
 
 ```python
 class ReflectionPadding2D(layers.Layer):
-    """Implements Reflection Padding as a layer.
+    """Reflection Padding을 레이어로 구현합니다.
 
     Args:
-        padding(tuple): Amount of padding for the
-        spatial dimensions.
+        padding(tuple): 공간 차원에 대한 패딩 양.
 
     Returns:
-        A padded tensor with the same type as the input tensor.
+        입력 텐서와 동일한 타입의 패딩된 텐서.
     """
 
     def __init__(self, padding=(1, 1), **kwargs):
@@ -287,29 +298,31 @@ def upsample(
 
 * * *
 
-Build the generators
---------------------
+## 생성자 빌드
+{: #build-the-generators}
+<!-- ## Build the generators -->
 
-The generator consists of downsampling blocks: nine residual blocks and upsampling blocks. The structure of the generator is the following:
+생성자는 다운샘플링 블록, 9개의 residual 블록, 그리고 업샘플링 블록으로 구성됩니다. 
+생성자의 구조는 다음과 같습니다:
 
-```
-c7s1-64 ==> Conv block with `relu` activation, filter size of 7
-d128 ====|
-         |-> 2 downsampling blocks
-d256 ====|
-R256 ====|
-R256     |
-R256     |
-R256     |
-R256     |-> 9 residual blocks
-R256     |
-R256     |
-R256     |
-R256 ====|
-u128 ====|
-         |-> 2 upsampling blocks
-u64  ====|
-c7s1-3 => Last conv block with `tanh` activation, filter size of 7.
+```plaintext
+c7s1-64 ==> `relu` 활성화 함수와 필터 크기 7을 가진 Conv 블록  
+d128 ====|  
+         |-> 2개의 다운샘플링 블록  
+d256 ====|  
+R256 ====|  
+R256     |  
+R256     |  
+R256     |  
+R256     |-> 9개의 residual 블록  
+R256     |  
+R256     |  
+R256     |  
+R256 ====|  
+u128 ====|  
+         |-> 2개의 업샘플링 블록  
+u64  ====|  
+c7s1-3 => `tanh` 활성화 함수와 필터 크기 7을 가진 마지막 Conv 블록  
 ```
 
 ```python
@@ -329,21 +342,21 @@ def get_resnet_generator(
     x = tfa.layers.InstanceNormalization(gamma_initializer=gamma_initializer)(x)
     x = layers.Activation("relu")(x)
 
-    # Downsampling
+    # 다운샘플링
     for _ in range(num_downsampling_blocks):
         filters *= 2
         x = downsample(x, filters=filters, activation=layers.Activation("relu"))
 
-    # Residual blocks
+    # Residual 블록
     for _ in range(num_residual_blocks):
         x = residual_block(x, activation=layers.Activation("relu"))
 
-    # Upsampling
+    # 업샘플링
     for _ in range(num_upsample_blocks):
         filters //= 2
         x = upsample(x, filters, activation=layers.Activation("relu"))
 
-    # Final block
+    # 마지막 블록
     x = ReflectionPadding2D(padding=(3, 3))(x)
     x = layers.Conv2D(3, (7, 7), padding="valid")(x)
     x = layers.Activation("tanh")(x)
@@ -354,10 +367,11 @@ def get_resnet_generator(
 
 * * *
 
-Build the discriminators
-------------------------
+## 판별자 빌드
+{: #build-the-discriminators}
+<!-- ## Build the discriminators -->
 
-The discriminators implement the following architecture: `C64->C128->C256->C512`
+판별자는 다음과 같은 아키텍처를 구현합니다: `C64->C128->C256->C512`
 
 ```python
 def get_discriminator(
@@ -401,21 +415,22 @@ def get_discriminator(
     return model
 
 
-# Get the generators
+# 생성자 가져오기
 gen_G = get_resnet_generator(name="generator_G")
 gen_F = get_resnet_generator(name="generator_F")
 
-# Get the discriminators
+# 판별자 가져오기
 disc_X = get_discriminator(name="discriminator_X")
 disc_Y = get_discriminator(name="discriminator_Y")
 ```
 
 * * *
 
-Build the CycleGAN model
-------------------------
+## CycleGAN 모델 빌드
+{: #build-the-cyclegan-model}
+<!-- ## Build the CycleGAN model -->
 
-We will override the `train_step()` method of the `Model` class for training via `fit()`.
+`fit()`을 통해 트레이닝하기 위해 `Model` 클래스의 `train_step()` 메서드를 재정의하겠습니다.
 
 ```python
 class CycleGan(keras.Model):
@@ -456,55 +471,55 @@ class CycleGan(keras.Model):
         self.identity_loss_fn = keras.losses.MeanAbsoluteError()
 
     def train_step(self, batch_data):
-        # x is Horse and y is zebra
+        # x는 말 이미지, y는 얼룩말 이미지입니다.
         real_x, real_y = batch_data
 
-        # For CycleGAN, we need to calculate different
-        # kinds of losses for the generators and discriminators.
-        # We will perform the following steps here:
+        # CycleGAN에서는, 생성자와 판별자에 대해
+        # 다양한 손실을 계산해야 합니다.
+        # 여기서는 다음 단계를 수행합니다:
         #
-        # 1. Pass real images through the generators and get the generated images
-        # 2. Pass the generated images back to the generators to check if we
-        #    can predict the original image from the generated image.
-        # 3. Do an identity mapping of the real images using the generators.
-        # 4. Pass the generated images in 1) to the corresponding discriminators.
-        # 5. Calculate the generators total loss (adversarial + cycle + identity)
-        # 6. Calculate the discriminators loss
-        # 7. Update the weights of the generators
-        # 8. Update the weights of the discriminators
-        # 9. Return the losses in a dictionary
+        # 1. 실제 이미지를 생성자에 통과시켜 생성된 이미지를 얻습니다.
+        # 2. 생성된 이미지를 다시 생성자에 통과시켜,
+        #    생성된 이미지로부터 원본 이미지를 예측할 수 있는지 확인합니다.
+        # 3. 생성자를 사용하여 실제 이미지의 동일성 매핑(identity mapping)을 수행합니다.
+        # 4. 1)에서 생성된 이미지를 해당 판별자에 통과시킵니다.
+        # 5. 생성자의 총 손실(적대적(adversarial) + 사이클 + 동일성(identity))을 계산합니다.
+        # 6. 판별자의 손실을 계산합니다.
+        # 7. 생성자의 가중치를 업데이트합니다.
+        # 8. 판별자의 가중치를 업데이트합니다.
+        # 9. 손실을 딕셔너리 형태로 반환합니다.
 
         with tf.GradientTape(persistent=True) as tape:
-            # Horse to fake zebra
+            # '말'에서 '가짜 얼룩말'으로
             fake_y = self.gen_G(real_x, training=True)
-            # Zebra to fake horse -> y2x
+            # '얼룩말'에서 '가짜 말'로 -> y2x
             fake_x = self.gen_F(real_y, training=True)
 
-            # Cycle (Horse to fake zebra to fake horse): x -> y -> x
+            # 사이클 (말 -> 가짜 얼룩말 -> 가짜 말): x -> y -> x
             cycled_x = self.gen_F(fake_y, training=True)
-            # Cycle (Zebra to fake horse to fake zebra) y -> x -> y
+            # 사이클 (얼룩말 -> 가짜 말 -> 가짜 얼룩말) y -> x -> y
             cycled_y = self.gen_G(fake_x, training=True)
 
-            # Identity mapping
+            # 동일성 매핑 (Identity mapping)
             same_x = self.gen_F(real_x, training=True)
             same_y = self.gen_G(real_y, training=True)
 
-            # Discriminator output
+            # 판별자 출력
             disc_real_x = self.disc_X(real_x, training=True)
             disc_fake_x = self.disc_X(fake_x, training=True)
 
             disc_real_y = self.disc_Y(real_y, training=True)
             disc_fake_y = self.disc_Y(fake_y, training=True)
 
-            # Generator adversarial loss
+            # 생성자 적대적 손실
             gen_G_loss = self.generator_loss_fn(disc_fake_y)
             gen_F_loss = self.generator_loss_fn(disc_fake_x)
 
-            # Generator cycle loss
+            # 생성자 사이클 손실
             cycle_loss_G = self.cycle_loss_fn(real_y, cycled_y) * self.lambda_cycle
             cycle_loss_F = self.cycle_loss_fn(real_x, cycled_x) * self.lambda_cycle
 
-            # Generator identity loss
+            # 생성자 동일성 손실
             id_loss_G = (
                 self.identity_loss_fn(real_y, same_y)
                 * self.lambda_cycle
@@ -516,23 +531,23 @@ class CycleGan(keras.Model):
                 * self.lambda_identity
             )
 
-            # Total generator loss
+            # 생성자의 총 손실
             total_loss_G = gen_G_loss + cycle_loss_G + id_loss_G
             total_loss_F = gen_F_loss + cycle_loss_F + id_loss_F
 
-            # Discriminator loss
+            # 판별자 손실
             disc_X_loss = self.discriminator_loss_fn(disc_real_x, disc_fake_x)
             disc_Y_loss = self.discriminator_loss_fn(disc_real_y, disc_fake_y)
 
-        # Get the gradients for the generators
+        # 생성자의 그래디언트 구하기
         grads_G = tape.gradient(total_loss_G, self.gen_G.trainable_variables)
         grads_F = tape.gradient(total_loss_F, self.gen_F.trainable_variables)
 
-        # Get the gradients for the discriminators
+        # 판별자의 그래디언트 구하기
         disc_X_grads = tape.gradient(disc_X_loss, self.disc_X.trainable_variables)
         disc_Y_grads = tape.gradient(disc_Y_loss, self.disc_Y.trainable_variables)
 
-        # Update the weights of the generators
+        # 생성자의 가중치 업데이트
         self.gen_G_optimizer.apply_gradients(
             zip(grads_G, self.gen_G.trainable_variables)
         )
@@ -540,7 +555,7 @@ class CycleGan(keras.Model):
             zip(grads_F, self.gen_F.trainable_variables)
         )
 
-        # Update the weights of the discriminators
+        # 판별자의 가중치 업데이트
         self.disc_X_optimizer.apply_gradients(
             zip(disc_X_grads, self.disc_X.trainable_variables)
         )
@@ -558,12 +573,13 @@ class CycleGan(keras.Model):
 
 * * *
 
-Create a callback that periodically saves generated images
-----------------------------------------------------------
+## 생성된 이미지를 주기적으로 저장하는 콜백 만들기
+{: #create-a-callback-that-periodically-saves-generated-images}
+<!-- ## Create a callback that periodically saves generated images -->
 
 ```python
 class GANMonitor(keras.callbacks.Callback):
-    """A callback to generate and save images after each epoch"""
+    """매 에포크 후 이미지를 생성하고 저장하는 콜백"""
 
     def __init__(self, num_img=4):
         self.num_img = num_img
@@ -592,32 +608,33 @@ class GANMonitor(keras.callbacks.Callback):
 
 * * *
 
-Train the end-to-end model
---------------------------
+## 엔드 투 엔드 모델 트레이닝
+{: #train-the-end-to-end-model}
+<!-- ## Train the end-to-end model -->
 
 ```python
-# Loss function for evaluating adversarial loss
+# 적대적 손실을 평가하기 위한 손실 함수
 adv_loss_fn = keras.losses.MeanSquaredError()
 
-# Define the loss function for the generators
+# 생성자를 위한 손실 함수 정의
 def generator_loss_fn(fake):
     fake_loss = adv_loss_fn(tf.ones_like(fake), fake)
     return fake_loss
 
 
-# Define the loss function for the discriminators
+# 판별자를 위한 손실 함수 정의
 def discriminator_loss_fn(real, fake):
     real_loss = adv_loss_fn(tf.ones_like(real), real)
     fake_loss = adv_loss_fn(tf.zeros_like(fake), fake)
     return (real_loss + fake_loss) * 0.5
 
 
-# Create cycle gan model
+# Cycle GAN 모델 생성
 cycle_gan_model = CycleGan(
     generator_G=gen_G, generator_F=gen_F, discriminator_X=disc_X, discriminator_Y=disc_Y
 )
 
-# Compile the model
+# 모델 컴파일
 cycle_gan_model.compile(
     gen_G_optimizer=keras.optimizers.legacy.Adam(learning_rate=2e-4, beta_1=0.5),
     gen_F_optimizer=keras.optimizers.legacy.Adam(learning_rate=2e-4, beta_1=0.5),
@@ -626,15 +643,15 @@ cycle_gan_model.compile(
     gen_loss_fn=generator_loss_fn,
     disc_loss_fn=discriminator_loss_fn,
 )
-# Callbacks
+# 콜백 설정
 plotter = GANMonitor()
 checkpoint_filepath = "./model_checkpoints/cyclegan_checkpoints.{epoch:03d}"
 model_checkpoint_callback = keras.callbacks.ModelCheckpoint(
     filepath=checkpoint_filepath, save_weights_only=True
 )
 
-# Here we will train the model for just one epoch as each epoch takes around
-# 7 minutes on a single P100 backed machine.
+# 각 에포크가 단일 P100 머신에서 약 7분이 걸리므로, 
+# 여기서는 모델을 1 에포크만 트레이닝합니다.
 cycle_gan_model.fit(
     tf.data.Dataset.zip((train_horses, train_zebras)),
     epochs=1,
@@ -642,11 +659,20 @@ cycle_gan_model.fit(
 )
 ```
 
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
 1067/1067 [==============================] - ETA: 0s - G_loss: 4.4794 - F_loss: 4.1048 - D_X_loss: 0.1584 - D_Y_loss: 0.1233
 ```
 
+</details>
+
 ![png]({{ site.baseurl }}/img/examples/generative/cyclegan/cyclegan_21_1.png)
+
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
 
 ```
 1067/1067 [==============================] - 390s 366ms/step - G_loss: 4.4783 - F_loss: 4.1035 - D_X_loss: 0.1584 - D_Y_loss: 0.1232
@@ -654,14 +680,17 @@ cycle_gan_model.fit(
 <tensorflow.python.keras.callbacks.History at 0x7f4184326e90>
 ```
 
-Test the performance of the model.
+</details>
 
-You can use the trained model hosted on [Hugging Face Hub](https://huggingface.co/keras-io/CycleGAN) and try the demo on [Hugging Face Spaces](https://huggingface.co/spaces/keras-io/CycleGAN).
+모델의 성능을 테스트합니다.
+
+[Hugging Face Hub](https://huggingface.co/keras-io/CycleGAN)에 호스팅된 트레이닝된 모델을 사용하고, 
+[Hugging Face Spaces](https://huggingface.co/spaces/keras-io/CycleGAN)에서 데모를 시도해 볼 수 있습니다.
 
 ```python
-# This model was trained for 90 epochs. We will be loading those weights
-# here. Once the weights are loaded, we will take a few samples from the test
-# data and check the model's performance.
+# 이 모델은 90 에포크 동안 트레이닝되었습니다. 
+# 여기서 그 가중치를 로드할 것입니다.
+# 가중치를 로드한 후, 테스트 데이터에서 몇 개의 샘플을 가져와 모델의 성능을 확인하겠습니다.
 ```
 
 ```python
@@ -670,7 +699,7 @@ You can use the trained model hosted on [Hugging Face Hub](https://huggingface.c
 ```
 
 ```python
-# Load the checkpoints
+# 체크포인트 로드
 weight_file = "./saved_checkpoints/cyclegan_checkpoints.090"
 cycle_gan_model.load_weights(weight_file).expect_partial()
 print("Weights loaded successfully")
@@ -695,13 +724,20 @@ plt.tight_layout()
 plt.show()
 ```
 
+
+<details markdown="block">
+<summary>결과를 보려면 클릭하세요.</summary>
+
 ```
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
+    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                    Dload  Upload   Total   Spent    Left  Speed
 100   634  100   634    0     0   2874      0 --:--:-- --:--:-- --:--:--  2881
 100  273M  100  273M    0     0  1736k      0  0:02:41  0:02:41 --:--:-- 2049k
 
 Weights loaded successfully
 ```
+
+</details>
+
 
 ![png]({{ site.baseurl }}/img/examples/generative/cyclegan/cyclegan_25_1.png)

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ f> AlbertMaskedLMPreprocessor layer
+title: AlbertMaskedLMPreprocessor layer
 nav_order: 01+01+06
 permalink: /api/keras_nlp/models/albert/albert_masked_lm_preprocessor/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Albert
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/albert/albert_masked_lm_preprocessor/](https://keras.io/api/keras_nlp/models/albert/albert_masked_lm_preprocessor/){:target="_blank"}

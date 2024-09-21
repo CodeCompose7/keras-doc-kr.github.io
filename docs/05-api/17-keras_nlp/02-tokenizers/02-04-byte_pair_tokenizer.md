@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 4) BytePairTokenizer
+title: BytePairTokenizer
 nav_order: 02+04
 permalink: /api/keras_nlp/tokenizers/byte_pair_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Tokenizers
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/tokenizers/byte_pair_tokenizer/](https://keras.io/api/keras_nlp/tokenizers/byte_pair_tokenizer/){:target="_blank"}

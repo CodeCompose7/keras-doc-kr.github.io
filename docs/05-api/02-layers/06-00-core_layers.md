@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Core layers
+title: 코어 레이어
 nav_order: 06+00
 permalink: /api/layers/core_layers/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

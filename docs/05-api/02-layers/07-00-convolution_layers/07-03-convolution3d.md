@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 3) Conv3D layer
+title: Conv3D layer
 nav_order: 07+03
 permalink: /api/layers/convolution_layers/convolution3d/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 컨볼루션 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/convolution_layers/convolution3d/](https://keras.io/api/layers/convolution_layers/convolution3d/){:target="_blank"}

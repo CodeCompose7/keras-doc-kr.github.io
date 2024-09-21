@@ -3,7 +3,7 @@ layout: default
 title: Layer weight regularizers
 nav_order: 04+00
 permalink: /api/layers/regularizers/
-parent: Keras Layers API
+parent: Keras 레이어 API
 grand_parent: Keras 3 API 문서
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ q> RandomShear layer
+title: RandomShear layer
 nav_order: 01+01+17
 permalink: /api/keras_cv/layers/augmentation/random_shear/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Augmentation 레이어
+grand_parent: KerasCV 레이어
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/layers/augmentation/random_shear/](https://keras.io/api/keras_cv/layers/augmentation/random_shear/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 4) HyperResNet
+title: HyperResNet
 nav_order: 04+04
 permalink: /api/keras_tuner/hypermodels/hyper_resnet/
-parent: KerasTuner
-grand_parent: Keras 3 API 문서
+parent: HyperModels
+grand_parent: KerasTuner
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_tuner/hypermodels/hyper_resnet/](https://keras.io/api/keras_tuner/hypermodels/hyper_resnet/){:target="_blank"}

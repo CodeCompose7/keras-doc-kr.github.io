@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ e> BartSeq2SeqLMPreprocessor layer
+title: BartSeq2SeqLMPreprocessor layer
 nav_order: 01+02+05
 permalink: /api/keras_nlp/models/bart/bart_seq_2_seq_lm_preprocessor/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Bart
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/bart/bart_seq_2_seq_lm_preprocessor/](https://keras.io/api/keras_nlp/models/bart/bart_seq_2_seq_lm_preprocessor/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 5) Serialization utilities
+title: Serialization utilities
 nav_order: 04+05
 permalink: /api/models/model_saving_apis/serialization_utils/
-parent: Models API
-grand_parent: Keras 3 API 문서
+parent: 저장 & 직렬화
+grand_parent: Models API
 ---
 
 * 원본 링크 : [https://keras.io/api/models/model_saving_apis/serialization_utils/](https://keras.io/api/models/model_saving_apis/serialization_utils/){:target="_blank"}

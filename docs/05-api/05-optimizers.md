@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Optimizers
+title: 옵티마이저
 nav_order: 5
 permalink: /api/optimizers/
 parent: Keras 3 API 문서

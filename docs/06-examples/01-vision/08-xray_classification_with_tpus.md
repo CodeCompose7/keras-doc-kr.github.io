@@ -34,8 +34,10 @@ grand_parent: 코드 예제
 
 ----
 
-## 소개 + 셋업
+소개 + 셋업
 ---------------------
+{: #introduction--set-up}
+<!-- Introduction + Set-up -->
 
 이 튜토리얼에서는 엑스레이 스캔에서 폐렴(pneumonia)이 있는지 여부를 예측하기 위해, 엑스레이 이미지 분류 모델을 빌드하는 방법을 설명합니다.
 
@@ -156,6 +158,8 @@ CLASS_NAMES = ["NORMAL", "PNEUMONIA"]
 
 데이터 로드
 -------------
+{: #load-the-data}
+<!-- Load the data -->
 
 [_Cell_](https://www.cell.com/cell/fulltext/S0092-8674(18)30154-5)에서 사용하는 흉부 엑스레이 데이터는 트레이닝 파일과 테스트 파일로 나뉩니다. 먼저 트레이닝용 TFRecords를 로드해 보겠습니다.
 
@@ -272,6 +276,8 @@ test_ds = test_ds.batch(BATCH_SIZE)
 
 데이터세트 시각화
 ---------------------
+{: #visualize-the-dataset}
+<!-- Visualize the dataset -->
 
 먼저, 버퍼링된 프리페칭을 사용하여 I/O가 차단되지 않고 디스크에서 데이터를 가져올 수 있도록 하겠습니다.
 
@@ -331,6 +337,8 @@ show_batch(image_batch.numpy(), label_batch.numpy())
 
 CNN 빌드
 -------------
+{: #build-the-cnn}
+<!-- Build the CNN -->
 
 모델을 보다 모듈화하고 이해하기 쉽게 만들기 위해, 몇 가지 블록을 정의해 보겠습니다. 컨볼루션 신경망을 빌드할 때, 컨볼루션 블록과 Dense 레이어 블록을 만들겠습니다.
 
@@ -398,6 +406,8 @@ def build_model():
 
 데이터 불균형 수정
 --------------------------
+{: #correct-for-data-imbalance}
+<!-- Correct for data imbalance -->
 
 이 예제 앞부분에서, 폐렴으로 분류된 이미지가 정상보다 많아 데이터의 불균형을 확인했습니다. 클래스 가중치를 사용하여 이를 보정하겠습니다:
 
@@ -427,8 +437,12 @@ Weight for class 1: 0.67
 
 모델 트레이닝
 ---------------
+{: #train-the-model}
+<!-- Train the model -->
 
 ### 콜백 정의하기
+{: #defining-callbacks}
+<!-- ### Defining callbacks -->
 
 체크포인트 콜백은 모델의 가장 좋은 가중치를 저장하므로, 다음에 모델을 사용하고자 할 때, 트레이닝에 시간을 들일 필요가 없습니다. 조기 중지 콜백은 모델이 정체되기 시작하거나, 모델이 과적합하기 시작하면 트레이닝 프로세스를 중지합니다.
 
@@ -450,6 +464,8 @@ lr_schedule = keras.optimizers.schedules.ExponentialDecay(
 ```
 
 ### 모델 Fit
+{: #fit-the-model}
+<!-- ### Fit the model -->
 
 메트릭에는, 정확도(precision)와 재응답률(recall)이 포함되어야 모델이 얼마나 좋은지 더 많은 정보를 얻을 수 있습니다. 정확도는 레이블 중 몇 퍼센트의 레이블이 정확한지를 알려줍니다. 데이터의 균형이 맞지 않기 때문에, 정확도는 좋은 모델에 대한 왜곡된 느낌을 줄 수 있습니다. (즉, PNEUMONIA를 항상 74% 정확도로 예측하는 모델은 좋은 모델이 아닙니다)
 
@@ -568,6 +584,8 @@ Epoch 35/100
 
 모델 성능 시각화
 -----------------------------
+{: #visualizing-model-performance}
+<!-- Visualizing model performance -->
 
 트레이닝 및 검증 세트에 대한 모델 정확도와 손실을 플로팅해 보겠습니다. 이 노트북에는 랜덤 시드가 지정되어 있지 않습니다. 노트북의 경우, 약간의 편차가 있을 수 있습니다.
 
@@ -592,6 +610,8 @@ for i, met in enumerate(["precision", "recall", "binary_accuracy", "loss"]):
 
 결과 예측 및 평가
 ----------------------------
+{: #predict-and-evaluate-results}
+<!-- Predict and evaluate results -->
 
 테스트 데이터로 모델을 평가해 봅시다!
 

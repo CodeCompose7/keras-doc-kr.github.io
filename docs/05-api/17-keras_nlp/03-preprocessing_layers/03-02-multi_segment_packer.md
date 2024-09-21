@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 2) MultiSegmentPacker layer
+title: MultiSegmentPacker layer
 nav_order: 03+02
 permalink: /api/keras_nlp/preprocessing_layers/multi_segment_packer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Preprocessing 레이어
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/preprocessing_layers/multi_segment_packer/](https://keras.io/api/keras_nlp/preprocessing_layers/multi_segment_packer/){:target="_blank"}

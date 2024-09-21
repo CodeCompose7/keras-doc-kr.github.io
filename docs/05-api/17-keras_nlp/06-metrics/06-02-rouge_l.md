@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 2) RougeL metric
+title: RougeL metric
 nav_order: 06+02
 permalink: /api/keras_nlp/metrics/rouge_l/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Metrics
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/metrics/rouge_l/](https://keras.io/api/keras_nlp/metrics/rouge_l/){:target="_blank"}

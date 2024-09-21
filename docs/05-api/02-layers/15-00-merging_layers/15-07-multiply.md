@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 7) Multiply layer
+title: Multiply layer
 nav_order: 15+07
 permalink: /api/layers/merging_layers/multiply/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: Merging 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/merging_layers/multiply/](https://keras.io/api/layers/merging_layers/multiply/){:target="_blank"}

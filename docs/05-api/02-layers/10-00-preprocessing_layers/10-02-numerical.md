@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 2) Numerical features preprocessing layers
+title: 수치적 특성 전처리 레이어
 nav_order: 10+02
 permalink: /api/layers/preprocessing_layers/numerical/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: 전처리 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/preprocessing_layers/numerical/](https://keras.io/api/layers/preprocessing_layers/numerical/){:target="_blank"}

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ e> XLMRobertaMaskedLM model
+title: XLMRobertaMaskedLM model
 nav_order: 01+12+05
 permalink: /api/keras_nlp/models/xlm_roberta/xlm_roberta_masked_lm/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: XLM-RoBERTa
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/xlm_roberta/xlm_roberta_masked_lm/](https://keras.io/api/keras_nlp/models/xlm_roberta/xlm_roberta_masked_lm/){:target="_blank"}

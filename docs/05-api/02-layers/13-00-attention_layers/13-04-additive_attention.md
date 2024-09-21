@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 4) AdditiveAttention layer
+title: AdditiveAttention layer
 nav_order: 13+04
 permalink: /api/layers/attention_layers/additive_attention/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: Attention 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/attention_layers/additive_attention/](https://keras.io/api/layers/attention_layers/additive_attention/){:target="_blank"}

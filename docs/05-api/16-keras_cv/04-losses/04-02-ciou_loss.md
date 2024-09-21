@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 2) CIoU Loss
+title: CIoU Loss
 nav_order: 04+02
 permalink: /api/keras_cv/losses/ciou_loss/
-parent: KerasCV
-grand_parent: Keras 3 API 문서
+parent: Losses
+grand_parent: KerasCV
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_cv/losses/ciou_loss/](https://keras.io/api/keras_cv/losses/ciou_loss/){:target="_blank"}

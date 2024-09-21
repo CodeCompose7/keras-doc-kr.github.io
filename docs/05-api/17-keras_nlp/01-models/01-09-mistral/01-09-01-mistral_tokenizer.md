@@ -1,10 +1,10 @@
 ---
 layout: default
-title: ... └ a> MistralTokenizer
+title: MistralTokenizer
 nav_order: 01+09+01
 permalink: /api/keras_nlp/models/mistral/mistral_tokenizer/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: Mistral
+grand_parent: 모델
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/mistral/mistral_tokenizer/](https://keras.io/api/keras_nlp/models/mistral/mistral_tokenizer/){:target="_blank"}

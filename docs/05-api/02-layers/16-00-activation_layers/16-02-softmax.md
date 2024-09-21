@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 2) Softmax layer
+title: Softmax layer
 nav_order: 16+02
 permalink: /api/layers/activation_layers/softmax/
-parent: Keras Layers API
-grand_parent: Keras 3 API 문서
+parent: Activation 레이어
+grand_parent: Keras 레이어 API
 ---
 
 * 원본 링크 : [https://keras.io/api/layers/activation_layers/softmax/](https://keras.io/api/layers/activation_layers/softmax/){:target="_blank"}

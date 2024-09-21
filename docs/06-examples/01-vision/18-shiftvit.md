@@ -35,6 +35,8 @@ grand_parent: 코드 예제
 ----
 
 ## 소개
+{: #introduction}
+<!-- ## Introduction -->
 
 [비전 트랜스포머](https://arxiv.org/abs/2010.11929)(Vision Transformers, ViTs)는 트랜스포머와 컴퓨터 비전(CV)의 교차점에서 연구의 물결을 촉발시켰습니다.
 
@@ -54,6 +56,8 @@ ViT는, Transformer 블록의 Multi-Head Self-Attention 메커니즘 덕분에, 
 
 셋업 및 import
 -----------------
+{: #setup-and-imports}
+<!-- Setup and imports -->
 
 ```python
 import numpy as np
@@ -76,6 +80,8 @@ keras.utils.set_random_seed(SEED)
 
 하이퍼파라미터
 ---------------
+{: #hyperparameters}
+<!-- Hyperparameters -->
 
 이는 실험을 위해 선택한 하이퍼파라미터입니다. 자유롭게 조정하시기 바랍니다.
 
@@ -132,6 +138,8 @@ config = Config()
 
 CIFAR-10 데이터 세트 로드
 -------------------------
+{: #load-the-cifar-10-dataset}
+<!-- Load the CIFAR-10 dataset -->
 
 우리는 실험에 CIFAR-10 데이터 세트를 사용합니다.
 
@@ -168,6 +176,8 @@ Testing samples: 10000
 
 데이터 보강
 -----------------
+{: #data-augmentation}
+<!-- Data Augmentation -->
 
 보강 파이프라인은 다음으로 구성됩니다.
 
@@ -196,6 +206,8 @@ def get_augmentation_model():
 
 ShiftViT 아키텍쳐
 -------------------------
+{: #the-shiftvit-architecture}
+<!-- The ShiftViT architecture -->
 
 이 섹션에서는, [ShiftViT 논문](https://arxiv.org/abs/2201.10801)에서 제안된 아키텍처를 구축합니다.
 
@@ -215,6 +227,8 @@ ShiftViT 아키텍쳐
 _참고_: [공식 구현](https://github.com/microsoft/SPACH/blob/main/models/shiftvit.py)과 비교하여, Keras API에 더 잘 맞도록 일부 주요 구성 요소를 재구성했습니다.
 
 ### ShiftViT 블록
+{: #the-shiftvit-block}
+<!-- ### The ShiftViT Block  -->
 
 ![ShiftViT block]({{ site.baseurl }}/img/examples/vision/shiftvit/IDe35vo.gif)
 
@@ -233,6 +247,8 @@ ShiftViT 아키텍처의 각 단계는 그림 2와 같이 Shift Block으로 구�
 3.  MLP 레이어
 
 #### MLP 블록
+{: #the-mlp-block}
+<!-- #### The MLP block -->
 
 MLP 블록은 densely-connected 레이어 스택으로 설계되었습니다.
 
@@ -272,6 +288,8 @@ class MLP(layers.Layer):
 ```
 
 #### DropPath 레이어
+{: #the-droppath-layer}
+<!-- #### The DropPath layer -->
 
 확률적 깊이(Stochastic depth)는 일련의 레이어를 무작위로 drop 하는 정규화 기법입니다. 추론하는 동안, 레이어는 그대로 유지됩니다. Dropout과 매우 유사하지만, 레이어 내부에 존재하는 개별 노드가 아닌, 레이어 블록에 대해 작동합니다.
 
@@ -298,6 +316,7 @@ class DropPath(layers.Layer):
         return x
 ```
 
+<!-- #### Block -->
 #### Block
 
 이 논문에서 가장 중요한 연산은 **시프트 연산(shift operation)**입니다. 이 섹션에서는, 시프트 연산에 대해 설명하고 저자가 제공한 원본 구현과 비교합니다.
@@ -431,6 +450,8 @@ class ShiftViTBlock(layers.Layer):
 ```
 
 ### ShiftViT 블록
+{: #the-shiftvit-blocks}
+<!-- ### The ShiftViT blocks -->
 
 ![Shift Blokcs]({{ site.baseurl }}/img/examples/vision/shiftvit/FKy5NnD.png)
 
@@ -441,6 +462,8 @@ class ShiftViTBlock(layers.Layer):
 Shift 블록 뒤에는 특성 입력을 축소(scales down)하는 PatchMerging 레이어가 이어집니다. PatchMerging 레이어는 모델의 피라미드 구조에 도움이 됩니다.
 
 #### PatchMerging 레이어
+{: #the-patchmerging-layer}
+<!-- #### The PatchMerging layer -->
 
 이 레이어는 인접한 두 개의 토큰을 병합합니다. 이 레이어는 특성를 공간적으로 축소하고, 채널별(channel wise)로 피처를 늘리는 데 도움이 됩니다. Conv2D 레이어를 사용하여 패치를 병합합니다.
 
@@ -471,6 +494,8 @@ class PatchMerging(layers.Layer):
 ```
 
 #### Stacked Shift 블록
+{: #stacked-shift-blocks}
+<!-- #### Stacked Shift Blocks -->
 
 각 단계에는 논문에서 제안한 대로 다양한 수의 ShiftViT 블록이 쌓이게 됩니다. 이 레이어는 패치 병합 레이어와 함께 스택된 시프트 ViT 블록을 포함하는 generic 레이어입니다. 두 가지 작업(시프트 ViT 블록과 패치 병합)을 결합하는 것은 코드 재사용성을 높이기 위해 선택한 디자인 선택입니다.
 
@@ -568,6 +593,8 @@ class StackedShiftBlocks(layers.Layer):
 
 ShiftViT 모델
 ------------------
+{: #the-shiftvit-model}
+<!-- The ShiftViT model -->
 
 ShiftViT 커스텀 모델을 구축합니다.
 
@@ -717,6 +744,8 @@ class ShiftViTModel(keras.Model):
 
 모델 인스턴스화
 ---------------------
+{: #instantiate-the-model}
+<!-- Instantiate the model -->
 
 ```python
 model = ShiftViTModel(
@@ -737,6 +766,8 @@ model = ShiftViTModel(
 
 학습률 스케쥴
 ----------------------
+{: #learning-rate-schedule}
+<!-- Learning rate schedule -->
 
 많은 실험에서, 우리는 학습률을 천천히 증가시켜 모델을 워밍업하고, 
 그런 다음, 학습률을 천천히 감소시켜 모델을 쿨다운하고 싶어합니다. 
@@ -828,6 +859,8 @@ class WarmUpCosine(keras.optimizers.schedules.LearningRateSchedule):
 
 모델 컴파일 및 트레이닝
 ---------------------------
+{: #compile-and-train-the-model}
+<!-- Compile and train the model -->
 
 ```python
 # 모델 저장 시 입력 모양을 사용할 수 있도록, 샘플 데이터를 모델에 전달합니다.
@@ -998,6 +1031,8 @@ Top 5 test accuracy: 98.55%
 
 트레이닝 한 모델 저장
 ------------------
+{: #save-trained-model}
+<!-- Save trained model -->
 
 Subclassing으로 모델을 만들었으므로, HDF5 형식으로 모델을 저장할 수 없습니다.
 
@@ -1011,6 +1046,8 @@ model.save("ShiftViT")
 
 모델 추론
 ---------------
+{: #model-inference}
+<!-- Model inference -->
 
 **추론을 위한 샘플 데이터 다운로드**
 
@@ -1125,6 +1162,8 @@ for images in predict_ds:
 
 결론
 ----------
+{: #conclusion}
+<!-- Conclusion -->
 
 이 논문의 가장 큰 기여는 새로운 아키텍처가 아니라, 
 어텐션 없이 트레이닝된 계층적 ViT가 매우 좋은 성능을 낼 수 있다는 아이디어입니다. 

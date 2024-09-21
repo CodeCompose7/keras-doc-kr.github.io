@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 3) HyperImageAugment
+title: HyperImageAugment
 nav_order: 04+03
 permalink: /api/keras_tuner/hypermodels/hyper_image_augment/
-parent: KerasTuner
-grand_parent: Keras 3 API 문서
+parent: HyperModels
+grand_parent: KerasTuner
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_tuner/hypermodels/hyper_image_augment/](https://keras.io/api/keras_tuner/hypermodels/hyper_image_augment/){:target="_blank"}

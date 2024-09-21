@@ -1,10 +1,10 @@
 ---
 layout: default
-title: └ 12) XLM-RoBERTa
+title: XLM-RoBERTa
 nav_order: 01+12
 permalink: /api/keras_nlp/models/xlm_roberta/
-parent: KerasNLP
-grand_parent: Keras 3 API 문서
+parent: 모델
+grand_parent: KerasNLP
 ---
 
 * 원본 링크 : [https://keras.io/api/keras_nlp/models/xlm_roberta/](https://keras.io/api/keras_nlp/models/xlm_roberta/){:target="_blank"}
